@@ -7,7 +7,7 @@
             "actions": [
                 {
                     "name": "Jump",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "5beb2edc-7cdf-414f-ae72-d4102c73371a",
                     "expectedControlType": "Button",
                     "processors": "",
@@ -40,13 +40,22 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "31519d71-6549-41af-887f-bce0e2ce4e90",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "",
                     "id": "56cb5cf3-f916-468e-95e1-60f37dc3ae82",
-                    "path": "<Keyboard>/w",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "KB&M",
@@ -84,6 +93,17 @@
                     "processors": "",
                     "groups": "KB&M",
                     "action": "Duck",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9a65fe55-23d6-45d9-b7e9-e358fc34ac5a",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KB&M",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
