@@ -17,6 +17,7 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody rigid;
     [SerializeField]
     private bool grounded = false;
+    private Interactable interactable;
 
     
     private void Start()
@@ -50,6 +51,14 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+    void OnInteract()
+    {
+        if(interactable != null)
+        {
+            interactable.Interact();
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -68,6 +77,21 @@ public class PlayerMove : MonoBehaviour
             moveValRight = 0f;
             moveValLeft = 0f;
             rigid.velocity = new Vector3(0f, (rigid.velocity.y / moveSpeed), 0f) * moveSpeed;
+        }
+
+    }
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.tag == "Interactable")
+        {
+            interactable = collision.gameObject.GetComponent<Interactable>();
+        }
+    }
+    private void OnTriggerExit(Collider collision)
+    {
+        if (collision.gameObject.tag == "Interactable")
+        {
+            interactable = null;
         }
     }
 }
