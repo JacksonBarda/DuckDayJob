@@ -4,8 +4,10 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
-    public abstract void Interact();
+    public FadeController fade;
 
+    public abstract void Interact();
+    public abstract void Action();
     protected abstract void Finished();
 
 }

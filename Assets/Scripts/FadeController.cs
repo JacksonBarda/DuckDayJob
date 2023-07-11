@@ -6,80 +6,77 @@ using UnityEngine.UI;
 
 public class FadeController : MonoBehaviour
 {
-    public static FadeController Instance { get; private set; }
-    public GameObject fadeSquare;
+    private Image image;
+    private float originalAlpha;
 
-    private Color desiredColor;
-    private float currentAlpha;
-    private float fadeDuration = 2f;
-    private float elapsedTime;
-
-    private void Awake()
+    public void FadeImageOverTime(float fadeTime, Interactable targetObject)
     {
-        if(Instance == null)
-        {
-            Instance = this;
+        image = GetComponent<Image>();
 
-        }
-        else
-        {
-            Destroy(this);
-            return;
-        }
+        // Store the original alpha value of the image
+        originalAlpha = image.color.a;
+
+        // Start the fade-out coroutine
+        StartCoroutine(FadeOutCoroutine(fadeTime, targetObject));
     }
 
-    // Update is called once per frame
-    private void Update()
+    private IEnumerator FadeOutCoroutine(float fadeTime, Interactable targetObject)
     {
-        // Increment the elapsed time
-        elapsedTime += Time.deltaTime;
+        // Calculate the target alpha (fully transparent)
+        float targetAlpha = 1f;
 
-        // Check if the fade effect is complete
-        while(elapsedTime <= fadeDuration)
-        { 
-            Debug.Log("StartFade");
-            // Update the fade material color
-            Color initialColor = fadeSquare.GetComponent<Image>().color;
-            fadeSquare.GetComponent<Image>().color = Color.Lerp(initialColor, desiredColor, elapsedTime / fadeDuration);
-        }
-    }
-    public void FadeOut()
-    {
-        desiredColor = new Color(255,255,255,1);
-        elapsedTime = 0;
-    }
-    public void FadeIn()
-    {
-        desiredColor = new Color(255,255,255,0);
-        elapsedTime = 0;
-    }
-    public IEnumerator fadeOutSquare(bool fadeToBlack = true, float fadeSpeed = 1f)
-    {
+        // Calculate the alpha increment per frame
+        float alphaIncrement = (originalAlpha + targetAlpha) / fadeTime;
 
-        Color objectColor = fadeSquare.GetComponent<Image>().color;
-        float fadeAmount;
-
-        if (fadeToBlack)
+        // Fade out the image
+        while (image.color.a < targetAlpha)
         {
-            while(fadeSquare.GetComponent<Image>().color.a < 1)
-            {
-                fadeAmount = objectColor.a + (fadeSpeed * Time.deltaTime);
-                objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
-                fadeSquare.GetComponent<Image>().color = objectColor;
-                yield return null;
-            }
+            // Update the alpha value of the image
+            Color currentColor = image.color;
+            currentColor.a += alphaIncrement * Time.deltaTime;
+            image.color = currentColor;
+
+            yield return null;
         }
-        else
+
+        // Call the function on the target object
+        targetObject.Action();
+
+        // Start the fade-in coroutine
+        StartCoroutine(Wait(fadeTime));
+    }
+    private IEnumerator Wait(float fadeTime)
+    {
+        float time = 0;
+        while(time < 1.0f)
         {
-            while (fadeSquare.GetComponent<Image>().color.a > 0)
-            {
-                fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
-                objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
-                fadeSquare.GetComponent<Image>().color = objectColor;
-                yield return null;
-            }
+            time += Time.deltaTime;
+            yield return null;
         }
- 
-        yield return new WaitForEndOfFrame();
+        StartCoroutine(FadeInCoroutine(fadeTime));
+    }
+    private IEnumerator FadeInCoroutine(float fadeTime)
+    {
+        // Calculate the target alpha (original alpha)
+        float targetAlpha = originalAlpha;
+
+        // Calculate the alpha increment per frame
+        float alphaIncrement = (targetAlpha + image.color.a) / fadeTime;
+
+        // Fade in the image
+        while (image.color.a > targetAlpha)
+        {
+            // Update the alpha value of the image
+            Color currentColor = image.color;
+            currentColor.a -= alphaIncrement * Time.deltaTime;
+            image.color = currentColor;
+
+            yield return null;
+        }
+
+        // Ensure the final alpha value is exactly the original alpha
+        Color finalColor = image.color;
+        finalColor.a = originalAlpha;
+        image.color = finalColor;
     }
 }
