@@ -22,7 +22,7 @@ public class DoorInteract : Interactable
     }
     protected override void Finished()
     {
-;
+
     }
 
 }
