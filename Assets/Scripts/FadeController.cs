@@ -48,7 +48,7 @@ public class FadeController : MonoBehaviour
     private IEnumerator Wait(float fadeTime)
     {
         float time = 0;
-        while(time < 1.0f)
+        while(time < 1.3f)
         {
             time += Time.deltaTime;
             yield return null;

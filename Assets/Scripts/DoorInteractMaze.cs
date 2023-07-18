@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 
-public class DoorInteract : Interactable
+public class DoorInteractMaze : Interactable
 {
 
     [SerializeField]
@@ -17,13 +17,13 @@ public class DoorInteract : Interactable
 
     public override void Interact()
     {
-        fade.FadeImageOverTime(0.7f, this);
+        fade.FadeImageOverTime(0.5f, this);
 
     }
     public override void Action()
     {
-        playerMove.Maze(false);
-        rigid.useGravity = true;
+        playerMove.Maze(true);
+        rigid.useGravity = false;
         Player.transform.position = endLocation.position;
     }
     protected override void Finished()

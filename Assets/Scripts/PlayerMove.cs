@@ -8,16 +8,22 @@ public class PlayerMove : MonoBehaviour
     private float moveValRight;
     private float moveValLeft;
     private float moveValUp;
+    private float moveValDown;
     private float moveValRightHolder;
     private float moveValLeftHolder;
     private float moveValUpHolder;
+    private float moveValDownHolder;
     [SerializeField]
     private float moveSpeed;
 
     private Rigidbody rigid;
     [SerializeField]
     private bool grounded = false;
+    
     private Interactable interactable;
+
+
+    public bool mazeMode = false;
 
     
     private void Start()
@@ -44,18 +50,35 @@ public class PlayerMove : MonoBehaviour
     }
     void OnJump(InputValue value)
     {
-        if (grounded)
+        if (interactable != null && mazeMode)
+        {
+            interactable.Interact();
+        }
+        if (grounded && !mazeMode)
         {
             moveValUp = value.Get<float>();
             rigid.velocity = new Vector3(moveValRight - moveValLeft, (rigid.velocity.y / moveSpeed) + moveValUp, 0f) * moveSpeed;
         }
     }
 
-    void OnInteract()
+    void OnInteract(InputValue value)
     {
-        if(interactable != null)
+        moveValUpHolder = value.Get<float>();
+        if (interactable != null && !mazeMode)
         {
             interactable.Interact();
+        }
+        if (mazeMode)
+        {
+            moveValUp = moveValUpHolder;
+        }
+    }
+    void OnDuck(InputValue value)
+    {
+        moveValDownHolder = value.Get<float>();
+        if (mazeMode)
+        {
+            moveValDown = moveValDownHolder;
         }
     }
 
@@ -63,11 +86,23 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         grounded = Physics.Raycast(transform.position, -Vector3.up, 0.75f);
-        rigid.velocity = new Vector3(moveValRight - moveValLeft, (rigid.velocity.y/moveSpeed), 0f) * moveSpeed;
-        if (grounded)
+        if (!mazeMode)
+        {
+            rigid.velocity = new Vector3(moveValRight - moveValLeft, (rigid.velocity.y/moveSpeed), 0f) * moveSpeed;
+        }
+
+        if (grounded && !mazeMode)
         {
             moveValRight = moveValRightHolder;
             moveValLeft = moveValLeftHolder;
+        }
+        if(mazeMode)
+        {
+            moveValDown = moveValDownHolder;
+            moveValRight = moveValRightHolder;
+            moveValLeft = moveValLeftHolder;
+            moveValUp = moveValUpHolder;
+            rigid.velocity = new Vector3(moveValRight - moveValLeft, moveValUp-moveValDown, 0f) * moveSpeed;
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -93,5 +128,9 @@ public class PlayerMove : MonoBehaviour
         {
             interactable = null;
         }
+    }
+    public void Maze(bool value)
+    {
+        mazeMode = value;
     }
 }
