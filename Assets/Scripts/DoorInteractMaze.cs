@@ -9,11 +9,15 @@ public class DoorInteractMaze : Interactable
     [SerializeField]
     private Transform endLocation;
     [SerializeField]
+    private string endLocationString;
+    [SerializeField]
     private Transform Player;
     [SerializeField]
     private PlayerMove playerMove;
     [SerializeField]
     private Rigidbody rigid;
+    [SerializeField]
+    private UIManager manager;
 
     public override void Interact()
     {
@@ -25,6 +29,7 @@ public class DoorInteractMaze : Interactable
         playerMove.Maze(true);
         rigid.useGravity = false;
         Player.transform.position = endLocation.position;
+        manager.UpdateLocation(endLocationString);
     }
     protected override void Finished()
     {
