@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
+using Enums;
 
 public class UIManager : MonoBehaviour
 {
@@ -16,11 +18,12 @@ public class UIManager : MonoBehaviour
     private int dayNumber = 1;
     private int hour = 9;
     private string meridiem = "a.m.";
+    private Locations startingLocation = Locations.LOBBY;
 
     // Start is called before the first frame update
     void Start()
     {
-        location.text = "Lobby";
+        setLocation(startingLocation);
         day.text = "Day " + dayNumber;
         time.text = hour + ":00 " + meridiem;
     }
@@ -58,5 +61,60 @@ public class UIManager : MonoBehaviour
             }
         }
         time.text = hour + ":00 " + meridiem;
+    }
+
+    public void setLocation(Locations currentLocation)
+    {
+        string room = "";
+
+        switch (currentLocation)
+        {
+            case Locations.LOBBY:
+                room = "LOBBY";
+                break;
+
+            case Locations.CLOSET:
+                room = "CLOSET";
+                break;
+
+            case Locations.OFFICE:
+                room = "OFFICE";
+                break;
+
+            case Locations.BREAKROOM:
+                room = "BREAKROOM";
+                break;
+
+            case Locations.MEETINGROOM:
+                room = "MEETING ROOM";
+                break;
+
+            case Locations.BATHROOM:
+                room = "BATHROOM";
+                break;
+
+            case Locations.MAZE:
+                room = "MAZE";
+                break;
+
+            case Locations.MANUFACTURING:
+                room = "MANUFACTURING ROOM";
+                break;
+
+            case Locations.KILLINGFLOOR:
+                room = "KILLING ROOM";
+                break;
+
+            case Locations.BOSSROOM:
+                room = "BOSS'S OFFICE";
+                break;
+
+            default:
+                room = "NONE";
+                break;
+            
+        }
+
+        UpdateLocation(room);
     }
 }

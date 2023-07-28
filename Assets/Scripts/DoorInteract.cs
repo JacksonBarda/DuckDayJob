@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using Enums;
 
 public class DoorInteract : Interactable
 {
 
     [SerializeField]
     private Transform endLocation;
-    [SerializeField]
-    private string endLocationString;
     [SerializeField]
     private Transform Player;
     [SerializeField]
@@ -18,6 +17,8 @@ public class DoorInteract : Interactable
     private Rigidbody rigid;
     [SerializeField]
     private UIManager manager;
+    [SerializeField]
+    private Locations endRoom;
 
     public override void Interact()
     {
@@ -29,7 +30,7 @@ public class DoorInteract : Interactable
         playerMove.Maze(false);
         rigid.useGravity = true;
         Player.transform.position = endLocation.position;
-        manager.UpdateLocation(endLocationString);
+        manager.setLocation(endRoom);
     }
     protected override void Finished()
     {
