@@ -6,16 +6,20 @@ using UnityEngine.UI;
 
 public class FadeController : MonoBehaviour
 {
+    [SerializeField]
+    private float darkTime;
     private Image image;
     private float originalAlpha;
 
-    public void FadeImageOverTime(float fadeTime, Interactable targetObject)
+    public void Start()
     {
         image = GetComponent<Image>();
 
         // Store the original alpha value of the image
         originalAlpha = image.color.a;
-
+    }
+    public void FadeImageOverTime(float fadeTime, Interactable targetObject)
+    {
         // Start the fade-out coroutine
         StartCoroutine(FadeOutCoroutine(fadeTime, targetObject));
     }
@@ -48,7 +52,7 @@ public class FadeController : MonoBehaviour
     private IEnumerator Wait(float fadeTime)
     {
         float time = 0;
-        while(time < 1.3f)
+        while(time < darkTime)
         {
             time += Time.deltaTime;
             yield return null;
@@ -61,7 +65,7 @@ public class FadeController : MonoBehaviour
         float targetAlpha = originalAlpha;
 
         // Calculate the alpha increment per frame
-        float alphaIncrement = (targetAlpha + image.color.a) / fadeTime;
+        float alphaIncrement = (targetAlpha + image.color.a) / (fadeTime/2);
 
         // Fade in the image
         while (image.color.a > targetAlpha)
