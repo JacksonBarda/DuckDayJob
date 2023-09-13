@@ -1,3 +1,4 @@
+using Enums;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -14,7 +15,10 @@ public class DoorInteractMaze : Interactable
     private PlayerMove playerMove;
     [SerializeField]
     private Rigidbody rigid;
-
+    [SerializeField]
+    private UIManager manager;
+    [SerializeField]
+    private Locations endRoom;
     public override void Interact()
     {
         fade.FadeImageOverTime(0.5f, this);
@@ -25,6 +29,7 @@ public class DoorInteractMaze : Interactable
         playerMove.Maze(true);
         rigid.useGravity = false;
         Player.transform.position = endLocation.position;
+        manager.setLocation(endRoom);
     }
     protected override void Finished()
     {
