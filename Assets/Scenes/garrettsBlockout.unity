@@ -10652,6 +10652,8 @@ MonoBehaviour:
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
   rigid: {fileID: 1614031489}
+  manager: {fileID: 1206418959}
+  endRoom: 0
 --- !u!65 &155767996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16205,6 +16207,8 @@ MonoBehaviour:
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
   rigid: {fileID: 1614031489}
+  manager: {fileID: 1206418959}
+  endRoom: 0
 --- !u!65 &297062249
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29280,6 +29284,8 @@ MonoBehaviour:
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
   rigid: {fileID: 1614031489}
+  manager: {fileID: 1206418959}
+  endRoom: 0
 --- !u!65 &501773036
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43392,6 +43398,8 @@ MonoBehaviour:
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
   rigid: {fileID: 1614031489}
+  manager: {fileID: 1206418959}
+  endRoom: 0
 --- !u!65 &718528056
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54043,6 +54051,8 @@ MonoBehaviour:
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
   rigid: {fileID: 1614031489}
+  manager: {fileID: 1206418959}
+  endRoom: 0
 --- !u!65 &937786660
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65847,6 +65857,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1206418958}
+  - component: {fileID: 1206418959}
   m_Layer: 0
   m_Name: UI Manager
   m_TagString: Untagged
@@ -65869,6 +65880,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1206418959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206418957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c855d022670ee374fae494825c9cf7e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  location: {fileID: 368679173}
+  day: {fileID: 34316444}
+  time: {fileID: 1406928297}
 --- !u!43 &1209899865
 Mesh:
   m_ObjectHideFlags: 0
@@ -82179,6 +82205,8 @@ MonoBehaviour:
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
   rigid: {fileID: 1614031489}
+  manager: {fileID: 1206418959}
+  endRoom: 0
 --- !u!65 &1559557965
 BoxCollider:
   m_ObjectHideFlags: 0
