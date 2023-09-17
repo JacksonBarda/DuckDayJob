@@ -86,13 +86,10 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         grounded = Physics.Raycast(transform.position, -Vector3.up, 0.75f);
+
         if (!mazeMode)
         {
-            rigid.velocity = new Vector3(moveValRight - moveValLeft, (rigid.velocity.y/moveSpeed), 0f) * moveSpeed;
-        }
-
-        if (grounded && !mazeMode)
-        {
+            rigid.velocity = new Vector3(moveValRight - moveValLeft +((rigid.velocity.x) - (rigid.velocity.x * 0.1f)), (rigid.velocity.y), 0f);
             moveValRight = moveValRightHolder;
             moveValLeft = moveValLeftHolder;
         }
@@ -107,11 +104,16 @@ public class PlayerMove : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Wall")
+        if (collision.gameObject.tag == "Wall")
         {
-            moveValRight = 0f;
-            moveValLeft = 0f;
-            rigid.velocity = new Vector3(0f, (rigid.velocity.y / moveSpeed), 0f) * moveSpeed;
+            ContactPoint contact = collision.GetContact(0);
+            Vector3 bounceDirection = contact.normal;
+            float bounceForce = 50f; // Adjust this value to control the bounce intensity
+
+            // Apply the bounce force
+            rigid.velocity = new Vector3(-rigid.velocity.x, (rigid.velocity.y), 0f);
+            rigid.AddForce(bounceDirection * bounceForce, ForceMode.Impulse);
+            
         }
 
     }
