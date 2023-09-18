@@ -19,7 +19,9 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody rigid;
     [SerializeField]
     private bool grounded = false;
-    
+    [SerializeField]
+    private Vector3 customLocation;
+
     private Interactable interactable;
 
 
@@ -67,6 +69,7 @@ public class PlayerMove : MonoBehaviour
         if (interactable != null && !mazeMode)
         {
             interactable.Interact();
+            Debug.Log("interacted");
         }
         if (mazeMode)
         {
@@ -101,6 +104,11 @@ public class PlayerMove : MonoBehaviour
             moveValUp = moveValUpHolder;
             rigid.velocity = new Vector3(moveValRight - moveValLeft, moveValUp-moveValDown, 0f) * moveSpeed;
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+          //  customLocation = 
+            MoveToCustomLocation();
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -134,5 +142,9 @@ public class PlayerMove : MonoBehaviour
     public void Maze(bool value)
     {
         mazeMode = value;
+    }
+    private void MoveToCustomLocation()
+    {
+        transform.position = customLocation;
     }
 }

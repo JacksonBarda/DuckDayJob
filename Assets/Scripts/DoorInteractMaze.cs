@@ -19,6 +19,7 @@ public class DoorInteractMaze : Interactable
     private UIManager manager;
     [SerializeField]
     private Locations endRoom;
+
     public override void Interact()
     {
         fade.FadeImageOverTime(0.5f, this);
