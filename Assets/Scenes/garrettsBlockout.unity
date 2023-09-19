@@ -86902,7 +86902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abeb1705fb715284e9b595e09a100674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 2
   grounded: 0
   customLocation: {x: 0, y: 0, z: 0}
   mazeMode: 0
