@@ -1,0 +1,141 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using System;
+using Enums;
+using Unity.VisualScripting;
+
+public class ReadDialogueData : MonoBehaviour
+{
+    [SerializeField]
+    private TextAsset DialogData;
+
+    [Serializable]
+    public struct DialogStruct
+    {
+        public string scene;
+        public int day;
+        public int order_priority;
+        public DayEnum dayOrNight;
+        public string name;
+        public int profileNumber;
+        public string dialogue;
+        public bool normalUI;
+        public Alignment align;
+        public FontSelectStyle fontStyle;
+        public bool options;
+        public int optionNumber;
+        public bool talkAgain;
+
+        public DialogStruct(string sceneString, int dayNumber, int order, DayEnum dayNight, string duck, 
+            int profile, string dialog, bool uistyle, Alignment alignment, FontSelectStyle style, bool opt, int optNum, bool again)
+        {
+            scene = sceneString;
+            day = dayNumber;
+            order_priority = order;
+            dayOrNight = dayNight;
+            name = duck;
+            profileNumber = profile;
+            dialogue = dialog;
+            normalUI = uistyle;
+            align = alignment;
+            fontStyle = style;
+            options = opt;  
+            optionNumber = optNum;
+            talkAgain = again;
+           
+        }
+
+    }
+
+    [SerializeField]
+    private List<DialogStruct> DialogList = new List<DialogStruct>();
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        getData();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+
+    public void getData()
+    {
+        DialogList.Clear();
+        string[] firstLinesInFile = DialogData.text.Split("\n");
+
+        // remove first row because those are the headings
+        int count = 0;
+        List<string> LinesInFile = new List<string>();
+
+        foreach (string row in firstLinesInFile)
+        {
+            if (count != 0)
+            {
+                LinesInFile.Add(row);
+            }
+            count++;
+        }
+
+
+        // sets the row into a proper struct to add to the dialogue lists
+        foreach (string line in LinesInFile)
+        {
+            if (string.IsNullOrEmpty(line))
+            {
+                Debug.Log("Empty");
+
+            }
+            else
+            {
+                string[] getLine = line.Split("\t");
+
+                /*
+                string scene = getLine[0];
+                int day = int.Parse(getLine[1]);
+                int order = int.Parse(getLine[2]);
+                DayEnum dayOrNight = (DayEnum)System.Enum.Parse(typeof(DayEnum), getLine[3]);
+                string name = getLine[4];
+                int profile = int.Parse(getLine[5]);
+                string dialog = getLine[6];
+                bool normalUI = convertStringToBool(getLine[7]);
+                Alignment align = (Alignment)System.Enum.Parse(typeof(Alignment), getLine[8]);
+                FontSelectStyle style = (FontSelectStyle)System.Enum.Parse(typeof(FontSelectStyle), getLine[9]);
+                bool options = convertStringToBool(getLine[10]);
+                int optNum = int.Parse(getLine[11]);
+                bool talkAgain = convertStringToBool(getLine[12]);
+                */
+
+                DialogStruct dialogRow = new DialogStruct(getLine[0], int.Parse(getLine[1]), int.Parse(getLine[2]), (DayEnum)System.Enum.Parse(typeof(DayEnum), getLine[3]), getLine[4],
+                    int.Parse(getLine[5]), getLine[6], convertStringToBool(getLine[7]), (Alignment)System.Enum.Parse(typeof(Alignment), getLine[8]),
+                    (FontSelectStyle)System.Enum.Parse(typeof(FontSelectStyle), getLine[9]), convertStringToBool(getLine[10]), int.Parse(getLine[11]), convertStringToBool(getLine[12]));
+
+                DialogList.Add(dialogRow);
+            }
+        }
+    }
+
+    // converts the string to bool because there were parse issues initially
+    public bool convertStringToBool(string boolString)
+    {
+        bool newBool;
+
+        if (boolString.Equals("TRUE"))
+        {
+            newBool = true;
+        }
+        else
+        {
+            newBool = false;
+        }
+
+        return newBool;
+    }
+}

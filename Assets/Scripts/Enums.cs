@@ -13,5 +13,23 @@ namespace Enums
         KILLINGFLOOR,
         BOSSROOM
     }
+
+    public enum DayEnum
+    {
+        Day,
+        Night
+    }
+    
+    public enum Alignment
+    {
+        Left,
+        Right
+    }
+
+    public enum FontSelectStyle
+    {
+        Italics,
+        Normal
+    }
 }
 
