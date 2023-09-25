@@ -6,14 +6,19 @@ public class EmailDecrypt : Interactable
 {
     public GameObject puzzleUI;
     public GameObject mainUI;
-    public RectTransform greenBox;
+
     public Text[] numberColumns;
+    public GameObject[] boxColors;
+    public RectTransform[] rect;
     private int focusedColumn;
     private int[] correctNumbers;
+    private bool[] isAnimating;
+    private float[] speeds;
 
     public override void Interact()
     {
         //fade.FadeImageOverTime(0.7f, this);
+ 
         puzzleUI.SetActive(true);
         mainUI.SetActive(false);
         InitializePuzzle();
@@ -36,6 +41,11 @@ public class EmailDecrypt : Interactable
 
     private void InitializePuzzle()
     {
+        foreach (GameObject GO in boxColors)
+        {
+            GO.GetComponent<Image>().color = new Color(164, 61, 53, 255);
+
+        }
         correctNumbers = new int[numberColumns.Length];
         for (int i = 0; i < numberColumns.Length; i++)
         {
@@ -61,12 +71,12 @@ public class EmailDecrypt : Interactable
         if (Input.GetKeyDown(KeyCode.Space))
         {
             RectTransform columnTransform = numberColumns[focusedColumn].GetComponent<RectTransform>();
-            if (greenBox.rect.Contains(columnTransform.localPosition))
+            if (rect[focusedColumn].GetComponent<Rect>().Contains(columnTransform.localPosition))
             {
                 int lockedNumber = int.Parse(numberColumns[focusedColumn].text);
                 if (lockedNumber == correctNumbers[focusedColumn])
                 {
-                    numberColumns[focusedColumn].color = Color.green;
+                    boxColors[focusedColumn].GetComponent<Image>().color = new Color(79, 154, 53, 255);
                     focusedColumn++;
                 }
                 else
@@ -80,12 +90,12 @@ public class EmailDecrypt : Interactable
     private IEnumerator FloatingNumbersAnimation()
     {
         int[] currentNumbers = new int[numberColumns.Length];
-        float[] speeds = new float[numberColumns.Length];
-        bool[] isAnimating = new bool[numberColumns.Length];
+        speeds = new float[numberColumns.Length];
+        isAnimating = new bool[numberColumns.Length];
 
         for (int i = 0; i < speeds.Length; i++)
         {
-            speeds[i] = Random.Range(0.03f, 0.06f);
+            speeds[i] = Random.Range(0.05f, 0.1f);
             isAnimating[i] = true;
         }
 
@@ -104,7 +114,7 @@ public class EmailDecrypt : Interactable
                     RectTransform columnTransform = numberColumns[i].GetComponent<RectTransform>();
                     columnTransform.localPosition += new Vector3(0, -speeds[i], 0);
 
-                    if (columnTransform.localPosition.y < -greenBox.rect.height)
+                    if (columnTransform.localPosition.y < -rect[focusedColumn].localPosition.y)
                     {
                         columnTransform.localPosition = new Vector3(columnTransform.localPosition.x, 0, columnTransform.localPosition.z);
                         currentNumbers[i] = (currentNumbers[i] + 1) % 10;
@@ -119,19 +129,20 @@ public class EmailDecrypt : Interactable
 
     private IEnumerator ResetPuzzle()
     {
-        greenBox.GetComponent<Image>().color = Color.red;
-        for (int i = 0; i < focusedColumn; i++)
+
+        for (int i = 0; i < speeds.Length; i++)
         {
-            numberColumns[i].color = Color.red;
+            speeds[i] = Random.Range(0.05f, 0.1f);
+            isAnimating[i] = true;
         }
+        foreach (GameObject GO in boxColors)
+        {
+            GO.GetComponent<Image>().color = new Color(164, 61, 53, 255);
+        }
+
         yield return new WaitForSeconds(1f);
 
-        greenBox.GetComponent<Image>().color = Color.green;
-        for (int i = 0; i < focusedColumn; i++)
-        {
-            numberColumns[i].color = Color.white;
-        }
-        focusedColumn = 0;
+
     }
 }
 
