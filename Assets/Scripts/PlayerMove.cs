@@ -21,12 +21,13 @@ public class PlayerMove : MonoBehaviour
     private bool grounded = false;
     [SerializeField]
     private Vector3 customLocation;
-    [SerializeField]
-    private Interactable interactable;
+
+    private List<Interactable> interactable = new List<Interactable>();
 
     public bool puzzleMode = false;
     public bool mazeMode = false;
 
+   
     
     private void Start()
     {
@@ -52,9 +53,9 @@ public class PlayerMove : MonoBehaviour
     }
     void OnJump(InputValue value)
     {
-        if (interactable != null && mazeMode)
+        if (interactable[0] != null && mazeMode)
         {
-            interactable.Interact();
+            interactable[0].Interact();
         }
         if (grounded && !mazeMode && !puzzleMode)
         {
@@ -66,9 +67,10 @@ public class PlayerMove : MonoBehaviour
     void OnInteract(InputValue value)
     {
         moveValUpHolder = value.Get<float>();
-        if (interactable != null && !mazeMode && !puzzleMode)
+        if (interactable[0] != null && !mazeMode && !puzzleMode)
         {
-            interactable.Interact();
+
+            interactable[interactable.Count].Interact();
             Debug.Log("interacted");
         }
         if (mazeMode)
@@ -132,14 +134,17 @@ public class PlayerMove : MonoBehaviour
     {
         if (collision.gameObject.tag == "Interactable")
         {
-            interactable = collision.gameObject.GetComponent<Interactable>();
+            if (interactable != null)
+                interactable.Add(collision.gameObject.GetComponent<Interactable>());
+
         }
     }
     private void OnTriggerExit(Collider collision)
     {
         if (collision.gameObject.tag == "Interactable")
         {
-            interactable = null;
+            if (interactable != null)
+            interactable.Remove(interactable[0]);
         }
     }
     public void Maze(bool value)
