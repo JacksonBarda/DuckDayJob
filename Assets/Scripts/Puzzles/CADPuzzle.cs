@@ -66,6 +66,7 @@ public class CADPuzzle : Interactable
 
     public override void Interact()
     {
+        player.puzzleMode = true;
         puzzleUI.SetActive(true);
         mainUI.SetActive(false);
     }
@@ -77,6 +78,7 @@ public class CADPuzzle : Interactable
 
     protected override void Finished()
     {
+        player.puzzleMode = false;
         puzzleUI.SetActive(false);
         mainUI.SetActive(true);
         count = 0;

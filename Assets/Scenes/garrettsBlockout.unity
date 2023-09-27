@@ -10718,6 +10718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fade: {fileID: 1463816534}
+  player: {fileID: 0}
   endLocation: {fileID: 1741837645}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -16580,6 +16581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fade: {fileID: 1463816534}
+  player: {fileID: 0}
   endLocation: {fileID: 520832545}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -30077,6 +30079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fade: {fileID: 1463816534}
+  player: {fileID: 0}
   endLocation: {fileID: 1075681631}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -44641,6 +44644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fade: {fileID: 1463816534}
+  player: {fileID: 0}
   endLocation: {fileID: 1741837645}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -55694,6 +55698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fade: {fileID: 1463816534}
+  player: {fileID: 0}
   endLocation: {fileID: 1166499524}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -71403,6 +71408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fade: {fileID: 1463816534}
+  player: {fileID: 1614031491}
   puzzleUI: {fileID: 1769270219}
   mainUI: {fileID: 1213719444}
   numberColumns:
@@ -78358,6 +78364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fade: {fileID: 1463816534}
+  player: {fileID: 1614031491}
   wires:
   - {fileID: 453863459}
   - {fileID: 1129034480}
@@ -85038,6 +85045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fade: {fileID: 1463816534}
+  player: {fileID: 0}
   endLocation: {fileID: 309978772}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -89012,6 +89020,7 @@ MonoBehaviour:
   moveSpeed: 2
   grounded: 0
   customLocation: {x: 0, y: 0, z: 0}
+  puzzleMode: 0
   mazeMode: 0
 --- !u!114 &1614031492
 MonoBehaviour:
@@ -103802,6 +103811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fade: {fileID: 1463816534}
+  player: {fileID: 1614031491}
   fragments:
   - {fileID: 1956100895}
   outlines:
