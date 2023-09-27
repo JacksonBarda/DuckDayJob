@@ -46,11 +46,11 @@ public class EmailDecrypt : Interactable
 
     private void InitializePuzzle()
     {
-
+        Debug.Log(boxColors[1]);
         foreach (GameObject GO in boxColors)
         {
-            GO.GetComponent<Image>().color = new Color(164, 61, 53, 255);
-
+            GO.GetComponent<Image>().color = new Color32(164, 61, 53, 255);
+            Debug.Log(GO);
         }
         correctNumbers = new int[numberColumns.Length];
         for (int i = 0; i < numberColumns.Length; i++)
@@ -84,7 +84,7 @@ public class EmailDecrypt : Interactable
                     int lockedNumber = int.Parse(numberColumns[focusedColumn].text);
                     if (lockedNumber == correctNumbers[focusedColumn])
                     {
-                        boxColors[focusedColumn].GetComponent<Image>().color = new Color(79, 154, 53, 255);
+                        boxColors[focusedColumn].GetComponent<Image>().color = new Color32(79, 154, 53, 255);
                         focusedColumn++;
                     }
                     else
@@ -128,7 +128,7 @@ public class EmailDecrypt : Interactable
                     {
                         columnTransform.localPosition = new Vector3(columnTransform.localPosition.x, 0, columnTransform.localPosition.z);
                         currentNumbers[i] = (currentNumbers[i] + 1) % 10;
-                        Debug.Log(currentNumbers[i].ToString());
+                        //Debug.Log(currentNumbers[i].ToString());
                         numberColumns[i].text = currentNumbers[i].ToString();
                     }
                 }
@@ -147,7 +147,7 @@ public class EmailDecrypt : Interactable
         }
         foreach (GameObject GO in boxColors)
         {
-            GO.GetComponent<Image>().color = new Color(164, 61, 53, 255);
+            GO.GetComponent<Image>().color = new Color32(164, 61, 53, 255);
         }
 
         yield return new WaitForSeconds(1f);
