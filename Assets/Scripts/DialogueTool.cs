@@ -67,6 +67,7 @@ public class DialogueTool : Interactable
         DialogueDisplay.SetActive(true);
 
         // disable user input
+        player.puzzleMode = true;
 
         // set first line
         setDialogueUI();
@@ -76,7 +77,7 @@ public class DialogueTool : Interactable
     {
         // call it anytime inside the function and have your stuff that finished the interact, like close all the dialogue and bring back the main UI
         // below is placeholder if there is no code. If there is code, can delete
-        throw new System.NotImplementedException();
+        player.puzzleMode = false;
     }
 
     

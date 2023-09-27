@@ -98020,6 +98020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fade: {fileID: 1463816534}
+  player: {fileID: 1614031491}
   MainDisplay: {fileID: 1213719444}
   DialogueDisplay: {fileID: 2075323091}
   Profile: {fileID: 2122043642}
