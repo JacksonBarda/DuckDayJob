@@ -6,9 +6,13 @@ using TMPro;
 using System;
 using Enums;
 using Unity.VisualScripting;
+using System.Runtime.CompilerServices;
 
 public class ReadDialogueData : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject UIManager;
+    
     [SerializeField]
     private TextAsset DialogData;
 
@@ -50,8 +54,9 @@ public class ReadDialogueData : MonoBehaviour
 
     }
 
-    [SerializeField]
-    private List<DialogStruct> DialogList = new List<DialogStruct>();
+    public List<DialogStruct> DialogList = new List<DialogStruct>();
+
+    public List<Sprite> ProfileImages = new List<Sprite>();
 
     // Start is called before the first frame update
     void Start()
