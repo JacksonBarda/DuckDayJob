@@ -67,6 +67,7 @@ public class DialogueTool : Interactable
 
     public override void Interact()
     {
+        Debug.Log("Talked");
         index = 0;
         // as you press w, it does this
         MainDisplay.SetActive(false);

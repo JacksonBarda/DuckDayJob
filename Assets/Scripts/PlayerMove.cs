@@ -21,7 +21,7 @@ public class PlayerMove : MonoBehaviour
     private bool grounded = false;
     [SerializeField]
     private Vector3 customLocation;
-
+    [SerializeField]
     private Interactable interactable;
 
     public bool puzzleMode = false;
