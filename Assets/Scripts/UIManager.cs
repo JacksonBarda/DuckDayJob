@@ -19,7 +19,8 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private GameObject DialogueUI;
 
-    private int dayNumber = 1;
+    public int dayNumber = 1;
+    public DayEnum dayOrNight = DayEnum.Day;
     private int hour = 9;
     private string meridiem = "a.m.";
     private Locations startingLocation = Locations.LOBBY;
@@ -48,6 +49,7 @@ public class UIManager : MonoBehaviour
         dayNumber++;
         day.text = "Day " + dayNumber;
     }
+
 
     public void UpdateTime(int addHours)
     {

@@ -8,6 +8,7 @@ using Enums;
 using Unity.VisualScripting;
 using System.Runtime.CompilerServices;
 using Unity.IO.LowLevel.Unsafe;
+using static UnityEditor.Progress;
 
 public class ReadDialogueData : MonoBehaviour
 {
@@ -61,7 +62,7 @@ public class ReadDialogueData : MonoBehaviour
 
     public GameObject DialogTool;
 
-    public int priority = 1;
+    public int priority;
 
     public List<GameObject> DialogueToolsList = new List<GameObject>(); 
 
@@ -69,6 +70,18 @@ public class ReadDialogueData : MonoBehaviour
     void Start()
     {
         getData();
+
+        // set dialogue list for each tool
+        foreach (GameObject dTool in DialogueToolsList)
+        {
+            dTool.GetComponent<DialogueTool>().setList();
+        }
+        DialogTool = DialogueToolsList[0];
+        DialogTool.GetComponent<DialogueTool>().Interact();
+
+        // set which dialogue tools are active
+        priority = 1;
+        setDialogueTools();
     }
 
     // Update is called once per frame
@@ -155,5 +168,22 @@ public class ReadDialogueData : MonoBehaviour
     {
         DialogTool.GetComponent<DialogueTool>().index++;
         DialogTool.GetComponent<DialogueTool>().setDialogueUI();
+    }
+
+    public void setDialogueTools()
+    {
+        foreach (GameObject dTool in DialogueToolsList)
+        {
+            if (dTool.GetComponent<DialogueTool>().DialogueList[0].order_priority == priority 
+                && dTool.GetComponent<DialogueTool>().DialogueList[0].day == UIManager.GetComponent<UIManager>().dayNumber 
+                && dTool.GetComponent<DialogueTool>().DialogueList[0].dayOrNight == UIManager.GetComponent<UIManager>().dayOrNight)
+            {
+                dTool.SetActive(true);
+            }
+            else
+            {
+                dTool.SetActive(false);
+            }
+        }
     }
 }

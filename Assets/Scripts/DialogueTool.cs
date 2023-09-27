@@ -30,9 +30,8 @@ public class DialogueTool : Interactable
     private string scene;
     [SerializeField]
     private bool increasePriority;
-    
 
-    private List<DialogStruct> DialogueList = new List<DialogStruct>();
+    public List<DialogStruct> DialogueList = new List<DialogStruct>();
 
     private List<DialogStruct> refDialogueList = new List<DialogStruct>();
 
@@ -40,6 +39,26 @@ public class DialogueTool : Interactable
 
     // Start is called before the first frame update
     void Start()
+    {
+        /*
+        refDialogueList = DialogueManager.GetComponent<ReadDialogueData>().DialogList;
+        foreach (DialogStruct DialogueRow in refDialogueList)
+        {
+            if (DialogueRow.scene == scene)
+            {
+                DialogueList.Add(DialogueRow);
+            }
+        }
+        */
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    public void setList()
     {
         refDialogueList = DialogueManager.GetComponent<ReadDialogueData>().DialogList;
         foreach (DialogStruct DialogueRow in refDialogueList)
@@ -49,12 +68,6 @@ public class DialogueTool : Interactable
                 DialogueList.Add(DialogueRow);
             }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public override void Action()
@@ -67,6 +80,7 @@ public class DialogueTool : Interactable
 
     public override void Interact()
     {
+        Debug.Log("Talked");
         index = 0;
         // as you press w, it does this
         MainDisplay.SetActive(false);
@@ -90,6 +104,7 @@ public class DialogueTool : Interactable
         if (increasePriority)
         {
             DialogueManager.GetComponent<ReadDialogueData>().priority++;
+            DialogueManager.GetComponent<ReadDialogueData>().setDialogueTools();
         }
     }
 
