@@ -6,9 +6,14 @@ using TMPro;
 using System;
 using Enums;
 using Unity.VisualScripting;
+using System.Runtime.CompilerServices;
+using Unity.IO.LowLevel.Unsafe;
 
 public class ReadDialogueData : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject UIManager;
+    
     [SerializeField]
     private TextAsset DialogData;
 
@@ -50,8 +55,15 @@ public class ReadDialogueData : MonoBehaviour
 
     }
 
-    [SerializeField]
-    private List<DialogStruct> DialogList = new List<DialogStruct>();
+    public List<DialogStruct> DialogList = new List<DialogStruct>();
+
+    public List<Sprite> ProfileImages = new List<Sprite>();
+
+    public GameObject DialogTool;
+
+    public int priority = 1;
+
+    public List<GameObject> DialogueToolsList = new List<GameObject>(); 
 
     // Start is called before the first frame update
     void Start()
@@ -137,5 +149,11 @@ public class ReadDialogueData : MonoBehaviour
         }
 
         return newBool;
+    }
+
+    public void nextLine()
+    {
+        DialogTool.GetComponent<DialogueTool>().index++;
+        DialogTool.GetComponent<DialogueTool>().setDialogueUI();
     }
 }

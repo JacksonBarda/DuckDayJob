@@ -14,6 +14,10 @@ public class UIManager : MonoBehaviour
     private TMP_Text day;
     [SerializeField]
     private TMP_Text time;
+    [SerializeField]
+    private GameObject MainUI;
+    [SerializeField]
+    private GameObject DialogueUI;
 
     private int dayNumber = 1;
     private int hour = 9;
@@ -117,4 +121,5 @@ public class UIManager : MonoBehaviour
 
         UpdateLocation(room);
     }
+
 }
