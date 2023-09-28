@@ -76,6 +76,7 @@ public class ReadDialogueData : MonoBehaviour
         {
             dTool.GetComponent<DialogueTool>().setList();
         }
+
         DialogTool = DialogueToolsList[0];
         DialogTool.GetComponent<DialogueTool>().Interact();
 
@@ -139,35 +140,23 @@ public class ReadDialogueData : MonoBehaviour
                 */
 
                 DialogStruct dialogRow = new DialogStruct(getLine[0], int.Parse(getLine[1]), int.Parse(getLine[2]), (DayEnum)System.Enum.Parse(typeof(DayEnum), getLine[3]), getLine[4],
-                    int.Parse(getLine[5]), getLine[6], convertStringToBool(getLine[7]), (Alignment)System.Enum.Parse(typeof(Alignment), getLine[8]),
-                    (FontSelectStyle)System.Enum.Parse(typeof(FontSelectStyle), getLine[9]), convertStringToBool(getLine[10]), int.Parse(getLine[11]), convertStringToBool(getLine[12]));
+                    int.Parse(getLine[5]), getLine[6], bool.Parse(getLine[7]), (Alignment)System.Enum.Parse(typeof(Alignment), getLine[8]),
+                    (FontSelectStyle)System.Enum.Parse(typeof(FontSelectStyle), getLine[9]), bool.Parse(getLine[10]), int.Parse(getLine[11]), bool.Parse(getLine[12]));
 
                 DialogList.Add(dialogRow);
             }
         }
     }
 
-    // converts the string to bool because there were parse issues initially
-    public bool convertStringToBool(string boolString)
-    {
-        bool newBool;
-
-        if (boolString.Equals("TRUE"))
-        {
-            newBool = true;
-        }
-        else
-        {
-            newBool = false;
-        }
-
-        return newBool;
-    }
-
     public void nextLine()
     {
         DialogTool.GetComponent<DialogueTool>().index++;
         DialogTool.GetComponent<DialogueTool>().setDialogueUI();
+    }
+
+    public void optionClicked()
+    {
+        DialogTool.GetComponent<DialogueTool>().setSelectedOptionDialogue();
     }
 
     public void setDialogueTools()

@@ -6,6 +6,7 @@ using TMPro;
 using static ReadDialogueData;
 using UnityEditor;
 using Enums;
+using Unity.VisualScripting;
 
 public class DialogueTool : Interactable
 {
@@ -27,19 +28,30 @@ public class DialogueTool : Interactable
     [SerializeField]
     private GameObject DialogueManager;
     [SerializeField]
+    private GameObject Options;
+    [SerializeField]
     private string scene;
     [SerializeField]
     private bool increasePriority;
+    [SerializeField]
+    private GameObject optionButtonPrefab;
 
     public List<DialogStruct> DialogueList = new List<DialogStruct>();
+
+    public List<DialogStruct> talkAgainList = new List<DialogStruct>();
+
+    private List<DialogStruct> responseList = new List<DialogStruct>();
 
     private List<DialogStruct> refDialogueList = new List<DialogStruct>();
 
     public int index = 0;
 
+    private bool talkAgain;
+
     // Start is called before the first frame update
     void Start()
     {
+        talkAgain = false;
         /*
         refDialogueList = DialogueManager.GetComponent<ReadDialogueData>().DialogList;
         foreach (DialogStruct DialogueRow in refDialogueList)
@@ -63,11 +75,20 @@ public class DialogueTool : Interactable
         refDialogueList = DialogueManager.GetComponent<ReadDialogueData>().DialogList;
         foreach (DialogStruct DialogueRow in refDialogueList)
         {
-            if (DialogueRow.scene == scene)
+            if (DialogueRow.scene.Contains(scene) == true)
             {
-                DialogueList.Add(DialogueRow);
+                if (DialogueRow.talkAgain == false)
+                {
+                    DialogueList.Add(DialogueRow);
+                }
+                else
+                {
+                    talkAgainList.Add(DialogueRow);
+                }
+                
             }
         }
+
     }
 
     public override void Action()
@@ -106,83 +127,223 @@ public class DialogueTool : Interactable
             DialogueManager.GetComponent<ReadDialogueData>().priority++;
             DialogueManager.GetComponent<ReadDialogueData>().setDialogueTools();
         }
+        talkAgain = true;
+        index = 0;
     }
 
-    
+    public bool setOptions()
+    {
+        bool hadOption = false;
+        if (talkAgain)
+        {
+            
+
+        }
+        else
+        {
+            Options.SetActive(true);
+
+            if (DialogueList[index].options)
+            {
+                hadOption = true;
+                for (int i = 1; i < DialogueList[index].optionNumber; i++)
+                {
+                    GameObject newButton = Instantiate(optionButtonPrefab, Options.transform);
+                    newButton.GetComponent<OptionButtonSetUp>().optionNumber = i;
+                    List<DialogStruct> optionList = new List<DialogStruct>();
+                    foreach (DialogStruct optionDialog in DialogueList)
+                    {
+                        if (optionDialog.optionNumber == i && optionDialog.scene.Contains("Response") == true)
+                        {
+                            optionList.Add(optionDialog);
+                        }
+                        if (optionDialog.optionNumber == i && optionDialog.scene.Contains("Option") == true)
+                        {
+                            newButton.GetComponent<TMP_Text>().text = optionDialog.dialogue;
+                        }
+                    }
+                    newButton.GetComponent<OptionButtonSetUp>().OptionResponseList = optionList;
+                }
+            }
+        }
+        return hadOption;
+    }
     public void setProfile()
     {
-        switch (DialogueList[index].align)
+        if (talkAgain)
         {
-            case Alignment.Left:
-                Profile.gameObject.SetActive(true);
-                Profile2.gameObject.SetActive(false);
-                Profile.sprite = DialogueManager.GetComponent<ReadDialogueData>().ProfileImages[DialogueList[index].profileNumber - 1];
-                break;
+            switch (talkAgainList[index].align)
+            {
+                case Alignment.Left:
+                    Profile.gameObject.SetActive(true);
+                    Profile2.gameObject.SetActive(false);
+                    Profile.sprite = DialogueManager.GetComponent<ReadDialogueData>().ProfileImages[talkAgainList[index].profileNumber - 1];
+                    break;
 
-            case Alignment.Right:
-                Profile.gameObject.SetActive(false);
-                Profile2.gameObject.SetActive(true);
-                Profile2.sprite = DialogueManager.GetComponent<ReadDialogueData>().ProfileImages[DialogueList[index].profileNumber - 1];
-                break;
+                case Alignment.Right:
+                    Profile.gameObject.SetActive(false);
+                    Profile2.gameObject.SetActive(true);
+                    Profile2.sprite = DialogueManager.GetComponent<ReadDialogueData>().ProfileImages[talkAgainList[index].profileNumber - 1];
+                    break;
 
-            default:
-                Profile.gameObject.SetActive(true);
-                Profile2.gameObject.SetActive(false);
-                Profile.sprite = DialogueManager.GetComponent<ReadDialogueData>().ProfileImages[DialogueList[index].profileNumber - 1];
-                break;
+                default:
+                    Profile.gameObject.SetActive(true);
+                    Profile2.gameObject.SetActive(false);
+                    Profile.sprite = DialogueManager.GetComponent<ReadDialogueData>().ProfileImages[talkAgainList[index].profileNumber - 1];
+                    break;
+            }
         }
+        else
+        {
+            switch (DialogueList[index].align)
+            {
+                case Alignment.Left:
+                    Profile.gameObject.SetActive(true);
+                    Profile2.gameObject.SetActive(false);
+                    Profile.sprite = DialogueManager.GetComponent<ReadDialogueData>().ProfileImages[DialogueList[index].profileNumber - 1];
+                    break;
+
+                case Alignment.Right:
+                    Profile.gameObject.SetActive(false);
+                    Profile2.gameObject.SetActive(true);
+                    Profile2.sprite = DialogueManager.GetComponent<ReadDialogueData>().ProfileImages[DialogueList[index].profileNumber - 1];
+                    break;
+
+                default:
+                    Profile.gameObject.SetActive(true);
+                    Profile2.gameObject.SetActive(false);
+                    Profile.sprite = DialogueManager.GetComponent<ReadDialogueData>().ProfileImages[DialogueList[index].profileNumber - 1];
+                    break;
+            }
+        }
+        
     }
     public void setName()
     {
-        Name.text = DialogueList[index].name;
-        switch (DialogueList[index].align)
+        if (talkAgain)
         {
-            case Alignment.Left:
-                Name.alignment = TextAlignmentOptions.Left;
-                break;
+            Name.text = talkAgainList[index].name;
+            switch (talkAgainList[index].align)
+            {
+                case Alignment.Left:
+                    Name.alignment = TextAlignmentOptions.Left;
+                    break;
 
-            case Alignment.Right:
-                Name.alignment = TextAlignmentOptions.Right;
-                break;
+                case Alignment.Right:
+                    Name.alignment = TextAlignmentOptions.Right;
+                    break;
 
-            default:
-                Name.alignment = TextAlignmentOptions.Left;
-                break;
+                default:
+                    Name.alignment = TextAlignmentOptions.Left;
+                    break;
+            }
         }
+        else
+        {
+            Name.text = DialogueList[index].name;
+            switch (DialogueList[index].align)
+            {
+                case Alignment.Left:
+                    Name.alignment = TextAlignmentOptions.Left;
+                    break;
+
+                case Alignment.Right:
+                    Name.alignment = TextAlignmentOptions.Right;
+                    break;
+
+                default:
+                    Name.alignment = TextAlignmentOptions.Left;
+                    break;
+            }
+        }
+        
     }
     public void setLine()
     {
-        Dialogue.text = DialogueList[index].dialogue;
-        switch (DialogueList[index].fontStyle)
+        if (talkAgain)
         {
-            case FontSelectStyle.Normal:
-                Dialogue.fontStyle = FontStyles.Normal;
-                break;
+            Dialogue.text = talkAgainList[index].dialogue;
+            switch (talkAgainList[index].fontStyle)
+            {
+                case FontSelectStyle.Normal:
+                    Dialogue.fontStyle = FontStyles.Normal;
+                    break;
 
-            case FontSelectStyle.Italics:
-                Dialogue.fontStyle = FontStyles.Italic;
-                break;
+                case FontSelectStyle.Italics:
+                    Dialogue.fontStyle = FontStyles.Italic;
+                    break;
 
-            default:
-                Dialogue.fontStyle = FontStyles.Normal;
-                break;
+                default:
+                    Dialogue.fontStyle = FontStyles.Normal;
+                    break;
 
+            }
         }
+        else
+        {
+            Dialogue.text = DialogueList[index].dialogue;
+            switch (DialogueList[index].fontStyle)
+            {
+                case FontSelectStyle.Normal:
+                    Dialogue.fontStyle = FontStyles.Normal;
+                    break;
+
+                case FontSelectStyle.Italics:
+                    Dialogue.fontStyle = FontStyles.Italic;
+                    break;
+
+                default:
+                    Dialogue.fontStyle = FontStyles.Normal;
+                    break;
+
+            }
+        }
+        
 
     }
 
     public void setDialogueUI()
     {
-        if (index > DialogueList.Count-1)
+        if (talkAgain)
         {
-            Finished();
+            if (index > talkAgainList.Count - 1)
+            {
+                Finished();
+            }
+            else
+            {
+                if (!setOptions())
+                {
+                    setProfile();
+                    setName();
+                    setLine();
+                }
+
+            }
         }
         else
         {
-            setProfile();
-            setName();
-            setLine();
+            if (index > DialogueList.Count - 1)
+            {
+                Finished();
+            }
+            else
+            {
+                if (!setOptions())
+                {
+                    setProfile();
+                    setName();
+                    setLine();
+                }
+
+            }
         }
+        
+    }
+
+    public void setSelectedOptionDialogue()
+    {
+        Options.SetActive(false);
     }
 
 }
