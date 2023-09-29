@@ -34960,6 +34960,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1638869473}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: NextButton
+      value: 
+      objectReference: {fileID: 1832684910}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: MainDisplay
       value: 
       objectReference: {fileID: 1213719444}
@@ -92223,6 +92227,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1638869473}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: NextButton
+      value: 
+      objectReference: {fileID: 1832684910}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: MainDisplay
       value: 
       objectReference: {fileID: 1213719444}
@@ -98430,6 +98438,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1638869473}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: NextButton
+      value: 
+      objectReference: {fileID: 1832684910}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: MainDisplay
       value: 
       objectReference: {fileID: 1213719444}
@@ -98709,6 +98721,7 @@ MonoBehaviour:
   optionButtonPrefab: {fileID: 3741148585713256696, guid: 8d6318746227bea4fa19349685a9f366, type: 3}
   DialogueList: []
   talkAgainList: []
+  refDialogueList: []
   index: 0
 --- !u!65 &1804512342
 BoxCollider:
@@ -117028,6 +117041,10 @@ PrefabInstance:
       propertyPath: Profile2
       value: 
       objectReference: {fileID: 1638869473}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: NextButton
+      value: 
+      objectReference: {fileID: 1832684910}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: MainDisplay
       value: 

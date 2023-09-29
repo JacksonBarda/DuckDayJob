@@ -36,22 +36,28 @@ public class DialogueTool : Interactable
     [SerializeField]
     private GameObject optionButtonPrefab;
 
+
     public List<DialogStruct> DialogueList = new List<DialogStruct>();
 
     public List<DialogStruct> talkAgainList = new List<DialogStruct>();
 
-    private List<DialogStruct> responseList = new List<DialogStruct>();
-
+    private List<List<DialogStruct>> responseList = new List<List<DialogStruct>>();
+    [SerializeField]
     private List<DialogStruct> refDialogueList = new List<DialogStruct>();
+
+    private List<GameObject> buttonList = new List<GameObject>();
 
     public int index = 0;
 
     private bool talkAgain;
 
+    private bool inOptionDialog;
+
     // Start is called before the first frame update
     void Start()
     {
         talkAgain = false;
+        inOptionDialog = false;
         /*
         refDialogueList = DialogueManager.GetComponent<ReadDialogueData>().DialogList;
         foreach (DialogStruct DialogueRow in refDialogueList)
@@ -122,21 +128,79 @@ public class DialogueTool : Interactable
         MainDisplay.SetActive(true);
         DialogueDisplay.SetActive(false);
         player.puzzleMode = false;
+
         if (increasePriority)
         {
             DialogueManager.GetComponent<ReadDialogueData>().priority++;
             DialogueManager.GetComponent<ReadDialogueData>().setDialogueTools();
         }
-        talkAgain = true;
+
+        if (inOptionDialog)
+        {
+            if (talkAgain)
+            {
+                talkAgainList = refDialogueList;
+            }
+            else
+            {
+                DialogueList = refDialogueList;
+            }
+            inOptionDialog = false;
+        }
+
+        // only sets talk again if there is a talk again dialogue. otherwise, if talk with the duck again, will play the same dialogue
+        if (talkAgainList.Count != 0)
+        {
+            talkAgain = true;
+        }
         index = 0;
+        
+    }
+
+    public void ResetTool()
+    {
+        MainDisplay.SetActive(true);
+        DialogueDisplay.SetActive(false);
+        player.puzzleMode = false;
     }
 
     public bool setOptions()
     {
         bool hadOption = false;
+        responseList.Clear();
         if (talkAgain)
         {
-            
+            Options.SetActive(true);
+
+            if (talkAgainList[index].options)
+            {
+                refDialogueList = talkAgainList;
+                hadOption = true;
+                setProfile();
+                setName();
+                setLine();
+                for (int i = 1; i <= talkAgainList[index].optionNumber; i++)
+                {
+                    GameObject newButton = Instantiate(optionButtonPrefab, Options.transform);
+                    newButton.GetComponent<OptionButtonSetUp>().optionNumber = i;
+                    buttonList.Add(newButton);
+                    List<DialogStruct> optionList = new List<DialogStruct>();
+                    foreach (DialogStruct optionDialog in talkAgainList)
+                    {
+                        if (optionDialog.optionNumber == i && optionDialog.scene.Contains("Response") == true)
+                        {
+                            optionList.Add(optionDialog);
+                        }
+                        if (optionDialog.optionNumber == i && optionDialog.scene.Contains("Option") == true)
+                        {
+                            newButton.GetComponentInChildren<TMP_Text>().text = optionDialog.dialogue;
+                        }
+                    }
+                    newButton.GetComponent<OptionButtonSetUp>().OptionResponseList = optionList;
+                    newButton.GetComponent<OptionButtonSetUp>().originalDialogueTool = this.gameObject;
+                    responseList.Add(optionList);
+                }
+            }
 
         }
         else
@@ -145,11 +209,16 @@ public class DialogueTool : Interactable
 
             if (DialogueList[index].options)
             {
+                refDialogueList = DialogueList;
                 hadOption = true;
-                for (int i = 1; i < DialogueList[index].optionNumber; i++)
+                setProfile();
+                setName();
+                setLine();
+                for (int i = 1; i <= DialogueList[index].optionNumber; i++)
                 {
                     GameObject newButton = Instantiate(optionButtonPrefab, Options.transform);
                     newButton.GetComponent<OptionButtonSetUp>().optionNumber = i;
+                    buttonList.Add(newButton);
                     List<DialogStruct> optionList = new List<DialogStruct>();
                     foreach (DialogStruct optionDialog in DialogueList)
                     {
@@ -159,12 +228,15 @@ public class DialogueTool : Interactable
                         }
                         if (optionDialog.optionNumber == i && optionDialog.scene.Contains("Option") == true)
                         {
-                            newButton.GetComponent<TMP_Text>().text = optionDialog.dialogue;
+                            newButton.GetComponentInChildren<TMP_Text>().text = optionDialog.dialogue;
                         }
                     }
                     newButton.GetComponent<OptionButtonSetUp>().OptionResponseList = optionList;
+                    newButton.GetComponent<OptionButtonSetUp>().originalDialogueTool = this.gameObject;
+                    responseList.Add(optionList);
                 }
             }
+
         }
         return hadOption;
     }
@@ -341,9 +413,17 @@ public class DialogueTool : Interactable
         
     }
 
-    public void setSelectedOptionDialogue()
+    public void setSelectedOptionDialogue(GameObject selectedButton)
     {
         Options.SetActive(false);
+        inOptionDialog = true;
+        DialogueList = responseList[selectedButton.GetComponent<OptionButtonSetUp>().optionNumber - 1];
+        // need to delete option buttons
+        foreach (GameObject button in buttonList)
+        {
+            Destroy(button);
+        }
+        ResetTool();
     }
 
 }

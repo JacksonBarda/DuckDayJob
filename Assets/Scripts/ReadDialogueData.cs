@@ -154,11 +154,6 @@ public class ReadDialogueData : MonoBehaviour
         DialogTool.GetComponent<DialogueTool>().setDialogueUI();
     }
 
-    public void optionClicked()
-    {
-        DialogTool.GetComponent<DialogueTool>().setSelectedOptionDialogue();
-    }
-
     public void setDialogueTools()
     {
         foreach (GameObject dTool in DialogueToolsList)

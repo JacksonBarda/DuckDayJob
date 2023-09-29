@@ -14,7 +14,7 @@ Welcome to Nestla,1,2,Day,Main Duck,2,That means... I can introduce myself to Du
 Welcome to Nestla,1,2,Day,Main Duck,2,"Yes, sir! I look forward to meeting everyone.",TRUE,Left,Normal,FALSE,0,FALSE
 Welcome to Nestla,1,2,Day,Eggwin,3,"Good luck! Here is a list of ducks I would like you to meet. We have quite a few... interesting ducks here, if you catch my drift. So don’t let them weird you out.",TRUE,Right,Normal,FALSE,0,FALSE
 Welcome to Nestla,1,2,Day,Eggwin,3,I’ll be here if you either have questions or have finished your first assignment.,TRUE,Right,Normal,FALSE,0,FALSE
-Questions for Meet the Ducks,1,3,Day,Eggwin,3,Do you have a question?,TRUE,Right,Normal,TRUE,0,FALSE
+Questions for Meet the Ducks,1,3,Day,Eggwin,3,Do you have a question?,TRUE,Right,Normal,TRUE,4,FALSE
 Questions for Meet the Ducks_Option1,1,3,Day,None,0,Where can I find Duckette? ,TRUE,Right,Normal,FALSE,1,FALSE
 Questions for Meet the Ducks_Response1,1,3,Day,Eggwin,3,Duckette should be in the office room at her desk. She’s almost always on the computer.,TRUE,Right,Normal,FALSE,1,FALSE
 Questions for Meet the Ducks_Option2,1,3,Day,None,0,Where can I find Donald? ,TRUE,Right,Normal,FALSE,2,FALSE

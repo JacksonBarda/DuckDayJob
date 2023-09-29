@@ -122,9 +122,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ReadDialogueData, Assembly-CSharp
-        m_MethodName: optionClicked
+      - m_Target: {fileID: 5470681689021620536}
+        m_TargetAssemblyTypeName: OptionButtonSetUp, Assembly-CSharp
+        m_MethodName: selectOption
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -148,6 +148,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   optionNumber: 0
   OptionResponseList: []
+  dialogueToolPrefab: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
+  originalDialogueTool: {fileID: 0}
 --- !u!1 &6596580377218667982
 GameObject:
   m_ObjectHideFlags: 0
