@@ -89011,7 +89011,7 @@ Transform:
   m_GameObject: {fileID: 1614031485}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.9, y: 2.5, z: -5}
+  m_LocalPosition: {x: 88.6, y: 2.5, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -89081,7 +89081,6 @@ MonoBehaviour:
   moveSpeed: 2
   grounded: 0
   customLocation: {x: 0, y: 0, z: 0}
-  interactable: {fileID: 0}
   puzzleMode: 0
   mazeMode: 0
 --- !u!114 &1614031492
@@ -98187,8 +98186,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.5638275, y: 1.3487421, z: 4.9968863}
-  m_Center: {x: -0.041900635, y: -0.56833583, z: -1.9984431}
+  m_Size: {x: 2.6261063, y: 1.9696454, z: 4.9968863}
+  m_Center: {x: -0.008640289, y: -0.2578842, z: -1.9984431}
 --- !u!23 &1804512343
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -104113,8 +104112,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.94065857, y: 1.4343871, z: 4.9968863}
-  m_Center: {x: -0.041900635, y: -0.3884825, z: -1.9984431}
+  m_Size: {x: 1.9607086, y: 1.4343871, z: 4.9968863}
+  m_Center: {x: 0.4681244, y: -0.3884825, z: -1.9984431}
 --- !u!23 &1965858667
 MeshRenderer:
   m_ObjectHideFlags: 0
