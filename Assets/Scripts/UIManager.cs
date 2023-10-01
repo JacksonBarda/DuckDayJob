@@ -44,6 +44,8 @@ public class UIManager : MonoBehaviour
         location.text = newLocation;
     }
 
+    // when update day, set priority in dialgoeu manager back to 0
+    // also need a task code that can trigger priority increase as well
     public void UpdateDay()
     {
         dayNumber++;

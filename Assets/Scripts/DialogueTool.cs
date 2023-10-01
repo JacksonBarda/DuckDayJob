@@ -42,7 +42,7 @@ public class DialogueTool : Interactable
     public List<DialogStruct> talkAgainList = new List<DialogStruct>();
 
     private List<List<DialogStruct>> responseList = new List<List<DialogStruct>>();
-    [SerializeField]
+
     private List<DialogStruct> refDialogueList = new List<DialogStruct>();
 
     private List<GameObject> buttonList = new List<GameObject>();
