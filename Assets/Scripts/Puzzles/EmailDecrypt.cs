@@ -6,12 +6,17 @@ using UnityEngine.UI;
 
 public class EmailDecrypt : Interactable
 {
-    public GameObject puzzleUI;
-    public GameObject mainUI;
+    [SerializeField]
+    private GameObject puzzleUI;
+    [SerializeField]
+    private GameObject mainUI;
+    [SerializeField]
+    private List<Text> numberColumns;
+    [SerializeField]
+    private List<GameObject> boxColors;
+    [SerializeField]
+    private List<RectTransform> rect;
 
-    public List<Text> numberColumns;
-    public List<GameObject> boxColors;
-    public List<RectTransform> rect;
     private int focusedColumn;
     private List<int> correctNumbers;
     private List<bool> isAnimating;
