@@ -21,10 +21,10 @@ public class PlayerMove : MonoBehaviour
     private bool grounded = false;
     [SerializeField]
     private Vector3 customLocation;
-
+    [SerializeField]
     private Interactable interactable;
 
-
+    public bool puzzleMode = false;
     public bool mazeMode = false;
 
     
@@ -56,7 +56,7 @@ public class PlayerMove : MonoBehaviour
         {
             interactable.Interact();
         }
-        if (grounded && !mazeMode)
+        if (grounded && !mazeMode && !puzzleMode)
         {
             moveValUp = value.Get<float>();
             rigid.velocity = new Vector3(moveValRight - moveValLeft, (rigid.velocity.y / moveSpeed) + moveValUp, 0f) * moveSpeed;
@@ -66,7 +66,7 @@ public class PlayerMove : MonoBehaviour
     void OnInteract(InputValue value)
     {
         moveValUpHolder = value.Get<float>();
-        if (interactable != null && !mazeMode)
+        if (interactable != null && !mazeMode && !puzzleMode)
         {
             interactable.Interact();
             Debug.Log("interacted");
@@ -89,26 +89,29 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         grounded = Physics.Raycast(transform.position, -Vector3.up, 0.75f);
+        if (!puzzleMode)
+        {
+            if (!mazeMode)
+            {
+                rigid.velocity = new Vector3(moveValRight - moveValLeft +((rigid.velocity.x) - (rigid.velocity.x * 0.1f)), (rigid.velocity.y), 0f);
+                moveValRight = moveValRightHolder;
+                moveValLeft = moveValLeftHolder;
+            }
+            if(mazeMode)
+            {
+                moveValDown = moveValDownHolder;
+                moveValRight = moveValRightHolder;
+                moveValLeft = moveValLeftHolder;
+                moveValUp = moveValUpHolder;
+                rigid.velocity = new Vector3(moveValRight - moveValLeft, moveValUp-moveValDown, 0f) * moveSpeed;
+            }
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+              //  customLocation = 
+                MoveToCustomLocation();
+            }
+        }
 
-        if (!mazeMode)
-        {
-            rigid.velocity = new Vector3(moveValRight - moveValLeft +((rigid.velocity.x) - (rigid.velocity.x * 0.1f)), (rigid.velocity.y), 0f);
-            moveValRight = moveValRightHolder;
-            moveValLeft = moveValLeftHolder;
-        }
-        if(mazeMode)
-        {
-            moveValDown = moveValDownHolder;
-            moveValRight = moveValRightHolder;
-            moveValLeft = moveValLeftHolder;
-            moveValUp = moveValUpHolder;
-            rigid.velocity = new Vector3(moveValRight - moveValLeft, moveValUp-moveValDown, 0f) * moveSpeed;
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-          //  customLocation = 
-            MoveToCustomLocation();
-        }
     }
     private void OnCollisionEnter(Collision collision)
     {

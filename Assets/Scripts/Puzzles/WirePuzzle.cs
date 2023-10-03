@@ -28,6 +28,7 @@ public class WirePuzzle : Interactable
 
     public override void Interact()
     {
+        player.puzzleMode = true;
         puzzleUI.SetActive(true);
         mainUI.SetActive(false);
         initialStates = new List<bool>(wires.Count);
@@ -40,6 +41,7 @@ public class WirePuzzle : Interactable
 
     protected override void Finished()
     {
+        player.puzzleMode = false;
         for (int i = 0; i < wires.Count; i++)
         {
             wires[i].transform.gameObject.SetActive(true);

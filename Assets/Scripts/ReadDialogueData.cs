@@ -6,9 +6,15 @@ using TMPro;
 using System;
 using Enums;
 using Unity.VisualScripting;
+using System.Runtime.CompilerServices;
+using Unity.IO.LowLevel.Unsafe;
+using static UnityEditor.Progress;
 
 public class ReadDialogueData : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject UIManager;
+    
     [SerializeField]
     private TextAsset DialogData;
 
@@ -50,13 +56,33 @@ public class ReadDialogueData : MonoBehaviour
 
     }
 
-    [SerializeField]
-    private List<DialogStruct> DialogList = new List<DialogStruct>();
+    public List<DialogStruct> DialogList = new List<DialogStruct>();
+
+    public List<Sprite> ProfileImages = new List<Sprite>();
+
+    public GameObject DialogTool;
+
+    public int priority;
+
+    public List<GameObject> DialogueToolsList = new List<GameObject>(); 
 
     // Start is called before the first frame update
     void Start()
     {
         getData();
+
+        // set dialogue list for each tool
+        foreach (GameObject dTool in DialogueToolsList)
+        {
+            dTool.GetComponent<DialogueTool>().setList();
+        }
+
+        DialogTool = DialogueToolsList[0];
+        DialogTool.GetComponent<DialogueTool>().Interact();
+
+        // set which dialogue tools are active
+        priority = 1;
+        setDialogueTools();
     }
 
     // Update is called once per frame
@@ -114,28 +140,34 @@ public class ReadDialogueData : MonoBehaviour
                 */
 
                 DialogStruct dialogRow = new DialogStruct(getLine[0], int.Parse(getLine[1]), int.Parse(getLine[2]), (DayEnum)System.Enum.Parse(typeof(DayEnum), getLine[3]), getLine[4],
-                    int.Parse(getLine[5]), getLine[6], convertStringToBool(getLine[7]), (Alignment)System.Enum.Parse(typeof(Alignment), getLine[8]),
-                    (FontSelectStyle)System.Enum.Parse(typeof(FontSelectStyle), getLine[9]), convertStringToBool(getLine[10]), int.Parse(getLine[11]), convertStringToBool(getLine[12]));
+                    int.Parse(getLine[5]), getLine[6], bool.Parse(getLine[7]), (Alignment)System.Enum.Parse(typeof(Alignment), getLine[8]),
+                    (FontSelectStyle)System.Enum.Parse(typeof(FontSelectStyle), getLine[9]), bool.Parse(getLine[10]), int.Parse(getLine[11]), bool.Parse(getLine[12]));
 
                 DialogList.Add(dialogRow);
             }
         }
     }
 
-    // converts the string to bool because there were parse issues initially
-    public bool convertStringToBool(string boolString)
+    public void nextLine()
     {
-        bool newBool;
+        DialogTool.GetComponent<DialogueTool>().index++;
+        DialogTool.GetComponent<DialogueTool>().setDialogueUI();
+    }
 
-        if (boolString.Equals("TRUE"))
+    public void setDialogueTools()
+    {
+        foreach (GameObject dTool in DialogueToolsList)
         {
-            newBool = true;
+            if (dTool.GetComponent<DialogueTool>().DialogueList[0].order_priority == priority 
+                && dTool.GetComponent<DialogueTool>().DialogueList[0].day == UIManager.GetComponent<UIManager>().dayNumber 
+                && dTool.GetComponent<DialogueTool>().DialogueList[0].dayOrNight == UIManager.GetComponent<UIManager>().dayOrNight)
+            {
+                dTool.SetActive(true);
+            }
+            else
+            {
+                dTool.SetActive(false);
+            }
         }
-        else
-        {
-            newBool = false;
-        }
-
-        return newBool;
     }
 }

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 07222b7dd2be3c84688817ac6545cb75
+<<<<<<< HEAD
+guid: 6939ae2e9da850e48b0757a0dde01072
+=======
+guid: ef34bb36f77f66946a35c20f6c33321e
+>>>>>>> origin/AlexBranch3
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

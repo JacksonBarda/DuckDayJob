@@ -14,8 +14,13 @@ public class UIManager : MonoBehaviour
     private TMP_Text day;
     [SerializeField]
     private TMP_Text time;
+    [SerializeField]
+    private GameObject MainUI;
+    [SerializeField]
+    private GameObject DialogueUI;
 
-    private int dayNumber = 1;
+    public int dayNumber = 1;
+    public DayEnum dayOrNight = DayEnum.Day;
     private int hour = 9;
     private string meridiem = "a.m.";
     private Locations startingLocation = Locations.LOBBY;
@@ -39,11 +44,14 @@ public class UIManager : MonoBehaviour
         location.text = newLocation;
     }
 
+    // when update day, set priority in dialgoeu manager back to 0
+    // also need a task code that can trigger priority increase as well
     public void UpdateDay()
     {
         dayNumber++;
         day.text = "Day " + dayNumber;
     }
+
 
     public void UpdateTime(int addHours)
     {
@@ -117,4 +125,5 @@ public class UIManager : MonoBehaviour
 
         UpdateLocation(room);
     }
+
 }
