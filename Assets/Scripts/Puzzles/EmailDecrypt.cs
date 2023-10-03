@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,14 +9,15 @@ public class EmailDecrypt : Interactable
     public GameObject puzzleUI;
     public GameObject mainUI;
 
-    public Text[] numberColumns;
-    public GameObject[] boxColors;
-    public RectTransform[] rect;
+    public List<Text> numberColumns;
+    public List<GameObject> boxColors;
+    public List<RectTransform> rect;
     private int focusedColumn;
-    private int[] correctNumbers;
-    private bool[] isAnimating;
-    private float[] speeds;
+    private List<int> correctNumbers;
+    private List<bool> isAnimating;
+    private List<float> speeds;
     private bool inPuzzle = false;
+    private List<float> timers;
 
     public override void Interact()
     {
@@ -40,58 +43,59 @@ public class EmailDecrypt : Interactable
     }
     void Update()
     {
-        HandleInput();
-        CheckLocking();
+        if(player.puzzleMode)
+        {
+            CheckLocking();
+        }
+
     }
 
     private void InitializePuzzle()
     {
+        timers = new List<float>(numberColumns.Count);
+
         Debug.Log(boxColors[1]);
         foreach (GameObject GO in boxColors)
         {
             GO.GetComponent<Image>().color = new Color32(164, 61, 53, 255);
             Debug.Log(GO);
         }
-        correctNumbers = new int[numberColumns.Length];
-        for (int i = 0; i < numberColumns.Length; i++)
+        correctNumbers = new List<int>(numberColumns.Count);
+        for (int i = 0; i < numberColumns.Count; i++)
         {
+            timers.Add(0f); // Initialize timers with zeros
             numberColumns[i].text = Random.Range(0, 10).ToString();
-            correctNumbers[i] = i;
+            correctNumbers.Add(i); // Use Add method to add elements to the list
         }
     }
 
-    private void HandleInput()
-    {
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && focusedColumn > 0)
-        {
-            focusedColumn--;
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow) && focusedColumn < numberColumns.Length - 1)
-        {
-            focusedColumn++;
-        }
-    }
+
 
     private void CheckLocking()
     {
-        if(inPuzzle)
+        if (inPuzzle)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                RectTransform columnTransform = numberColumns[focusedColumn].GetComponent<RectTransform>();
-                if (rect[focusedColumn].GetComponent<Rect>().Contains(columnTransform.localPosition))
+               
+                int lockedNumber = int.Parse(numberColumns[focusedColumn].text);
+                
+                if (lockedNumber == correctNumbers[focusedColumn])
                 {
-                    int lockedNumber = int.Parse(numberColumns[focusedColumn].text);
-                    if (lockedNumber == correctNumbers[focusedColumn])
+                    boxColors[focusedColumn].GetComponent<Image>().color = new Color32(79, 154, 53, 255);
+                    if (focusedColumn == numberColumns.Count)
                     {
-                        boxColors[focusedColumn].GetComponent<Image>().color = new Color32(79, 154, 53, 255);
-                        focusedColumn++;
+                        Finished();
+                        return;
                     }
-                    else
-                    {
-                        StartCoroutine(ResetPuzzle());
-                    }
+
+                    focusedColumn++;
                 }
+                else
+                {
+                    StartCoroutine(ResetPuzzle());
+                }
+                
             }
         }
 
@@ -99,38 +103,48 @@ public class EmailDecrypt : Interactable
 
     private IEnumerator FloatingNumbersAnimation()
     {
-        int[] currentNumbers = new int[numberColumns.Length];
-        speeds = new float[numberColumns.Length];
-        isAnimating = new bool[numberColumns.Length];
+        List<int> currentNumbers = new List<int>(numberColumns.Count);
+        speeds = new List<float>(numberColumns.Count);
+        isAnimating = new List<bool>(numberColumns.Count);
 
-        for (int i = 0; i < speeds.Length; i++)
+        for (int i = 0; i < numberColumns.Count; i++)
         {
-            speeds[i] = Random.Range(0.05f, 0.1f);
-            isAnimating[i] = true;
+            speeds.Add(Random.Range(0.5f, 0.6f)); // Use Add method to add elements to the list
+            isAnimating.Add(true); // Use Add method to add elements to the list
+           
         }
+        for (int i = 0; i < numberColumns.Count; i++)
+        {
+            int number;
+            if (int.TryParse(numberColumns[i].text, out number))
+            {
+                currentNumbers.Add(number);
+            }
+            else
+            {
+                Debug.LogError("Failed to parse number from text: " + numberColumns[i].text);
+            }
+        }
+
+
 
         while (true)
         {
-            for (int i = 0; i < numberColumns.Length; i++)
-            {
-                if (i < focusedColumn) // Stop animating when the number is correctly selected
+            for (int i = 0; i < numberColumns.Count; i++)
+            {     
+                float duration = speeds[i]; // Set desired duration (in seconds) for changing numbers
+                if (i < focusedColumn) // Stop updating timer when the number is correctly selected
                 {
-                    isAnimating[i] = false;
                     continue;
                 }
 
-                if (isAnimating[i])
-                {
-                    RectTransform columnTransform = numberColumns[i].GetComponent<RectTransform>();
-                    columnTransform.localPosition += new Vector3(0, -speeds[i], 0);
+                timers[i] += Time.deltaTime;
 
-                    if (columnTransform.localPosition.y < -rect[focusedColumn].localPosition.y)
-                    {
-                        columnTransform.localPosition = new Vector3(columnTransform.localPosition.x, 0, columnTransform.localPosition.z);
-                        currentNumbers[i] = (currentNumbers[i] + 1) % 10;
-                        //Debug.Log(currentNumbers[i].ToString());
-                        numberColumns[i].text = currentNumbers[i].ToString();
-                    }
+                if (timers[i] >= duration)
+                {
+                    timers[i] = 0f;
+                    currentNumbers[i] = (currentNumbers[i] + 1) % 10;
+                    numberColumns[i].text = currentNumbers[i].ToString();
                 }
             }
             yield return null;
@@ -140,19 +154,22 @@ public class EmailDecrypt : Interactable
     private IEnumerator ResetPuzzle()
     {
 
-        for (int i = 0; i < speeds.Length; i++)
+
+        for (int i = 0; i < numberColumns.Count; i++)
         {
-            speeds[i] = Random.Range(0.05f, 0.1f);
+
+            speeds[i] = Random.Range(0.5f, 0.7f);
             isAnimating[i] = true;
         }
         foreach (GameObject GO in boxColors)
         {
             GO.GetComponent<Image>().color = new Color32(164, 61, 53, 255);
         }
-
+        focusedColumn = 0;
         yield return new WaitForSeconds(1f);
 
 
     }
-}
 
+
+}

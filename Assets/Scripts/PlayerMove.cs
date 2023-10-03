@@ -21,7 +21,7 @@ public class PlayerMove : MonoBehaviour
     private bool grounded = false;
     [SerializeField]
     private Vector3 customLocation;
-
+    [SerializeField]
     private List<Interactable> interactable = new List<Interactable>();
 
     public bool puzzleMode = false;
@@ -70,7 +70,7 @@ public class PlayerMove : MonoBehaviour
         if (interactable[0] != null && !mazeMode && !puzzleMode)
         {
 
-            interactable[interactable.Count].Interact();
+            interactable[0].Interact();
             Debug.Log("interacted");
         }
         if (mazeMode)
