@@ -153,9 +153,6 @@ public class DialogueTool : Interactable
         }
         index = 0;
 
-        //this.gameObject.SetActive(false);
-        //this.gameObject.SetActive(true);
-
     }
 
     public void ResetTool()
@@ -163,8 +160,15 @@ public class DialogueTool : Interactable
         MainDisplay.SetActive(true);
         DialogueDisplay.SetActive(false);
         player.puzzleMode = false;
-        this.gameObject.SetActive(false);
-        this.gameObject.SetActive(true);
+        if (!inOptionDialog)
+        {
+            this.gameObject.SetActive(false);
+            this.gameObject.SetActive(true);
+        }
+        responseList.Clear();
+        buttonList.Clear();
+
+
     }
 
     public bool setOptions()

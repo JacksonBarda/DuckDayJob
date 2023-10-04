@@ -87,9 +87,11 @@ public class EmailDecrypt : Interactable
                 
                 if (lockedNumber == correctNumbers[focusedColumn])
                 {
+                    Debug.Log(focusedColumn);
                     boxColors[focusedColumn].GetComponent<Image>().color = new Color32(79, 154, 53, 255);
-                    if (focusedColumn == numberColumns.Count)
+                    if (focusedColumn == 9)
                     {
+                        Debug.Log("Finished");
                         Finished();
                         return;
                     }
