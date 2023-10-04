@@ -31,7 +31,7 @@ public class VendingMachine : Interactable
         throw new System.NotImplementedException();
     }
 
-    protected override void Finished()
+    public override void Finished()
     {
         puzzleUI.SetActive(false);
         mainUI.SetActive(true);

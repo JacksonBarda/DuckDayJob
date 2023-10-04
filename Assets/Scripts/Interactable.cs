@@ -9,6 +9,6 @@ public abstract class Interactable : MonoBehaviour
 
     public abstract void Interact();
     public abstract void Action();
-    protected abstract void Finished();
+    public abstract void Finished();
 
 }

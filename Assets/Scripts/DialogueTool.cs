@@ -121,13 +121,11 @@ public class DialogueTool : Interactable
         setDialogueUI();
     }
 
-    protected override void Finished()
+    public override void Finished()
     {
         // call it anytime inside the function and have your stuff that finished the interact, like close all the dialogue and bring back the main UI
         // below is placeholder if there is no code. If there is code, can delete
-        MainDisplay.SetActive(true);
-        DialogueDisplay.SetActive(false);
-        player.puzzleMode = false;
+        ResetTool();
 
         if (increasePriority)
         {
@@ -154,7 +152,10 @@ public class DialogueTool : Interactable
             talkAgain = true;
         }
         index = 0;
-        
+
+        //this.gameObject.SetActive(false);
+        //this.gameObject.SetActive(true);
+
     }
 
     public void ResetTool()
@@ -162,6 +163,8 @@ public class DialogueTool : Interactable
         MainDisplay.SetActive(true);
         DialogueDisplay.SetActive(false);
         player.puzzleMode = false;
+        this.gameObject.SetActive(false);
+        this.gameObject.SetActive(true);
     }
 
     public bool setOptions()

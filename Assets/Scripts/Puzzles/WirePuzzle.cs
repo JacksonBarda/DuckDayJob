@@ -39,7 +39,7 @@ public class WirePuzzle : Interactable
         StartCoroutine(RotatePowerStates());
     }
 
-    protected override void Finished()
+    public override void Finished()
     {
         player.puzzleMode = false;
         for (int i = 0; i < wires.Count; i++)

@@ -76,7 +76,7 @@ public class CADPuzzle : Interactable
         throw new System.NotImplementedException();
     }
 
-    protected override void Finished()
+    public override void Finished()
     {
         player.puzzleMode = false;
         puzzleUI.SetActive(false);

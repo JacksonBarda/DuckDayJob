@@ -39,7 +39,7 @@ public class EmailDecrypt : Interactable
     {
 
     }
-    protected override void Finished()
+    public override void Finished()
     {
         inPuzzle = false;
         player.puzzleMode = false;

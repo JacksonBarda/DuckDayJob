@@ -8,7 +8,7 @@ using Enums;
 using Unity.VisualScripting;
 using System.Runtime.CompilerServices;
 using Unity.IO.LowLevel.Unsafe;
-using static UnityEditor.Progress;
+//using static UnityEditor.Progress;
 
 public class ReadDialogueData : MonoBehaviour
 {

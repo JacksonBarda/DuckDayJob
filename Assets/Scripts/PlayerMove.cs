@@ -32,7 +32,12 @@ public class PlayerMove : MonoBehaviour
     private void Start()
     {
         rigid = gameObject.GetComponent<Rigidbody>();
+        interactable.Remove(interactable[0]);
 
+    }
+    void OnLeave()
+    {
+        //interactable[0].Finished();
     }
     void OnRight(InputValue value)
     {
@@ -71,6 +76,7 @@ public class PlayerMove : MonoBehaviour
         {
 
             interactable[0].Interact();
+            interactable.Remove(interactable[0]);
             Debug.Log("interacted");
         }
         if (mazeMode)
@@ -95,7 +101,7 @@ public class PlayerMove : MonoBehaviour
         {
             if (!mazeMode)
             {
-                rigid.velocity = new Vector3(moveValRight - moveValLeft +((rigid.velocity.x) - (rigid.velocity.x * 0.1f)), (rigid.velocity.y), 0f);
+                rigid.velocity = new Vector3(moveValRight - moveValLeft +((rigid.velocity.x) - (rigid.velocity.x * 0.1f)), (rigid.velocity.y), 0f) * moveSpeed;
                 moveValRight = moveValRightHolder;
                 moveValLeft = moveValLeftHolder;
             }
@@ -143,8 +149,8 @@ public class PlayerMove : MonoBehaviour
     {
         if (collision.gameObject.tag == "Interactable")
         {
-            if (interactable != null)
-            interactable.Remove(interactable[0]);
+            if (interactable[0] != null)
+                interactable.Remove(interactable[0]);
         }
     }
     public void Maze(bool value)
