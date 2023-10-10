@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 1650722492}
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -10024,6 +10024,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fade: {fileID: 1463816534}
   player: {fileID: 0}
+  taskName: 
+  isCompleted: 0
+  hasFailed: 0
   endLocation: {fileID: 1741837645}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -15723,6 +15726,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fade: {fileID: 1463816534}
   player: {fileID: 0}
+  taskName: 
+  isCompleted: 0
+  hasFailed: 0
   endLocation: {fileID: 520832545}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -28029,6 +28035,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fade: {fileID: 1463816534}
   player: {fileID: 0}
+  taskName: 
+  isCompleted: 0
+  hasFailed: 0
   endLocation: {fileID: 1075681631}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -42143,6 +42152,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fade: {fileID: 1463816534}
   player: {fileID: 0}
+  taskName: 
+  isCompleted: 0
+  hasFailed: 0
   endLocation: {fileID: 1741837645}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -48486,6 +48498,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fade: {fileID: 1463816534}
   player: {fileID: 0}
+  taskName: 
+  isCompleted: 0
+  hasFailed: 0
   endLocation: {fileID: 1166499524}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -53502,6 +53517,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fade: {fileID: 1463816534}
   player: {fileID: 1614031491}
+  taskName: 
+  isCompleted: 0
+  hasFailed: 0
   endLocation: {fileID: 1166499524}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -62459,7 +62477,7 @@ PrefabInstance:
     - target: {fileID: -8475570974890087892, guid: 082b22bd9f2875848acc5aa84ef195f8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2df438ae6d7777c4fac5e3489dae1579, type: 2}
+      objectReference: {fileID: 5561349426305759274, guid: 082b22bd9f2875848acc5aa84ef195f8, type: 3}
     - target: {fileID: -6046497857000080617, guid: 082b22bd9f2875848acc5aa84ef195f8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -69829,6 +69847,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fade: {fileID: 1463816534}
   player: {fileID: 1614031491}
+  taskName: 
+  isCompleted: 0
+  hasFailed: 0
   puzzleUI: {fileID: 1769270219}
   mainUI: {fileID: 1213719444}
   numberColumns:
@@ -73046,6 +73067,61 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1380391818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1380391820}
+  - component: {fileID: 1380391819}
+  m_Layer: 0
+  m_Name: TaskManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1380391819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380391818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 197c8e351d93f0f46bcae96d070d49ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactablesDay1: []
+  interactablesDay2: []
+  interactablesDay3: []
+  interactablesDay4: []
+  interactablesDay5: []
+  interactablesDay6: []
+  interactablesDay7: []
+  currentDay: 0
+  maxDays: 7
+  minTasksPerDay: 3
+  maxTasksPerDay: 5
+--- !u!4 &1380391820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380391818}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.190428, y: -26.657103, z: 38.94575}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1381032354
 GameObject:
   m_ObjectHideFlags: 0
@@ -76516,6 +76592,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fade: {fileID: 1463816534}
   player: {fileID: 1614031491}
+  taskName: 
+  isCompleted: 0
+  hasFailed: 0
   wires:
   - {fileID: 453863459}
   - {fileID: 1129034480}
@@ -82533,6 +82612,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fade: {fileID: 1463816534}
   player: {fileID: 0}
+  taskName: 
+  isCompleted: 0
+  hasFailed: 0
   endLocation: {fileID: 309978772}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -94997,6 +95079,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fade: {fileID: 1463816534}
   player: {fileID: 1614031491}
+  taskName: 
+  isCompleted: 0
+  hasFailed: 0
   MainDisplay: {fileID: 1213719444}
   DialogueDisplay: {fileID: 2075323091}
   Profile: {fileID: 2122043642}
@@ -98548,7 +98633,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: aadd5a709a48466c887296bb5b1b8110, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -100224,6 +100309,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fade: {fileID: 1463816534}
   player: {fileID: 1614031491}
+  taskName: 
+  isCompleted: 0
+  hasFailed: 0
   fragments:
   - {fileID: 1956100895}
   outlines:
@@ -112695,3 +112783,4 @@ SceneRoots:
   - {fileID: 724982287}
   - {fileID: 1088406683}
   - {fileID: 1650722493}
+  - {fileID: 1380391820}
