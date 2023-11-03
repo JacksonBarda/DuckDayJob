@@ -36,6 +36,7 @@ public class DialogueTool : Interactable
     [SerializeField]
     private GameObject optionButtonPrefab;
 
+    private string duckname;
 
     public List<DialogStruct> DialogueList = new List<DialogStruct>();
 
@@ -102,9 +103,10 @@ public class DialogueTool : Interactable
         // happens when you fade out and in
         // don't need it but keep it
         throw new System.NotImplementedException();
+        
 
     }
-
+    
     public override void Interact()
     {
         Debug.Log("Talked");
@@ -119,7 +121,9 @@ public class DialogueTool : Interactable
         // set first line
         DialogueManager.GetComponent<ReadDialogueData>().DialogTool = this.gameObject;
         setDialogueUI();
+
     }
+   
 
     public override void Finished()
     {
@@ -302,6 +306,7 @@ public class DialogueTool : Interactable
         if (talkAgain)
         {
             Name.text = talkAgainList[index].name;
+            duckname = talkAgainList[index].name;
             switch (talkAgainList[index].align)
             {
                 case Alignment.Left:
@@ -320,6 +325,7 @@ public class DialogueTool : Interactable
         else
         {
             Name.text = DialogueList[index].name;
+            duckname = DialogueList[index].name;
             switch (DialogueList[index].align)
             {
                 case Alignment.Left:
@@ -396,6 +402,7 @@ public class DialogueTool : Interactable
                     setProfile();
                     setName();
                     setLine();
+                    AudioManager.Instance.PlayDialogue(duckname);
                 }
 
             }
@@ -413,11 +420,12 @@ public class DialogueTool : Interactable
                     setProfile();
                     setName();
                     setLine();
+                    AudioManager.Instance.PlayDialogue(duckname);
                 }
 
             }
         }
-        
+
     }
 
     public void setSelectedOptionDialogue(GameObject selectedButton)
