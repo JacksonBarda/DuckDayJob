@@ -132,7 +132,7 @@ public class PlayerMove : MonoBehaviour
             }
 
             movingThreshold = new Vector3(.01f, .01f, .01f);
-            if ((rigid.velocity - movingThreshold).sqrMagnitude > .05f)
+            if ((rigid.velocity - movingThreshold).sqrMagnitude > .1f)
             {
                 animator.SetBool("isMoving", true);
             }
