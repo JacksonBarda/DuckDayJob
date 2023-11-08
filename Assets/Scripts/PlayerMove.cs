@@ -13,8 +13,14 @@ public class PlayerMove : MonoBehaviour
     private float moveValLeftHolder;
     private float moveValUpHolder;
     private float moveValDownHolder;
+    private Vector3 movingThreshold;
     [SerializeField]
     private float moveSpeed;
+    [SerializeField]
+    private Animator animator;
+    [SerializeField]
+    private SpriteRenderer spriteRenderer;
+
 
     private Rigidbody rigid;
     [SerializeField]
@@ -33,27 +39,31 @@ public class PlayerMove : MonoBehaviour
     {
         rigid = gameObject.GetComponent<Rigidbody>();
         interactable.Remove(interactable[0]);
-
+        //animator = GetComponent<Animator>();
     }
     void OnLeave()
     {
-        //interactable[0].Finished();
+        interactable[0].Finished();
     }
     void OnRight(InputValue value)
     {
         moveValRightHolder = value.Get<float>();
-        if (grounded)
+        if (grounded && moveValLeft < .01)
         {
             moveValRight = moveValRightHolder;
+            animator.SetFloat("Input", moveValRight);
+            spriteRenderer.flipX = false;
         }
         
     }
     void OnLeft(InputValue value)
     {
         moveValLeftHolder = value.Get<float>();
-        if (grounded)
+        if (grounded && moveValRight < .01)
         {
             moveValLeft = moveValLeftHolder;
+            animator.SetFloat("Input", moveValLeft);
+            spriteRenderer.flipX = true;
         }
     }
     void OnJump(InputValue value)
@@ -68,6 +78,7 @@ public class PlayerMove : MonoBehaviour
             rigid.velocity = new Vector3(moveValRight - moveValLeft, (rigid.velocity.y / moveSpeed) + moveValUp, 0f) * moveSpeed;
         }
     }
+
 
     void OnInteract(InputValue value)
     {
@@ -97,6 +108,7 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         grounded = Physics.Raycast(transform.position, -Vector3.up, 0.75f);
+
         if (!puzzleMode)
         {
             if (!mazeMode)
@@ -117,6 +129,16 @@ public class PlayerMove : MonoBehaviour
             {
               //  customLocation = 
                 MoveToCustomLocation();
+            }
+
+            movingThreshold = new Vector3(.01f, .01f, .01f);
+            if ((rigid.velocity - movingThreshold).sqrMagnitude > .05f)
+            {
+                animator.SetBool("isMoving", true);
+            }
+            else
+            {
+                animator.SetBool("isMoving", false);
             }
         }
 
