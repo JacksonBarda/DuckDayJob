@@ -38,6 +38,10 @@ public class DialogueTool : Interactable
 
     private string duckname;
 
+    // Dialogue counter
+    private int quackscompleted;
+    private string previousName;
+
     public List<DialogStruct> DialogueList = new List<DialogStruct>();
 
     public List<DialogStruct> talkAgainList = new List<DialogStruct>();
@@ -341,7 +345,16 @@ public class DialogueTool : Interactable
                     break;
             }
         }
-        
+        if (duckname.Equals(previousName))
+        {
+            quackscompleted++;
+        }
+        else
+        {
+            quackscompleted = 0;
+            previousName = duckname;
+        }
+
     }
     public void setLine()
     {
@@ -402,7 +415,10 @@ public class DialogueTool : Interactable
                     setProfile();
                     setName();
                     setLine();
-                    AudioManager.Instance.PlayDialogue(duckname);
+                    if (quackscompleted == 0)
+                    {
+                        AudioManager.Instance.PlayDialogue(duckname);
+                    }
                 }
 
             }
@@ -420,7 +436,10 @@ public class DialogueTool : Interactable
                     setProfile();
                     setName();
                     setLine();
-                    AudioManager.Instance.PlayDialogue(duckname);
+                    if (quackscompleted == 0)
+                    {
+                        AudioManager.Instance.PlayDialogue(duckname);
+                    }
                 }
 
             }

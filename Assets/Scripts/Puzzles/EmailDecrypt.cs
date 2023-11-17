@@ -33,6 +33,7 @@ public class EmailDecrypt : Interactable
         InitializePuzzle();
         inPuzzle = true;
         StartCoroutine(FloatingNumbersAnimation());
+        AudioManager.Instance.PlayMusic("Hacking");
     }
 
     public override void Action()
@@ -45,6 +46,9 @@ public class EmailDecrypt : Interactable
         player.puzzleMode = false;
         puzzleUI.SetActive(false);
         mainUI.SetActive(true);
+        AudioManager.Instance.PlaySFX("SFX_Complete");
+        //location of puzzle
+        AudioManager.Instance.PlayMusic("Lobby");
     }
     void Update()
     {
@@ -87,6 +91,7 @@ public class EmailDecrypt : Interactable
                 
                 if (lockedNumber == correctNumbers[focusedColumn])
                 {
+                    AudioManager.Instance.PlaySFX("SFX_Decrypt");
                     Debug.Log(focusedColumn);
                     boxColors[focusedColumn].GetComponent<Image>().color = new Color32(79, 154, 53, 255);
                     if (focusedColumn == 9)
@@ -161,7 +166,7 @@ public class EmailDecrypt : Interactable
     private IEnumerator ResetPuzzle()
     {
 
-
+        AudioManager.Instance.PlaySFX("SFX_Error");
         for (int i = 0; i < numberColumns.Count; i++)
         {
 

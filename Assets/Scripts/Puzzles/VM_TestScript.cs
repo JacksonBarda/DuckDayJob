@@ -27,6 +27,7 @@ public class TestVendingMachine : Interactable
     {
         puzzleUI.SetActive(true);
         mainUI.SetActive(false);
+        AudioManager.Instance.PlayMusic("VendingAmbience");
     }
 
     public override void Action()
@@ -38,6 +39,8 @@ public class TestVendingMachine : Interactable
     {
         puzzleUI.SetActive(false);
         mainUI.SetActive(true);
+        //Location of Puzzle
+        AudioManager.Instance.PlayMusic("Lobby");
     }
 
     private void Start()
@@ -57,6 +60,7 @@ public class TestVendingMachine : Interactable
     {
         enteredNumber += number;
         UpdateDisplay();
+        AudioManager.Instance.PlaySFX("SFX_VendingButton");
     }
 
     private void Enter()
@@ -75,6 +79,7 @@ public class TestVendingMachine : Interactable
         UpdateDisplay();
         puzzleUI.SetActive(false);
         mainUI.SetActive(true);
+        AudioManager.Instance.PlayMusic("Lobby");
     }
     private void VMremove()
     {
