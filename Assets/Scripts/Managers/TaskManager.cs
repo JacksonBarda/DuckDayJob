@@ -37,6 +37,7 @@ public class TaskManager : MonoBehaviour
 
     private void InitializeTasks()
     {
+
         tasksByDay.Add(interactablesDay1);
         tasksByDay.Add(interactablesDay2);
         tasksByDay.Add(interactablesDay3);
