@@ -49,6 +49,7 @@ public class WirePuzzle : Interactable
         wiresCut = 0;
         puzzleUI.SetActive(false);
         mainUI.SetActive(true);
+        AudioManager.Instance.PlaySFX("SFX_Complete");
     }
 
 
@@ -73,7 +74,7 @@ public class WirePuzzle : Interactable
         {
             wires[index].transform.gameObject.SetActive(false);
             wiresCut++;
-
+            AudioManager.Instance.PlaySFX("SFX_WireCut");
             if (wiresCut == wires.Count)
             {
                 StopCoroutine(RotatePowerStates());

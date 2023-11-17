@@ -15898,7 +15898,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 638254939}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &638254939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27507,10 +27519,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSounds:
   - audioname: Lobby
-    aclip: {fileID: 8300000, guid: 821e597a5429bbb40bd568683d6b9814, type: 3}
+    aclip: {fileID: 8300000, guid: 6c07be781a2d6e34aae2124044a2b352, type: 3}
+  - audioname: Hacking
+    aclip: {fileID: 8300000, guid: 687f070baf726024a86a75cb7698b797, type: 3}
+  - audioname: VendingAmbience
+    aclip: {fileID: 8300000, guid: 93bc8c44bbb758340b44313c52ed7e24, type: 3}
   sfxSounds:
-  - audioname: Quack
-    aclip: {fileID: 8300000, guid: be6a228966af903479ff8787683b2241, type: 3}
+  - audioname: SFX_Decrypt
+    aclip: {fileID: 8300000, guid: 205df597a8de96d46b4d10f07ba8afad, type: 3}
+  - audioname: SFX_Error
+    aclip: {fileID: 8300000, guid: 8db1bf387194c6f46a8805f530a7f6cd, type: 3}
+  - audioname: SFX_TaskComplete
+    aclip: {fileID: 8300000, guid: 014e48bcbb1ab3a43af3ed638272f111, type: 3}
+  - audioname: SFX_VendingButton
+    aclip: {fileID: 8300000, guid: 4e36b2f1c7ce5eb40a5997a8819e7e46, type: 3}
+  - audioname: SFX_WireCut
+    aclip: {fileID: 8300000, guid: e7ec433f069d3894393f47a7ac7b094c, type: 3}
   dialogueSounds:
   - audioname: Main Duck
     aclip: {fileID: 8300000, guid: be6a228966af903479ff8787683b2241, type: 3}
@@ -27522,9 +27546,15 @@ MonoBehaviour:
     aclip: {fileID: 8300000, guid: 459789e3836dbb843aaa729258aef016, type: 3}
   - audioname: Quackson
     aclip: {fileID: 8300000, guid: 459789e3836dbb843aaa729258aef016, type: 3}
+  movementSounds:
+  - audioname: Silence
+    aclip: {fileID: 0}
+  - audioname: WalkSound
+    aclip: {fileID: 8300000, guid: ec64ff3b0ca176c42a4f2e4077c98477, type: 3}
   MusicSource: {fileID: 2122053452}
   sfxSource: {fileID: 459148100}
   dialogueSource: {fileID: 1114376657}
+  movementSource: {fileID: 0}
 --- !u!4 &1134343426
 Transform:
   m_ObjectHideFlags: 0
@@ -34414,7 +34444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -49897,9 +49927,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -50008,6 +50038,7 @@ GameObject:
   - component: {fileID: 2122831127}
   - component: {fileID: 2122831126}
   - component: {fileID: 2122831125}
+  - component: {fileID: 2122831129}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged

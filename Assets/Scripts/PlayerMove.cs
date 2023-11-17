@@ -21,7 +21,6 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     private SpriteRenderer spriteRenderer;
 
-
     private Rigidbody rigid;
     [SerializeField]
     private bool grounded = false;
@@ -54,7 +53,6 @@ public class PlayerMove : MonoBehaviour
             animator.SetFloat("Input", moveValRight);
             spriteRenderer.flipX = false;
         }
-        
     }
     void OnLeft(InputValue value)
     {
@@ -65,6 +63,7 @@ public class PlayerMove : MonoBehaviour
             animator.SetFloat("Input", moveValLeft);
             spriteRenderer.flipX = true;
         }
+        
     }
     void OnJump(InputValue value)
     {
@@ -134,11 +133,19 @@ public class PlayerMove : MonoBehaviour
             movingThreshold = new Vector3(.01f, .01f, .01f);
             if ((rigid.velocity - movingThreshold).sqrMagnitude > .1f)
             {
-                animator.SetBool("isMoving", true);
+                if (animator.GetBool("isMoving") == false)
+                {
+                    animator.SetBool("isMoving", true);
+                    AudioManager.Instance.PlayMovement("WalkSound");
+                }
             }
             else
             {
-                animator.SetBool("isMoving", false);
+                if (animator.GetBool("isMoving") == true)
+                {
+                    animator.SetBool("isMoving", false); 
+                    AudioManager.Instance.PlayMovement("Silence");
+                }
             }
         }
 
