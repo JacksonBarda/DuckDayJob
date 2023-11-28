@@ -19,12 +19,14 @@ public class MainMenuButtons : MonoBehaviour
 
     private void Start()
     {
-       
+        PlayerPrefs.SetString("playerName", null);
     }
     public void OnStartClicked()
     {
+
         string _playerName = PlayerPrefs.GetString("playerName");
-        if (_playerName != null)
+        Debug.Log(_playerName);
+        if (_playerName != "")
         {
             SceneManager.LoadScene("garrettsBlockout");
         }
