@@ -309,7 +309,7 @@ public class DialogueTool : Interactable
     {
         if (talkAgain)
         {
-            Name.text = talkAgainList[index].name;
+            Name.text = replaceMainDuck(talkAgainList[index].name);
             duckname = talkAgainList[index].name;
             switch (talkAgainList[index].align)
             {
@@ -328,7 +328,7 @@ public class DialogueTool : Interactable
         }
         else
         {
-            Name.text = DialogueList[index].name;
+            Name.text = replaceMainDuck(DialogueList[index].name);
             duckname = DialogueList[index].name;
             switch (DialogueList[index].align)
             {
@@ -360,7 +360,7 @@ public class DialogueTool : Interactable
     {
         if (talkAgain)
         {
-            Dialogue.text = talkAgainList[index].dialogue;
+            Dialogue.text = replaceMainDuck(talkAgainList[index].dialogue);
             switch (talkAgainList[index].fontStyle)
             {
                 case FontSelectStyle.Normal:
@@ -379,7 +379,7 @@ public class DialogueTool : Interactable
         }
         else
         {
-            Dialogue.text = DialogueList[index].dialogue;
+            Dialogue.text = replaceMainDuck(DialogueList[index].dialogue);
             switch (DialogueList[index].fontStyle)
             {
                 case FontSelectStyle.Normal:
@@ -458,6 +458,14 @@ public class DialogueTool : Interactable
             Destroy(button);
         }
         ResetTool();
+    }
+
+    // Return function that returns the text with player name whenever Main Duck is mentioned
+    public string replaceMainDuck(string originalText)
+    {
+        string name = PlayerPrefs.GetString("playerName");
+        string newText = originalText.Replace("Main Duck", name);
+        return newText;
     }
 
 }
