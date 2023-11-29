@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,21 +20,25 @@ public class TaskManager : MonoBehaviour
     private List<Interactable> interactablesDay6;
     [SerializeField]
     private List<Interactable> interactablesDay7;
-    public int currentDay = 0;
+
+
+
+    
     public int maxDays = 7;
-    public int minTasksPerDay = 3;
-    public int maxTasksPerDay = 5;
+
+    public int dayCount = 0;
+    private int count = 0;
+    private int day = 1;
+    private List<Interactable> currentDay;
+
+
+    public static TaskManager TMInstance;
 
     private void Start()
     {
         InitializeTasks();
     }
 
-    private void Update()
-    {
-        CheckCompletedTasks();
-        ChangeWorld();
-    }
 
     private void InitializeTasks()
     {
@@ -45,57 +50,44 @@ public class TaskManager : MonoBehaviour
         tasksByDay.Add(interactablesDay5);
         tasksByDay.Add(interactablesDay6);
         tasksByDay.Add(interactablesDay7);
+        currentDay = tasksByDay[dayCount];
 
-        // Add tasks to each day's list
-        // You can populate tasksByDay[i] with instances of Interactable subclasses
+
     }
 
-    private void CheckCompletedTasks()
+    private void TaskFailed()
     {
-        List<Interactable> currentDayTasks = tasksByDay[currentDay];
-        foreach (Interactable task in currentDayTasks)
-        {
-            if (!task.isCompleted && task.hasFailed)
-            {
-                ChangeWorldOnTaskFailure(task);
-            }
-        }
+        //Potentially change day here
+
     }
 
-    private void ChangeWorld()
+    private void TaskCompleted(Interactable _task)
     {
-        // Change the world based on the number of completed tasks
-        // You can add your own logic here to modify the world as needed
-        int completedTasks = CountCompletedTasks();
-        if (completedTasks == 1)
+        count++;
+        ChangeDay();
+    }
+    private void ChangeDay()
+    {
+        if(count > currentDay.Count)
         {
-
+            dayCount++;
+            currentDay = tasksByDay[dayCount];
+            
+            SaveGame();
+            LoadNextDay();
         }
-        else if (completedTasks == 2)
-        {
-
-        }
-        // Add more conditions for other completed tasks
+        //
+        //Change day time here
     }
 
-    private int CountCompletedTasks()
+    private void LoadNextDay()
     {
-        int completedTasks = 0;
-        List<Interactable> currentDayTasks = tasksByDay[currentDay];
-        foreach (Interactable task in currentDayTasks)
-        {
-            if (task.isCompleted)
-            {
-                completedTasks++;
-            }
-        }
-        return completedTasks;
+        //Reload scene with next day counter 
     }
 
-    private void ChangeWorldOnTaskFailure(Interactable task)
+    private void SaveGame()
     {
-        task.hasFailed = false;
-
+        //PlayerPrefs save the 
     }
 }
 
