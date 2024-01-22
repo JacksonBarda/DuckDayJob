@@ -63,6 +63,7 @@ public class TaskManager : MonoBehaviour
 
     private void TaskCompleted(Interactable _task)
     {
+        _task.gameObject.SetActive(false);
         count++;
         ChangeDay();
     }
