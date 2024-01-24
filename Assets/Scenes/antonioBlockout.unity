@@ -13628,7 +13628,7 @@ MonoBehaviour:
   playerMove: {fileID: 1614031491}
   rigid: {fileID: 1614031489}
   manager: {fileID: 1206418959}
-  endRoom: 1
+  endRoom: 2
 --- !u!65 &548193331
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20202,7 +20202,7 @@ MonoBehaviour:
   playerMove: {fileID: 1614031491}
   rigid: {fileID: 1614031489}
   manager: {fileID: 1206418959}
-  endRoom: 3
+  endRoom: 5
 --- !u!65 &718528056
 BoxCollider:
   m_ObjectHideFlags: 0
