@@ -129,7 +129,7 @@ public class DialogueTool : Interactable
     }
    
 
-    public override void Finished()
+    public override void Complete()
     {
         // call it anytime inside the function and have your stuff that finished the interact, like close all the dialogue and bring back the main UI
         // below is placeholder if there is no code. If there is code, can delete
@@ -406,7 +406,7 @@ public class DialogueTool : Interactable
         {
             if (index > talkAgainList.Count - 1)
             {
-                Finished();
+                Complete();
             }
             else
             {
@@ -427,7 +427,7 @@ public class DialogueTool : Interactable
         {
             if (index > DialogueList.Count - 1)
             {
-                Finished();
+                Complete();
             }
             else
             {

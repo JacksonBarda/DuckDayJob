@@ -6,10 +6,7 @@ using UnityEngine.UI;
 
 public class EmailDecrypt : Interactable
 {
-    [SerializeField]
-    private GameObject puzzleUI;
-    [SerializeField]
-    private GameObject mainUI;
+
     [SerializeField]
     private List<Text> numberColumns;
     [SerializeField]
@@ -40,12 +37,11 @@ public class EmailDecrypt : Interactable
     {
 
     }
-    public override void Finished()
+    public override void Complete()
     {
+        base.Complete();
         inPuzzle = false;
-        player.puzzleMode = false;
-        puzzleUI.SetActive(false);
-        mainUI.SetActive(true);
+
         AudioManager.Instance.PlaySFX("SFX_Complete");
         //location of puzzle
         AudioManager.Instance.PlayMusic("Lobby");
@@ -97,7 +93,7 @@ public class EmailDecrypt : Interactable
                     if (focusedColumn == 9)
                     {
                         Debug.Log("Finished");
-                        Finished();
+                        Complete();
                         return;
                     }
 

@@ -32,9 +32,9 @@ public class DoorInteract : Interactable
         Player.transform.position = endLocation.position;
         manager.setLocation(endRoom);
     }
-    public override void Finished()
+    public override void Complete()
     {
-
+        
     }
 
 }

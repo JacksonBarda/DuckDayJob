@@ -13,10 +13,7 @@ public class WirePuzzle : Interactable
    // private AudioSource audioSource;
     public List<bool> initialStates;
 
-    [SerializeField]
-    private GameObject puzzleUI;
-    [SerializeField]
-    private GameObject mainUI;
+
     private int wiresCut;
 
 
@@ -39,16 +36,16 @@ public class WirePuzzle : Interactable
         StartCoroutine(RotatePowerStates());
     }
 
-    public override void Finished()
+    public override void Complete()
     {
-        player.puzzleMode = false;
+        base.Complete();
+
         for (int i = 0; i < wires.Count; i++)
         {
             wires[i].transform.gameObject.SetActive(true);
         }
         wiresCut = 0;
-        puzzleUI.SetActive(false);
-        mainUI.SetActive(true);
+
         AudioManager.Instance.PlaySFX("SFX_Complete");
     }
 
@@ -78,7 +75,7 @@ public class WirePuzzle : Interactable
             if (wiresCut == wires.Count)
             {
                 StopCoroutine(RotatePowerStates());
-                Finished();
+                Complete();
                 
             }
         }

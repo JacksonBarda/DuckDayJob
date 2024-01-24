@@ -42,7 +42,7 @@ public class PlayerMove : MonoBehaviour
     }
     void OnLeave()
     {
-        interactable[0].Finished();
+        //interactable[0].Complete();
     }
     void OnRight(InputValue value)
     {
@@ -51,7 +51,7 @@ public class PlayerMove : MonoBehaviour
         {
             moveValRight = moveValRightHolder;
             animator.SetFloat("Input", moveValRight);
-            spriteRenderer.flipX = false;
+            //spriteRenderer.flipX = false;
         }
     }
     void OnLeft(InputValue value)
@@ -60,8 +60,8 @@ public class PlayerMove : MonoBehaviour
         if (grounded && moveValRight < .01)
         {
             moveValLeft = moveValLeftHolder;
-            animator.SetFloat("Input", moveValLeft);
-            spriteRenderer.flipX = true;
+           // animator.SetFloat("Input", moveValLeft);
+
         }
         
     }
@@ -113,6 +113,16 @@ public class PlayerMove : MonoBehaviour
             if (!mazeMode)
             {
                 rigid.velocity = new Vector3(moveValRight - moveValLeft +((rigid.velocity.x) - (rigid.velocity.x * 0.1f)), (rigid.velocity.y), 0f) * moveSpeed;
+                if(rigid.velocity.x > 0.1f)
+                {
+                    animator.SetFloat("Input", Mathf.Abs(rigid.velocity.x));
+                    spriteRenderer.flipX = false;
+                }
+                else if(rigid.velocity.x < -0.1f)
+                {
+                    animator.SetFloat("Input", Mathf.Abs(rigid.velocity.x));
+                    spriteRenderer.flipX = true;
+                }
                 moveValRight = moveValRightHolder;
                 moveValLeft = moveValLeftHolder;
             }

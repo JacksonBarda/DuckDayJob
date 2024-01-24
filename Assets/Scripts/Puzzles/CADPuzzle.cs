@@ -15,10 +15,7 @@ public class CADPuzzle : Interactable
     public float snapThresholdRot = 5.0f;
     public float rotDistance;
 
-    [SerializeField]
-    private GameObject puzzleUI;
-    [SerializeField]
-    private GameObject mainUI;
+
 
     [HideInInspector]
     public Image selectedFragment;
@@ -65,7 +62,7 @@ public class CADPuzzle : Interactable
         }
         if(count >= fragments.Count)
         {
-            Finished();
+            Complete();
         }
     }
 
@@ -81,16 +78,19 @@ public class CADPuzzle : Interactable
         throw new System.NotImplementedException();
     }
 
-    public override void Finished()
+    public override void Complete()
     {
-        player.puzzleMode = false;
-        puzzleUI.SetActive(false);
-        mainUI.SetActive(true);
+        base.Complete();
+
         count = 0;
         foreach(Image fragment in fragments)
         {
             fragment.rectTransform.position = fragment.GetComponent<FragmentDragger>().originalPosition;
         }
       
+    }
+    public override void Failed()
+    {
+        base.Failed();
     }
 }

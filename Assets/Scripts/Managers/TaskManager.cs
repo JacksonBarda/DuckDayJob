@@ -22,8 +22,8 @@ public class TaskManager : MonoBehaviour
     private List<Interactable> interactablesDay7;
 
 
-
-    
+    public GameObject deathScreen;
+    private int health;
     public int maxDays = 7;
 
     public int dayCount = 0;
@@ -31,12 +31,20 @@ public class TaskManager : MonoBehaviour
     private int day = 1;
     private List<Interactable> currentDay;
 
+    public delegate void OnTaskComplete(Interactable _task);
+    public static OnTaskComplete onTaskComplete;
+
+    public delegate void OnTaskFailed(Interactable _task);
+    public static OnTaskComplete onTaskFailed;
 
     public static TaskManager TMInstance;
 
     private void Start()
     {
+        health = 3;
         InitializeTasks();
+        onTaskComplete += TaskCompleted;
+        onTaskComplete += TaskFailed;
     }
 
 
@@ -55,17 +63,32 @@ public class TaskManager : MonoBehaviour
 
     }
 
-    private void TaskFailed()
+    private void TaskFailed(Interactable _task)
     {
-        //Potentially change day here
+        health -= 1;
+        if(health == 0)
+        {
+            OnDeath();
+        }
+        SaveGame();
+    }
 
+    private void OnDeath()
+    {
+        deathScreen.SetActive(true);
     }
 
     private void TaskCompleted(Interactable _task)
     {
+        //Change day time here
+        _task.player.puzzleMode = false;
+        _task.puzzleUI.SetActive(false);
+        _task.mainUI.SetActive(true);
         _task.gameObject.SetActive(false);
         count++;
+
         ChangeDay();
+        SaveGame();
     }
     private void ChangeDay()
     {
@@ -75,20 +98,25 @@ public class TaskManager : MonoBehaviour
             currentDay = tasksByDay[dayCount];
             
             SaveGame();
-            LoadNextDay();
+            LoadDay();
         }
         //
-        //Change day time here
+        
     }
 
-    private void LoadNextDay()
+    private void LoadDay()
     {
-        //Reload scene with next day counter 
+        deathScreen.SetActive(false);
+        currentDay = tasksByDay[dayCount];
+
     }
 
     private void SaveGame()
     {
-        //PlayerPrefs save the 
+        PlayerPrefs.SetInt("dayCount", dayCount);
+        PlayerPrefs.SetInt("Count", count);
+        PlayerPrefs.SetInt("Health", health);
+        PlayerPrefs.Save();
     }
 }
 

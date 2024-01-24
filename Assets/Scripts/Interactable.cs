@@ -9,12 +9,18 @@ public class Interactable : MonoBehaviour
     public string taskName;
     public bool isCompleted;
     public bool hasFailed;
+    public GameObject puzzleUI;
+    public GameObject mainUI;
 
     public virtual void Interact() { }
     public virtual void Action() { }
-    public virtual void Finished()
+    public virtual void Complete()
     {
-
+        TaskManager.onTaskComplete(this);
+    }
+    public virtual void Failed()
+    {
+        TaskManager.onTaskFailed(this);
     }
 
 }
