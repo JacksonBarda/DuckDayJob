@@ -65,6 +65,9 @@ public class TaskManager : MonoBehaviour
 
     private void TaskFailed(Interactable _task)
     {
+        _task.player.puzzleMode = false;
+        _task.puzzleUI.SetActive(false);
+        _task.mainUI.SetActive(true);
         health -= 1;
         if(health == 0)
         {

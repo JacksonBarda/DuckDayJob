@@ -7041,6 +7041,8 @@ MonoBehaviour:
   taskName: 
   isCompleted: 0
   hasFailed: 0
+  puzzleUI: {fileID: 0}
+  mainUI: {fileID: 0}
   endLocation: {fileID: 520832545}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -13258,6 +13260,8 @@ MonoBehaviour:
   taskName: 
   isCompleted: 0
   hasFailed: 0
+  puzzleUI: {fileID: 0}
+  mainUI: {fileID: 0}
   endLocation: {fileID: 1741837645}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -14507,6 +14511,8 @@ MonoBehaviour:
   taskName: 
   isCompleted: 0
   hasFailed: 0
+  puzzleUI: {fileID: 0}
+  mainUI: {fileID: 0}
   endLocation: {fileID: 1821216363}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -21221,6 +21227,8 @@ MonoBehaviour:
   taskName: 
   isCompleted: 0
   hasFailed: 0
+  puzzleUI: {fileID: 0}
+  mainUI: {fileID: 0}
   endLocation: {fileID: 1817258937}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -23466,6 +23474,8 @@ MonoBehaviour:
   taskName: 
   isCompleted: 0
   hasFailed: 0
+  puzzleUI: {fileID: 0}
+  mainUI: {fileID: 0}
   endLocation: {fileID: 1833557384}
   Player: {fileID: 0}
   playerMove: {fileID: 0}
@@ -26124,6 +26134,8 @@ MonoBehaviour:
   taskName: 
   isCompleted: 0
   hasFailed: 0
+  puzzleUI: {fileID: 0}
+  mainUI: {fileID: 0}
   endLocation: {fileID: 1166499524}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -36904,6 +36916,7 @@ MonoBehaviour:
   interactablesDay5: []
   interactablesDay6: []
   interactablesDay7: []
+  deathScreen: {fileID: 0}
   maxDays: 7
   dayCount: 0
 --- !u!4 &1380391820
@@ -38818,6 +38831,8 @@ MonoBehaviour:
   taskName: 
   isCompleted: 0
   hasFailed: 0
+  puzzleUI: {fileID: 498680367}
+  mainUI: {fileID: 1213719444}
   wires:
   - {fileID: 453863459}
   - {fileID: 1129034480}
@@ -38826,8 +38841,6 @@ MonoBehaviour:
   - {fileID: 794339411}
   rotationInterval: 0.5
   initialStates: 0000000000
-  puzzleUI: {fileID: 498680367}
-  mainUI: {fileID: 1213719444}
 --- !u!65 &1435794232
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42269,6 +42282,8 @@ MonoBehaviour:
   taskName: 
   isCompleted: 0
   hasFailed: 0
+  puzzleUI: {fileID: 0}
+  mainUI: {fileID: 0}
   endLocation: {fileID: 1319298927}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -42660,6 +42675,8 @@ MonoBehaviour:
   taskName: 
   isCompleted: 0
   hasFailed: 0
+  puzzleUI: {fileID: 0}
+  mainUI: {fileID: 0}
   endLocation: {fileID: 961919109}
   Player: {fileID: 0}
   playerMove: {fileID: 0}
@@ -47382,6 +47399,8 @@ MonoBehaviour:
   taskName: 
   isCompleted: 0
   hasFailed: 0
+  puzzleUI: {fileID: 0}
+  mainUI: {fileID: 0}
   endLocation: {fileID: 490245846}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -50344,6 +50363,8 @@ MonoBehaviour:
   taskName: Talk to the ducks!
   isCompleted: 0
   hasFailed: 0
+  puzzleUI: {fileID: 0}
+  mainUI: {fileID: 0}
   MainDisplay: {fileID: 1213719444}
   DialogueDisplay: {fileID: 2075323091}
   Tasklist: {fileID: 443456424}
@@ -50555,6 +50576,8 @@ MonoBehaviour:
   taskName: 
   isCompleted: 0
   hasFailed: 0
+  puzzleUI: {fileID: 0}
+  mainUI: {fileID: 0}
   endLocation: {fileID: 902190580}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -53900,6 +53923,8 @@ MonoBehaviour:
   taskName: 
   isCompleted: 0
   hasFailed: 0
+  puzzleUI: {fileID: 1677427587}
+  mainUI: {fileID: 1213719444}
   fragments:
   - {fileID: 1956100895}
   - {fileID: 530502011}
@@ -53914,8 +53939,6 @@ MonoBehaviour:
   snapThreshold: 100
   snapThresholdRot: 5
   rotDistance: 0
-  puzzleUI: {fileID: 1677427587}
-  mainUI: {fileID: 1213719444}
   SLDR_Progress: {fileID: 1502068344}
   selectedFragment: {fileID: 0}
 --- !u!65 &1965858666

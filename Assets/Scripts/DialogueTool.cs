@@ -65,6 +65,11 @@ public class DialogueTool : Interactable
     // Start is called before the first frame update
     void Start()
     {
+        if(taskName == null) 
+        {
+            taskName = scene;
+        }
+
         talkAgain = false;
         inOptionDialog = false;
         /*

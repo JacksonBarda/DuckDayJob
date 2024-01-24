@@ -16,10 +16,6 @@ public class CADPuzzle : Interactable
     public float rotDistance;
 
     [SerializeField]
-    private GameObject puzzleUI;
-    [SerializeField]
-    private GameObject mainUI;
-    [SerializeField]
     private Slider SLDR_Progress;
 
     [HideInInspector]
@@ -68,7 +64,7 @@ public class CADPuzzle : Interactable
         }
         if (count >= fragments.Count)
         {
-            Finished();
+            Complete();
         }
     }
 
@@ -84,11 +80,10 @@ public class CADPuzzle : Interactable
         throw new System.NotImplementedException();
     }
 
-    public override void Finished()
+    public override void Complete()
     {
-        player.puzzleMode = false;
-        puzzleUI.SetActive(false);
-        mainUI.SetActive(true);
+        base.Complete();
+
         count = 0;
         AudioManager.Instance.PlaySFX("SFX_Complete");
         foreach (Image fragment in fragments)
