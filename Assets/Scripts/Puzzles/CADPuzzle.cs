@@ -15,7 +15,12 @@ public class CADPuzzle : Interactable
     public float snapThresholdRot = 5.0f;
     public float rotDistance;
 
-
+    [SerializeField]
+    private GameObject puzzleUI;
+    [SerializeField]
+    private GameObject mainUI;
+    [SerializeField]
+    private Slider SLDR_Progress;
 
     [HideInInspector]
     public Image selectedFragment;
@@ -25,7 +30,7 @@ public class CADPuzzle : Interactable
     private void Update()
     {
         HandleInput();
-        
+
 
     }
 
@@ -55,14 +60,15 @@ public class CADPuzzle : Interactable
             fragment.rectTransform.position = outlines[index].rectTransform.position;
             fragment.rectTransform.rotation = outlines[index].rectTransform.rotation;
             count++;
+            AudioManager.Instance.PlaySFX("SFX_VendingButton");
         }
         else
         {
             fragment.rectTransform.position = fragment.GetComponent<FragmentDragger>().originalPosition;
         }
-        if(count >= fragments.Count)
+        if (count >= fragments.Count)
         {
-            Complete();
+            Finished();
         }
     }
 
@@ -78,19 +84,17 @@ public class CADPuzzle : Interactable
         throw new System.NotImplementedException();
     }
 
-    public override void Complete()
+    public override void Finished()
     {
-        base.Complete();
-
+        player.puzzleMode = false;
+        puzzleUI.SetActive(false);
+        mainUI.SetActive(true);
         count = 0;
-        foreach(Image fragment in fragments)
+        AudioManager.Instance.PlaySFX("SFX_Complete");
+        foreach (Image fragment in fragments)
         {
             fragment.rectTransform.position = fragment.GetComponent<FragmentDragger>().originalPosition;
         }
-      
-    }
-    public override void Failed()
-    {
-        base.Failed();
+        SLDR_Progress.value++;
     }
 }
