@@ -4,18 +4,23 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Threading;
+using System;
 
 public class CADPuzzle : Interactable
 {
     public List<Image> fragments;
     public List<Image> outlines;
-    public float rotationSpeed = 100f;
+    public float rotationSpeed = 75f;
     public float snapThreshold = 0.1f;
+    public float snapThresholdRot = 5.0f;
+    public float rotDistance;
 
     [SerializeField]
     private GameObject puzzleUI;
     [SerializeField]
     private GameObject mainUI;
+    [SerializeField]
+    private Slider SLDR_Progress;
 
     [HideInInspector]
     public Image selectedFragment;
@@ -25,6 +30,8 @@ public class CADPuzzle : Interactable
     private void Update()
     {
         HandleInput();
+
+
     }
 
     private void HandleInput()
@@ -44,21 +51,22 @@ public class CADPuzzle : Interactable
 
     public void CheckSnap(Image fragment)
     {
-        
-        
+
         int index = fragments.IndexOf(fragment);
         float distance = Vector3.Distance(fragment.rectTransform.position, outlines[index].rectTransform.position);
-        if (distance <= snapThreshold)
+        rotDistance = Mathf.Abs((fragment.rectTransform.rotation.eulerAngles.z - outlines[index].rectTransform.rotation.eulerAngles.z));
+        if (distance <= snapThreshold && (360f - snapThresholdRot) <= rotDistance || rotDistance <= snapThresholdRot)
         {
             fragment.rectTransform.position = outlines[index].rectTransform.position;
             fragment.rectTransform.rotation = outlines[index].rectTransform.rotation;
             count++;
+            AudioManager.Instance.PlaySFX("SFX_VendingButton");
         }
         else
         {
             fragment.rectTransform.position = fragment.GetComponent<FragmentDragger>().originalPosition;
         }
-        if(count >= fragments.Count)
+        if (count >= fragments.Count)
         {
             Finished();
         }
@@ -82,10 +90,11 @@ public class CADPuzzle : Interactable
         puzzleUI.SetActive(false);
         mainUI.SetActive(true);
         count = 0;
-        foreach(Image fragment in fragments)
+        AudioManager.Instance.PlaySFX("SFX_Complete");
+        foreach (Image fragment in fragments)
         {
             fragment.rectTransform.position = fragment.GetComponent<FragmentDragger>().originalPosition;
         }
-      
+        SLDR_Progress.value++;
     }
 }

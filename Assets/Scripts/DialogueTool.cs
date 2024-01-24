@@ -18,6 +18,8 @@ public class DialogueTool : Interactable
     [SerializeField]
     private GameObject DialogueDisplay;
     [SerializeField]
+    private TMP_Text Tasklist;
+    [SerializeField]
     private Image Profile;
     [SerializeField]
     private Image Profile2;
@@ -35,6 +37,8 @@ public class DialogueTool : Interactable
     private bool increasePriority;
     [SerializeField]
     private GameObject optionButtonPrefab;
+    [SerializeField]
+    private Slider SLDR_Progress;
 
     private string duckname;
 
@@ -153,14 +157,14 @@ public class DialogueTool : Interactable
             }
             inOptionDialog = false;
         }
-
         // only sets talk again if there is a talk again dialogue. otherwise, if talk with the duck again, will play the same dialogue
         if (talkAgainList.Count != 0)
         {
             talkAgain = true;
         }
         index = 0;
-
+        Tasklist.SetText(taskName);
+        SLDR_Progress.value++;
     }
 
     public void ResetTool()
