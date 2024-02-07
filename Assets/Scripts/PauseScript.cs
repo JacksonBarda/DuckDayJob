@@ -18,6 +18,7 @@ public class PauseScript : MonoBehaviour
     public Button BTN_AudioOption;
     public Button BTN_ReturnAudio;
     public Button BTN_ReturnCharacters;
+    public Button BTN_ExitGame;
 
     private bool OpenPause = false;
 
@@ -30,6 +31,7 @@ public class PauseScript : MonoBehaviour
         BTN_CharacterMenu.onClick.AddListener(OpenCharacters);
         BTN_ReturnAudio.onClick.AddListener(MenuFromAudio);
         BTN_ReturnCharacters.onClick.AddListener(MenuFromCharacters);
+        BTN_ExitGame.onClick.AddListener(ExitGame);
     }
 
     public void OpenMenu()
@@ -69,5 +71,19 @@ public class PauseScript : MonoBehaviour
     {
         UI_CharacterMenu.SetActive(false);
         UI_MainMenu.SetActive(true);
+    }
+    public void ExitGame()
+    {
+        #if UNITY_EDITOR
+            // If running in the Unity editor
+            if (UnityEditor.EditorApplication.isPlaying)
+            {
+                // If in play mode, exit play mode
+                UnityEditor.EditorApplication.ExitPlaymode();
+            }
+        #else
+            // If not running in the Unity editor, quit the application
+            Application.Quit();
+        #endif  
     }
 }

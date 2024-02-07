@@ -19,6 +19,8 @@ public class DoorInteract : Interactable
     private UIManager manager;
     [SerializeField]
     private Locations endRoom;
+    [SerializeField]
+    private FollowPlayer followPlayer;
 
     public override void Interact()
     {
@@ -31,6 +33,8 @@ public class DoorInteract : Interactable
         rigid.useGravity = true;
         Player.transform.position = endLocation.position;
         manager.setLocation(endRoom);
+        followPlayer.SetBumps(endRoom);
+
     }
     public override void Complete()
     {

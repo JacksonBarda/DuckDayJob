@@ -30,6 +30,7 @@ public class TaskManager : MonoBehaviour
     private int count = 0;
     private int day = 1;
     private List<Interactable> currentDay;
+    public UIManager uiMananger;
 
     public delegate void OnTaskComplete(Interactable _task);
     public static OnTaskComplete onTaskComplete;
@@ -74,6 +75,7 @@ public class TaskManager : MonoBehaviour
             OnDeath();
         }
         SaveGame();
+        uiMananger.UpdateTime(1);
     }
 
     private void OnDeath()
@@ -83,6 +85,7 @@ public class TaskManager : MonoBehaviour
 
     private void TaskCompleted(Interactable _task)
     {
+        uiMananger.UpdateTime(1);
         //Change day time here
         _task.player.puzzleMode = false;
         _task.puzzleUI.SetActive(false);
@@ -103,7 +106,6 @@ public class TaskManager : MonoBehaviour
             SaveGame();
             LoadDay();
         }
-        //
         
     }
 
