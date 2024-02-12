@@ -73,10 +73,10 @@ public class FollowPlayer : MonoBehaviour
                 break;
 
             case Locations.BATHROOM:
-                zBump = -8.29f;
+                zBump = -7.29f;
                 yBump = 1.0f;
-                xMin = 39.71f;
-                xMax = 40.01f;
+                xMin = 39.21f;
+                xMax = 40.51f;
                 break;
 
             case Locations.MAZE:
