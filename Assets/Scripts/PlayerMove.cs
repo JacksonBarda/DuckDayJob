@@ -25,6 +25,8 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     private bool grounded = false;
     [SerializeField]
+    private bool walled = false;
+    [SerializeField]
     private Vector3 customLocation;
     [SerializeField]
     private List<Interactable> interactable = new List<Interactable>();
@@ -47,7 +49,7 @@ public class PlayerMove : MonoBehaviour
     void OnRight(InputValue value)
     {
         moveValRightHolder = value.Get<float>();
-        if (grounded && moveValLeft < .01)
+        if (walled && grounded && moveValLeft < .01)
         {
             moveValRight = moveValRightHolder;
             animator.SetFloat("Input", moveValRight);
@@ -57,7 +59,7 @@ public class PlayerMove : MonoBehaviour
     void OnLeft(InputValue value)
     {
         moveValLeftHolder = value.Get<float>();
-        if (grounded && moveValRight < .01)
+        if (walled && grounded && moveValRight < .01)
         {
             moveValLeft = moveValLeftHolder;
            // animator.SetFloat("Input", moveValLeft);
@@ -106,7 +108,23 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Ray ray = new Ray(transform.position, -Vector3.right);
+        Ray ray2 = new Ray(transform.position, Vector3.right);
+        RaycastHit hit;
+        RaycastHit hit2;
+        Physics.Raycast(ray2, out hit2, 0.5f);
+        Physics.Raycast(ray, out hit, 0.5f);
+
         grounded = Physics.Raycast(transform.position, -Vector3.up, 0.75f);
+        if (hit.collider != null && hit2.collider != null)
+            if (hit.collider.tag != "interactable" && hit2.collider.tag != "interactable")
+                walled = Physics.Raycast(ray, out hit, 0.5f) || Physics.Raycast(ray2, out hit2, 0.5f);
+        if(hit.collider != null)
+            Debug.Log(hit.collider);
+        if (hit2.collider != null)
+            Debug.Log(hit2.collider);
+        Debug.DrawRay(transform.position, -Vector3.right, Color.red);
+        Debug.DrawRay(transform.position, Vector3.right, Color.red);
 
         if (!puzzleMode)
         {
@@ -141,7 +159,7 @@ public class PlayerMove : MonoBehaviour
             }
 
             movingThreshold = new Vector3(.01f, .01f, .01f);
-            if ((rigid.velocity - movingThreshold).sqrMagnitude > .1f)
+            if (!walled && (rigid.velocity - movingThreshold).sqrMagnitude > .1f)
             {
                 if (animator.GetBool("isMoving") == false)
                 {
@@ -177,7 +195,7 @@ public class PlayerMove : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Interactable")
+        if (collision.gameObject.tag == "Interactable" || collision.gameObject.tag == "Door")
         {
             if (interactable != null)
                 interactable.Add(collision.gameObject.GetComponent<Interactable>());
@@ -186,7 +204,7 @@ public class PlayerMove : MonoBehaviour
     }
     private void OnTriggerExit(Collider collision)
     {
-        if (collision.gameObject.tag == "Interactable")
+        if (collision.gameObject.tag == "Interactable" || collision.gameObject.tag == "Door")
         {
             if (interactable[0] != null)
                 interactable.Remove(interactable[0]);
