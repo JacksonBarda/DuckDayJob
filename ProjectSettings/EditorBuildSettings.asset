@@ -8,11 +8,17 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/StartScreen.unity
     guid: 913d1f0cf2b595f41b34087ec465554f
-  - enabled: 1
-    path: Assets/Scenes/AntonioBlockout.unity
+  - enabled: 0
+    path: Assets/Scenes/garrettsBlockout.unity
     guid: 32d355b4ad5f07c4ba16803d6737ebb3
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: f52d64ef40a1c6848b936021d169013e
+  - enabled: 0
+    path: Assets/Scenes/antonioBlockout.unity
+    guid: 3b542bbdcde07c741a54b02083bd415b
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 3bfbdcfe322de794ab794e0ff8f8ce7e, type: 2}
