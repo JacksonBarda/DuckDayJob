@@ -1,95 +1,92 @@
-Scene,Day,Order Priority,Day/Night,Name,Profile Image,Dialogue,Normal UI,Alignment,Font Style,Options,Option Number,Talk Again
-Welcome to Nestla,1,1,Day,Main Duck,2,"After those long, treacherous 4 years of sleepless nights, countless projects, and winging all those exams at Purduck University, I’ve finally made it. My dream job: A mechanical engineer at the one and only Nestla.",TRUE,Left,Italics,FALSE,0,FALSE
-Welcome to Nestla,1,1,Day,Main Duck,2,The lobby looks exactly like the pictures too! I’m supposed to meet Elon Duck here to start my first day... but where is he?,TRUE,Left,Italics,FALSE,0,FALSE
-Welcome to Nestla,1,1,Day,Eggwin,3,Hello! Sorry to keep you waiting. Are you-,TRUE,Right,Normal,FALSE,0,FALSE
-Welcome to Nestla,1,1,Day,Main Duck,2,Elon Duck! Sir! It is a pleasure to finally meet... you... Where is the iconic monocle?,TRUE,Left,Normal,FALSE,0,FALSE
-Welcome to Nestla,1,1,Day,Eggwin,3,"Haha, I’m sorry to say the boss isn’t in the office today. My name Is Eggwin. I’ll be helping you on your first day here.",TRUE,Right,Normal,FALSE,0,FALSE
-Welcome to Nestla,1,1,Day,Eggwin,3,"I’m assuming you’re the new employee then. Main Duck, right?",TRUE,Right,Normal,FALSE,0,FALSE
-Welcome to Nestla,1,1,Day,Main Duck,2,Quack! That’s me!,TRUE,Left,Normal,FALSE,0,FALSE
-Welcome to Nestla,1,1,Day,Eggwin,3,"Perfect, I already have your first assignment.",TRUE,Right,Normal,FALSE,0,FALSE
-Welcome to Nestla,1,1,Day,Main Duck,2,An assignment already? Will I be working on the flying cars I’ve been hearing so much on the webbed?,TRUE,Left,Normal,FALSE,0,FALSE
-Welcome to Nestla,1,1,Day,Eggwin,3,"Heh, you’re getting your beak in the clouds before even flapping your wings yet. Though with a resume like yours, I’m sure you’ll be working in the manufacturing room in no time!",TRUE,Right,Normal,FALSE,0,FALSE
-Welcome to Nestla,1,1,Day,Eggwin,3,"I was going to suggest your first assignment to be introducing yourself to everyone else in the office. You’ll be working with many ducks here on a variety of projects, so I recommend getting to know them as soon as you can.",TRUE,Right,Normal,FALSE,0,FALSE
-Welcome to Nestla,1,1,Day,Main Duck,2,That means... I can introduce myself to Duckette! She should be here. She updated her PeepedIn that she was also working here after graduation.,TRUE,Left,Italics,FALSE,0,FALSE
-Welcome to Nestla,1,1,Day,Main Duck,2,"Yes, sir! I look forward to meeting everyone.",TRUE,Left,Normal,FALSE,0,FALSE
-Welcome to Nestla,1,1,Day,Eggwin,3,"Good luck! Here is a list of ducks I would like you to meet. We have quite a few... interesting ducks here, if you catch my drift. So don’t let them weird you out.",TRUE,Right,Normal,FALSE,0,FALSE
-Welcome to Nestla,1,1,Day,Eggwin,3,I’ll be here if you either have questions or have finished your first assignment.,TRUE,Right,Normal,FALSE,0,FALSE
-Questions for Meet the Ducks,1,2,Day,Eggwin,3,Do you have a question?,TRUE,Right,Normal,TRUE,0,FALSE
-Questions for Meet the Ducks_Option1,1,2,Day,None,0,Where can I find Duckette? ,TRUE,Right,Normal,FALSE,1,FALSE
-Questions for Meet the Ducks_Response1,1,2,Day,Eggwin,3,Duckette should be in the office room at her desk. She’s almost always on the computer.,TRUE,Right,Normal,FALSE,1,FALSE
-Questions for Meet the Ducks_Option2,1,2,Day,None,0,Where can I find Donald? ,TRUE,Right,Normal,FALSE,2,FALSE
-Questions for Meet the Ducks_Response2,1,2,Day,Eggwin,3,Donald? I wouldn’t be surprised if he’s slacking in the breakroom. Maybe try checking there?,TRUE,Right,Normal,FALSE,2,FALSE
-Questions for Meet the Ducks_Option3,1,2,Day,None,0,Where can I find Quackson? ,TRUE,Right,Normal,FALSE,3,FALSE
-Questions for Meet the Ducks_Response3,1,2,Day,Eggwin,3,Quackson? I rarely see that duck. I wonder where he could be hiding.,TRUE,Right,Normal,FALSE,3,FALSE
-Questions for Meet the Ducks_Option4,1,2,Day,None,0,I have no questions. ,TRUE,Right,Normal,FALSE,4,FALSE
-Questions for Meet the Ducks_Response4,1,2,Day,Eggwin,3,Ok! Be sure to report back once you talk to everyone!,TRUE,Right,Normal,FALSE,4,FALSE
-Meet Duckette,1,2,Day,Main Duck,2,It’s her! It’s actually Duckette!,TRUE,Left,Italics,FALSE,0,FALSE
-Meet Duckette,1,2,Day,Main Duck,2,The ONLY other reason why I picked this job. I can’t waste my chances.,TRUE,Left,Italics,FALSE,0,FALSE
-Meet Duckette,1,2,Day,Main Duck,2,Hello Duckette! What were the odds that we both got a job at Nestla after graduation?,TRUE,Left,Normal,FALSE,0,FALSE
-Meet Duckette,1,2,Day,Duckette,4,"Uhh, and you are?",TRUE,Right,Normal,FALSE,0,FALSE
-Meet Duckette,1,2,Day,Main Duck,2,STRIKE ONE!,TRUE,Left,Italics,FALSE,0,FALSE
-Meet Duckette,1,2,Day,Main Duck,2,Don’t you remember me? I’m Main Duck. We both went to Purduck University and studied mechanical engineering.,TRUE,Left,Normal,FALSE,0,FALSE
-Meet Duckette,1,2,Day,Duckette,4,"Hmm, are you sure? I don’t recall.",TRUE,Right,Normal,FALSE,0,FALSE
-Meet Duckette,1,2,Day,Main Duck,2,STRIKE 2!,TRUE,Left,Italics,FALSE,0,FALSE
-Meet Duckette,1,2,Day,Main Duck,2,We were in that ME 365 together last year.,TRUE,Left,Normal,FALSE,0,FALSE
-Meet Duckette,1,2,Day,Duckette,4,Oh... maybe.,TRUE,Right,Normal,FALSE,0,FALSE
-Meet Duckette,1,2,Day,Main Duck,2,AND STRIKE 3! SHE OFFICIALLY DOES NOT REMEMBER ME!,TRUE,Left,Italics,FALSE,0,FALSE
-Meet Duckette,1,2,Day,Main Duck,2,"H-Heh, well, I’m excited to be working with you. I hope we’re on the same project!",TRUE,Left,Normal,FALSE,0,FALSE
-Meet Duckette,1,2,Day,Duckette,4,Uh ok! It was nice to meet you.,TRUE,Right,Normal,FALSE,0,FALSE
-Meet Duckette,1,2,Day,Duckette,4,Oh! Did you need anything?,TRUE,Right,Normal,FALSE,0,TRUE
-Meet Duckette,1,2,Day,Main Duck,2,"I need your number, but my beak feels like it's glued shut at the moment",TRUE,Left,Italics,FALSE,0,TRUE
-Meet Duckette,1,2,Day,Main Duck,2,"Uh... no, just saying hi.",TRUE,Left,Normal,FALSE,0,TRUE
-Meet Donald,1,2,Day,Donald,5,You the new duck?,TRUE,Right,Normal,FALSE,0,FALSE
-Meet Donald,1,2,Day,Main Duck,2,"Yup, that’s me! My name is Main Duck.",TRUE,Left,Normal,FALSE,0,FALSE
-Meet Donald,1,2,Day,Donald,5,I would quit if I were you.,TRUE,Right,Normal,FALSE,0,FALSE
-Meet Donald,1,2,Day,Main Duck,2,What? Why?,TRUE,Left,Normal,FALSE,0,FALSE
-Meet Donald,1,2,Day,Donald,5,"You’re just like everyone else... dreaming of working for the Elon Duck at Nestla. But everyone is disappearing, flying away like flying cars.",TRUE,Right,Normal,FALSE,0,FALSE
-Meet Donald,1,2,Day,Main Duck,2,"Uh, what do you mean that-",TRUE,Left,Normal,FALSE,0,FALSE
-Meet Donald,1,2,Day,Donald,5,We just hired someone last week. Now they’re gone. The duck we hired the week prior is gone too.,TRUE,Right,Normal,FALSE,0,FALSE
-Meet Donald,1,2,Day,Donald,5,And yesterday I could’ve sworn I saw blood in the manufacturing room. Are we really making flying cars?,TRUE,Right,Normal,FALSE,0,FALSE
-Meet Donald,1,2,Day,Main Duck,2,What is this duck talking about? I should probably just leave.,TRUE,Left,Italics,FALSE,0,FALSE
-Meet Donald,1,2,Day,Main Duck,2,"Uh, I don’t know. But it was nice meeting you? I’m just gonna... go now.",TRUE,Left,Normal,FALSE,0,FALSE
-Meet Donald,1,2,Day,Donald,5,Try to stay alive duck.,TRUE,Right,Normal,FALSE,0,TRUE
-Meet Donald,1,2,Day,Main Duck,2,That’s not ominous at all,TRUE,Left,Italics,FALSE,0,TRUE
-Meet Quackson,1,2,Day,Main Duck,2,"Argh, I really REALLY got to use the restroom. Why are all the open stalls so dirty?!",TRUE,Left,Italics,FALSE,0,FALSE
-Meet Quackson,1,2,Day,Main Duck,2,Let me see if this first stall is open.,TRUE,Left,Italics,FALSE,0,FALSE
-Meet Quackson,1,2,Day,Main Duck,2,(Knocks on stall door) Hello? Anyone there?,TRUE,Left,Normal,FALSE,0,FALSE
-Meet Quackson,1,2,Day,Quackson,6,What the quack are you doing? Find a different stall.,TRUE,Right,Normal,FALSE,0,FALSE
-Meet Quackson,1,2,Day,Main Duck,2,I can’t use the other stalls! Have you seen the sorry state they’re in?,TRUE,Left,Normal,FALSE,0,FALSE
-Meet Quackson,1,2,Day,Quackson,6,So? I’m busy.,TRUE,Right,Normal,FALSE,0,FALSE
-Meet Quackson,1,2,Day,Main Duck,2,Wait... is that Angry Ducks?,TRUE,Left,Normal,FALSE,0,FALSE
-Meet Quackson,1,2,Day,Quackson,6,No.,TRUE,Right,Normal,FALSE,0,FALSE
-Meet Quackson,1,2,Day,Quackson,6,(Flushes toilet).,TRUE,Right,Normal,FALSE,0,FALSE
-Meet Quackson,1,2,Day,Quackson,6,Stall is taken!,TRUE,Right,Normal,FALSE,0,TRUE
-Meet Quackson,1,2,Day,Main Duck,2,...I know.,TRUE,Left,Normal,FALSE,0,TRUE
-Try to Stay Overnight,1,1,Night,Main Duck,2,"Wow, it’s already nighttime! My first day flew by fast.",TRUE,Left,Italics,FALSE,0,FALSE
-Try to Stay Overnight,1,1,Night,Main Duck,2,"Everyone’s already gone too, even Duckette. Might as well pack up then and get ready to...",TRUE,Left,Italics,FALSE,0,FALSE
-Try to Stay Overnight,1,1,Night,Main Duck,2,WAIT! Everyone is gone! That means... I have the whole office to myself! I’ve always wanted to explore the Nestla Office at night.,TRUE,Left,Italics,FALSE,0,FALSE
-Try to Stay Overnight,1,1,Night,Main Duck,2,"I can get all the drinks I want from the vending machine, I can finally use the quacking bathroom, and I can take a peep at Duckette’s desk. And there’s no one here to stop me!",TRUE,Left,Italics,FALSE,0,FALSE
+ï»¿Scene,Day,Order Priority,Day/Night,Name,Profile Image,Dialogue,Normal UI,Alignment,Font Style,Options,Option Number,Talk Again
+Introduction,1,1,Day,Main Duck,2,"After those long, treacherous 4 years of sleepless nights, countless projects, and winging all those exams at Purduck University, Iâ€™ve finally made it. My dream job: A mechanical engineer at the one and only Nestla.",TRUE,Left,Italics,FALSE,0,FALSE
+Introduction,1,1,Day,Main Duck,2,The lobby looks exactly like the pictures too! Iâ€™m supposed to meet Elon Duck here to start my first day... but where is he?,TRUE,Left,Italics,FALSE,0,FALSE
+Welcome to Nestla,1,2,Day,Eggwin,3,Hello! Sorry to keep you waiting. Are you-,TRUE,Right,Normal,FALSE,0,FALSE
+Welcome to Nestla,1,2,Day,Main Duck,2,Elon Duck! Sir! It is a pleasure to finally meet... you... Where is the iconic monocle?,TRUE,Left,Normal,FALSE,0,FALSE
+Welcome to Nestla,1,2,Day,Eggwin,3,"Haha, Iâ€™m sorry to say the boss isnâ€™t in the office today. My name Is Eggwin. Iâ€™ll be helping you on your first day here.",TRUE,Right,Normal,FALSE,0,FALSE
+Welcome to Nestla,1,2,Day,Eggwin,3,"Iâ€™m assuming youâ€™re the new employee then. Main Duck, right?",TRUE,Right,Normal,FALSE,0,FALSE
+Welcome to Nestla,1,2,Day,Main Duck,2,Quack! Thatâ€™s me!,TRUE,Left,Normal,FALSE,0,FALSE
+Welcome to Nestla,1,2,Day,Eggwin,3,"Perfect, I already have your first assignment.",TRUE,Right,Normal,FALSE,0,FALSE
+Welcome to Nestla,1,2,Day,Main Duck,2,An assignment already? Will I be working on the flying cars Iâ€™ve been hearing so much on the webbed?,TRUE,Left,Normal,FALSE,0,FALSE
+Welcome to Nestla,1,2,Day,Eggwin,3,"Heh, youâ€™re getting your beak in the clouds before even flapping your wings yet. Though with a resume like yours, Iâ€™m sure youâ€™ll be working in the manufacturing room in no time!",TRUE,Right,Normal,FALSE,0,FALSE
+Welcome to Nestla,1,2,Day,Eggwin,3,"I was going to suggest your first assignment to be introducing yourself to everyone else in the office. Youâ€™ll be working with many ducks here on a variety of projects, so I recommend getting to know them as soon as you can.",TRUE,Right,Normal,FALSE,0,FALSE
+Welcome to Nestla,1,2,Day,Main Duck,2,That means... I can introduce myself to Duckette! She should be here. She updated her PeepedIn that she was also working here after graduation.,TRUE,Left,Italics,FALSE,0,FALSE
+Welcome to Nestla,1,2,Day,Main Duck,2,"Yes, sir! I look forward to meeting everyone.",TRUE,Left,Normal,FALSE,0,FALSE
+Welcome to Nestla,1,2,Day,Eggwin,3,"Good luck! Here is a list of ducks I would like you to meet. We have quite a few... interesting ducks here, if you catch my drift. So donâ€™t let them weird you out.",TRUE,Right,Normal,FALSE,0,FALSE
+Welcome to Nestla,1,2,Day,Eggwin,3,Iâ€™ll be here if you either have questions or have finished your first assignment.,TRUE,Right,Normal,FALSE,0,FALSE
+Questions for Meet the Ducks,1,3,Day,Eggwin,3,Do you have a question?,TRUE,Right,Normal,TRUE,4,FALSE
+Questions for Meet the Ducks_Option1,1,3,Day,None,0,Where can I find Duckette?Â ,TRUE,Right,Normal,FALSE,1,FALSE
+Questions for Meet the Ducks_Response1,1,3,Day,Eggwin,3,Duckette should be in the office room at her desk. Sheâ€™s almost always on the computer.,TRUE,Right,Normal,FALSE,1,FALSE
+Questions for Meet the Ducks_Option2,1,3,Day,None,0,Where can I find Donald?Â ,TRUE,Right,Normal,FALSE,2,FALSE
+Questions for Meet the Ducks_Response2,1,3,Day,Eggwin,3,Donald? I wouldnâ€™t be surprised if heâ€™s slacking in the breakroom. Maybe try checking there?,TRUE,Right,Normal,FALSE,2,FALSE
+Questions for Meet the Ducks_Option3,1,3,Day,None,0,Where can I find Quackson?Â ,TRUE,Right,Normal,FALSE,3,FALSE
+Questions for Meet the Ducks_Response3,1,3,Day,Eggwin,3,Quackson? I rarely see that duck. I wonder where he could be hiding.,TRUE,Right,Normal,FALSE,3,FALSE
+Questions for Meet the Ducks_Option4,1,3,Day,None,0,I have no questions.Â ,TRUE,Right,Normal,FALSE,4,FALSE
+Questions for Meet the Ducks_Response4,1,3,Day,Eggwin,3,Ok! Be sure to report back once you talk to everyone!,TRUE,Right,Normal,FALSE,4,FALSE
+Meet Duckette,1,3,Day,Main Duck,2,Itâ€™s her! Itâ€™s actually Duckette!,TRUE,Left,Italics,FALSE,0,FALSE
+Meet Duckette,1,3,Day,Main Duck,2,The ONLY other reason why I picked this job. I canâ€™t waste my chances.,TRUE,Left,Italics,FALSE,0,FALSE
+Meet Duckette,1,3,Day,Main Duck,2,Hello Duckette! What were the odds that we both got a job at Nestla after graduation?,TRUE,Left,Normal,FALSE,0,FALSE
+Meet Duckette,1,3,Day,Duckette,4,"Uhh, and you are?",TRUE,Right,Normal,FALSE,0,FALSE
+Meet Duckette,1,3,Day,Main Duck,2,STRIKE ONE!,TRUE,Left,Italics,FALSE,0,FALSE
+Meet Duckette,1,3,Day,Main Duck,2,Donâ€™t you remember me? Iâ€™m Main Duck. We both went to Purduck University and studied mechanical engineering.,TRUE,Left,Normal,FALSE,0,FALSE
+Meet Duckette,1,3,Day,Duckette,4,"Hmm, are you sure? I donâ€™t recall.",TRUE,Right,Normal,FALSE,0,FALSE
+Meet Duckette,1,3,Day,Main Duck,2,STRIKE 2!,TRUE,Left,Italics,FALSE,0,FALSE
+Meet Duckette,1,3,Day,Main Duck,2,We were in that ME 365 together last year.,TRUE,Left,Normal,FALSE,0,FALSE
+Meet Duckette,1,3,Day,Duckette,4,Oh... maybe.,TRUE,Right,Normal,FALSE,0,FALSE
+Meet Duckette,1,3,Day,Main Duck,2,AND STRIKE 3! SHE OFFICIALLY DOES NOT REMEMBER ME!,TRUE,Left,Italics,FALSE,0,FALSE
+Meet Duckette,1,3,Day,Main Duck,2,"H-Heh, well, Iâ€™m excited to be working with you. I hope weâ€™re on the same project!",TRUE,Left,Normal,FALSE,0,FALSE
+Meet Duckette,1,3,Day,Duckette,4,Uh ok! It was nice to meet you.,TRUE,Right,Normal,FALSE,0,FALSE
+Meet Duckette,1,3,Day,Duckette,4,Oh! Did you need anything?,TRUE,Right,Normal,FALSE,0,TRUE
+Meet Duckette,1,3,Day,Main Duck,2,"I need your number, but my beak feels like it's glued shut at the moment",TRUE,Left,Italics,FALSE,0,TRUE
+Meet Duckette,1,3,Day,Main Duck,2,"Uh... no, just saying hi.",TRUE,Left,Normal,FALSE,0,TRUE
+Meet Donald,1,3,Day,Donald,5,You the new duck?,TRUE,Right,Normal,FALSE,0,FALSE
+Meet Donald,1,3,Day,Main Duck,2,"Yup, thatâ€™s me! My name is Main Duck.",TRUE,Left,Normal,FALSE,0,FALSE
+Meet Donald,1,3,Day,Donald,5,I would quit if I were you.,TRUE,Right,Normal,FALSE,0,FALSE
+Meet Donald,1,3,Day,Main Duck,2,What? Why?,TRUE,Left,Normal,FALSE,0,FALSE
+Meet Donald,1,3,Day,Donald,5,"Youâ€™re just like everyone else... dreaming of working for the Elon Duck at Nestla. But everyone is disappearing, flying away like flying cars.",TRUE,Right,Normal,FALSE,0,FALSE
+Meet Donald,1,3,Day,Main Duck,2,"Uh, what do you mean that-",TRUE,Left,Normal,FALSE,0,FALSE
+Meet Donald,1,3,Day,Donald,5,We just hired someone last week. Now theyâ€™re gone. The duck we hired the week prior is gone too.,TRUE,Right,Normal,FALSE,0,FALSE
+Meet Donald,1,3,Day,Donald,5,And yesterday I couldâ€™ve sworn I saw blood in the manufacturing room. Are we really making flying cars?,TRUE,Right,Normal,FALSE,0,FALSE
+Meet Donald,1,3,Day,Main Duck,2,What is this duck talking about? I should probably just leave.,TRUE,Left,Italics,FALSE,0,FALSE
+Meet Donald,1,3,Day,Main Duck,2,"Uh, I donâ€™t know. But it was nice meeting you? Iâ€™m just gonna... go now.",TRUE,Left,Normal,FALSE,0,FALSE
+Meet Donald,1,3,Day,Donald,5,Try to stay alive duck.,TRUE,Right,Normal,FALSE,0,TRUE
+Meet Donald,1,3,Day,Main Duck,2,Thatâ€™s not ominous at all,TRUE,Left,Italics,FALSE,0,TRUE
+Meet Quackson,1,3,Day,Main Duck,2,"Argh, I really REALLY got to use the restroom. Why are all the open stalls so dirty?!",TRUE,Left,Italics,FALSE,0,FALSE
+Meet Quackson,1,3,Day,Main Duck,2,Let me see if this first stall is open.,TRUE,Left,Italics,FALSE,0,FALSE
+Meet Quackson,1,3,Day,Main Duck,2,(Knocks on stall door) Hello? Anyone there?,TRUE,Left,Normal,FALSE,0,FALSE
+Meet Quackson,1,3,Day,Quackson,6,What the quack are you doing? Find a different stall.,TRUE,Right,Normal,FALSE,0,FALSE
+Meet Quackson,1,3,Day,Main Duck,2,I canâ€™t use the other stalls! Have you seen the sorry state theyâ€™re in?,TRUE,Left,Normal,FALSE,0,FALSE
+Meet Quackson,1,3,Day,Quackson,6,So? Iâ€™m busy.,TRUE,Right,Normal,FALSE,0,FALSE
+Meet Quackson,1,3,Day,Main Duck,2,Wait... is that Angry Ducks?,TRUE,Left,Normal,FALSE,0,FALSE
+Meet Quackson,1,3,Day,Quackson,6,No.,TRUE,Right,Normal,FALSE,0,FALSE
+Meet Quackson,1,3,Day,Quackson,6,(Flushes toilet).,TRUE,Right,Normal,FALSE,0,FALSE
+Meet Quackson,1,3,Day,Quackson,6,Stall is taken!,TRUE,Right,Normal,FALSE,0,TRUE
+Meet Quackson,1,3,Day,Main Duck,2,...I know.,TRUE,Left,Normal,FALSE,0,TRUE
+Try to Stay Overnight,1,1,Night,Main Duck,2,"Wow, itâ€™s already nighttime! My first day flew by fast.",TRUE,Left,Italics,FALSE,0,FALSE
+Try to Stay Overnight,1,1,Night,Main Duck,2,"Everyoneâ€™s already gone too, even Duckette. Might as well pack up then and get ready to...",TRUE,Left,Italics,FALSE,0,FALSE
+Try to Stay Overnight,1,1,Night,Main Duck,2,WAIT! Everyone is gone! That means... I have the whole office to myself! Iâ€™ve always wanted to explore the Nestla Office at night.,TRUE,Left,Italics,FALSE,0,FALSE
+Try to Stay Overnight,1,1,Night,Main Duck,2,"I can get all the drinks I want from the vending machine, I can finally use the quacking bathroom, and I can take a peep at Ducketteâ€™s desk. And thereâ€™s no one here to stop me!",TRUE,Left,Italics,FALSE,0,FALSE
 Try to Stay Overnight,1,1,Night,Janitor,7,Please leave.,TRUE,Right,Normal,FALSE,0,FALSE
 Try to Stay Overnight,1,1,Night,Main Duck,2,AHH! Where did you come from?,TRUE,Left,Normal,FALSE,0,FALSE
 Try to Stay Overnight,1,1,Night,Janitor,7,Our closing time is 7:00pm. Please leave so I can clean.,TRUE,Right,Normal,FALSE,0,FALSE
 Try to Stay Overnight,1,1,Night,Main Duck,2,"Uhh well, can you make one exception? Pretty please? Just give me five minutes?",TRUE,Left,Normal,FALSE,0,FALSE
-Try to Stay Overnight,1,1,Night,Janitor,7,No. Leave or else I’ll have to kick you out.,TRUE,Right,Normal,FALSE,0,FALSE
-Try to Stay Overnight,1,1,Night,Main Duck,2,Looks like they’re not changing their mind anytime soon. I guess they’re pretty strict with their closing hours.,TRUE,Left,Italics,FALSE,0,FALSE
+Try to Stay Overnight,1,1,Night,Janitor,7,No. Leave or else Iâ€™ll have to kick you out.,TRUE,Right,Normal,FALSE,0,FALSE
+Try to Stay Overnight,1,1,Night,Main Duck,2,Looks like theyâ€™re not changing their mind anytime soon. I guess theyâ€™re pretty strict with their closing hours.,TRUE,Left,Italics,FALSE,0,FALSE
 Try to Stay Overnight,1,1,Night,Main Duck,2,"Fineee, have a good night.",TRUE,Left,Normal,FALSE,0,FALSE
 Try to Stay Overnight,1,1,Night,Janitor,7,Goodnight. I encourage you to remember our closing hours next time.,TRUE,Right,Normal,FALSE,0,FALSE
 Task Tutorial,1,3,Day,Main Duck,2,I finished my first assignment!,TRUE,Left,Normal,FALSE,0,FALSE
-Task Tutorial,1,3,Day,Eggwin,3,"That’s egg-cellent! After all, you’ll be working with them here at Nestla, so it’s best to make those connections now!",TRUE,Right,Normal,FALSE,0,FALSE
-Task Tutorial,1,3,Day,Main Duck,2,"Connections... Oh flapping quack, Duckette didn’t even remember me! That’s not even close to a connection!",TRUE,Left,Italics,FALSE,0,FALSE
-Task Tutorial,1,3,Day,Eggwin,3,"And you’re in luck, I already have your next assignment!",TRUE,Right,Normal,FALSE,0,FALSE
-Task Tutorial,1,3,Day,Main Duck,2,What if I’m stuck working with an egg-centric like Donald? He gave me the creeps. My feathers stood on end from the weird nonsense he was squawking.,TRUE,Left,Italics,FALSE,0,FALSE
-Task Tutorial,1,3,Day,Eggwin,3,"Let me check my duckument here. Hmm, seems like you specialized in mechanical engineering at Purduck University, so you’ll probably be suited for CADs.",TRUE,Right,Normal,FALSE,0,FALSE
-Task Tutorial,1,3,Day,Main Duck,2,"Hmm, I have to find a way to work with Duckette! If we work together, there’s no way she could forget a duck like me: hardworking, smart,...",TRUE,Left,Italics,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Eggwin,3,"Thatâ€™s egg-cellent! After all, youâ€™ll be working with them here at Nestla, so itâ€™s best to make those connections now!",TRUE,Right,Normal,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Main Duck,2,"Connections... Oh flapping quack, Duckette didnâ€™t even remember me! Thatâ€™s not even close to a connection!",TRUE,Left,Italics,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Eggwin,3,"And youâ€™re in luck, I already have your next assignment!",TRUE,Right,Normal,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Main Duck,2,What if Iâ€™m stuck working with an egg-centric like Donald? He gave me the creeps. My feathers stood on end from the weird nonsense he was squawking.,TRUE,Left,Italics,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Eggwin,3,"Let me check my duckument here. Hmm, seems like you specialized in mechanical engineering at Purduck University, so youâ€™ll probably be suited for CADs.",TRUE,Right,Normal,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Main Duck,2,"Hmm, I have to find a way to work with Duckette! If we work together, thereâ€™s no way she could forget a duck like me: hardworking, smart,...",TRUE,Left,Italics,FALSE,0,FALSE
 Task Tutorial,1,3,Day,Eggwin,3,"Duckette will also need the latest blueprints from the team, as well as the reports from testing the latest flying car model. And I believe Donald needs some of the parts that were just shipped today...",TRUE,Right,Normal,FALSE,0,FALSE
 Task Tutorial,1,3,Day,Eggwin,3,"With no other duck available, could I trouble you with deliveries too?",TRUE,Right,Normal,FALSE,0,FALSE
-Task Tutorial,1,3,Day,Main Duck,2,I’ll be working with Duckette?,TRUE,Left,Normal,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Main Duck,2,Iâ€™ll be working with Duckette?,TRUE,Left,Normal,FALSE,0,FALSE
 Task Tutorial,1,3,Day,Eggwin,3,"Uhh, were you even listening to me?",TRUE,Right,Normal,FALSE,0,FALSE
 Task Tutorial,1,3,Day,Main Duck,2,Heh... sorry.,TRUE,Left,Normal,FALSE,0,FALSE
-Task Tutorial,1,3,Day,Eggwin,3,"I get it. It’s your first day, and you’re not the first duck to flap out about working at Nestla. But it’s important to finish these tasks on time.",TRUE,Right,Normal,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Eggwin,3,"I get it. Itâ€™s your first day, and youâ€™re not the first duck to flap out about working at Nestla. But itâ€™s important to finish these tasks on time.",TRUE,Right,Normal,FALSE,0,FALSE
 Task Tutorial,1,3,Day,Eggwin,3,Your tasks today should be pretty simple. We need a finished CAD and some deliveries sent out by the end of the day.,TRUE,Right,Normal,FALSE,0,FALSE
-Task Tutorial,1,3,Day,Main Duck,2,"Yes, sir! I’ll get straight to work.",TRUE,Left,Normal,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Main Duck,2,"Yes, sir! Iâ€™ll get straight to work.",TRUE,Left,Normal,FALSE,0,FALSE
 Task Tutorial,1,3,Day,Main Duck,2,Duckette here I come to save the day!,TRUE,Left,Italics,FALSE,0,FALSE
-,,,,,,,,,,,,
-,,,,,,,,,,,,
-,,,,,,,,,,,,
