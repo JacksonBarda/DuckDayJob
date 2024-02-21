@@ -150,8 +150,11 @@ public class ReadDialogueData : MonoBehaviour
 
     public void nextLine()
     {
-        DialogTool.GetComponent<DialogueTool>().index++;
-        DialogTool.GetComponent<DialogueTool>().setDialogueUI();
+        if (DialogTool.GetComponent<DialogueTool>().hadOption == false){
+            DialogTool.GetComponent<DialogueTool>().index++;
+            DialogTool.GetComponent<DialogueTool>().setDialogueUI();
+        }
+        
     }
 
     public void setDialogueTools()

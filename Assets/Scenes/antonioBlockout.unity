@@ -24602,6 +24602,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1696000672}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: DialogueButton
+      value: 
+      objectReference: {fileID: 1832684910}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: DialogueDisplay
       value: 
       objectReference: {fileID: 2075323091}
@@ -50262,6 +50266,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1696000672}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: DialogueButton
+      value: 
+      objectReference: {fileID: 1832684910}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: DialogueDisplay
       value: 
       objectReference: {fileID: 2075323091}
@@ -50311,7 +50319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.266
+      value: 7.13
       objectReference: {fileID: 0}
     - target: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_LocalPosition.y
@@ -67253,6 +67261,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1696000672}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: DialogueButton
+      value: 
+      objectReference: {fileID: 1832684910}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: DialogueDisplay
       value: 
       objectReference: {fileID: 2075323091}
@@ -67302,7 +67314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.788
+      value: 5.87
       objectReference: {fileID: 0}
     - target: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_LocalPosition.y
@@ -75551,6 +75563,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1696000672}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: DialogueButton
+      value: 
+      objectReference: {fileID: 1832684910}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: DialogueDisplay
       value: 
       objectReference: {fileID: 2075323091}
@@ -81332,9 +81348,11 @@ MonoBehaviour:
   increasePriority: 1
   optionButtonPrefab: {fileID: 3741148585713256696, guid: 8d6318746227bea4fa19349685a9f366, type: 3}
   SLDR_Progress: {fileID: 1696000672}
+  DialogueButton: {fileID: 1832684910}
   DialogueList: []
   talkAgainList: []
   index: 0
+  hadOption: 0
 --- !u!65 &1804512342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -81373,7 +81391,7 @@ Transform:
   m_GameObject: {fileID: 1804512340}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.42, y: 0.3111515, z: -9.223698}
+  m_LocalPosition: {x: 4.67, y: 0.3111515, z: -9.223698}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -95081,6 +95099,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1696000672}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: DialogueButton
+      value: 
+      objectReference: {fileID: 1832684910}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: DialogueDisplay
       value: 
       objectReference: {fileID: 2075323091}
@@ -96350,6 +96372,10 @@ PrefabInstance:
       propertyPath: SLDR_Progress
       value: 
       objectReference: {fileID: 1696000672}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: DialogueButton
+      value: 
+      objectReference: {fileID: 1832684910}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: DialogueDisplay
       value: 
