@@ -74,3 +74,19 @@ Try to Stay Overnight,1,1,Night,Janitor,7,No. Leave or else I’ll have to kick 
 Try to Stay Overnight,1,1,Night,Main Duck,2,Looks like they’re not changing their mind anytime soon. I guess they’re pretty strict with their closing hours.,TRUE,Left,Italics,FALSE,0,FALSE
 Try to Stay Overnight,1,1,Night,Main Duck,2,"Fineee, have a good night.",TRUE,Left,Normal,FALSE,0,FALSE
 Try to Stay Overnight,1,1,Night,Janitor,7,Goodnight. I encourage you to remember our closing hours next time.,TRUE,Right,Normal,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Main Duck,2,I finished my first assignment!,TRUE,Left,Normal,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Eggwin,3,"That’s egg-cellent! After all, you’ll be working with them here at Nestla, so it’s best to make those connections now!",TRUE,Right,Normal,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Main Duck,2,"Connections... Oh flapping quack, Duckette didn’t even remember me! That’s not even close to a connection!",TRUE,Left,Italics,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Eggwin,3,"And you’re in luck, I already have your next assignment!",TRUE,Right,Normal,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Main Duck,2,What if I’m stuck working with an egg-centric like Donald? He gave me the creeps. My feathers stood on end from the weird nonsense he was squawking.,TRUE,Left,Italics,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Eggwin,3,"Let me check my duckument here. Hmm, seems like you specialized in mechanical engineering at Purduck University, so you’ll probably be suited for CADs.",TRUE,Right,Normal,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Main Duck,2,"Hmm, I have to find a way to work with Duckette! If we work together, there’s no way she could forget a duck like me: hardworking, smart,...",TRUE,Left,Italics,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Eggwin,3,"Duckette will also need the latest blueprints from the team, as well as the reports from testing the latest flying car model. And I believe Donald needs some of the parts that were just shipped today...",TRUE,Right,Normal,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Eggwin,3,"With no other duck available, could I trouble you with deliveries too?",TRUE,Right,Normal,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Main Duck,2,I’ll be working with Duckette?,TRUE,Left,Normal,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Eggwin,3,"Uhh, were you even listening to me?",TRUE,Right,Normal,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Main Duck,2,Heh... sorry.,TRUE,Left,Normal,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Eggwin,3,"I get it. It’s your first day, and you’re not the first duck to flap out about working at Nestla. But it’s important to finish these tasks on time.",TRUE,Right,Normal,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Eggwin,3,Your tasks today should be pretty simple. We need a finished CAD and some deliveries sent out by the end of the day.,TRUE,Right,Normal,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Main Duck,2,"Yes, sir! I’ll get straight to work.",TRUE,Left,Normal,FALSE,0,FALSE
+Task Tutorial,1,3,Day,Main Duck,2,Duckette here I come to save the day!,TRUE,Left,Italics,FALSE,0,FALSE
