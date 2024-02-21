@@ -95,16 +95,42 @@ Eyes for Duckette	2	1	Day	Main Duck	2	"Our first conversation was... wobbly, at 
 Eyes for Duckette	2	1	Day	Main Duck	2	"Oh, there she is now! Aww, look at her already typing away. She never was the one to fowl up her responsibilities."	TRUE	Left	Italics	FALSE	0	FALSE
 Eyes for Duckette	2	1	Day	Main Duck	2	"Good morning Duckette, I hope you are having a ducky-tastic day!"	TRUE	Left	Normal	FALSE	0	FALSE
 Eyes for Duckette	2	1	Day	Duckette	4	"...Thanks, whoever you are."	TRUE	Right	Normal	FALSE	0	FALSE
-Eyes for Duckette	2	1	Day	Main Duck	2	WHAT?! How could she have NOT liked it? It took me the whole ride here to figure out the best way to greet her.	TRUE	Left	Italics	FALSE	0	FALSE
+Eyes for Duckette	2	1	Day	Main Duck	2	WHAT?! How could she have NOT liked that? It took me the whole ride here to figure out the best way to greet her.	TRUE	Left	Italics	FALSE	0	FALSE
 Eyes for Duckette	2	1	Day	Main Duck	2	She didn't even look at me. Is she actually working or-	TRUE	Left	Italics	FALSE	0	FALSE
-Eyes for Duckette	2	1	Day	Main Duck	2	GASP! Or maybe she's talking to someone!	TRUE	Left	Italics	FALSE	0	FALSE
+Eyes for Duckette	2	1	Day	Main Duck	2	SQUAWK! Or maybe she's talking to someone!	TRUE	Left	Italics	FALSE	0	FALSE
 Eyes for Duckette	2	1	Day	Duckette	4	"Um, can I help you? You've been staring for quite a bit."	TRUE	Right	Normal	FALSE	0	FALSE
 Eyes for Duckette	2	1	Day	Main Duck	2	"O-Oh, I was just wondering what you're working on today. I have another CAD I need to finish up."	TRUE	Left	Normal	FALSE	0	FALSE
 Eyes for Duckette	2	1	Day	Duckette	4	"I'm just responding to emails right now, nothing fancy."	TRUE	Right	Normal	FALSE	0	FALSE
 Eyes for Duckette	2	1	Day	Duckette	4	Good luck with the CADs.	TRUE	Right	Normal	FALSE	0	FALSE
 Eyes for Duckette	2	1	Day	Main Duck	2	"Hmm, “just” emails? We'll see about that."	TRUE	Left	Italics	FALSE	0	FALSE
 Eyes for Duckette	2	1	Day	Main Duck	2	I'll be sure to impress Duckette by quacktively tackling my tasks.	TRUE	Left	Italics	FALSE	0	FALSE
-												
-												
-												
-												
+Selecting a Drink for Duckette	2	0	Day	Main Duck	2	"Now, what drink would Duckette like?"	TRUE	Left	Italics	FALSE	0	FALSE
+Drink Choice Confirmation for Duckette	2	0	Day	Main Duck	2	Should I pick this one?	TRUE	Left	Italics	FALSE	0	FALSE
+Drink Choice Selected for Duckette	2	0	Day	Main Duck	2	I'll pick this one then. I hope Duckette likes it!	TRUE	Left	Italics	FALSE	0	FALSE
+If Main Duck Chose Right Drink (Peepsi)	2	0	Day	Main Duck	2	Hello Duckette! This is for you.	TRUE	Left	Normal	FALSE	0	FALSE
+If Main Duck Chose Right Drink (Peepsi)	2	0	Day	Duckette	4	Oh? Is that Peepsi?	TRUE	Right	Normal	FALSE	0	FALSE
+If Main Duck Chose Right Drink (Peepsi)	2	0	Day	Main Duck	2	Yes! Do you... not like Peepsi?	TRUE	Left	Normal	FALSE	0	FALSE
+If Main Duck Chose Right Drink (Peepsi)	2	0	Day	Duckette	4	...	TRUE	Right	Normal	FALSE	0	FALSE
+If Main Duck Chose Right Drink (Peepsi)	2	0	Day	Main Duck	2	"Ah, I can't read that face! What is swimming in her thoughts right now?"	TRUE	Left	Italics	FALSE	0	FALSE
+If Main Duck Chose Right Drink (Peepsi)	2	0	Day	Duckette	4	I'm surprised you didn't get me Quack-a-Cola. I always preferred Peepsi.	TRUE	Right	Normal	FALSE	0	FALSE
+If Main Duck Chose Right Drink (Peepsi)	2	0	Day	Duckette	4	"Thank you. Main Duck, right?"	TRUE	Right	Normal	FALSE	0	FALSE
+If Main Duck Chose Right Drink (Peepsi)	2	0	Day	Main Duck	2	SHE KNOWS MY NAME!	TRUE	Left	Italics	FALSE	0	FALSE
+If Main Duck Chose Right Drink (Peepsi)	2	0	Day	Main Duck	2	That's one affection point! There's still a waddle of hope for me.	TRUE	Left	Italics	FALSE	0	FALSE
+If Main Duck Chose Wrong Drink for Duckette	2	0	Day	Main Duck	2	Hello Duckette! This is for you.	TRUE	Left	Normal	FALSE	0	FALSE
+If Main Duck Chose Wrong Drink for Duckette	2	0	Day	Duckette	4	"Thanks intern, just leave it on my desk."	TRUE	Right	Normal	FALSE	0	FALSE
+If Main Duck Chose Wrong Drink for Duckette	2	0	Day	Main Duck	2	She barely looked at the drink!	TRUE	Left	Italics	FALSE	0	FALSE
+If Main Duck Chose Wrong Drink for Duckette	2	0	Day	Main Duck	2	"Oh Duckette, when will I ever be more than an intern to you?"	TRUE	Left	Italics	FALSE	0	FALSE
+Hack into Duckette's Computer Part I	2	1	Night	Main Duck	2	"Finally, all the ducks are gone."	TRUE	Left	Italics	FALSE	0	FALSE
+Hack into Duckette's Computer Part I	2	1	Night	Main Duck	2	"I didn't have much luck catching Duckette's attention today, so my only beakon of hope is to see who she was emailing in the morning."	TRUE	Left	Italics	FALSE	0	FALSE
+Hack into Duckette's Computer Part I	2	1	Night	Main Duck	2	Desperate times call for desperate measures! Time to find Duckette's cubicle.	TRUE	Left	Italics	FALSE	0	FALSE
+Hack into Duckette's Computer Part II	2	2	Night	Main Duck	2	Quack! I was praying she would forget to sign out. I need to find out what her password is.	TRUE	Left	Italics	FALSE	0	FALSE
+Hack into Duckette's Computer Part III	2	3	Night	Main Duck	2	I'm in! Time to open her emails...	TRUE	Left	Normal	FALSE	0	FALSE
+Hack into Duckette's Computer Part III	2	3	Night	Main Duck	2	"Looks like there is an email from Elon Duck asking for the latest reports, so that's why she asked for my help."	TRUE	Left	Normal	FALSE	0	FALSE
+Hack into Duckette's Computer Part III	2	3	Night	Main Duck	2	...And there's an email from a Manfred? Who is that? I've never seen them in the office.	TRUE	Left	Normal	FALSE	0	FALSE
+Hack into Duckette's Computer Part III	2	3	Night	Main Duck	2	IS SHE ALREADY IN LOVE WITH SOMEONE ELSE?!	TRUE	Left	Normal	FALSE	0	FALSE
+Hack into Duckette's Computer Part III	2	3	Night	Main Duck	2	"No, no, it can't be! Nestla is huge! I probably haven't met everyone yet. Duckette is one popular duck, after all."	TRUE	Left	Normal	FALSE	0	FALSE
+Hack into Duckette's Computer Part III	2	3	Night	Main Duck	2	Let's just open this email up just in case...	TRUE	Left	Normal	FALSE	0	FALSE
+Hack into Duckette's Computer Part III	2	3	Night	Janitor	7	(footsteps echo in the distance)	TRUE	Right	Normal	FALSE	0	FALSE
+Hack into Duckette's Computer Part III	2	3	Night	Main Duck	2	"Quack, it's the janitor! It must be closing hours now!"	TRUE	Left	Normal	FALSE	0	FALSE
+Hack into Duckette's Computer Part III	2	3	Night	Main Duck	2	"I already got in trouble yesterday, no need to keep that streak."	TRUE	Left	Normal	FALSE	0	FALSE
+Hack into Duckette's Computer Part III	2	3	Night	Main Duck	2	I'll leave for the day.	TRUE	Left	Normal	FALSE	0	FALSE
