@@ -123,6 +123,10 @@ public class PlayerMove : MonoBehaviour
                     animator.SetFloat("Input", Mathf.Abs(rigid.velocity.x));
                     spriteRenderer.flipX = true;
                 }
+                if(rigid.velocity.x == 0f)
+                {
+                    animator.SetFloat("Input", Mathf.Abs(rigid.velocity.x));
+                }
                 moveValRight = moveValRightHolder;
                 moveValLeft = moveValLeftHolder;
             }

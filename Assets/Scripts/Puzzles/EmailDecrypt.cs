@@ -6,178 +6,194 @@ using UnityEngine.UI;
 
 public class EmailDecrypt : Interactable
 {
-
+    public GameObject puzzleBarUI;
+    public List<Image> fragments;
+    public List<Image> outlines;
+    public float rotationSpeed = 75f;
+    public float snapThreshold = 0.1f;
+    public float snapThresholdRot = 5.0f;
     [SerializeField]
-    private List<Text> numberColumns;
+    private float movementSpeed = 5f;
     [SerializeField]
-    private List<GameObject> boxColors;
+    private float sizeChangeSpeed = 5f;
+    public float rotDistance;
+    private Vector2 targetRedBoxPosition;
+    private Vector2 targetWhiteBoxPosition;
+    private float targetRedBoxWidth;
+    private float targetWhiteBoxWidth;
     [SerializeField]
-    private List<RectTransform> rect;
+    private Slider SLDR_Progress;
 
-    private int focusedColumn;
-    private List<int> correctNumbers;
-    private List<bool> isAnimating;
-    private List<float> speeds;
-    private bool inPuzzle = false;
-    private List<float> timers;
+    [HideInInspector]
+    public Image selectedFragment;
 
+    public Image progressBar; 
+    public RectTransform redBox; 
+    public RectTransform whiteBox; 
+
+    public float decryptionSpeed = 0.5f;
+    private bool partOneComplete = false;
+
+    private int count = 0;
+
+    private void Update()
+    {
+        HandleInput();
+        if (partOneComplete)
+        {
+            HandleMouseInteraction();
+            UpdateBoxMovements();
+        }
+        
+    }
+
+    private void HandleInput()
+    {
+        if (selectedFragment != null)
+        {
+            if (Input.GetKey(KeyCode.Q))
+            {
+                selectedFragment.rectTransform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
+            }
+            else if (Input.GetKey(KeyCode.E))
+            {
+                selectedFragment.rectTransform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
+            }
+        }
+    }
+
+    public void CheckSnap(Image fragment)
+    {
+
+        int index = fragments.IndexOf(fragment);
+        float distance = Vector3.Distance(fragment.rectTransform.position, outlines[index].rectTransform.position);
+        rotDistance = Mathf.Abs((fragment.rectTransform.rotation.eulerAngles.z - outlines[index].rectTransform.rotation.eulerAngles.z));
+        if (distance <= snapThreshold && (360f - snapThresholdRot) <= rotDistance || rotDistance <= snapThresholdRot)
+        {
+            fragment.rectTransform.position = outlines[index].rectTransform.position;
+            fragment.rectTransform.rotation = outlines[index].rectTransform.rotation;
+            count++;
+            AudioManager.Instance.PlaySFX("SFX_VendingButton");
+        }
+        else
+        {
+            fragment.rectTransform.position = fragment.GetComponent<FragmentDragger>().originalPosition;
+        }
+        if (count >= fragments.Count)
+        {
+            //Complete();
+            puzzleBarUI.SetActive(true);
+            partOneComplete = true;
+
+        }
+    }
+    private void Start()
+    {
+        targetWhiteBoxPosition = new Vector2(Random.Range(progressBar.GetComponent<RectTransform>().rect.xMin, progressBar.GetComponent<RectTransform>().rect.xMax), whiteBox.rect.y - 123f);
+        targetRedBoxPosition = new Vector2(Random.Range(whiteBox.rect.xMin, whiteBox.rect.xMax), redBox.rect.position.y +50);
+        targetWhiteBoxWidth = Random.Range(progressBar.GetComponent<RectTransform>().rect.width * 0.1f, progressBar.GetComponent<RectTransform>().rect.width * 0.30f);
+        targetRedBoxWidth = Random.Range(whiteBox.rect.width * 0.4f, whiteBox.rect.width * 1.0f);
+    }
+    
     public override void Interact()
     {
-        //fade.FadeImageOverTime(0.7f, this);
+        
         player.puzzleMode = true;
         puzzleUI.SetActive(true);
         mainUI.SetActive(false);
-        InitializePuzzle();
-        inPuzzle = true;
-        StartCoroutine(FloatingNumbersAnimation());
-        AudioManager.Instance.PlayMusic("Hacking");
+        //puzzleBarUI.SetActive(false);
+        progressBar.fillMethod = Image.FillMethod.Horizontal;
+        progressBar.fillAmount = 0;
     }
 
     public override void Action()
     {
-
+        throw new System.NotImplementedException();
     }
+
     public override void Complete()
     {
         base.Complete();
-        inPuzzle = false;
 
+        count = 0;
         AudioManager.Instance.PlaySFX("SFX_Complete");
-        //location of puzzle
-        AudioManager.Instance.PlayMusic("Lobby");
+        foreach (Image fragment in fragments)
+        {
+            fragment.rectTransform.position = fragment.GetComponent<FragmentDragger>().originalPosition;
+        }
+        SLDR_Progress.value++;
     }
-    void Update()
+    private void HandleMouseInteraction()
     {
-        if(player.puzzleMode)
+        // Check if the mouse is within the red box
+        if (RectTransformUtility.RectangleContainsScreenPoint(redBox, Input.mousePosition))
         {
-            CheckLocking();
+            // Update the progress bar based on decryption speed
+            progressBar.fillAmount += Time.deltaTime * decryptionSpeed;
+
+            // Update the position and size of the red and white boxes periodically
+            
+        }
+        else
+        {
+            // Reset progress if the mouse is outside the red box
+            progressBar.fillAmount = 0f;
         }
 
+        // Check if the progress bar is filled
+        if (progressBar.fillAmount >= 1.0f)
+        {
+            Complete();
+        }
     }
-
-    private void InitializePuzzle()
+    void UpdateBoxMovements()
     {
-        timers = new List<float>(numberColumns.Count);
-
-        Debug.Log(boxColors[1]);
-        foreach (GameObject GO in boxColors)
+        // Check if the red box has reached its target position
+        if ((Vector2)redBox.anchoredPosition != targetRedBoxPosition)
         {
-            GO.GetComponent<Image>().color = new Color32(164, 61, 53, 255);
-            Debug.Log(GO);
+            // Smoothly move the red box towards the target position
+            redBox.anchoredPosition = Vector2.MoveTowards(redBox.anchoredPosition, targetRedBoxPosition, Time.deltaTime * movementSpeed);
         }
-        correctNumbers = new List<int>(numberColumns.Count);
-        for (int i = 0; i < numberColumns.Count; i++)
+        else
         {
-            timers.Add(0f); // Initialize timers with zeros
-            numberColumns[i].text = Random.Range(0, 10).ToString();
-            correctNumbers.Add(i); // Use Add method to add elements to the list
+            // Red box reached the target, pick a new target position
+            targetRedBoxPosition = new Vector2(Random.Range(whiteBox.rect.xMin, whiteBox.rect.xMax), redBox.rect.position.y + 50);
+            targetRedBoxWidth = Random.Range(whiteBox.rect.width * 0.4f, whiteBox.rect.width * 1.0f);
         }
-    }
-
-
-
-    private void CheckLocking()
-    {
-        if (inPuzzle)
+        if(redBox.rect.width !> targetRedBoxWidth-1 || redBox.rect.width !> targetRedBoxWidth + 1)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-               
-                int lockedNumber = int.Parse(numberColumns[focusedColumn].text);
-                
-                if (lockedNumber == correctNumbers[focusedColumn])
-                {
-                    AudioManager.Instance.PlaySFX("SFX_Decrypt");
-                    Debug.Log(focusedColumn);
-                    boxColors[focusedColumn].GetComponent<Image>().color = new Color32(79, 154, 53, 255);
-                    if (focusedColumn == 9)
-                    {
-                        Debug.Log("Finished");
-                        Complete();
-                        return;
-                    }
-
-                    focusedColumn++;
-                }
-                else
-                {
-                    StartCoroutine(ResetPuzzle());
-                }
-                
-            }
+            float redBoxWidth = Mathf.Lerp(redBox.rect.width, targetRedBoxWidth, Time.deltaTime * sizeChangeSpeed);
+            redBox.sizeDelta = new Vector2(redBoxWidth, redBox.rect.height);
         }
+        else
+        {
+            targetRedBoxWidth = Random.Range(whiteBox.rect.width * 0.3f, whiteBox.rect.width * 1.0f);
+        }
+
+        if ((Vector2)whiteBox.anchoredPosition != targetWhiteBoxPosition)
+        {
+            // Smoothly move the white box towards the target position
+            whiteBox.anchoredPosition = Vector2.MoveTowards(whiteBox.anchoredPosition, targetWhiteBoxPosition, Time.deltaTime * movementSpeed);
+        }
+        else
+        {
+            // White box reached the target, pick a new target position
+            //targetWhiteBoxWidth = Random.Range(progressBar.GetComponent<RectTransform>().rect.width * 0.1f, progressBar.GetComponent<RectTransform>().rect.width * 0.60f);
+            targetWhiteBoxPosition = new Vector2(Random.Range(progressBar.GetComponent<RectTransform>().rect.xMin, progressBar.GetComponent<RectTransform>().rect.xMax), whiteBox.rect.y - 123f);
+        }
+        /*
+        if (whiteBox.rect.width !> targetWhiteBoxWidth-1 || whiteBox.rect.width !< targetWhiteBoxWidth + 1)
+        {
+            //float whiteBoxWidth = Mathf.Lerp(whiteBox.rect.width, targetWhiteBoxWidth, Time.deltaTime * sizeChangeSpeed);
+            //whiteBox.sizeDelta = new Vector2(whiteBoxWidth, whiteBox.rect.height);
+        }
+        else
+        {
+            targetWhiteBoxWidth = Random.Range(progressBar.GetComponent<RectTransform>().rect.width * 0.1f, progressBar.GetComponent<RectTransform>().rect.width * 0.60f);
+        }
+        */
+        // Smoothly change the size of the white box
+       
 
     }
-
-    private IEnumerator FloatingNumbersAnimation()
-    {
-        List<int> currentNumbers = new List<int>(numberColumns.Count);
-        speeds = new List<float>(numberColumns.Count);
-        isAnimating = new List<bool>(numberColumns.Count);
-
-        for (int i = 0; i < numberColumns.Count; i++)
-        {
-            speeds.Add(Random.Range(0.5f, 0.6f)); // Use Add method to add elements to the list
-            isAnimating.Add(true); // Use Add method to add elements to the list
-           
-        }
-        for (int i = 0; i < numberColumns.Count; i++)
-        {
-            int number;
-            if (int.TryParse(numberColumns[i].text, out number))
-            {
-                currentNumbers.Add(number);
-            }
-            else
-            {
-                Debug.LogError("Failed to parse number from text: " + numberColumns[i].text);
-            }
-        }
-
-
-
-        while (true)
-        {
-            for (int i = 0; i < numberColumns.Count; i++)
-            {     
-                float duration = speeds[i]; // Set desired duration (in seconds) for changing numbers
-                if (i < focusedColumn) // Stop updating timer when the number is correctly selected
-                {
-                    continue;
-                }
-
-                timers[i] += Time.deltaTime;
-
-                if (timers[i] >= duration)
-                {
-                    timers[i] = 0f;
-                    currentNumbers[i] = (currentNumbers[i] + 1) % 10;
-                    numberColumns[i].text = currentNumbers[i].ToString();
-                }
-            }
-            yield return null;
-        }
-    }
-
-    private IEnumerator ResetPuzzle()
-    {
-
-        AudioManager.Instance.PlaySFX("SFX_Error");
-        for (int i = 0; i < numberColumns.Count; i++)
-        {
-
-            speeds[i] = Random.Range(0.5f, 0.7f);
-            isAnimating[i] = true;
-        }
-        foreach (GameObject GO in boxColors)
-        {
-            GO.GetComponent<Image>().color = new Color32(164, 61, 53, 255);
-        }
-        focusedColumn = 0;
-        yield return new WaitForSeconds(1f);
-
-
-    }
-
-
 }
