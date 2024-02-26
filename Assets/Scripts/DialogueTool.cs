@@ -39,6 +39,8 @@ public class DialogueTool : Interactable
     private GameObject optionButtonPrefab;
     [SerializeField]
     private Slider SLDR_Progress;
+    [SerializeField]
+    private GameObject DialogueButton;
 
     private string duckname;
 
@@ -61,6 +63,8 @@ public class DialogueTool : Interactable
     private bool talkAgain;
 
     private bool inOptionDialog;
+
+    public bool hadOption = false;
 
     // Start is called before the first frame update
     void Start()
@@ -190,12 +194,12 @@ public class DialogueTool : Interactable
 
     public bool setOptions()
     {
-        bool hadOption = false;
+        hadOption = false;
         responseList.Clear();
         if (talkAgain)
         {
             Options.SetActive(true);
-
+            DialogueButton.SetActive(false);
             if (talkAgainList[index].options)
             {
                 refDialogueList = talkAgainList;
@@ -459,6 +463,7 @@ public class DialogueTool : Interactable
     public void setSelectedOptionDialogue(GameObject selectedButton)
     {
         Options.SetActive(false);
+        DialogueButton.SetActive(true);
         inOptionDialog = true;
         DialogueList = responseList[selectedButton.GetComponent<OptionButtonSetUp>().optionNumber - 1];
         // need to delete option buttons
