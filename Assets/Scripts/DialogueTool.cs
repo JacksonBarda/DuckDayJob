@@ -43,6 +43,8 @@ public class DialogueTool : Interactable
     private GameObject DialogueButton;
     [SerializeField]
     public GameObject DialogueIndicator;
+    [SerializeField]
+    public GameObject UIManager;
 
     private string duckname;
 
@@ -67,6 +69,10 @@ public class DialogueTool : Interactable
     private bool inOptionDialog;
 
     public bool hadOption = false;
+
+    public bool timeMoves = false;
+
+    public int hours = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -177,6 +183,10 @@ public class DialogueTool : Interactable
         index = 0;
         Tasklist.SetText(taskName);
         SLDR_Progress.value++;
+        if (timeMoves == true)
+        {
+            UIManager.GetComponent<UIManager>().UpdateTime(hours);
+        }
     }
 
     public void ResetTool()
