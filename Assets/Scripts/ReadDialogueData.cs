@@ -166,6 +166,8 @@ public class ReadDialogueData : MonoBehaviour
                 && dTool.GetComponent<DialogueTool>().DialogueList[0].dayOrNight == UIManager.GetComponent<UIManager>().dayOrNight)
             {
                 dTool.SetActive(true);
+                if (dTool.GetComponent<DialogueTool>().DialogueIndicator != null)
+                    dTool.GetComponent<DialogueTool>().DialogueIndicator.SetActive(true);
             }
             else
             {

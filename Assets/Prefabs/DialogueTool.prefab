@@ -165,7 +165,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8161731065144322017
@@ -266,6 +266,7 @@ MonoBehaviour:
   optionButtonPrefab: {fileID: 3741148585713256696, guid: 8d6318746227bea4fa19349685a9f366, type: 3}
   SLDR_Progress: {fileID: 0}
   DialogueButton: {fileID: 0}
+  DialogueIndicator: {fileID: 2557612985409383229}
   DialogueList: []
   talkAgainList: []
   index: 0

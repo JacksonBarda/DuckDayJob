@@ -41,6 +41,8 @@ public class DialogueTool : Interactable
     private Slider SLDR_Progress;
     [SerializeField]
     private GameObject DialogueButton;
+    [SerializeField]
+    public GameObject DialogueIndicator;
 
     private string duckname;
 
@@ -139,6 +141,7 @@ public class DialogueTool : Interactable
         DialogueManager.GetComponent<ReadDialogueData>().DialogTool = this.gameObject;
         setDialogueUI();
 
+        DialogueIndicator.SetActive(false);
     }
    
 
@@ -481,5 +484,5 @@ public class DialogueTool : Interactable
         string newText = originalText.Replace("Main Duck", name);
         return newText;
     }
-
+    
 }
