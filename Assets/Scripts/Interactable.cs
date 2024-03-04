@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
+    public bool activatePostPuzzle = false;
+    public Interactable puzzleToActivate;
     public FadeController fade;
     public PlayerMove player;
     public string taskName;
     public bool isCompleted;
     public bool hasFailed;
+    public bool isVisibleOnStart = true;
     public GameObject puzzleUI;
     public GameObject mainUI;
 
@@ -16,6 +19,11 @@ public class Interactable : MonoBehaviour
     public virtual void Action() { }
     public virtual void Complete()
     {
+        if (activatePostPuzzle)
+        {
+            puzzleToActivate.gameObject.SetActive(true);
+        }
+        isCompleted = true;
         TaskManager.onTaskComplete(this);
     }
     public virtual void Failed()

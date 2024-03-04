@@ -54,6 +54,8 @@ public class DialogueTool : Interactable
 
     private List<DialogStruct> refDialogueList = new List<DialogStruct>();
 
+    private List<DialogStruct> retrievalDialogueList = new List<DialogStruct>();
+
     private List<GameObject> buttonList = new List<GameObject>();
 
     public int index = 0;
@@ -61,6 +63,16 @@ public class DialogueTool : Interactable
     private bool talkAgain;
 
     private bool inOptionDialog;
+
+    private int roundNum = 1;
+
+    // Retrieval Variables
+    [SerializeField]
+    private int Round1Answer;
+    [SerializeField]
+    private int Round2Answer;
+    private bool correct = false;
+    private int holdIndex = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -72,16 +84,7 @@ public class DialogueTool : Interactable
 
         talkAgain = false;
         inOptionDialog = false;
-        /*
-        refDialogueList = DialogueManager.GetComponent<ReadDialogueData>().DialogList;
-        foreach (DialogStruct DialogueRow in refDialogueList)
-        {
-            if (DialogueRow.scene == scene)
-            {
-                DialogueList.Add(DialogueRow);
-            }
-        }
-        */
+
     }
 
     // Update is called once per frame
@@ -143,7 +146,7 @@ public class DialogueTool : Interactable
         // call it anytime inside the function and have your stuff that finished the interact, like close all the dialogue and bring back the main UI
         // below is placeholder if there is no code. If there is code, can delete
         ResetTool();
-
+        roundNum = 1;
         if (increasePriority)
         {
             DialogueManager.GetComponent<ReadDialogueData>().priority++;
@@ -172,21 +175,7 @@ public class DialogueTool : Interactable
         SLDR_Progress.value++;
     }
 
-    public void ResetTool()
-    {
-        MainDisplay.SetActive(true);
-        DialogueDisplay.SetActive(false);
-        player.puzzleMode = false;
-        if (!inOptionDialog)
-        {
-            this.gameObject.SetActive(false);
-            this.gameObject.SetActive(true);
-        }
-        responseList.Clear();
-        buttonList.Clear();
-
-
-    }
+   
 
     public bool setOptions()
     {
@@ -211,13 +200,35 @@ public class DialogueTool : Interactable
                     List<DialogStruct> optionList = new List<DialogStruct>();
                     foreach (DialogStruct optionDialog in talkAgainList)
                     {
-                        if (optionDialog.optionNumber == i && optionDialog.scene.Contains("Response") == true)
+                        if (optionDialog.optionNumber == i && optionDialog.scene.Contains("Response") == true) 
+                            //optionDialog.scene.Contains("Round" + roundNum) == true //THERE IS ALWAYS 2 ROUNDS
                         {
-                            optionList.Add(optionDialog);
+                            if(activatePostPuzzle)
+                            {
+                                if (optionDialog.scene.Contains("Round" + roundNum) == true)
+                                {
+                                    optionList.Add(optionDialog);
+                                }
+                            }else
+                            {
+                                optionList.Add(optionDialog);
+                            }
+                            
                         }
                         if (optionDialog.optionNumber == i && optionDialog.scene.Contains("Option") == true)
                         {
-                            newButton.GetComponentInChildren<TMP_Text>().text = optionDialog.dialogue;
+                            if (activatePostPuzzle)
+                            {
+                                if (optionDialog.scene.Contains("Round" + roundNum) == true)
+                                {
+                                    newButton.GetComponentInChildren<TMP_Text>().text = optionDialog.dialogue;
+                                }
+                            }
+                            else
+                            {
+                                newButton.GetComponentInChildren<TMP_Text>().text = optionDialog.dialogue;
+                            }
+                            
                         }
                     }
                     newButton.GetComponent<OptionButtonSetUp>().OptionResponseList = optionList;
@@ -230,16 +241,32 @@ public class DialogueTool : Interactable
         else
         {
             Options.SetActive(true);
-
+            if (activatePostPuzzle)
+            {
+                if (roundNum == 2)
+                {
+                    retrievalDialogueList = refDialogueList;
+                }
+            }
             if (DialogueList[index].options)
             {
+                holdIndex = index; //IndexOf or find where it is in the original dialoge list
+                Debug.Log(holdIndex);
                 refDialogueList = DialogueList;
                 hadOption = true;
                 setProfile();
                 setName();
                 setLine();
-                for (int i = 1; i <= DialogueList[index].optionNumber; i++)
+                if (activatePostPuzzle)
                 {
+                    if (roundNum == 2)
+                    {
+                        DialogueList = retrievalDialogueList;
+                    }
+                }
+                for (int i = 1; i <= 4; i++)
+                {
+                    //DialogueList[index].optionNumber <-- NEED TO CHANGE LATER FOR RETRIEVAL BECAUSE ONLY SHOWING ONE
                     GameObject newButton = Instantiate(optionButtonPrefab, Options.transform);
                     newButton.GetComponent<OptionButtonSetUp>().optionNumber = i;
                     buttonList.Add(newButton);
@@ -247,12 +274,37 @@ public class DialogueTool : Interactable
                     foreach (DialogStruct optionDialog in DialogueList)
                     {
                         if (optionDialog.optionNumber == i && optionDialog.scene.Contains("Response") == true)
+                        //optionDialog.scene.Contains("Round" + roundNum) == true //THERE IS ALWAYS 2 ROUNDS
                         {
-                            optionList.Add(optionDialog);
+                            
+                            if (activatePostPuzzle)
+                            {
+                                if (optionDialog.scene.Contains("Round" + roundNum) == true)
+                                {
+                                    optionList.Add(optionDialog);
+                                    
+                                }
+                            }
+                            else
+                            {
+                                optionList.Add(optionDialog);
+                            }
+
                         }
                         if (optionDialog.optionNumber == i && optionDialog.scene.Contains("Option") == true)
                         {
-                            newButton.GetComponentInChildren<TMP_Text>().text = optionDialog.dialogue;
+                            if (activatePostPuzzle)
+                            {
+                                if (optionDialog.scene.Contains("Round" + roundNum) == true)
+                                {
+                                    newButton.GetComponentInChildren<TMP_Text>().text = optionDialog.dialogue;
+                                }
+                            }
+                            else
+                            {
+                                newButton.GetComponentInChildren<TMP_Text>().text = optionDialog.dialogue;
+                            }
+
                         }
                     }
                     newButton.GetComponent<OptionButtonSetUp>().OptionResponseList = optionList;
@@ -436,7 +488,26 @@ public class DialogueTool : Interactable
         {
             if (index > DialogueList.Count - 1)
             {
-                Complete();
+                Debug.Log("End of List");
+                if (activatePostPuzzle && !correct)
+                {
+                    
+                    DialogueList = refDialogueList;
+                    if (roundNum == 1)
+                    {
+                        index = 0;
+                    }
+                    else
+                    {
+                        index = holdIndex;
+                    }
+                    setDialogueUI();
+                }
+                else
+                {
+                    Complete();
+                }
+                
             }
             else
             {
@@ -450,6 +521,7 @@ public class DialogueTool : Interactable
                         AudioManager.Instance.PlayDialogue(duckname);
                     }
                 }
+                
 
             }
         }
@@ -460,13 +532,76 @@ public class DialogueTool : Interactable
     {
         Options.SetActive(false);
         inOptionDialog = true;
+        // holdIndex = DialogueList.IndexOf(); <---------- WE NEED TO HOLD THE INDEX OF THE RESPONSE
         DialogueList = responseList[selectedButton.GetComponent<OptionButtonSetUp>().optionNumber - 1];
         // need to delete option buttons
         foreach (GameObject button in buttonList)
         {
             Destroy(button);
         }
+        if (activatePostPuzzle)
+        {
+            
+            
+            //roundNum++;
+            if (roundNum == 1)
+            {
+                if (selectedButton.GetComponent<OptionButtonSetUp>().optionNumber == Round1Answer)
+                {
+                    roundNum++;
+                    correct = true;
+                    Debug.Log("Correct");
+                }
+                else
+                {
+                    correct = false;
+                }
+            }
+            /*
+            if (roundNum == 1)
+            {
+                if (selectedButton.GetComponent<OptionButtonSetUp>().optionNumber == Round1Answer)
+                {
+                    roundNum++;
+                    correct = true;
+                }
+                else
+                {
+                    correct = false;
+                }
+            }
+            else
+            {
+                if (selectedButton.GetComponent<OptionButtonSetUp>().optionNumber == Round2Answer)
+                {
+                    roundNum++;
+                    correct = true;
+                }
+                else
+                {
+                    correct = false;
+                    // DON'T HAVE INDEX--, INSTEAD HAVE ANOTHER VARIABLE FOR 
+                }
+            }
+            */
+        }
+
         ResetTool();
+    }
+
+    public void ResetTool()
+    {
+        MainDisplay.SetActive(true);
+        DialogueDisplay.SetActive(false);
+        player.puzzleMode = false;
+        if (!inOptionDialog)
+        {
+            this.gameObject.SetActive(false);
+            this.gameObject.SetActive(true);
+        }
+        responseList.Clear();
+        buttonList.Clear();
+
     }
 
     // Return function that returns the text with player name whenever Main Duck is mentioned

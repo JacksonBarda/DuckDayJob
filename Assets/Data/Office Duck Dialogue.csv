@@ -62,26 +62,26 @@ Meet Quackson,1,3,Day,Quackson,6,No.,TRUE,Right,Normal,FALSE,0,FALSE
 Meet Quackson,1,3,Day,Quackson,6,(Flushes toilet).,TRUE,Right,Normal,FALSE,0,FALSE
 Meet Quackson,1,3,Day,Quackson,6,Stall is taken!,TRUE,Right,Normal,FALSE,0,TRUE
 Meet Quackson,1,3,Day,Main Duck,2,...I know.,TRUE,Left,Normal,FALSE,0,TRUE
-Eggwin's Retrieval Request,1,0,Day,Eggwin,3,"Main Duck, could you ask Duckette for the latest reports? I'll need to review and submit them to Elon Duck by the end of the day.",TRUE,Right,Normal,FALSE,0,TRUE
-Eggwin's Retrieval Request,1,0,Day,Main Duck,2,Quack! You got it!,TRUE,Left,Normal,FALSE,0,TRUE
-Ask Duckette for Retrieval Item,1,0,Day,Duckette,4,"Oh, hello there! Can I help you with something?",TRUE,Right,Normal,TRUE,0,TRUE
-Ask Duckette for Retrieval Item_Round1_Option1,1,0,Day,None,0,I need something from you.,TRUE,Right,Normal,FALSE,1,TRUE
-Ask Duckette for Retrieval Item_Round1_Response1,1,0,Day,Duckette,4,What do you need from me?,TRUE,Right,Normal,TRUE,1,TRUE
-Ask Duckette for Retrieval Item_Round1_Option2,1,0,Day,None,0,You look impeckable today.,TRUE,Right,Normal,FALSE,2,TRUE
-Ask Duckette for Retrieval Item_Round1_Response2,1,0,Day,Duckette,4,Eggscuse me?,TRUE,Right,Normal,FALSE,2,TRUE
-Ask Duckette for Retrieval Item_Round1_Option3,1,0,Day,None,0,Can I help you with something?,TRUE,Right,Normal,FALSE,3,TRUE
-Ask Duckette for Retrieval Item_Round1_Response3,1,0,Day,Duckette,4,Eggscuse me?,TRUE,Right,Normal,FALSE,3,TRUE
-Ask Duckette for Retrieval Item_Round1_Option4,1,0,Day,None,0,Wanna go out?,TRUE,Right,Normal,FALSE,4,TRUE
-Ask Duckette for Retrieval Item_Round1_Response4,1,0,Day,Duckette,4,Eggscuse me?,TRUE,Right,Normal,FALSE,4,TRUE
-Ask Duckette for Retrieval Item_Round2_Option1,1,0,Day,None,0,I need a mechanical part from you.,TRUE,Right,Normal,FALSE,1,TRUE
-Ask Duckette for Retrieval Item_Round2_Response1,1,0,Day,Duckette,4,"Umm, what? I don't have that.",TRUE,Right,Normal,FALSE,1,TRUE
-Ask Duckette for Retrieval Item_Round2_Option2,1,0,Day,None,0,I need your number.,TRUE,Right,Normal,FALSE,2,TRUE
-Ask Duckette for Retrieval Item_Round2_Response2,1,0,Day,Duckette,4,"Umm, what? I don't have that.",TRUE,Right,Normal,FALSE,2,TRUE
-Ask Duckette for Retrieval Item_Round2_Option3,1,0,Day,None,0,I need the report.,TRUE,Right,Normal,FALSE,3,TRUE
-Ask Duckette for Retrieval Item_Round2_Response3,1,0,Day,Duckette,4,"Oh right, the report that's due today! I have it right here.",TRUE,Right,Normal,FALSE,3,TRUE
-Ask Duckette for Retrieval Item_Round2_Option4,1,0,Day,None,0,I need some quack.,TRUE,Right,Normal,FALSE,4,TRUE
-Ask Duckette for Retrieval Item_Round2_Response4,1,0,Day,Duckette,4,"Umm, what? I don't have that.",TRUE,Right,Normal,FALSE,4,TRUE
-Give Requested Item to Eggwin,1,0,Day,Eggwin,3,Thanks for the report! I'll get it to Elon Duck right away!,TRUE,Right,Normal,FALSE,0,TRUE
+Eggwin's Retrieval Request,1,0,Day,Eggwin,3,"Main Duck, could you ask Duckette for the latest reports? I'll need to review and submit them to Elon Duck by the end of the day.",TRUE,Right,Normal,FALSE,0,FALSE
+Eggwin's Retrieval Request,1,0,Day,Main Duck,2,Quack! You got it!,TRUE,Left,Normal,FALSE,0,FALSE
+Ask Duckette for Retrieval Item,1,0,Day,Duckette,4,"Oh, hello there! Can I help you with something?",TRUE,Right,Normal,TRUE,0,FALSE
+Ask Duckette for Retrieval Item_Round1_Option1,1,0,Day,None,0,I need something from you.,TRUE,Right,Normal,FALSE,1,FALSE
+Ask Duckette for Retrieval Item_Round1_Response1,1,0,Day,Duckette,4,What do you need from me?,TRUE,Right,Normal,TRUE,1,FALSE
+Ask Duckette for Retrieval Item_Round1_Option2,1,0,Day,None,0,You look impeckable today.,TRUE,Right,Normal,FALSE,2,FALSE
+Ask Duckette for Retrieval Item_Round1_Response2,1,0,Day,Duckette,4,Eggscuse me?,TRUE,Right,Normal,FALSE,2,FALSE
+Ask Duckette for Retrieval Item_Round1_Option3,1,0,Day,None,0,Can I help you with something?,TRUE,Right,Normal,FALSE,3,FALSE
+Ask Duckette for Retrieval Item_Round1_Response3,1,0,Day,Duckette,4,Eggscuse me?,TRUE,Right,Normal,FALSE,3,FALSE
+Ask Duckette for Retrieval Item_Round1_Option4,1,0,Day,None,0,Wanna go out?,TRUE,Right,Normal,FALSE,4,FALSE
+Ask Duckette for Retrieval Item_Round1_Response4,1,0,Day,Duckette,4,Eggscuse me?,TRUE,Right,Normal,FALSE,4,FALSE
+Ask Duckette for Retrieval Item_Round2_Option1,1,0,Day,None,0,I need a mechanical part from you.,TRUE,Right,Normal,FALSE,1,FALSE
+Ask Duckette for Retrieval Item_Round2_Response1,1,0,Day,Duckette,4,"Umm, what? I don't have that.",TRUE,Right,Normal,FALSE,1,FALSE
+Ask Duckette for Retrieval Item_Round2_Option2,1,0,Day,None,0,I need your number.,TRUE,Right,Normal,FALSE,2,FALSE
+Ask Duckette for Retrieval Item_Round2_Response2,1,0,Day,Duckette,4,"Umm, what? I don't have that.",TRUE,Right,Normal,FALSE,2,FALSE
+Ask Duckette for Retrieval Item_Round2_Option3,1,0,Day,None,0,I need the report.,TRUE,Right,Normal,FALSE,3,FALSE
+Ask Duckette for Retrieval Item_Round2_Response3,1,0,Day,Duckette,4,"Oh right, the report that's due today! I have it right here.",TRUE,Right,Normal,FALSE,3,FALSE
+Ask Duckette for Retrieval Item_Round2_Option4,1,0,Day,None,0,I need some quack.,TRUE,Right,Normal,FALSE,4,FALSE
+Ask Duckette for Retrieval Item_Round2_Response4,1,0,Day,Duckette,4,"Umm, what? I don't have that.",TRUE,Right,Normal,FALSE,4,FALSE
+Give Requested Item to Eggwin,1,0,Day,Eggwin,3,Thanks for the report! I'll get it to Elon Duck right away!,TRUE,Right,Normal,FALSE,0,FALSE
 Try to Stay Overnight,1,1,Night,Main Duck,2,"Wow, it's already nighttime! My first day flew by fast.",TRUE,Left,Italics,FALSE,0,FALSE
 Try to Stay Overnight,1,1,Night,Main Duck,2,"Everyone's already gone too, even Duckette. Might as well pack up then and get ready to...",TRUE,Left,Italics,FALSE,0,FALSE
 Try to Stay Overnight,1,1,Night,Main Duck,2,WAIT! Everyone is gone! That means... I have the whole office to myself! I've always wanted to explore the Nestla Office at night.,TRUE,Left,Italics,FALSE,0,FALSE

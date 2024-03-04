@@ -1,36 +1,41 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using static TaskManager;
 
 public class TaskManager : MonoBehaviour
 {
+
+    private List<DayTask> tasksByDay = new List<DayTask>();
     [SerializeField]
-    private List<List<Interactable>> tasksByDay = new List<List<Interactable>>();
+    public DayTask Day1;
     [SerializeField]
-    private List<Interactable> interactablesDay1;
+    public DayTask Day2;
     [SerializeField]
-    private List<Interactable> interactablesDay2;
+    public DayTask Day3;
     [SerializeField]
-    private List<Interactable> interactablesDay3;
+    public DayTask Day4;
     [SerializeField]
-    private List<Interactable> interactablesDay4;
+    public DayTask Day5;
     [SerializeField]
-    private List<Interactable> interactablesDay5;
+    public DayTask Day6;
     [SerializeField]
-    private List<Interactable> interactablesDay6;
-    [SerializeField]
-    private List<Interactable> interactablesDay7;
+    public DayTask Day7;
 
 
     public GameObject deathScreen;
     private int health;
     public int maxDays = 7;
 
-    public int dayCount = 0;
+    //public int dayCount = 0;
+    public int ptCount = 0;
     private int count = 0;
     private int day = 1;
-    private List<Interactable> currentDay;
-    public UIManager uiMananger;
+
+
+    public UIManager uiManager;
 
     public delegate void OnTaskComplete(Interactable _task);
     public static OnTaskComplete onTaskComplete;
@@ -39,28 +44,38 @@ public class TaskManager : MonoBehaviour
     public static OnTaskComplete onTaskFailed;
 
     public static TaskManager TMInstance;
+    public enum PartIdentifier
+    {
+        Pt1,
+        Pt2,
+        Pt3,
+        Pt4,
+        Pt5
+    }
+    private PartIdentifier currentPt = PartIdentifier.Pt1;
 
     private void Start()
     {
+
         health = 3;
         InitializeTasks();
         onTaskComplete += TaskCompleted;
-        onTaskComplete += TaskFailed;
+        onTaskFailed += TaskFailed;
     }
 
 
     private void InitializeTasks()
     {
 
-        tasksByDay.Add(interactablesDay1);
-        tasksByDay.Add(interactablesDay2);
-        tasksByDay.Add(interactablesDay3);
-        tasksByDay.Add(interactablesDay4);
-        tasksByDay.Add(interactablesDay5);
-        tasksByDay.Add(interactablesDay6);
-        tasksByDay.Add(interactablesDay7);
-        currentDay = tasksByDay[dayCount];
-
+        tasksByDay.Add(Day1);
+        tasksByDay.Add(Day2);
+        tasksByDay.Add(Day3);
+        tasksByDay.Add(Day4);
+        tasksByDay.Add(Day5);
+        tasksByDay.Add(Day6);
+        tasksByDay.Add(Day7);
+        ptCount = 0;
+        day = 1;
 
     }
 
@@ -75,7 +90,7 @@ public class TaskManager : MonoBehaviour
             OnDeath();
         }
         SaveGame();
-        uiMananger.UpdateTime(1);
+        uiManager.UpdateTime(1);
     }
 
     private void OnDeath()
@@ -85,43 +100,141 @@ public class TaskManager : MonoBehaviour
 
     private void TaskCompleted(Interactable _task)
     {
-        uiMananger.UpdateTime(1);
+
+        foreach (Interactable task in tasksByDay[day - 1].GetInteractables(currentPt))
+        {
+            if (task.isCompleted)
+            {
+                count++;
+            }
+        }
+        if (count > tasksByDay[day - 1].GetInteractables(currentPt).Count)
+        {
+            foreach(Interactable task in tasksByDay[day - 1].GetInteractables(currentPt))
+            {
+                task.gameObject.SetActive(false);
+            }
+            currentPt++;
+            foreach(Interactable task in tasksByDay[day - 1].GetInteractables(currentPt))
+            {
+                if (task.isVisibleOnStart)
+                {
+                    task.gameObject.SetActive(true);
+                }
+
+            }
+            SaveGame();
+        }
+        else
+        {
+            count = 0;
+        }
+        
+        uiManager.UpdateTime(1);
         //Change day time here
         _task.player.puzzleMode = false;
         _task.puzzleUI.SetActive(false);
         _task.mainUI.SetActive(true);
         _task.gameObject.SetActive(false);
-        count++;
 
-        ChangeDay();
-        SaveGame();
+        if (tasksByDay[day - 1].GetInteractables(currentPt).Count == 0)
+        {
+            ChangeDay();
+        }
+            
+        
     }
     private void ChangeDay()
     {
-        if(count > currentDay.Count)
-        {
-            dayCount++;
-            currentDay = tasksByDay[dayCount];
+
+        day++;
+        currentPt = 0;
             
-            SaveGame();
-            LoadDay();
-        }
-        
+        SaveGame();
+        LoadDay();  
     }
 
     private void LoadDay()
     {
+        day = PlayerPrefs.GetInt("dayCount", day);
+        ptCount =PlayerPrefs.GetInt("ptCount", ptCount);
+        health = PlayerPrefs.GetInt("Health", health);
         deathScreen.SetActive(false);
-        currentDay = tasksByDay[dayCount];
+        currentPt = GetCurrentPt(ptCount);
+        foreach (Interactable task in tasksByDay[day - 1].GetInteractables(currentPt))
+        {
+            if (task.isVisibleOnStart)
+            {
+                task.gameObject.SetActive(true);
+            }
+
+        }
 
     }
 
     private void SaveGame()
     {
-        PlayerPrefs.SetInt("dayCount", dayCount);
-        PlayerPrefs.SetInt("Count", count);
+        ptCount = (int)currentPt;
+        PlayerPrefs.SetInt("dayCount", day);
+        PlayerPrefs.SetInt("ptCount", ptCount);
         PlayerPrefs.SetInt("Health", health);
         PlayerPrefs.Save();
+    }
+    private PartIdentifier GetCurrentPt(int _ptCount)
+    {
+        switch(_ptCount)
+        {
+            case 0:
+                return PartIdentifier.Pt1;
+                
+            case 1:
+                return PartIdentifier.Pt2;
+                
+            case 2:
+                return PartIdentifier.Pt3;
+                
+            case 3:
+                return PartIdentifier.Pt4;
+               
+            case 4:
+                return PartIdentifier.Pt5;
+                
+            default:
+                return PartIdentifier.Pt1;
+                
+        }
+    }
+
+
+}
+
+[System.Serializable]
+public struct DayTask
+{
+    public int day;
+    public List<Interactable> pt1;
+    public List<Interactable> pt2;
+    public List<Interactable> pt3;
+    public List<Interactable> pt4;
+    public List<Interactable> pt5;
+
+    public List<Interactable> GetInteractables(PartIdentifier point)
+    {
+        switch (point)
+        {
+            case PartIdentifier.Pt1:
+                return pt1;
+            case PartIdentifier.Pt2:
+                return pt2;
+            case PartIdentifier.Pt3:
+                return pt3;
+            case PartIdentifier.Pt4:
+                return pt4;
+            case PartIdentifier.Pt5:
+                return pt5;
+            default:
+                return new List<Interactable>();
+        }
     }
 }
 
