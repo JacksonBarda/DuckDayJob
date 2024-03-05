@@ -8,8 +8,10 @@ using System;
 
 public class CADPuzzle : Interactable
 {
-    public List<Image> fragments;
-    public List<Image> outlines;
+    [SerializeField]
+    private List<Image> fragments;
+    [SerializeField]
+    private List<Image> outlines;
     public float rotationSpeed = 75f;
     public float snapThreshold = 0.1f;
     public float snapThresholdRot = 5.0f;
