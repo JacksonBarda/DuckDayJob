@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: walls
+  m_Name: LOBBY_DT_Green
   m_Shader: {fileID: 4800000, guid: 1fe8cefbb0066914f8f323f408d6b201, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -44,11 +44,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmmisTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: ae92e4cdb561c5f4a8f209d71689addb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 89a37da81e1528b45a82e24330eb573b, type: 3}
+        m_Texture: {fileID: 2800000, guid: b34fa09160cca4d419f0b04e01cf7ada, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -85,7 +85,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _OutlineSize: 15
+    - _OutlineSize: 10
     - _Parallax: 0.02
     - _RampLevels: 2
     - _RimAlpha: 0
@@ -100,8 +100,8 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FresnelColor: {r: 1, g: 1, b: 1, a: 1}
-    - _HighColor: {r: 0.8921654, g: 0.751, b: 1, a: 1}
-    - _LowColor: {r: 0.5959248, g: 0.34980392, b: 0.78431374, a: 1}
+    - _HighColor: {r: 0.76305884, g: 0.8117647, b: 0.7963839, a: 1}
+    - _LowColor: {r: 0.7050196, g: 0.7921569, b: 0.76652825, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
