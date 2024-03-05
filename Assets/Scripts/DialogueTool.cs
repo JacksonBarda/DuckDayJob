@@ -39,8 +39,8 @@ public class DialogueTool : Interactable
     private GameObject optionButtonPrefab;
     [SerializeField]
     private Slider SLDR_Progress;
-    [SerializeField]
-    private GameObject nextButton;
+    //[SerializeField]
+    //private GameObject nextButton;
 
     private string duckname;
 
@@ -85,7 +85,7 @@ public class DialogueTool : Interactable
 
         talkAgain = false;
         inOptionDialog = false;
-        nextButton.SetActive(true);
+        //nextButton.SetActive(true);
     }
 
     // Update is called once per frame
@@ -128,7 +128,7 @@ public class DialogueTool : Interactable
     {
         Debug.Log("Talked");
         index = 0;
-        nextButton.SetActive(true);
+        //nextButton.SetActive(true);
         // as you press w, it does this
         MainDisplay.SetActive(false);
         DialogueDisplay.SetActive(true);
@@ -193,7 +193,7 @@ public class DialogueTool : Interactable
             {
                 refDialogueList = talkAgainList;
                 hadOption = true;
-                nextButton.SetActive(false);
+                //nextButton.SetActive(false);
                 setProfile();
                 setName();
                 setLine();
@@ -263,7 +263,7 @@ public class DialogueTool : Interactable
                     refDialogueList = DialogueList;
                 }
                 hadOption = true;
-                nextButton.SetActive(false);
+                //nextButton.SetActive(false);
                 setProfile();
                 setName();
                 setLine();
@@ -544,7 +544,7 @@ public class DialogueTool : Interactable
         Options.SetActive(false);
         inOptionDialog = true;
         holdIndex = DialogueList.IndexOf(refDialogueList[0]); //<---------- WE NEED TO HOLD THE INDEX OF THE RESPONSE
-        nextButton.SetActive(true);
+        //nextButton.SetActive(true);
         DialogueList = responseList[selectedButton.GetComponent<OptionButtonSetUp>().optionNumber - 1];
         // need to delete option buttons
         foreach (GameObject button in buttonList)
@@ -624,7 +624,7 @@ public class DialogueTool : Interactable
         MainDisplay.SetActive(true);
         DialogueDisplay.SetActive(false);
         player.puzzleMode = false;
-        nextButton.SetActive(true);
+        //nextButton.SetActive(true);
         if (!inOptionDialog)
         {
             this.gameObject.SetActive(false);

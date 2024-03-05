@@ -150,10 +150,10 @@ public class ReadDialogueData : MonoBehaviour
 
     public void nextLine()
     {
-        if (DialogTool.GetComponent<DialogueTool>().hadOption == false){
+       // if (DialogTool.GetComponent<DialogueTool>().hadOption == false){
             DialogTool.GetComponent<DialogueTool>().index++;
             DialogTool.GetComponent<DialogueTool>().setDialogueUI();
-        }
+       // }
         
     }
 
@@ -166,8 +166,8 @@ public class ReadDialogueData : MonoBehaviour
                 && dTool.GetComponent<DialogueTool>().DialogueList[0].dayOrNight == UIManager.GetComponent<UIManager>().dayOrNight)
             {
                 dTool.SetActive(true);
-                if (dTool.GetComponent<DialogueTool>().DialogueIndicator != null)
-                    dTool.GetComponent<DialogueTool>().DialogueIndicator.SetActive(true);
+                //if (dTool.GetComponent<DialogueTool>().DialogueIndicator != null)
+                  //  dTool.GetComponent<DialogueTool>().DialogueIndicator.SetActive(true);
             }
             else
             {

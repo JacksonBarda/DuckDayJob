@@ -39,7 +39,7 @@ public class FollowPlayer : MonoBehaviour
             case Locations.LOBBY:
                 zBump = -8.29f;
                 yBump = 1.5f;
-                xMin = -7.0f;
+                xMin = -6.75f;
                 xMax = 16.46f;
                 
                 break;

@@ -28,7 +28,7 @@ public class MainMenuButtons : MonoBehaviour
         Debug.Log(_playerName);
         if (_playerName != "")
         {
-            SceneManager.LoadScene("garrettsBlockout");
+            SceneManager.LoadScene("MainScene");
         }
         else
         {
@@ -49,7 +49,7 @@ public class MainMenuButtons : MonoBehaviour
     {
         PlayerPrefs.SetString("playerName", playerInput.text);
         PlayerPrefs.Save();
-        SceneManager.LoadScene("garrettsBlockout");
+        SceneManager.LoadScene("MainScene");
     }
     public void OnQuitClicked()
     {
