@@ -250,7 +250,7 @@ public class DialogueTool : Interactable
             }
             if (DialogueList[index].options)
             {
-                holdIndex = index; //IndexOf or find where it is in the original dialoge list
+                //holdIndex = index; //IndexOf or find where it is in the original dialoge list
                 Debug.Log(holdIndex);
                 refDialogueList = DialogueList;
                 hadOption = true;
@@ -264,6 +264,7 @@ public class DialogueTool : Interactable
                         DialogueList = retrievalDialogueList;
                     }
                 }
+
                 for (int i = 1; i <= 4; i++)
                 {
                     //DialogueList[index].optionNumber <-- NEED TO CHANGE LATER FOR RETRIEVAL BECAUSE ONLY SHOWING ONE
@@ -493,14 +494,7 @@ public class DialogueTool : Interactable
                 {
                     
                     DialogueList = refDialogueList;
-                    if (roundNum == 1)
-                    {
-                        index = 0;
-                    }
-                    else
-                    {
-                        index = holdIndex;
-                    }
+                    index = holdIndex;
                     setDialogueUI();
                 }
                 else
@@ -532,7 +526,8 @@ public class DialogueTool : Interactable
     {
         Options.SetActive(false);
         inOptionDialog = true;
-        // holdIndex = DialogueList.IndexOf(); <---------- WE NEED TO HOLD THE INDEX OF THE RESPONSE
+        holdIndex = DialogueList.IndexOf(refDialogueList[0]); //<---------- WE NEED TO HOLD THE INDEX OF THE RESPONSE
+
         DialogueList = responseList[selectedButton.GetComponent<OptionButtonSetUp>().optionNumber - 1];
         // need to delete option buttons
         foreach (GameObject button in buttonList)
@@ -554,6 +549,20 @@ public class DialogueTool : Interactable
                 }
                 else
                 {
+                    correct = false;
+                }
+            }
+            if (roundNum == 2)
+            {
+                if (selectedButton.GetComponent<OptionButtonSetUp>().optionNumber == Round2Answer)
+                {
+                    roundNum++;
+                    correct = true;
+                    Debug.Log("Correct");
+                }
+                else
+                {
+                    //DialogueList = retrievalDialogueList;
                     correct = false;
                 }
             }

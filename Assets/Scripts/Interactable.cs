@@ -21,7 +21,8 @@ public class Interactable : MonoBehaviour
     {
         if (activatePostPuzzle)
         {
-            puzzleToActivate.gameObject.SetActive(true);
+            if(puzzleToActivate != null)
+                puzzleToActivate.gameObject.SetActive(true);
         }
         isCompleted = true;
         TaskManager.onTaskComplete(this);
