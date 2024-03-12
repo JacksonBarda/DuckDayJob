@@ -640,6 +640,18 @@ public class DialogueTool : Interactable
     {
         string name = PlayerPrefs.GetString("playerName");
         string newText = originalText.Replace("Main Duck", name);
+        newText = noQuotationMarks(newText);
+        return newText;
+    }
+
+    public string noQuotationMarks(string originalText)
+    {
+        string newText = originalText;
+        if (originalText.StartsWith("\""))
+        {
+            newText = originalText.Substring(1, originalText.Length - 2);
+            //newText = originalText.Replace("\"", ""); --> Another way to remove "", but would also remove the "" that are in the dialogue on purpose, so substring is the preferred method
+        }
         return newText;
     }
 

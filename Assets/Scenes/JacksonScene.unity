@@ -83163,7 +83163,6 @@ MonoBehaviour:
   increasePriority: 1
   optionButtonPrefab: {fileID: 3741148585713256696, guid: 8d6318746227bea4fa19349685a9f366, type: 3}
   SLDR_Progress: {fileID: 1696000672}
-  nextButton: {fileID: 0}
   DialogueList: []
   talkAgainList: []
   index: 0
@@ -98586,6 +98585,10 @@ PrefabInstance:
       propertyPath: Profile2
       value: 
       objectReference: {fileID: 1638869473}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: taskName
+      value: Intro
+      objectReference: {fileID: 0}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Quackclip
       value: 
