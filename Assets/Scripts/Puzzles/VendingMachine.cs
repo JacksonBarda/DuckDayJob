@@ -19,6 +19,7 @@ public class VendingMachine : Interactable
     private string enteredNumber = "";
     private int playerCoins = 20;
     public List<GameObject> itemCosts;
+    public VMItem[] itemArray = new VMItem[3];
 
     public override void Interact()
     {
@@ -50,6 +51,17 @@ public class VendingMachine : Interactable
         enterButton.onClick.AddListener(Enter);
         deleteButton.onClick.AddListener(VMremove);
         exitButton.onClick.AddListener(VMexit);
+
+        //create item array
+        itemArray[0] = new VMItem("Duck Crunch");
+        itemArray[1] = new VMItem("Peepsi");
+        itemArray[2] = new VMItem("Energy Gooster");
+        itemArray[3] = new VMItem("Dr. Ducker");
+
+        foreach (VMItem item in itemArray)
+        {
+            Debug.Log(item.itemName);
+        }
     }
 
     private void AddNumber(string number)
@@ -61,13 +73,29 @@ public class VendingMachine : Interactable
 
     private void Enter()
     {
+        Debug.Log(enteredNumber);
+        if (enteredNumber.Length > 2) //invalid number
+        {
+            StartCoroutine(DisplayMessage("ERROR"));
+        }
+        else //valid number
+        {
+            int itemIndex = int.Parse(enteredNumber.Substring(0,1)) - 1;
+            StartCoroutine(DisplayMessage("SUCCESS"));
+            PurchaseItem(itemIndex);
+        }
+        
+    }
 
-        int itemIndex = int.Parse(enteredNumber) - 1;
-        enteredNumber = null;
+    public IEnumerator DisplayMessage(string message)
+    {
+        enteredNumber = message;
+        UpdateDisplay();
+        yield return new WaitForSeconds(1f);
         enteredNumber = "";
         UpdateDisplay();
-        PurchaseItem(itemIndex);
     }
+
     private void VMexit()
     {
         enteredNumber = null;
@@ -85,12 +113,13 @@ public class VendingMachine : Interactable
     }
     private void PurchaseItem(int itemIndex)
     {
+
         if (itemIndex >= 0 && playerCoins >= 5)
         {
             playerCoins -= 5;
             UpdateDisplay();
-            itemCosts[itemIndex].SetActive(false);
-            Debug.Log("Purchased item: " + itemIndex);
+            //itemCosts[itemIndex].SetActive(false);
+            Debug.Log("Purchased item: " + itemArray[itemIndex].itemName);
         }
         else
         {
