@@ -19,7 +19,8 @@ public class VendingMachine : Interactable
     private string enteredNumber = "";
     private int playerCoins = 20;
     public List<GameObject> itemCosts;
-    public VMItem[] itemArray = new VMItem[3];
+    public string[] itemArray;
+
 
     public override void Interact()
     {
@@ -52,16 +53,12 @@ public class VendingMachine : Interactable
         deleteButton.onClick.AddListener(VMremove);
         exitButton.onClick.AddListener(VMexit);
 
-        //create item array
-        itemArray[0] = new VMItem("Duck Crunch");
-        itemArray[1] = new VMItem("Peepsi");
-        itemArray[2] = new VMItem("Energy Gooster");
-        itemArray[3] = new VMItem("Dr. Ducker");
-
-        foreach (VMItem item in itemArray)
-        {
-            Debug.Log(item.itemName);
-        }
+        itemArray = new string[]{
+            "Duck Crunch",
+            "Peepsi",
+            "Energy Gooster",
+            "Dr. Ducker"
+        };
     }
 
     private void AddNumber(string number)
@@ -73,20 +70,21 @@ public class VendingMachine : Interactable
 
     private void Enter()
     {
-        Debug.Log(enteredNumber);
-        if (enteredNumber.Length > 2) //invalid number
+        //Debug.Log("Entered number: " + enteredNumber);
+        int itemIndex = int.Parse(enteredNumber.Substring(0, 1)) - 1;
+
+        if (enteredNumber.Length > 2 || itemIndex < 0 || itemIndex > 3) //invalid number
         {
             StartCoroutine(DisplayMessage("ERROR"));
         }
         else //valid number
         {
-            int itemIndex = int.Parse(enteredNumber.Substring(0,1)) - 1;
-            StartCoroutine(DisplayMessage("SUCCESS"));
+            //Debug.Log("Enter() itemIndex: " + itemIndex);
             PurchaseItem(itemIndex);
         }
         
     }
-
+    
     public IEnumerator DisplayMessage(string message)
     {
         enteredNumber = message;
@@ -110,20 +108,30 @@ public class VendingMachine : Interactable
         enteredNumber = null;
         enteredNumber = "";
         UpdateDisplay();
+        //foreach (string item in itemArray)
+        //{
+        //    int thing = 0;
+        //    Debug.Log(thing + ": " + item);
+        //    thing++;
+        //}
+        //Debug.Log("done");
     }
     private void PurchaseItem(int itemIndex)
     {
-
+        //Debug.Log("PurchaseItem() itemIndex: " + itemIndex);
         if (itemIndex >= 0 && playerCoins >= 5)
         {
+            StartCoroutine(DisplayMessage("SUCCESS"));
             playerCoins -= 5;
             UpdateDisplay();
             //itemCosts[itemIndex].SetActive(false);
-            Debug.Log("Purchased item: " + itemArray[itemIndex].itemName);
+            //Debug.Log(itemIndex);
+            Debug.Log("Purchased item: " + itemArray[itemIndex]);
         }
         else
         {
-            Debug.Log("Not enough coins or invalid item index: " + itemIndex);
+            StartCoroutine(DisplayMessage("NO FUNDS"));
+            //Debug.Log("Not enough coins or invalid item index: " + itemIndex);
         }
     }
 
