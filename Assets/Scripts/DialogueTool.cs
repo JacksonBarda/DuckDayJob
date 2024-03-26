@@ -351,6 +351,12 @@ public class DialogueTool : Interactable
                     Profile.sprite = DialogueManager.GetComponent<ReadDialogueData>().ProfileImages[talkAgainList[index].profileNumber - 1];
                     break;
             }
+
+            if (talkAgainList[index].profileNumber == 0)
+            {
+                Profile.gameObject.SetActive(false);
+                Profile2.gameObject.SetActive(false);
+            }
         }
         else
         {
@@ -374,6 +380,12 @@ public class DialogueTool : Interactable
                     Profile.sprite = DialogueManager.GetComponent<ReadDialogueData>().ProfileImages[DialogueList[index].profileNumber - 1];
                     break;
             }
+
+            if (DialogueList[index].profileNumber == 0)
+            {
+                Profile.gameObject.SetActive(false);
+                Profile2.gameObject.SetActive(false);
+            }
         }
         
     }
@@ -383,6 +395,13 @@ public class DialogueTool : Interactable
         {
             Name.text = replaceMainDuck(talkAgainList[index].name);
             duckname = talkAgainList[index].name;
+
+            if (duckname.Equals("None"))
+            {
+                Name.text = "";
+
+            }
+
             switch (talkAgainList[index].align)
             {
                 case Alignment.Left:
@@ -402,6 +421,13 @@ public class DialogueTool : Interactable
         {
             Name.text = replaceMainDuck(DialogueList[index].name);
             duckname = DialogueList[index].name;
+
+            if (duckname.Equals("None"))
+            {
+                Name.text = "";
+
+            }
+
             switch (DialogueList[index].align)
             {
                 case Alignment.Left:
@@ -443,6 +469,10 @@ public class DialogueTool : Interactable
                     Dialogue.fontStyle = FontStyles.Italic;
                     break;
 
+                case FontSelectStyle.Bold:
+                    Dialogue.fontStyle = FontStyles.Bold;
+                    break;
+
                 default:
                     Dialogue.fontStyle = FontStyles.Normal;
                     break;
@@ -460,6 +490,10 @@ public class DialogueTool : Interactable
 
                 case FontSelectStyle.Italics:
                     Dialogue.fontStyle = FontStyles.Italic;
+                    break;
+
+                case FontSelectStyle.Bold:
+                    Dialogue.fontStyle = FontStyles.Bold;
                     break;
 
                 default:

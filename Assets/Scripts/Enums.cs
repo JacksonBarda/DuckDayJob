@@ -29,7 +29,8 @@ namespace Enums
     public enum FontSelectStyle
     {
         Italics,
-        Normal
+        Normal,
+        Bold
     }
 }
 

@@ -121,29 +121,34 @@ public class ReadDialogueData : MonoBehaviour
             }
             else
             {
-                string[] getLine = line.Split("\t");
-
-                /*
+                string[] getLine = line.Split("\t");  
                 string scene = getLine[0];
+                /*
+                Debug.Log(line);
                 int day = int.Parse(getLine[1]);
                 int order = int.Parse(getLine[2]);
                 DayEnum dayOrNight = (DayEnum)System.Enum.Parse(typeof(DayEnum), getLine[3]);
                 string name = getLine[4];
                 int profile = int.Parse(getLine[5]);
                 string dialog = getLine[6];
-                bool normalUI = convertStringToBool(getLine[7]);
+                Debug.Log(getLine[7]);
+                bool normalUI = bool.Parse(getLine[7]);
                 Alignment align = (Alignment)System.Enum.Parse(typeof(Alignment), getLine[8]);
                 FontSelectStyle style = (FontSelectStyle)System.Enum.Parse(typeof(FontSelectStyle), getLine[9]);
-                bool options = convertStringToBool(getLine[10]);
+                bool options = bool.Parse(getLine[10]);
                 int optNum = int.Parse(getLine[11]);
-                bool talkAgain = convertStringToBool(getLine[12]);
+                bool talkAgain = bool.Parse(getLine[12]);
                 */
 
-                DialogStruct dialogRow = new DialogStruct(getLine[0], int.Parse(getLine[1]), int.Parse(getLine[2]), (DayEnum)System.Enum.Parse(typeof(DayEnum), getLine[3]), getLine[4],
+                if (scene != "")
+                {
+                    DialogStruct dialogRow = new DialogStruct(getLine[0], int.Parse(getLine[1]), int.Parse(getLine[2]), (DayEnum)System.Enum.Parse(typeof(DayEnum), getLine[3]), getLine[4],
                     int.Parse(getLine[5]), getLine[6], bool.Parse(getLine[7]), (Alignment)System.Enum.Parse(typeof(Alignment), getLine[8]),
                     (FontSelectStyle)System.Enum.Parse(typeof(FontSelectStyle), getLine[9]), bool.Parse(getLine[10]), int.Parse(getLine[11]), bool.Parse(getLine[12]));
 
-                DialogList.Add(dialogRow);
+                    DialogList.Add(dialogRow);
+                }
+                
             }
         }
     }
