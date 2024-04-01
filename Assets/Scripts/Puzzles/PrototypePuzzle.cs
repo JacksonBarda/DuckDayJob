@@ -9,22 +9,25 @@ using System;
 public class PrototypePuzzle : Interactable
 {
     public float scrollSpeed;
+    public int score;
+    public int ducksHit;
+    [HideInInspector]
+    public List<GameObject> ListOfDucks;
 
     private Vector3 mousePosition;
     private Vector3 screenBounds;
     private float timePassed = 0;
     private float timeUntilNextSpawn = 2;
     private float maxSpawnWaitTime = 2;
-    private bool active = false;
+    public bool active = false;
+    private bool recordScore = true;
 
-    [SerializeField]
+
     public GameObject background;
-    [SerializeField]
     public Canvas canvasObject;
-    [SerializeField]
     public GameObject car;
-    [SerializeField]
     public GameObject duck;
+    public Text textScore;
 
     // Start is called before the first frame update
 
@@ -34,10 +37,10 @@ public class PrototypePuzzle : Interactable
         mainUI.SetActive(false);
         //AudioManager.Instance.PlayMusic("VendingAmbience");
         player.puzzleMode = true;
-        active = true;          //is the puzzle active; necessary because update function runs before puzzle is interacted with
+        active = true;                      //is the puzzle active (things moving); necessary because update function runs before puzzle is interacted with
+        recordScore = true;                 //is the puzzle keeping track of score; is true until just before duckpocalypse
 
         StartCoroutine(DuckSpawner());
-        Debug.Log("StartCoroutine");
     }
 
     public override void Action()
@@ -50,8 +53,6 @@ public class PrototypePuzzle : Interactable
 
         //Location of Puzzle
         AudioManager.Instance.PlayMusic("ManufacturingRoom");
-        active = false;
-        StopCoroutine(DuckSpawner());
     }
 
     void Start()
@@ -64,44 +65,51 @@ public class PrototypePuzzle : Interactable
     {
         if (active){
 
-            timePassed += Time.deltaTime;
-
             scrollSpeed = .3f + timePassed / 65;        //control scroll speed; initial speed is .3f
 
-            mousePosition.x = 250;
+            mousePosition.x = 400;
             mousePosition.y = Input.mousePosition.y;
             mousePosition.z = 4;
             car.transform.position = mousePosition;     //car follow mouse Y position
 
+            if (recordScore){
+                timePassed += Time.deltaTime;
+                score = (int)timePassed - (ducksHit * 5);
+                textScore.text = "Score: " + score.ToString();
+            }
+            
         }
     }
 
     void SpawnDuck()
     {
         GameObject duckClone = Instantiate(duck);
+        ListOfDucks.Add(duckClone);
         duckClone.transform.position = new Vector3(500, UnityEngine.Random.Range(-200, 200));
         duckClone.transform.SetParent(canvasObject.transform, false);
+        Debug.Log("Ducks in list: " + ListOfDucks.Count);
+
+        if (ListOfDucks.Count >= 10){
+            StartCoroutine(Duckpocalypse());
+        }
     }
 
     IEnumerator DuckSpawner()
     {
-        while (true){
+        while (active){
             yield return new WaitForSeconds(timeUntilNextSpawn);
             SpawnDuck();
             timeUntilNextSpawn = UnityEngine.Random.Range(.1f, maxSpawnWaitTime);
-                maxSpawnWaitTime -= .01f;
-            
+            maxSpawnWaitTime -= .05f; //originally .01
         }
-        
     }
 
-    void SpawnDuckpocalypse()
+    IEnumerator Duckpocalypse()
     {
-        int counter = 0;
-        while (counter < 100)
-        {
-            SpawnDuck();
-            counter++;
-        }
+        yield return new WaitForSeconds(3);
+        active = false;
+        StopCoroutine(DuckSpawner());
+        scrollSpeed = 0;
+        //add popup code heres
     }
 }

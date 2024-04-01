@@ -97,8 +97,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 62.2807, y: 45.364563, z: 19.935148}
-  m_Center: {x: -4.4597473, y: 1.8354187, z: -1.783597}
+  m_Size: {x: 66.37561, y: 49.46306, z: 19.935148}
+  m_Center: {x: -4.470337, y: 1.7150497, z: -1.783597}
 --- !u!54 &3122100689144737114
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -139,4 +139,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 300
-  prototypePuzzle: {fileID: 0}
