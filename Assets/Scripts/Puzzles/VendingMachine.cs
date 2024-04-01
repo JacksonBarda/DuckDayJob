@@ -16,6 +16,7 @@ public class VendingMachine : Interactable
     public Button deleteButton;
     public Button exitButton;
 
+    public string lastBoughtItem = "";
     private string enteredNumber = "";
     private int playerCoins = 20;
     public List<GameObject> itemCosts;
@@ -27,6 +28,7 @@ public class VendingMachine : Interactable
         puzzleUI.SetActive(true);
         mainUI.SetActive(false);
         AudioManager.Instance.PlayMusic("VendingAmbience");
+        player.puzzleMode = true;
     }
 
     public override void Action()
@@ -127,6 +129,7 @@ public class VendingMachine : Interactable
             //itemCosts[itemIndex].SetActive(false);
             //Debug.Log(itemIndex);
             Debug.Log("Purchased item: " + itemArray[itemIndex]);
+            lastBoughtItem = itemArray[itemIndex];
         }
         else
         {
