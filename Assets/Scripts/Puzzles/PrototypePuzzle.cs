@@ -55,6 +55,7 @@ public class PrototypePuzzle : Interactable
 
     public override void Complete()
     {
+        base.Complete();
 
         //Location of Puzzle
         AudioManager.Instance.PlayMusic("ManufacturingRoom");
@@ -119,7 +120,7 @@ public class PrototypePuzzle : Interactable
         yield return new WaitForSeconds(1);
         popupUI.SetActive(true);
         displayText.text = "TIME SURVIVED: " + timePassed +
-                           "<br>DUCKS HIT: " + ducksHit +
-                           "<br>SCORE: " + score;
+                           "\nDUCKS HIT: " + ducksHit +
+                           "\nSCORE: " + score;
     }
 }
