@@ -352,6 +352,12 @@ public class DialogueTool : Interactable
                     Profile.sprite = DialogueManager.GetComponent<ReadDialogueData>().ProfileImages[talkAgainList[index].profileNumber - 1];
                     break;
             }
+
+            if (talkAgainList[index].profileNumber == 0)
+            {
+                Profile.gameObject.SetActive(false);
+                Profile2.gameObject.SetActive(false);
+            }
         }
         else
         {
@@ -375,6 +381,12 @@ public class DialogueTool : Interactable
                     Profile.sprite = DialogueManager.GetComponent<ReadDialogueData>().ProfileImages[DialogueList[index].profileNumber - 1];
                     break;
             }
+
+            if (DialogueList[index].profileNumber == 0)
+            {
+                Profile.gameObject.SetActive(false);
+                Profile2.gameObject.SetActive(false);
+            }
         }
         
     }
@@ -384,6 +396,13 @@ public class DialogueTool : Interactable
         {
             Name.text = replaceMainDuck(talkAgainList[index].name);
             duckname = talkAgainList[index].name;
+
+            if (duckname.Equals("None"))
+            {
+                Name.text = "";
+
+            }
+
             switch (talkAgainList[index].align)
             {
                 case Alignment.Left:
@@ -403,6 +422,13 @@ public class DialogueTool : Interactable
         {
             Name.text = replaceMainDuck(DialogueList[index].name);
             duckname = DialogueList[index].name;
+
+            if (duckname.Equals("None"))
+            {
+                Name.text = "";
+
+            }
+
             switch (DialogueList[index].align)
             {
                 case Alignment.Left:
@@ -444,6 +470,10 @@ public class DialogueTool : Interactable
                     Dialogue.fontStyle = FontStyles.Italic;
                     break;
 
+                case FontSelectStyle.Bold:
+                    Dialogue.fontStyle = FontStyles.Bold;
+                    break;
+
                 default:
                     Dialogue.fontStyle = FontStyles.Normal;
                     break;
@@ -461,6 +491,10 @@ public class DialogueTool : Interactable
 
                 case FontSelectStyle.Italics:
                     Dialogue.fontStyle = FontStyles.Italic;
+                    break;
+
+                case FontSelectStyle.Bold:
+                    Dialogue.fontStyle = FontStyles.Bold;
                     break;
 
                 default:
@@ -641,6 +675,18 @@ public class DialogueTool : Interactable
     {
         string name = PlayerPrefs.GetString("playerName");
         string newText = originalText.Replace("Main Duck", name);
+        newText = noQuotationMarks(newText);
+        return newText;
+    }
+
+    public string noQuotationMarks(string originalText)
+    {
+        string newText = originalText;
+        if (originalText.StartsWith("\""))
+        {
+            newText = originalText.Substring(1, originalText.Length - 2);
+            //newText = originalText.Replace("\"", ""); --> Another way to remove "", but would also remove the "" that are in the dialogue on purpose, so substring is the preferred method
+        }
         return newText;
     }
 
