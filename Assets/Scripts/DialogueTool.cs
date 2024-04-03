@@ -134,7 +134,7 @@ public class DialogueTool : Interactable
         DialogueDisplay.SetActive(true);
 
         // disable user input
-        player.puzzleMode = true;
+        PlayerMove.puzzleMode = true;
 
         // set first line
         DialogueManager.GetComponent<ReadDialogueData>().DialogTool = this.gameObject;
@@ -145,6 +145,7 @@ public class DialogueTool : Interactable
 
     public override void Complete()
     {
+        base.Complete();
         // call it anytime inside the function and have your stuff that finished the interact, like close all the dialogue and bring back the main UI
         // below is placeholder if there is no code. If there is code, can delete
         ResetTool();
@@ -173,7 +174,7 @@ public class DialogueTool : Interactable
             talkAgain = true;
         }
         index = 0;
-        Tasklist.SetText(taskName);
+        //Tasklist.SetText(taskName);
         SLDR_Progress.value++;
     }
 
@@ -623,7 +624,7 @@ public class DialogueTool : Interactable
     {
         MainDisplay.SetActive(true);
         DialogueDisplay.SetActive(false);
-        player.puzzleMode = false;
+        PlayerMove.puzzleMode = false;
         //nextButton.SetActive(true);
         if (!inOptionDialog)
         {

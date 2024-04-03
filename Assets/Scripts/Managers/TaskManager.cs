@@ -7,7 +7,7 @@ using static TaskManager;
 
 public class TaskManager : MonoBehaviour
 {
-
+    public int count = 0;
     private List<DayTask> tasksByDay = new List<DayTask>();
     [SerializeField]
     public DayTask Day1;
@@ -31,7 +31,7 @@ public class TaskManager : MonoBehaviour
 
     //public int dayCount = 0;
     public int ptCount = 0;
-    private int count = 0;
+
     private int day = 1;
 
 
@@ -81,16 +81,19 @@ public class TaskManager : MonoBehaviour
 
     private void TaskFailed(Interactable _task)
     {
-        _task.player.puzzleMode = false;
-        _task.puzzleUI.SetActive(false);
-        _task.mainUI.SetActive(true);
+        PlayerMove.puzzleMode = false;
+        if(_task.puzzleUI !=null)
+            _task.puzzleUI.SetActive(false);
+        if (_task.mainUI != null)
+            _task.mainUI.SetActive(true);
         health -= 1;
         if(health == 0)
         {
             OnDeath();
         }
-        SaveGame();
         uiManager.UpdateTime(1);
+        SaveGame();
+        
     }
 
     private void OnDeath()
@@ -100,22 +103,25 @@ public class TaskManager : MonoBehaviour
 
     private void TaskCompleted(Interactable _task)
     {
+        
+
 
         foreach (Interactable task in tasksByDay[day - 1].GetInteractables(currentPt))
         {
-            if (task.isCompleted)
+            if (task.isCompleted && !task.counted)
             {
                 count++;
+                task.counted = true;
             }
         }
-        if (count > tasksByDay[day - 1].GetInteractables(currentPt).Count)
+        if (count >= tasksByDay[day - 1].GetInteractables(currentPt).Count)
         {
-            foreach(Interactable task in tasksByDay[day - 1].GetInteractables(currentPt))
+            foreach (Interactable task in tasksByDay[day - 1].GetInteractables(currentPt))
             {
                 task.gameObject.SetActive(false);
             }
             currentPt++;
-            foreach(Interactable task in tasksByDay[day - 1].GetInteractables(currentPt))
+            foreach (Interactable task in tasksByDay[day - 1].GetInteractables(currentPt))
             {
                 if (task.isVisibleOnStart)
                 {
@@ -123,27 +129,33 @@ public class TaskManager : MonoBehaviour
                 }
 
             }
+            count = 0;
             SaveGame();
+
         }
         else
         {
-            count = 0;
+                
         }
-        
+
         uiManager.UpdateTime(1);
         //Change day time here
-        _task.player.puzzleMode = false;
-        _task.puzzleUI.SetActive(false);
-        _task.mainUI.SetActive(true);
-        _task.gameObject.SetActive(false);
-
-        if (tasksByDay[day - 1].GetInteractables(currentPt).Count == 0)
+        PlayerMove.puzzleMode = false;
+        if (_task.puzzleUI != null)
+            _task.puzzleUI.SetActive(false);
+        if (_task.mainUI != null)
+            _task.mainUI.SetActive(true);
+        if (!_task.repeatable)
         {
-            ChangeDay();
+            _task.gameObject.SetActive(false);
         }
-            
-        
+        if (tasksByDay[day - 1].GetInteractables(currentPt)[count].forcePlay)
+        {
+            tasksByDay[day - 1].GetInteractables(currentPt)[count].Interact();
+        }
+             
     }
+
     private void ChangeDay()
     {
 
@@ -211,6 +223,7 @@ public class TaskManager : MonoBehaviour
 [System.Serializable]
 public struct DayTask
 {
+    [Tooltip ("Put the actual day - 1 EX: day1 = 0 for the days attribute")]
     public int day;
     public List<Interactable> pt1;
     public List<Interactable> pt2;

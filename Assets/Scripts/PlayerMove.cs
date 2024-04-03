@@ -29,7 +29,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     private List<Interactable> interactable = new List<Interactable>();
 
-    public bool puzzleMode = false;
+    public static bool puzzleMode = false;
     public bool mazeMode = false;
 
    
@@ -82,7 +82,7 @@ public class PlayerMove : MonoBehaviour
     void OnInteract(InputValue value)
     {
         moveValUpHolder = value.Get<float>();
-        if (interactable[0] != null && !mazeMode && !puzzleMode)
+        if (interactable != null && !mazeMode && !puzzleMode)
         {
 
             interactable[0].Interact();
@@ -106,6 +106,17 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(interactable != null)
+        {
+           foreach(Interactable task in interactable)
+            {
+                if (!task.gameObject.activeSelf)
+                {
+                    interactable.Remove(task);
+                }
+            }
+        }
+ 
         grounded = Physics.Raycast(transform.position, -Vector3.up, 0.75f);
 
         if (!puzzleMode)
@@ -192,8 +203,8 @@ public class PlayerMove : MonoBehaviour
     {
         if (collision.gameObject.tag == "Interactable")
         {
-            if (interactable[0] != null)
-                interactable.Remove(interactable[0]);
+            if (interactable != null)
+                interactable.Remove(collision.gameObject.GetComponent<Interactable>());
         }
     }
     public void Maze(bool value)

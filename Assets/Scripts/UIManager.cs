@@ -51,7 +51,17 @@ public class UIManager : MonoBehaviour
         dayNumber++;
         day.text = "Day " + dayNumber;
     }
-
+    public void SetNightTime()
+    {
+        hour = 5;
+        meridiem = "p.m.";
+    }
+    public void SetMorningTime()
+    {
+        hour = 8;
+        meridiem = "a.m.";
+        UpdateDay();
+    }
 
     public void UpdateTime(int addHours)
     {
@@ -68,6 +78,7 @@ public class UIManager : MonoBehaviour
                 meridiem = "a.m.";
             }
         }
+
         time.text = hour + ":00 " + meridiem;
     }
 

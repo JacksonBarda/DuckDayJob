@@ -98,7 +98,7 @@ public class EmailDecrypt : Interactable
     public override void Interact()
     {
         
-        player.puzzleMode = true;
+        PlayerMove.puzzleMode = true;
         puzzleUI.SetActive(true);
         mainUI.SetActive(false);
         //puzzleBarUI.SetActive(false);

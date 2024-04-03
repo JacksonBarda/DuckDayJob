@@ -72,7 +72,8 @@ public class CADPuzzle : Interactable
 
     public override void Interact()
     {
-        player.puzzleMode = true;
+        base.Interact();
+        PlayerMove.puzzleMode = true;
         puzzleUI.SetActive(true);
         mainUI.SetActive(false);
     }

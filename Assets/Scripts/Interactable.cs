@@ -5,6 +5,8 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     public bool activatePostPuzzle = false;
+    public bool repeatable = false;
+    public bool counted = false;
     public Interactable puzzleToActivate;
     public FadeController fade;
     public PlayerMove player;
@@ -14,8 +16,12 @@ public class Interactable : MonoBehaviour
     public bool isVisibleOnStart = true;
     public GameObject puzzleUI;
     public GameObject mainUI;
+    public bool forcePlay = false;
 
-    public virtual void Interact() { }
+    public virtual void Interact()
+    {
+        PlayerMove.puzzleMode = true;
+    }
     public virtual void Action() { }
     public virtual void Complete()
     {
