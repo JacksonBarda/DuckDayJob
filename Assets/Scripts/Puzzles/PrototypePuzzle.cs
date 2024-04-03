@@ -8,26 +8,30 @@ using System;
 
 public class PrototypePuzzle : Interactable
 {
-    public float scrollSpeed;
-    public int score;
-    public int ducksHit;
-    [HideInInspector]
-    public List<GameObject> ListOfDucks;
-
     private Vector3 mousePosition;
     private Vector3 screenBounds;
     private float timePassed = 0;
     private float timeUntilNextSpawn = 2;
     private float maxSpawnWaitTime = 2;
-    public bool active = false;
     private bool recordScore = true;
-
+    [SerializeField]
+    private GameObject ducksParent;
 
     public GameObject background;
     public Canvas canvasObject;
     public GameObject car;
     public GameObject duck;
     public Text textScore;
+    public GameObject popupUI;
+    public Text displayText;
+    public float scrollSpeed;
+    public int score;
+    public int ducksHit;
+
+    [HideInInspector]
+    public List<GameObject> ListOfDucks;
+    [HideInInspector]
+    public bool active = false;
 
     // Start is called before the first frame update
 
@@ -35,6 +39,7 @@ public class PrototypePuzzle : Interactable
     {
         puzzleUI.SetActive(true);
         mainUI.SetActive(false);
+        popupUI.SetActive(false);
         //AudioManager.Instance.PlayMusic("VendingAmbience");
         player.puzzleMode = true;
         active = true;                      //is the puzzle active (things moving); necessary because update function runs before puzzle is interacted with
@@ -86,8 +91,7 @@ public class PrototypePuzzle : Interactable
         GameObject duckClone = Instantiate(duck);
         ListOfDucks.Add(duckClone);
         duckClone.transform.position = new Vector3(500, UnityEngine.Random.Range(-200, 200));
-        duckClone.transform.SetParent(canvasObject.transform, false);
-        Debug.Log("Ducks in list: " + ListOfDucks.Count);
+        duckClone.transform.SetParent(ducksParent.transform, false);
 
         if (ListOfDucks.Count >= 10){
             StartCoroutine(Duckpocalypse());
@@ -107,9 +111,15 @@ public class PrototypePuzzle : Interactable
     IEnumerator Duckpocalypse()
     {
         yield return new WaitForSeconds(3);
+        recordScore = false;
         active = false;
         StopCoroutine(DuckSpawner());
         scrollSpeed = 0;
-        //add popup code heres
+
+        yield return new WaitForSeconds(1);
+        popupUI.SetActive(true);
+        displayText.text = "TIME SURVIVED: " + timePassed +
+                           "<br>DUCKS HIT: " + ducksHit +
+                           "<br>SCORE: " + score;
     }
 }
