@@ -28,7 +28,7 @@ public class VendingMachine : Interactable
         puzzleUI.SetActive(true);
         mainUI.SetActive(false);
         AudioManager.Instance.PlayMusic("VendingAmbience");
-        player.puzzleMode = true;
+        PlayerMove.puzzleMode = true;
     }
 
     public override void Action()

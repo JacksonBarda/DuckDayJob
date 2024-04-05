@@ -41,7 +41,7 @@ public class PrototypePuzzle : Interactable
         mainUI.SetActive(false);
         popupUI.SetActive(false);
         //AudioManager.Instance.PlayMusic("VendingAmbience");
-        player.puzzleMode = true;
+        PlayerMove.puzzleMode = true;
         active = true;                      //is the puzzle active (things moving); necessary because update function runs before puzzle is interacted with
         recordScore = true;                 //is the puzzle keeping track of score; is true until just before duckpocalypse
 
