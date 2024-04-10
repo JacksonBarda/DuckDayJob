@@ -60,8 +60,8 @@ Meet Quackson	1	3	Day	Quackson	6	So? I'm busy.	TRUE	Right	Normal	FALSE	0	FALSE
 Meet Quackson	1	3	Day	Main Duck	2	Wait... is that Angry Ducks?	TRUE	Left	Normal	FALSE	0	FALSE
 Meet Quackson	1	3	Day	Quackson	6	No.	TRUE	Right	Normal	FALSE	0	FALSE
 Meet Quackson	1	3	Day	Quackson	6	(Flushes toilet).	TRUE	Right	Normal	FALSE	0	FALSE
-Meet Quackson	1	3	Day	Quackson	6	Stall is taken!	TRUE	Right	Normal	FALSE	0	FALSE
-Meet Quackson	1	3	Day	Main Duck	2	...I know.	TRUE	Left	Normal	FALSE	0	FALSE
+Meet Quackson	1	3	Day	Quackson	6	Stall is taken!	TRUE	Right	Normal	FALSE	0	TRUE
+Meet Quackson	1	3	Day	Main Duck	2	...I know.	TRUE	Left	Normal	FALSE	0	TRUE
 Eggwin's Retrieval Request	1	0	Day	Eggwin	3	"Main Duck, could you <b>ask Duckette for the latest reports?</b> I'll need to review and submit them to Elon Duck by the end of the day."	TRUE	Right	Normal	FALSE	0	FALSE
 Eggwin's Retrieval Request	1	0	Day	Main Duck	2	Quack! You got it!	TRUE	Left	Normal	FALSE	0	FALSE
 Ask Duckette for Retrieval Item	1	0	Day	Duckette	4	"Oh, hello there! Can I help you with something?"	TRUE	Right	Normal	TRUE	0	FALSE
