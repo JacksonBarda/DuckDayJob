@@ -104,6 +104,7 @@ public class VendingMachine : Interactable
         puzzleUI.SetActive(false);
         mainUI.SetActive(true);
         AudioManager.Instance.PlayMusic("Lobby");
+        PlayerMove.puzzleMode = false;
     }
     private void VMremove()
     {
