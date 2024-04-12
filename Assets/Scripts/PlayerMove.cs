@@ -84,9 +84,18 @@ public class PlayerMove : MonoBehaviour
         moveValUpHolder = value.Get<float>();
         if (interactable != null && !mazeMode && !puzzleMode)
         {
-
+            Interactable holder;
+            holder = interactable[0];
             interactable[0].Interact();
-            interactable.Remove(interactable[0]);
+            moveValDown = 0;
+            moveValRight = 0;
+            moveValLeft = 0;
+            moveValUp = 0;
+            rigid.velocity = new Vector3(moveValRight - moveValLeft, moveValUp - moveValDown, 0f) * moveSpeed;
+            animator.SetBool("isMoving", false);
+
+            interactable.Clear();
+
             Debug.Log("interacted");
         }
         if (mazeMode)

@@ -1,22 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    public bool activatePostPuzzle = false;
+    [Header("Interactable Default Variable")]
     public bool repeatable = false;
-    public bool counted = false;
-    public Interactable puzzleToActivate;
-    public FadeController fade;
-    public PlayerMove player;
+
+    public bool forcePlay = false;
     public string taskName;
     public bool isCompleted;
     public bool hasFailed;
     public bool isVisibleOnStart = true;
-    public GameObject puzzleUI;
+    public bool activatePostPuzzle = false;
+    public Interactable puzzleToActivate;
+
+    public FadeController fade;
+    public PlayerMove player;
+
     public GameObject mainUI;
-    public bool forcePlay = false;
+    public bool counted = false;
+    [Header("Custom puzzle Variable")]
+    public GameObject puzzleUI;
 
     public virtual void Interact()
     {
