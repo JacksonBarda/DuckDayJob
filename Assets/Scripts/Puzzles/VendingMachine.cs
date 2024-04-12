@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class VendingMachine : Interactable
 {
 
-
     public Text displayText;
 
     public Text playerCoinsText;
@@ -22,6 +21,7 @@ public class VendingMachine : Interactable
     public List<GameObject> itemCosts;
     public string[] itemArray;
 
+    public string correctItem;
 
     public override void Interact()
     {
@@ -104,6 +104,8 @@ public class VendingMachine : Interactable
         puzzleUI.SetActive(false);
         mainUI.SetActive(true);
         AudioManager.Instance.PlayMusic("Lobby");
+        PlayerMove.puzzleMode = false;
+        
     }
     private void VMremove()
     {
@@ -130,6 +132,8 @@ public class VendingMachine : Interactable
             //Debug.Log(itemIndex);
             Debug.Log("Purchased item: " + itemArray[itemIndex]);
             lastBoughtItem = itemArray[itemIndex];
+
+            
         }
         else
         {
@@ -142,5 +146,11 @@ public class VendingMachine : Interactable
     {
         displayText.text = enteredNumber;
         playerCoinsText.text = "" + playerCoins;
+    }
+
+    private void EstablishCorrectDialogue()
+    {
+
+        
     }
 }

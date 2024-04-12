@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-public class DeskDragger : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DeskDragger : Interactable, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     
 
