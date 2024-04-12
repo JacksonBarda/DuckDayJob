@@ -50,7 +50,8 @@ public class TaskManager : MonoBehaviour
         Pt2,
         Pt3,
         Pt4,
-        Pt5
+        Pt5,
+        Pt6
     }
     private PartIdentifier currentPt = PartIdentifier.Pt1;
 
@@ -210,7 +211,10 @@ public class TaskManager : MonoBehaviour
                
             case 4:
                 return PartIdentifier.Pt5;
-                
+
+            case 5:
+                return PartIdentifier.Pt6;
+
             default:
                 return PartIdentifier.Pt1;
                 
@@ -230,6 +234,7 @@ public struct DayTask
     public List<Interactable> pt3;
     public List<Interactable> pt4;
     public List<Interactable> pt5;
+    public List<Interactable> pt6;
 
     public List<Interactable> GetInteractables(PartIdentifier point)
     {
@@ -245,6 +250,8 @@ public struct DayTask
                 return pt4;
             case PartIdentifier.Pt5:
                 return pt5;
+            case PartIdentifier.Pt6:
+                return pt6;
             default:
                 return new List<Interactable>();
         }

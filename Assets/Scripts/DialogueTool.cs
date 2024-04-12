@@ -32,7 +32,7 @@ public class DialogueTool : Interactable
     [SerializeField]
     private GameObject Options;
     [SerializeField]
-    private string scene;
+    private string gameScene;
     [SerializeField]
     private bool increasePriority;
     [SerializeField]
@@ -80,7 +80,7 @@ public class DialogueTool : Interactable
     {
         if(taskName == null) 
         {
-            taskName = scene;
+            taskName = gameScene;
         }
 
         talkAgain = false;
@@ -99,7 +99,7 @@ public class DialogueTool : Interactable
         refDialogueList = DialogueManager.GetComponent<ReadDialogueData>().DialogList;
         foreach (DialogStruct DialogueRow in refDialogueList)
         {
-            if (DialogueRow.scene.Contains(scene) == true)
+            if (DialogueRow.scene.Contains(gameScene) == true)
             {
                 if (DialogueRow.talkAgain == false)
                 {
