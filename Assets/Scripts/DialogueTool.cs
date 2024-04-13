@@ -39,8 +39,8 @@ public class DialogueTool : Interactable
     private GameObject optionButtonPrefab;
     [SerializeField]
     private Slider SLDR_Progress;
-    //[SerializeField]
-    //private GameObject nextButton;
+    [SerializeField]
+    private Button nextButton;
 
     private string duckname;
 
@@ -54,9 +54,9 @@ public class DialogueTool : Interactable
 
     private List<List<DialogStruct>> responseList = new List<List<DialogStruct>>();
 
-    private List<DialogStruct> refDialogueList = new List<DialogStruct>();
+    public List<DialogStruct> refDialogueList = new List<DialogStruct>();
 
-    private List<DialogStruct> retrievalDialogueList = new List<DialogStruct>();
+    public List<DialogStruct> retrievalDialogueList = new List<DialogStruct>();
 
     private List<GameObject> buttonList = new List<GameObject>();
 
@@ -69,10 +69,12 @@ public class DialogueTool : Interactable
     private int roundNum = 1;
 
     // Retrieval Variables
-    public int Round1Answer;
-    public int Round2Answer;
+    //public int Round1Answer;
+    //public int Round2Answer;
+    public List<int> Answers;
     private bool correct = false;
     private int holdIndex = 0;
+    private DialogStruct lastDialogue;
     private int attempts = 0;
 
     // Start is called before the first frame update
@@ -112,7 +114,7 @@ public class DialogueTool : Interactable
                 
             }
         }
-
+        retrievalDialogueList = DialogueList;
     }
 
     public override void Action()
@@ -227,12 +229,12 @@ public class DialogueTool : Interactable
                             {
                                 if (optionDialog.scene.Contains("Round" + roundNum) == true)
                                 {
-                                    newButton.GetComponentInChildren<TMP_Text>().text = optionDialog.dialogue;
+                                    newButton.GetComponentInChildren<TMP_Text>().text = noQuotationMarks(optionDialog.dialogue);
                                 }
                             }
                             else
                             {
-                                newButton.GetComponentInChildren<TMP_Text>().text = optionDialog.dialogue;
+                                newButton.GetComponentInChildren<TMP_Text>().text = noQuotationMarks(optionDialog.dialogue);
                             }
                             
                         }
@@ -248,26 +250,31 @@ public class DialogueTool : Interactable
         else
         {
             Options.SetActive(true);
-            if (activatePostPuzzle)
+            /*if (activatePostPuzzle)
             {
                 if (roundNum == 2)
                 {
                     retrievalDialogueList = refDialogueList;
                 }
             }
+            */
+            
             if (DialogueList[index].options)
             {
                 //holdIndex = index; //IndexOf or find where it is in the original dialoge list
-                Debug.Log(holdIndex);
+                Debug.Log("Round:" + roundNum);
+                
                 if (attempts == 0)
                 {
                     refDialogueList = DialogueList;
                 }
                 hadOption = true;
                 //nextButton.SetActive(false);
+                nextButton.interactable = false;
                 setProfile();
                 setName();
                 setLine();
+                lastDialogue = DialogueList[index]; //NEW
                 if (activatePostPuzzle)
                 {
                     if (roundNum == 2)
@@ -309,12 +316,12 @@ public class DialogueTool : Interactable
                             {
                                 if (optionDialog.scene.Contains("Round" + roundNum) == true)
                                 {
-                                    newButton.GetComponentInChildren<TMP_Text>().text = optionDialog.dialogue;
+                                    newButton.GetComponentInChildren<TMP_Text>().text = noQuotationMarks(optionDialog.dialogue);
                                 }
                             }
                             else
                             {
-                                newButton.GetComponentInChildren<TMP_Text>().text = optionDialog.dialogue;
+                                newButton.GetComponentInChildren<TMP_Text>().text = noQuotationMarks(optionDialog.dialogue);
                             }
 
                         }
@@ -538,7 +545,8 @@ public class DialogueTool : Interactable
                 if (activatePostPuzzle && !correct)
                 {
                     
-                    DialogueList = refDialogueList;
+                    DialogueList = retrievalDialogueList;
+                    /*
                     if (roundNum == 1)
                     {
                         index = holdIndex;
@@ -547,6 +555,8 @@ public class DialogueTool : Interactable
                     {
                         index = 0;
                     }
+                    */
+                    index = holdIndex; //NEW
                     setDialogueUI();
                 }
                 else
@@ -578,8 +588,10 @@ public class DialogueTool : Interactable
     {
         Options.SetActive(false);
         inOptionDialog = true;
-        holdIndex = DialogueList.IndexOf(refDialogueList[0]); //<---------- WE NEED TO HOLD THE INDEX OF THE RESPONSE
+        //holdIndex = DialogueList.IndexOf(refDialogueList[0]); //<---------- WE NEED TO HOLD THE INDEX OF THE RESPONSE //OLD
+        holdIndex = DialogueList.IndexOf(lastDialogue); // NEW MODIFICATION FOR WHEN THERE ARE MULTIPLE LINES IN A RESPONSE
         //nextButton.SetActive(true);
+        nextButton.interactable = true;
         DialogueList = responseList[selectedButton.GetComponent<OptionButtonSetUp>().optionNumber - 1];
         // need to delete option buttons
         foreach (GameObject button in buttonList)
@@ -588,9 +600,22 @@ public class DialogueTool : Interactable
         }
         if (activatePostPuzzle)
         {
-            
-            
+            if (selectedButton.GetComponent<OptionButtonSetUp>().optionNumber == Answers[roundNum - 1])
+            {
+                roundNum++;
+                correct = true;
+                Debug.Log("Correct");
+                attempts = 0;
+            }
+            else
+            {
+                correct = false;
+                Debug.Log("Wrong");
+                attempts++;
+            }
+        }
             //roundNum++;
+            /*
             if (roundNum == 1)
             {
                 if (selectedButton.GetComponent<OptionButtonSetUp>().optionNumber == Round1Answer)
@@ -606,6 +631,7 @@ public class DialogueTool : Interactable
                     attempts++;
                 }
             }
+            
             if (roundNum == 2)
             {
                 if (selectedButton.GetComponent<OptionButtonSetUp>().optionNumber == Round2Answer)
@@ -622,6 +648,7 @@ public class DialogueTool : Interactable
                     attempts++;
                 }
             }
+
             /*
             if (roundNum == 1)
             {
@@ -649,7 +676,7 @@ public class DialogueTool : Interactable
                 }
             }
             */
-        }
+        
 
         ResetTool();
     }
