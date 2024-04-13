@@ -1424,6 +1424,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5c563a7c1b2159b4fa2cab880d3d736d, type: 3}
   - {fileID: 21300000, guid: 5c563a7c1b2159b4fa2cab880d3d736d, type: 3}
   - {fileID: 21300000, guid: 5c563a7c1b2159b4fa2cab880d3d736d, type: 3}
+  - {fileID: 21300000, guid: 5c563a7c1b2159b4fa2cab880d3d736d, type: 3}
+  - {fileID: 21300000, guid: 5c563a7c1b2159b4fa2cab880d3d736d, type: 3}
+  - {fileID: 21300000, guid: 5c563a7c1b2159b4fa2cab880d3d736d, type: 3}
+  - {fileID: 21300000, guid: 5c563a7c1b2159b4fa2cab880d3d736d, type: 3}
+  - {fileID: 21300000, guid: 5c563a7c1b2159b4fa2cab880d3d736d, type: 3}
+  - {fileID: 21300000, guid: 5c563a7c1b2159b4fa2cab880d3d736d, type: 3}
   DialogTool: {fileID: 0}
   priority: 1
   DialogueToolsList:
@@ -37941,7 +37947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_Name
-      value: TestDuckUnionDialogueTool
+      value: TestElonDuckRetrievalDialogueTool
       objectReference: {fileID: 0}
     - target: {fileID: 8866254512280165129, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_Sprite
@@ -84245,8 +84251,6 @@ MonoBehaviour:
   retrievalDialogueList: []
   index: 0
   roundNum: 1
-  Round1Answer: 0
-  Round2Answer: 0
   Answers: 
 --- !u!65 &1804512342
 BoxCollider:

@@ -277,7 +277,7 @@ public class DialogueTool : Interactable
                 lastDialogue = DialogueList[index]; //NEW
                 if (activatePostPuzzle)
                 {
-                    if (roundNum == 2)
+                    if (roundNum >= 2)
                     {
                         DialogueList = retrievalDialogueList;
                     }

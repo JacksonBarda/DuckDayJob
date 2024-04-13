@@ -785,7 +785,7 @@ Unite the Ducks_Round1_Response2	6	4	Day	NPD 1	8	That sounds even more crazy tha
 Unite the Ducks_Round1_Response2	6	4	Day	NPD 1	8	"I mean, come on. A killing room? A Duck Farm?"	TRUE	Right	Normal	FALSE	2	FALSE
 Unite the Ducks_Round1_Response2	6	4	Day	NPD 1	8	Are you pulling our feathers or something? You think this is a funny joke?	TRUE	Right	Normal	FALSE	2	FALSE
 Unite the Ducks_Round1_Response2	6	4	Day	Main Duck	2	"No, you gotta listen to me! We even have evidence to prove it."	TRUE	Left	Normal	FALSE	2	FALSE
-Unite the Ducks_Round1_Response2	6	4	Day	NPD 1	8	Then prove it. <b>What evidence do you have to prove that the killing room exists?</b>	TRUE	Right	Normal	FALSE	2	FALSE
+Unite the Ducks_Round1_Response2	6	4	Day	NPD 1	8	Then prove it. <b>What evidence do you have to prove that the killing room exists?</b>	TRUE	Right	Normal	TRUE	2	FALSE
 Unite the Ducks_Round1_Option3	6	4	Day	None	0	They found a different job.	TRUE	Right	Normal	FALSE	3	FALSE
 Unite the Ducks_Round1_Response3	6	4	Day	NPD 1	8	Are we supposed to quacking believe that?	TRUE	Right	Normal	FALSE	3	FALSE
 Unite the Ducks_Round1_Response3	6	4	Day	Main Duck	2	"Oops, that wasn't the right explanation. Let me think about this again."	TRUE	Left	Italics	FALSE	3	FALSE
@@ -813,14 +813,14 @@ Unite the Ducks_Round2_Response4	6	4	Day	Main Duck	2	It's actually the <b>killin
 Unite the Ducks_Round2_Response4	6	4	Day	NPD 1	8	NOOOOO!	TRUE	Right	Normal	FALSE	4	FALSE
 Unite the Ducks_Round2_Response4	6	4	Day	Main Duck	2	"And these <color=red>memory files</color> duckument everything the janitor was doing in the killing room before I ""deactivated"" him."	TRUE	Left	Normal	FALSE	4	FALSE
 Unite the Ducks_Round2_Response4	6	4	Day	NPD 1	8	"Ok, but we must know one more thing about the janitor and the killing room."	TRUE	Right	Normal	FALSE	4	FALSE
-Unite the Ducks_Round2_Response4	6	4	Day	NPD 1	8	How was the janitor <b>getting to the killing room?</b>	TRUE	Right	Normal	FALSE	4	FALSE
+Unite the Ducks_Round2_Response4	6	4	Day	NPD 1	8	How was the janitor <b>getting to the killing room?</b>	TRUE	Right	Normal	TRUE	4	FALSE
 Unite the Ducks_Round3_Option1	6	4	Day	None	0	The vents in the bathroom.	TRUE	Right	Normal	FALSE	1	FALSE
 Unite the Ducks_Round3_Response1	6	4	Day	Main Duck	2	The janitor used the <b>vents</b> in the bathroom. They're right above Quackson's stall.	TRUE	Left	Normal	FALSE	1	FALSE
 Unite the Ducks_Round3_Response1	6	4	Day	Main Duck	2	"After all, that's how I was able to find the killing room."	TRUE	Left	Normal	FALSE	1	FALSE
 Unite the Ducks_Round3_Response1	6	4	Day	NPD 1	8	"Huh, that would be the perfect place. Barely any duck goes to the bathroom."	TRUE	Right	Normal	FALSE	1	FALSE
 Unite the Ducks_Round3_Response1	6	4	Day	NPD 1	8	"So, the janitor goes through the vents and helps operates the secret killing room, which is where the missing ducks went."	TRUE	Right	Normal	FALSE	1	FALSE
 Unite the Ducks_Round3_Response1	6	4	Day	NPD 1	8	But what about the Duck Farm you mentioned earlier?	TRUE	Right	Normal	FALSE	1	FALSE
-Unite the Ducks_Round3_Response1	6	4	Day	NPD 1	8	<b>Who</b> is responsible for the Duck Farm?	TRUE	Right	Normal	FALSE	1	FALSE
+Unite the Ducks_Round3_Response1	6	4	Day	NPD 1	8	<b>Who</b> is responsible for the Duck Farm?	TRUE	Right	Normal	TRUE	1	FALSE
 Unite the Ducks_Round3_Option2	6	4	Day	None	0	Teleportation.	TRUE	Right	Normal	FALSE	2	FALSE
 Unite the Ducks_Round3_Response2	6	4	Day	NPD 1	8	Huh? That doesn't make sense.	TRUE	Right	Normal	FALSE	2	FALSE
 Unite the Ducks_Round3_Response2	6	4	Day	Main Duck	2	"Yeah, it didn't make sense when it came out of my beak either. Let me think this through again."	TRUE	Left	Italics	FALSE	2	FALSE
@@ -832,9 +832,9 @@ Unite the Ducks_Round3_Response4	6	4	Day	NPD 1	8	Huh? That doesn't make sense.	T
 Unite the Ducks_Round3_Response4	6	4	Day	Main Duck	2	"Yeah, it didn't make sense when it came out of my beak either. Let me think this through again."	TRUE	Left	Italics	FALSE	4	FALSE
 Unite the Ducks_Round4_Option1	6	4	Day	None	0	Elon Duck.	TRUE	Right	Normal	FALSE	1	FALSE
 Unite the Ducks_Round4_Response1	6	4	Day	NPD 1	8	"No quacking way, <b>the boss of Nestla</b> himself?"	TRUE	Right	Normal	FALSE	1	FALSE
-Unite the Ducks_Round4_Response1	6	4	Day	NPD 2	9	But why would Elon Duck do such a thing?	TRUE	Right	Normal	FALSE	1	FALSE
-Unite the Ducks_Round4_Response1	6	4	Day	NPD 3	10	He's a famous innovator amongst all duck-kind! It's a big claim to be pointing wings at him.	TRUE	Right	Normal	FALSE	1	FALSE
-Unite the Ducks_Round4_Response1	6	4	Day	NPD 4	11	"So, what <b>evidence</b> do you have that <b>proves Elon Duck's connection to the Duck Farm?</b>"	TRUE	Right	Normal	FALSE	1	FALSE
+Unite the Ducks_Round4_Response1	6	4	Day	NPD 1	8	But why would Elon Duck do such a thing?	TRUE	Right	Normal	FALSE	1	FALSE
+Unite the Ducks_Round4_Response1	6	4	Day	NPD 1	8	He's a famous innovator amongst all duck-kind! It's a big claim to be pointing wings at him.	TRUE	Right	Normal	FALSE	1	FALSE
+Unite the Ducks_Round4_Response1	6	4	Day	NPD 1	8	"So, what <b>evidence</b> do you have that <b>proves Elon Duck's connection to the Duck Farm?</b>"	TRUE	Right	Normal	TRUE	1	FALSE
 Unite the Ducks_Round4_Option2	6	4	Day	None	0	Me.	TRUE	Right	Normal	FALSE	2	FALSE
 Unite the Ducks_Round4_Response2	6	4	Day	Donald	5	Main Duck! You know who is responsible for the Duck Farm. Quack it out already!	TRUE	Right	Normal	FALSE	2	FALSE
 Unite the Ducks_Round4_Option3	6	4	Day	None	0	Donald.	TRUE	Right	Normal	FALSE	3	FALSE
@@ -1271,9 +1271,3 @@ Duckette Day 7 - After Heartbroken	7	0	Day	Duckette	4	"Hehe, I'm sure Manfred wi
 Duckette Day 7 - After Heartbroken	7	0	Day	Duckette	4	Which means he'll come to visit! I better greet him outside.	FALSE	Right	Normal	FALSE	0	FALSE
 Duckette Day 7 - After Heartbroken	7	0	Day	Main Duck	2	...Quacking Manfred. Just you wait.	FALSE	Left	Italics	FALSE	0	FALSE
 Donald Day 7 - Before Kaboom 2	7	0	Day	Donald	5	You look like you have a plan. Lead the way.	FALSE	Right	Normal	FALSE	2	FALSE
-												
-												
-												
-												
-												
-												
