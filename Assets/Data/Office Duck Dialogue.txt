@@ -787,6 +787,8 @@ Before Uniting the Ducks	6	3	Day	Main Duck	2	And my feathers are still ruffled u
 Before Uniting the Ducks	6	3	Day	Donald	5	"Come on, Main Duck! You have a better chance than me. Look at how well my speech went last time."	TRUE	Right	Normal	FALSE	0	FALSE
 Before Uniting the Ducks	6	3	Day	Main Duck	2	"Ugh, he has a quacking point."	TRUE	Left	Italics	FALSE	0	FALSE
 Before Uniting the Ducks	6	3	Day	Main Duck	2	"Come on, Main Duck. This is for Duckette and all of duck-kind. I got this!"	TRUE	Left	Italics	FALSE	0	FALSE
+Before Uniting the Ducks	6	3	Day	Donald	5	What are you waiting for? 	FALSE	Right	Normal	FALSE	0	TRUE
+Before Uniting the Ducks	6	3	Day	Donald	5	We have all the evidence we need. All that's left is convincing them with a big speech.	FALSE	Right	Normal	FALSE	0	TRUE
 Unite the Ducks	6	4	Day	Main Duck	2	Everyone! Can I have your attention please?	TRUE	Left	Normal	FALSE	0	FALSE
 Unite the Ducks	6	4	Day	Main Duck	2	I have come to report that <b>we know what happened to the missing ducks.</b> And I would like your help in avenging them!	TRUE	Left	Normal	FALSE	0	FALSE
 Unite the Ducks	6	4	Day	NPD 1	8	*Sigh* Not another quacking speech.	TRUE	Right	Normal	FALSE	0	FALSE
@@ -1060,6 +1062,9 @@ Heartbroken and replaced by a human	7	3	Day	Main Duck	2	"I made sure to always t
 Heartbroken and replaced by a human	7	3	Day	Main Duck	2	But the one person she falls in love with... is the same human who helped found the Duckberry Farm.	TRUE	Left	Italics	FALSE	0	FALSE
 Heartbroken and replaced by a human	7	3	Day	Main Duck	2	How could she love someone like that?	TRUE	Left	Italics	FALSE	0	FALSE
 Heartbroken and replaced by a human	7	3	Day	Main Duck	2	It's... <b>It's over.</b> She doesn't love me. Not even a little bit.	TRUE	Left	Italics	FALSE	0	FALSE
+Heartbroken and replaced by a human	7	3	Day	Duckette	4	"Hehe, I'm sure Manfred will hear about what happened to Elon Duck and the Duckberry Farm."	FALSE	Right	Normal	FALSE	0	TRUE
+Heartbroken and replaced by a human	7	3	Day	Duckette	4	Which means he'll come to visit! I better greet him outside.	FALSE	Right	Normal	FALSE	0	TRUE
+Heartbroken and replaced by a human	7	3	Day	Main Duck	2	...Quacking Manfred. Just you wait.	FALSE	Left	Italics	FALSE	0	TRUE
 KABOOM - Part 1	7	4	Day	Donald	5	"Main Duck. I'm... I'm sorry about, well, you know..."	TRUE	Right	Normal	FALSE	1	FALSE
 KABOOM - Part 1	7	4	Day	Main Duck	2	...	TRUE	Left	Normal	FALSE	1	FALSE
 KABOOM - Part 1	7	4	Day	Donald	5	"Look, you know what they say, that there are always more ducks in the flock, or something like that."	TRUE	Right	Normal	FALSE	1	FALSE
