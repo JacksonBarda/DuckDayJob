@@ -57588,7 +57588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_Name
-      value: TestDuckUnionDialogueTool (1)
+      value: DT6_UniteTheDucksPuzzle
       objectReference: {fileID: 0}
     - target: {fileID: 8866254512280165129, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_Sprite
