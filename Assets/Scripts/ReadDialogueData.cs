@@ -23,7 +23,7 @@ public class ReadDialogueData : MonoBehaviour
     {
         public string scene;
         public int day;
-        public int order_priority;
+       // public int order_priority;
         public DayEnum dayOrNight;
         public string name;
         public int profileNumber;
@@ -40,7 +40,7 @@ public class ReadDialogueData : MonoBehaviour
         {
             scene = sceneString;
             day = dayNumber;
-            order_priority = order;
+            //order_priority = order;
             dayOrNight = dayNight;
             name = duck;
             profileNumber = profile;
@@ -62,7 +62,7 @@ public class ReadDialogueData : MonoBehaviour
 
     public GameObject DialogTool;
 
-    public int priority;
+    //public int priority;
 
     public List<GameObject> DialogueToolsList = new List<GameObject>(); 
 
@@ -81,7 +81,7 @@ public class ReadDialogueData : MonoBehaviour
         DialogTool.GetComponent<DialogueTool>().Interact();
 
         // set which dialogue tools are active
-        priority = 1;
+        //priority = 1;
         setDialogueTools();
     }
 
@@ -166,6 +166,7 @@ public class ReadDialogueData : MonoBehaviour
     {
         foreach (GameObject dTool in DialogueToolsList)
         {
+            /*
             if (dTool.GetComponent<DialogueTool>().DialogueList[0].order_priority == priority 
                 && dTool.GetComponent<DialogueTool>().DialogueList[0].day == UIManager.GetComponent<UIManager>().dayNumber 
                 && dTool.GetComponent<DialogueTool>().DialogueList[0].dayOrNight == UIManager.GetComponent<UIManager>().dayOrNight)
@@ -178,6 +179,7 @@ public class ReadDialogueData : MonoBehaviour
             {
                 dTool.SetActive(false);
             }
+            */
         }
     }
 }
