@@ -10,6 +10,7 @@ public class FadeOut : MonoBehaviour
     [SerializeField]
     private Image image;
     private float originalAlpha;
+    public bool running = false;
 
     public void Start()
     {
@@ -26,6 +27,7 @@ public class FadeOut : MonoBehaviour
 
     private IEnumerator FadeOutCoroutine(float fadeTime, Interactable targetObject)
     {
+        running = true;
         // Calculate the target alpha (fully transparent)
         float targetAlpha = 1f;
 
@@ -42,7 +44,7 @@ public class FadeOut : MonoBehaviour
 
             yield return null;
         }
-
+        running = false;
         // Call the function on the target object
         targetObject.Action();
 
