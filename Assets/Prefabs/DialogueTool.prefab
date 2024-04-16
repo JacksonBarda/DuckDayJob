@@ -245,13 +245,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 667ce02360b613a4c93e8500d9d9ae32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activatePostPuzzle: 0
+  repeatable: 0
+  counted: 0
+  puzzleToActivate: {fileID: 0}
   fade: {fileID: 0}
   player: {fileID: 0}
   taskName: 
   isCompleted: 0
   hasFailed: 0
+  isVisibleOnStart: 1
   puzzleUI: {fileID: 0}
   mainUI: {fileID: 0}
+  forcePlay: 0
   MainDisplay: {fileID: 0}
   DialogueDisplay: {fileID: 0}
   Tasklist: {fileID: 0}
@@ -265,9 +271,9 @@ MonoBehaviour:
   increasePriority: 0
   optionButtonPrefab: {fileID: 3741148585713256696, guid: 8d6318746227bea4fa19349685a9f366, type: 3}
   SLDR_Progress: {fileID: 0}
-  DialogueButton: {fileID: 0}
-  DialogueIndicator: {fileID: 2557612985409383229}
   DialogueList: []
   talkAgainList: []
   index: 0
-  hadOption: 0
+  roundNum: 1
+  Round1Answer: 0
+  Round2Answer: 0
