@@ -17,6 +17,10 @@ public class VendingMachine : Interactable
     public Button exitButton;
 
     public string lastBoughtItem = "";
+    public string correctItem = "";
+    public GameObject correctDialogue;
+    public GameObject incorrectDialogue;
+    private bool dialoguesActive = false;
     private string enteredNumber = "";
     private int playerCoins = 20;
     public List<GameObject> itemCosts;
@@ -41,6 +45,7 @@ public class VendingMachine : Interactable
 
         //Location of Puzzle
         AudioManager.Instance.PlayMusic("Lobby");
+        Debug.Log("Complete");
     }
 
     private void Start()
@@ -105,6 +110,13 @@ public class VendingMachine : Interactable
         mainUI.SetActive(true);
         AudioManager.Instance.PlayMusic("Lobby");
         PlayerMove.puzzleMode = false;
+
+        if (lastBoughtItem != "" || lastBoughtItem != null)
+        {
+            dialoguesActive = true;
+            CheckForCorrectItem();
+        }
+        Debug.Log("VMExit");
     }
     private void VMremove()
     {
@@ -143,5 +155,26 @@ public class VendingMachine : Interactable
     {
         displayText.text = enteredNumber;
         playerCoinsText.text = "" + playerCoins;
+    }
+
+    private void CheckForCorrectItem()      
+    {
+        //dialogue tools should be included in task manager and dialogue manager as normal
+        //
+
+        if (lastBoughtItem == correctItem) //if correct item bought, hide wrong item dialogue
+        {
+            incorrectDialogue.GetComponent<DialogueTool>().Complete();
+            incorrectDialogue.SetActive(false);
+
+            correctDialogue.SetActive(true);
+        }
+        else if (lastBoughtItem != correctItem)
+        {
+            correctDialogue.GetComponent<DialogueTool>().Complete();
+            correctDialogue.SetActive(false);
+
+            incorrectDialogue.SetActive(true);
+        }
     }
 }

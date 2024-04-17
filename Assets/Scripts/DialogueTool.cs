@@ -41,6 +41,8 @@ public class DialogueTool : Interactable
     private Slider SLDR_Progress;
     //[SerializeField]
     //private GameObject nextButton;
+    [SerializeField]
+    private GameObject DialogueIndicator;
 
     private string duckname;
 
@@ -86,6 +88,9 @@ public class DialogueTool : Interactable
         talkAgain = false;
         inOptionDialog = false;
         //nextButton.SetActive(true);
+        if (name.Contains("MainDuck")) DialogueIndicator.SetActive(false);
+        else DialogueIndicator.SetActive(true);
+
     }
 
     // Update is called once per frame
@@ -140,6 +145,7 @@ public class DialogueTool : Interactable
         DialogueManager.GetComponent<ReadDialogueData>().DialogTool = this.gameObject;
         setDialogueUI();
 
+        DialogueIndicator.SetActive(false);
     }
    
 
@@ -690,4 +696,17 @@ public class DialogueTool : Interactable
         return newText;
     }
 
+    public void assignVariables() 
+    {
+    //    MainDisplay = GameObject.Find("Main Display");
+    //    DialogueDisplay = GameObject.Find("DialogueDisplay");
+    //    Profile = GameObject.Find("Profile");
+    //    Profile = FindObjectsOfType<Image>().na
+    //    //Profile2 = GameObject.Find("Profile2");
+    //    //Name = GameObject.Find("NameText");
+    //    //Dialogue = GameObject.Find("DialogueText");
+    //    DialogueManager = GameObject.Find("DialogueManager");
+    //    Options = GameObject.Find("OptionHolder");
+    //    //SLDR_Progress = GameObject.Find("SLDR_Progress");
+    }
 }
