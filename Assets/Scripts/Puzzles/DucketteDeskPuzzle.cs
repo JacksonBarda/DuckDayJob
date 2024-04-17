@@ -2,11 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DucketteDeskPuzzle : Interactable
 {
     [SerializeField]
-    private InputField password;
+    private TMP_InputField password;
+    [SerializeField]
+    private GameObject DeskUI;
+    [SerializeField]
+    private GameObject ComputerUI;
+    [SerializeField]
+    private GameObject tryAgainText;
 
     private string correctPassword = "F3ath3rF1irt";
 
@@ -21,10 +28,7 @@ public class DucketteDeskPuzzle : Interactable
 
     public override void Action()
     {
-        if(password.text.ToLower() != correctPassword.ToLower())
-        {
 
-        }
 
     }
 
@@ -32,5 +36,27 @@ public class DucketteDeskPuzzle : Interactable
     {
         base.Complete();
 
+    }
+    public void OnToComputerPressed()
+    {
+        DeskUI.SetActive(false);
+        ComputerUI.SetActive(true);
+    }
+    public void OnReturnPressed()
+    {
+        DeskUI.SetActive(true);
+        ComputerUI.SetActive(false);
+    }
+    public void OnEnterPressed()
+    {
+        if (password.text.ToLower() != correctPassword.ToLower())
+        {
+            tryAgainText.SetActive(false);
+            Complete();
+        }
+        else
+        {
+            tryAgainText.SetActive(true);
+        }
     }
 }
