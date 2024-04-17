@@ -10190,35 +10190,43 @@ PrefabInstance:
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Name
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1071378096}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: fade
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1463816534}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: scene
       value: If Main Duck Chose Wrong Drink for Duckette
       objectReference: {fileID: 0}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: mainUI
+      value: 
+      objectReference: {fileID: 1213719444}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1614031491}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Options
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 718715262}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Profile
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2122043642}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Dialogue
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1516238098}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Profile2
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1638869473}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: puzzleUI
+      value: 
+      objectReference: {fileID: 2075323091}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: gameScene
       value: If Main Duck Chose Wrong Drink for Duckette
@@ -10234,7 +10242,7 @@ PrefabInstance:
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: MainDisplay
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1213719444}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: SLDR_Progress
       value: 
@@ -10242,11 +10250,15 @@ PrefabInstance:
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: DialogueDisplay
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2075323091}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: DialogueManager
       value: 
       objectReference: {fileID: 1643477341}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: isVisibleOnStart
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_Name
       value: DT2_Duckette4b
@@ -11347,6 +11359,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236474282}
   m_CullTransparentMesh: 1
+--- !u!1 &239553163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 239553164}
+  - component: {fileID: 239553165}
+  m_Layer: 0
+  m_Name: DayNightTransitionScript (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &239553164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239553163}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 924772521}
+  m_Father: {fileID: 1620897105}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &239553165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239553163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1831d4955787b4c9dcc1d0efe46b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repeatable: 0
+  forcePlay: 1
+  taskName: 
+  isCompleted: 0
+  hasFailed: 0
+  isVisibleOnStart: 1
+  activatePostPuzzle: 0
+  puzzleToActivate: {fileID: 0}
+  fade: {fileID: 0}
+  player: {fileID: 1614031491}
+  mainUI: {fileID: 1213719444}
+  counted: 0
+  puzzleUI: {fileID: 119284083}
+  UIManager: {fileID: 1206418959}
+  moonIn: {fileID: 1804272887}
+  sunIn: {fileID: 1745270656}
+  coverIn: {fileID: 230529176}
+  backgroundIn: {fileID: 119284089}
+  moonOut: {fileID: 1804272886}
+  sunOut: {fileID: 1745270655}
+  coverOut: {fileID: 230529175}
+  backgroundOut: {fileID: 119284088}
+  pivot: {fileID: 1711563799}
+  contButton: {fileID: 167986623}
+  endLocation: {fileID: 924772521}
+  endRoom: 0
+  camera: {fileID: 273295041}
 --- !u!43 &240047767
 Mesh:
   m_ObjectHideFlags: 0
@@ -15023,35 +15107,43 @@ PrefabInstance:
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Name
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1071378096}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: fade
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1463816534}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: scene
       value: Duckette's Retrieval Request
       objectReference: {fileID: 0}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: mainUI
+      value: 
+      objectReference: {fileID: 1213719444}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1614031491}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Options
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 718715262}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Profile
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2122043642}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Dialogue
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1516238098}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Profile2
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1638869473}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: puzzleUI
+      value: 
+      objectReference: {fileID: 2075323091}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: gameScene
       value: Duckette's Retrieval Request
@@ -15067,7 +15159,7 @@ PrefabInstance:
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: MainDisplay
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1213719444}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: SLDR_Progress
       value: 
@@ -15075,7 +15167,7 @@ PrefabInstance:
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: DialogueDisplay
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2075323091}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: DialogueManager
       value: 
@@ -26889,6 +26981,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 578581323}
   m_Mesh: {fileID: -1236605048239696063, guid: bc735893544d6d1488cf944ed60b4f25, type: 3}
+--- !u!1 &581538688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 581538689}
+  m_Layer: 0
+  m_Name: EndLoc2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &581538689
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581538688}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -417.17, y: -241.48578, z: -0.65767646}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1966914534}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &586458612
 GameObject:
   m_ObjectHideFlags: 0
@@ -28079,35 +28202,43 @@ PrefabInstance:
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Name
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1071378096}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: fade
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1463816534}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: scene
       value: Eyes for Duckette
       objectReference: {fileID: 0}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: mainUI
+      value: 
+      objectReference: {fileID: 1213719444}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1614031491}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Options
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 718715262}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Profile
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2122043642}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Dialogue
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1516238098}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Profile2
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1638869473}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: puzzleUI
+      value: 
+      objectReference: {fileID: 2075323091}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: gameScene
       value: Eyes for Duckette
@@ -28123,7 +28254,7 @@ PrefabInstance:
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: MainDisplay
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1213719444}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: SLDR_Progress
       value: 
@@ -28131,7 +28262,7 @@ PrefabInstance:
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: DialogueDisplay
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2075323091}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: DialogueManager
       value: 
@@ -38178,11 +38309,11 @@ PrefabInstance:
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Name
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1071378096}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: fade
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1463816534}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: scene
       value: Ask Eggwin for Retrieval Item
@@ -38190,27 +38321,31 @@ PrefabInstance:
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: mainUI
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1213719444}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1614031491}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Options
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 718715262}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Profile
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2122043642}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Dialogue
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1516238098}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Profile2
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1638869473}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: puzzleUI
+      value: 
+      objectReference: {fileID: 2075323091}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: roundNum
       value: 2
@@ -38222,7 +38357,7 @@ PrefabInstance:
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: MainDisplay
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1213719444}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Round1Answer
       value: 4
@@ -38238,7 +38373,7 @@ PrefabInstance:
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: DialogueDisplay
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2075323091}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: DialogueManager
       value: 
@@ -38962,7 +39097,7 @@ Transform:
   m_GameObject: {fileID: 781347147}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -93.8, y: 0.108, z: 0.5}
+  m_LocalPosition: {x: -56.72, y: 0.4, z: 4.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39040,7 +39175,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781347147}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -45658,6 +45793,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1769775219}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &924772520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 924772521}
+  m_Layer: 0
+  m_Name: EndLoc2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &924772521
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924772520}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -430.02, y: -241.48578, z: -0.65767646}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 239553164}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &925512748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47746,35 +47912,43 @@ PrefabInstance:
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Name
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1071378096}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: fade
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1463816534}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: scene
       value: Give Requested Item to Duckette
       objectReference: {fileID: 0}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: mainUI
+      value: 
+      objectReference: {fileID: 1213719444}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1614031491}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Options
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 718715262}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Profile
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2122043642}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Dialogue
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1516238098}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Profile2
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1638869473}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: puzzleUI
+      value: 
+      objectReference: {fileID: 2075323091}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: gameScene
       value: Give Requested Item to Duckette
@@ -47790,7 +47964,7 @@ PrefabInstance:
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: MainDisplay
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1213719444}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: SLDR_Progress
       value: 
@@ -47798,11 +47972,19 @@ PrefabInstance:
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: DialogueDisplay
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2075323091}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: DialogueManager
       value: 
       objectReference: {fileID: 1643477341}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: puzzleToActivate
+      value: 
+      objectReference: {fileID: 1373437132}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: activatePostPuzzle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_Name
       value: DT2_Duckette3
@@ -51378,7 +51560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -540.9868
+      value: -532.86
       objectReference: {fileID: 0}
     - target: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_LocalPosition.y
@@ -51431,6 +51613,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
   m_PrefabInstance: {fileID: 1016916822}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1016916825 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+  m_PrefabInstance: {fileID: 1016916822}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016916823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667ce02360b613a4c93e8500d9d9ae32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1018444166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57418,13 +57611,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142723155}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1262099916}
-  m_Father: {fileID: 1652403702}
+  m_Father: {fileID: 1620897105}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1142723157
 MonoBehaviour:
@@ -57463,7 +57656,7 @@ MonoBehaviour:
   pivot: {fileID: 1711563799}
   contButton: {fileID: 167986623}
   endLocation: {fileID: 1262099916}
-  endRoom: 0
+  endRoom: 2
   camera: {fileID: 273295041}
 --- !u!1 &1144923998
 GameObject:
@@ -63231,7 +63424,7 @@ Transform:
   m_GameObject: {fileID: 1262099915}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -429.88034, y: -241.48578, z: -0.65767646}
+  m_LocalPosition: {x: -417.27, y: -241.48578, z: -0.65767646}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -67875,34 +68068,46 @@ PrefabInstance:
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Name
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1071378096}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: fade
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1463816534}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: scene
       value: If Main Duck Chose Right Drink (Peepsi)
       objectReference: {fileID: 0}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: mainUI
+      value: 
+      objectReference: {fileID: 1213719444}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1614031491}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Options
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 718715262}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Profile
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2122043642}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Dialogue
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1516238098}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: Profile2
       value: 
+      objectReference: {fileID: 1638869473}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: puzzleUI
+      value: 
+      objectReference: {fileID: 2075323091}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: forcePlay
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: gameScene
@@ -67919,7 +68124,7 @@ PrefabInstance:
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: MainDisplay
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1213719444}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: SLDR_Progress
       value: 
@@ -67927,11 +68132,15 @@ PrefabInstance:
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: DialogueDisplay
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2075323091}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: DialogueManager
       value: 
       objectReference: {fileID: 1643477341}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: isVisibleOnStart
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_Name
       value: DT2_Duckette4a
@@ -68019,6 +68228,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
   m_PrefabInstance: {fileID: 1373437129}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1373437132 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+  m_PrefabInstance: {fileID: 1373437129}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373437130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667ce02360b613a4c93e8500d9d9ae32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1374872117
 GameObject:
   m_ObjectHideFlags: 0
@@ -68100,7 +68320,9 @@ MonoBehaviour:
     - {fileID: 1496227839}
     - {fileID: 1761468977}
     - {fileID: 1142723157}
-    pt5: []
+    pt5:
+    - {fileID: 1016916825}
+    - {fileID: 1142723157}
     pt6: []
   Day2:
     day: 1
@@ -68111,6 +68333,8 @@ MonoBehaviour:
     - {fileID: 313817810}
     - {fileID: 758068052}
     - {fileID: 966014211}
+    - {fileID: 1373437132}
+    - {fileID: 1373437132}
     pt3: []
     pt4: []
     pt5: []
@@ -81357,6 +81581,40 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 8.980001, y: 8.38, z: 1.4359328}
   m_Center: {x: 2.5683455, y: 4.19, z: 4.934804}
+--- !u!1 &1620897104
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1620897105}
+  m_Layer: 0
+  m_Name: DayNightTransitions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1620897105
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620897104}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1142723156}
+  - {fileID: 239553164}
+  - {fileID: 1966914534}
+  m_Father: {fileID: 1652403702}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1621172794
 GameObject:
   m_ObjectHideFlags: 0
@@ -83484,7 +83742,7 @@ Transform:
   - {fileID: 273698802}
   - {fileID: 371316945}
   - {fileID: 621203538}
-  - {fileID: 1142723156}
+  - {fileID: 1620897105}
   - {fileID: 833522701}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -97334,6 +97592,78 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1957699093}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1966914533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1966914534}
+  - component: {fileID: 1966914535}
+  m_Layer: 0
+  m_Name: DayNightTransitionScript (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1966914534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966914533}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 581538689}
+  m_Father: {fileID: 1620897105}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1966914535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966914533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1831d4955787b4c9dcc1d0efe46b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repeatable: 0
+  forcePlay: 1
+  taskName: 
+  isCompleted: 0
+  hasFailed: 0
+  isVisibleOnStart: 1
+  activatePostPuzzle: 0
+  puzzleToActivate: {fileID: 0}
+  fade: {fileID: 0}
+  player: {fileID: 1614031491}
+  mainUI: {fileID: 1213719444}
+  counted: 0
+  puzzleUI: {fileID: 119284083}
+  UIManager: {fileID: 1206418959}
+  moonIn: {fileID: 1804272887}
+  sunIn: {fileID: 1745270656}
+  coverIn: {fileID: 230529176}
+  backgroundIn: {fileID: 119284089}
+  moonOut: {fileID: 1804272886}
+  sunOut: {fileID: 1745270655}
+  coverOut: {fileID: 230529175}
+  backgroundOut: {fileID: 119284088}
+  pivot: {fileID: 1711563799}
+  contButton: {fileID: 167986623}
+  endLocation: {fileID: 581538689}
+  endRoom: 0
+  camera: {fileID: 273295041}
 --- !u!1 &1967861795
 GameObject:
   m_ObjectHideFlags: 0
