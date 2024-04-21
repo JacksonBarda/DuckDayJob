@@ -168,16 +168,16 @@ Hack into Duckette's Computer Part I,2,1,Night,Main Duck,2,"Finally, all the duc
 Hack into Duckette's Computer Part I,2,1,Night,Main Duck,2,"I didn't have much luck catching Duckette's attention today, so my only beakon of hope is to see <b>who she was emailing in the morning.</b>",TRUE,Left,Italics,FALSE,0,FALSE
 Hack into Duckette's Computer Part I,2,1,Night,Main Duck,2,Desperate times call for desperate measures! Time to find Duckette's cubicle.,TRUE,Left,Italics,FALSE,0,FALSE
 Hack into Duckette's Computer Part II,2,2,Night,Main Duck,2,Quack! I was praying she would forget to sign out. I need to find out what her <b>password</b> is.,TRUE,Left,Italics,FALSE,0,FALSE
-Hack into Duckette's Computer Part III,2,3,Night,Main Duck,2,I'm in! Time to open her emails...,TRUE,Left,Normal,FALSE,0,FALSE
-Hack into Duckette's Computer Part III,2,3,Night,Main Duck,2,"Looks like there is an <b>email from Elon Duck asking for the latest reports</b>, so that's why she asked for my help.",TRUE,Left,Normal,FALSE,0,FALSE
-Hack into Duckette's Computer Part III,2,3,Night,Main Duck,2,...And there's <b>an email from a Manfred?</b> Who is that? I've never seen them in the office.,TRUE,Left,Normal,FALSE,0,FALSE
-Hack into Duckette's Computer Part III,2,3,Night,Main Duck,2,IS SHE ALREADY IN LOVE WITH SOMEONE ELSE?!,TRUE,Left,Normal,FALSE,0,FALSE
-Hack into Duckette's Computer Part III,2,3,Night,Main Duck,2,"No, no, it can't be! Nestla is huge! I probably haven't met everyone yet. Duckette is one popular duck, after all.",TRUE,Left,Normal,FALSE,0,FALSE
-Hack into Duckette's Computer Part III,2,3,Night,Main Duck,2,Let's just open this email up just in case...,TRUE,Left,Normal,FALSE,0,FALSE
-Hack into Duckette's Computer Part III,2,3,Night,Janitor,7,(Footsteps echo in the distance),TRUE,Right,Normal,FALSE,0,FALSE
-Hack into Duckette's Computer Part III,2,3,Night,Main Duck,2,"Quack, it's the <b>Janitor!</b> It must be closing hours now!",TRUE,Left,Normal,FALSE,0,FALSE
-Hack into Duckette's Computer Part III,2,3,Night,Main Duck,2,"I already got in trouble yesterday, no need to keep that streak.",TRUE,Left,Normal,FALSE,0,FALSE
-Hack into Duckette's Computer Part III,2,3,Night,Main Duck,2,I'll leave for the day.,TRUE,Left,Normal,FALSE,0,FALSE
+Hack into Duckette's Computer Part III,2,3,Night,Main Duck,2,I'm in! Time to open her emails...,FALSE,Left,Normal,FALSE,0,FALSE
+Hack into Duckette's Computer Part III,2,3,Night,Main Duck,2,"Looks like there is an <b>email from Elon Duck asking for the latest reports</b>, so that's why she asked for my help.",FALSE,Left,Normal,FALSE,0,FALSE
+Hack into Duckette's Computer Part III,2,3,Night,Main Duck,2,...And there's <b>an email from a Manfred?</b> Who is that? I've never seen them in the office.,FALSE,Left,Normal,FALSE,0,FALSE
+Hack into Duckette's Computer Part III,2,3,Night,Main Duck,2,IS SHE ALREADY IN LOVE WITH SOMEONE ELSE?!,FALSE,Left,Normal,FALSE,0,FALSE
+Hack into Duckette's Computer Part III,2,3,Night,Main Duck,2,"No, no, it can't be! Nestla is huge! I probably haven't met everyone yet. Duckette is one popular duck, after all.",FALSE,Left,Normal,FALSE,0,FALSE
+Hack into Duckette's Computer Part III,2,3,Night,Main Duck,2,Let's just open this email up just in case...,FALSE,Left,Normal,FALSE,0,FALSE
+Hack into Duckette's Computer Part III,2,3,Night,Janitor,7,(Footsteps echo in the distance),FALSE,Right,Normal,FALSE,0,FALSE
+Hack into Duckette's Computer Part III,2,3,Night,Main Duck,2,"Quack, it's the <b>Janitor!</b> It must be closing hours now!",FALSE,Left,Normal,FALSE,0,FALSE
+Hack into Duckette's Computer Part III,2,3,Night,Main Duck,2,"I already got in trouble yesterday, no need to keep that streak.",FALSE,Left,Normal,FALSE,0,FALSE
+Hack into Duckette's Computer Part III,2,3,Night,Main Duck,2,I'll leave for the day.,FALSE,Left,Normal,FALSE,0,FALSE
 Elon Duck is in the Office,3,1,Day,Sybill,8,Have you heard? <b>He's coming today!</b>,TRUE,Right,Normal,FALSE,0,FALSE
 Elon Duck is in the Office,3,1,Day,Billy,9,"No quacking way, are you pulling my feathers?",TRUE,Right,Normal,FALSE,0,FALSE
 Elon Duck is in the Office,3,1,Day,Sybill,8,"No, it's true! He's finally going to show up in the office!",TRUE,Right,Normal,FALSE,0,FALSE
@@ -605,25 +605,25 @@ Dead Quackson T^T,5,2,Day,Main Duck,2,Do you just normally open closed bathroom 
 Dead Quackson T^T,5,2,Day,Donald,5,"But we have a good reason. Anyways, he's probably just reading his newspaper or playing Angry Ducks behind the newspaper.",TRUE,Right,Normal,FALSE,0,FALSE
 Dead Quackson T^T,5,2,Day,Main Duck,2,If I were you Quackson I would finish whatever you're doing and-,TRUE,Left,Normal,FALSE,0,FALSE
 Dead Quackson T^T,5,2,Day,Donald,5,Too late! We've given him enough time.,TRUE,Right,Normal,FALSE,0,FALSE
-Dead Quackson T^T,5,2,Day,None,0,"Donald breaks open the door, only for them to stumble upon <color=red>Quackson's dead body</color> slumped against the toilet.",FALSE,Left,Normal,FALSE,0,FALSE
-Dead Quackson T^T,5,2,Day,None,0,"Blood is splattered across the bathroom tiles and walls, but most of the blood seems to pool out from the numerous stab wounds on Quackson's body with no sign of stopping.",FALSE,Left,Normal,FALSE,0,FALSE
-Dead Quackson T^T,5,2,Day,Main Duck,2,"*Gags* Oh my duck, he's quacking <b>dead!</b>",FALSE,Left,Normal,FALSE,0,FALSE
-Dead Quackson T^T,5,2,Day,Donald,5,"Well, we have officially stumbled upon our first body.",FALSE,Right,Normal,FALSE,0,FALSE
-Dead Quackson T^T,5,2,Day,Main Duck,2,FIRST?!,FALSE,Left,Normal,FALSE,0,FALSE
-Dead Quackson T^T,5,2,Day,Donald,5,His wounds are fresh. He was likely just <b>killed this morning.</b>,FALSE,Right,Normal,FALSE,0,FALSE
-Dead Quackson T^T,5,2,Day,Donald,5,Either someone knows we would question Quackson or that Quackson knew something he shouldn't know. And I wouldn't be surprised if it was both.,FALSE,Right,Normal,FALSE,0,FALSE
-Dead Quackson T^T,5,2,Day,Main Duck,2,I think I'm going to be sick-,FALSE,Left,Normal,FALSE,0,FALSE
-Dead Quackson T^T,5,2,Day,Donald,5,The toilet is available now.,FALSE,Right,Normal,FALSE,0,FALSE
-Dead Quackson T^T,5,2,Day,Main Duck,2,Too soon.,FALSE,Left,Normal,FALSE,0,FALSE
-Dead Quackson T^T,5,2,Day,Main Duck,2,"Hey, I just noticed. There's a <b>vent</b> right above Quackson's head.",FALSE,Left,Normal,FALSE,0,FALSE
-Dead Quackson T^T,5,2,Day,Donald,5,"You know, the <b>rattling sound</b> did come from above...",FALSE,Right,Normal,FALSE,0,FALSE
-Dead Quackson T^T,5,2,Day,Main Duck,2,You think it came from the vents?,FALSE,Left,Normal,FALSE,0,FALSE
-Dead Quackson T^T,5,2,Day,Donald,5,"I mean, where else could it have come from? It's our only clue.",FALSE,Right,Normal,FALSE,0,FALSE
-Dead Quackson T^T,5,2,Day,Donald,5,I've been in the breakroom this entire time. No one went in or out of the bathroom.,FALSE,Right,Normal,FALSE,0,FALSE
-Dead Quackson T^T,5,2,Day,Donald,5,"So, the only way the killer could kill Quackson would be if they <b>traveled using the vents.</b>",FALSE,Right,Normal,FALSE,0,FALSE
-Dead Quackson T^T,5,2,Day,Main Duck,2,And why are you looking at me like that?,FALSE,Left,Normal,FALSE,0,FALSE
-Dead Quackson T^T,5,2,Day,Donald,5,Someone's got to <b>check inside the vent.</b> I'll be on watch duty in case anyone suspects your absence.,FALSE,Right,Normal,FALSE,0,FALSE
-Dead Quackson T^T,5,2,Day,Main Duck,2,"Of course, I have to go into the creepy vent. Let's just hope I don't get lost in there.",FALSE,Left,Normal,FALSE,0,FALSE
+Dead Quackson T^T,5,2,Day,None,0,"Donald breaks open the door, only for them to stumble upon <color=red>Quackson's dead body</color> slumped against the toilet.",TRUE,Left,Normal,FALSE,0,FALSE
+Dead Quackson T^T,5,2,Day,None,0,"Blood is splattered across the bathroom tiles and walls, but most of the blood seems to pool out from the numerous stab wounds on Quackson's body with no sign of stopping.",TRUE,Left,Normal,FALSE,0,FALSE
+Dead Quackson T^T,5,2,Day,Main Duck,2,"*Gags* Oh my duck, he's quacking <b>dead!</b>",TRUE,Left,Normal,FALSE,0,FALSE
+Dead Quackson T^T,5,2,Day,Donald,5,"Well, we have officially stumbled upon our first body.",TRUE,Right,Normal,FALSE,0,FALSE
+Dead Quackson T^T,5,2,Day,Main Duck,2,FIRST?!,TRUE,Left,Normal,FALSE,0,FALSE
+Dead Quackson T^T,5,2,Day,Donald,5,His wounds are fresh. He was likely just <b>killed this morning.</b>,TRUE,Right,Normal,FALSE,0,FALSE
+Dead Quackson T^T,5,2,Day,Donald,5,Either someone knows we would question Quackson or that Quackson knew something he shouldn't know. And I wouldn't be surprised if it was both.,TRUE,Right,Normal,FALSE,0,FALSE
+Dead Quackson T^T,5,2,Day,Main Duck,2,I think I'm going to be sick-,TRUE,Left,Normal,FALSE,0,FALSE
+Dead Quackson T^T,5,2,Day,Donald,5,The toilet is available now.,TRUE,Right,Normal,FALSE,0,FALSE
+Dead Quackson T^T,5,2,Day,Main Duck,2,Too soon.,TRUE,Left,Normal,FALSE,0,FALSE
+Dead Quackson T^T,5,2,Day,Main Duck,2,"Hey, I just noticed. There's a <b>vent</b> right above Quackson's head.",TRUE,Left,Normal,FALSE,0,FALSE
+Dead Quackson T^T,5,2,Day,Donald,5,"You know, the <b>rattling sound</b> did come from above...",TRUE,Right,Normal,FALSE,0,FALSE
+Dead Quackson T^T,5,2,Day,Main Duck,2,You think it came from the vents?,TRUE,Left,Normal,FALSE,0,FALSE
+Dead Quackson T^T,5,2,Day,Donald,5,"I mean, where else could it have come from? It's our only clue.",TRUE,Right,Normal,FALSE,0,FALSE
+Dead Quackson T^T,5,2,Day,Donald,5,I've been in the breakroom this entire time. No one went in or out of the bathroom.,TRUE,Right,Normal,FALSE,0,FALSE
+Dead Quackson T^T,5,2,Day,Donald,5,"So, the only way the killer could kill Quackson would be if they <b>traveled using the vents.</b>",TRUE,Right,Normal,FALSE,0,FALSE
+Dead Quackson T^T,5,2,Day,Main Duck,2,And why are you looking at me like that?,TRUE,Left,Normal,FALSE,0,FALSE
+Dead Quackson T^T,5,2,Day,Donald,5,Someone's got to <b>check inside the vent.</b> I'll be on watch duty in case anyone suspects your absence.,TRUE,Right,Normal,FALSE,0,FALSE
+Dead Quackson T^T,5,2,Day,Main Duck,2,"Of course, I have to go into the creepy vent. Let's just hope I don't get lost in there.",TRUE,Left,Normal,FALSE,0,FALSE
 Travel through the vent,5,3,Day,None,0,Main Duck takes a deep breath before hopping onto the toilet seat and climbing into the vent.,FALSE,Left,Normal,FALSE,0,FALSE
 Travel through the vent,5,3,Day,None,0,Main Duck notes the stray feathers scattered throughout the vent and uses this trail to waddle their way in the dark.,FALSE,Left,Normal,FALSE,0,FALSE
 Travel through the vent,5,3,Day,None,0,"Surprisingly, it's not as dusty as Main Duck expected it to be, which means this vent has either been frequently used for discreetly traveling from place to place...",FALSE,Left,Normal,FALSE,0,FALSE
@@ -631,133 +631,133 @@ Travel through the vent,5,3,Day,None,0,...or that the Janitor really likes to ke
 Travel through the vent,5,3,Day,None,0,"Before long, dim light floods through the cracks of another vent to Main Duck's right, along with a metallic, rusty stench.",FALSE,Left,Normal,FALSE,0,FALSE
 Travel through the vent,5,3,Day,Main Duck,2,This must be the exit. Is this the <b>secret room?</b>,FALSE,Left,Normal,FALSE,0,FALSE
 Travel through the vent,5,3,Day,Main Duck,2,Only one way to find out!,FALSE,Left,Normal,FALSE,0,FALSE
-The Killing Room,5,4,Day,Main Duck,2,"Finally, freedom at last!",FALSE,Left,Normal,FALSE,0,FALSE
-The Killing Room,5,4,Day,Main Duck,2,Who would've thought that Donald was right? There really is a secret room in Nest-,FALSE,Left,Normal,FALSE,0,FALSE
-The Killing Room,5,4,Day,Main Duck,2,AHHH! WHAT THE QUACK IS ALL THIS?!,FALSE,Left,Normal,FALSE,0,FALSE
-The Killing Room,5,4,Day,Eggwardo,11,"Help!!! Don't just stand there, quacking do something!",FALSE,Right,Normal,FALSE,0,FALSE
-The Killing Room,5,4,Day,Peeper ,12,mAmA!!!,FALSE,Right,Normal,FALSE,0,FALSE
-The Killing Room,5,4,Day,Main Duck,2,W-What? Huh?,FALSE,Left,Normal,FALSE,0,FALSE
-The Killing Room,5,4,Day,Quacksly ,13,AHHHHHHH!,FALSE,Right,Normal,FALSE,0,FALSE
-The Killing Room,5,4,Day,None,0,Main Duck helplessly watches as the <b>killing machine</b> in the center of the room slaughters one of the ducks.,FALSE,Left,Normal,FALSE,0,FALSE
-The Killing Room,5,4,Day,None,0,"Cardboard boxes dripping with blood are stacked beside the machine, and scattered feathers are littered across the floor.",FALSE,Left,Normal,FALSE,0,FALSE
-The Killing Room,5,4,Day,Main Duck,2,"That m-machine, it looks <b>familiar</b>... almost like all the CADs I was assigned to this week!",FALSE,Left,Italics,FALSE,0,FALSE
-The Killing Room,5,4,Day,Main Duck,2,We're not making parts for the new Model G... <b>we're making a killing machine for ducks!</b> But why?!,FALSE,Left,Italics,FALSE,0,FALSE
-The Killing Room,5,4,Day,Main Duck,2,"Maybe Duckette is already... No, no, of course not, that can't be! She must be in one of these cages.",FALSE,Left,Italics,FALSE,0,FALSE
-The Killing Room,5,4,Day,Main Duck,2,I know! <b>I'll try to save as many ducks as I can.</b> Maybe then I'll find Duckette and impress her as the feathered savior.,FALSE,Left,Italics,FALSE,0,FALSE
-The Killing Room,5,4,Day,None,0,"With no time to lose, Main Duck makes it their mission to check every cage in the slaughterhouse in the hopes of finding Duckette alive.",FALSE,Left,Normal,FALSE,0,FALSE
-The Killing Room,5,4,Day,None,0,"Along the way, Main Duck attempts to free the rest of the ducks, but only manages to save a few.",FALSE,Left,Normal,FALSE,0,FALSE
-The Killing Room,5,4,Day,None,0,Most were already dead or too close to those awaiting gates in the sky.,FALSE,Left,Normal,FALSE,0,FALSE
-The Killing Room,5,4,Day,None,0,Others had complex locks that even Donald's lockpicking kit couldn't unlock.,FALSE,Left,Normal,FALSE,0,FALSE
-The Killing Room,5,4,Day,None,0,"And so, Main Duck loses track of time in this numb, rhythmic cycle: Check a cage, find no Duckette, try to save the duck, face a corpse instead or a duck awaiting death, pray Duckette isn't next, and move on to the next cage.",FALSE,Left,Normal,FALSE,0,FALSE
-The Killing Room,5,4,Day,None,0,"By the time Main Duck has triple checked every single cage in the slaughterhouse, only a few ducks have been saved and no Duckette.",FALSE,Left,Normal,FALSE,0,FALSE
-The Killing Room,5,4,Day,Eggna ,14,"Main Duck, you're, like, our feathered angel!",FALSE,Right,Normal,FALSE,0,FALSE
-The Killing Room,5,4,Day,Quacklyn ,15,We would've been a sitting duck without you!,FALSE,Right,Normal,FALSE,0,FALSE
-The Killing Room,5,4,Day,Billtrix ,16,"Thank you for saving us, Main Duck!",FALSE,Right,Normal,FALSE,0,FALSE
-The Killing Room,5,4,Day,Main Duck,2,...,FALSE,Left,Normal,FALSE,0,FALSE
-The Killing Room,5,4,Day,Main Duck,2,Was I too late? <b>Duckette is nowhere to be found!</b>,FALSE,Left,Italics,FALSE,0,FALSE
-The Killing Room,5,4,Day,Main Duck,2,What if... the killing machine already got her?,FALSE,Left,Italics,FALSE,0,FALSE
-The Killing Room,5,4,Day,Main Duck,2,"No, she must still be alive. Maybe there's another slaughterhouse?",FALSE,Left,Italics,FALSE,0,FALSE
-The Killing Room,5,4,Day,Main Duck,2,But... it's already <b>getting late</b>. I can't risk getting caught.,FALSE,Left,Italics,FALSE,0,FALSE
-The Killing Room,5,4,Day,Main Duck,2,I should <b>get everyone out</b> of here first and then <b>report to Donald.</b>,FALSE,Left,Italics,FALSE,0,FALSE
-The Killing Room,5,4,Day,Main Duck,2,"It's getting late. Here, get yourselves in a row and follow me! I'll get us all out of here!",FALSE,Left,Normal,FALSE,0,FALSE
+The Killing Room,5,4,Day,Main Duck,2,"Finally, freedom at last!",TRUE,Left,Normal,FALSE,0,FALSE
+The Killing Room,5,4,Day,Main Duck,2,Who would've thought that Donald was right? There really is a secret room in Nest-,TRUE,Left,Normal,FALSE,0,FALSE
+The Killing Room,5,4,Day,Main Duck,2,AHHH! WHAT THE QUACK IS ALL THIS?!,TRUE,Left,Normal,FALSE,0,FALSE
+The Killing Room,5,4,Day,Eggwardo,11,"Help!!! Don't just stand there, quacking do something!",TRUE,Right,Normal,FALSE,0,FALSE
+The Killing Room,5,4,Day,Peeper ,12,mAmA!!!,TRUE,Right,Normal,FALSE,0,FALSE
+The Killing Room,5,4,Day,Main Duck,2,W-What? Huh?,TRUE,Left,Normal,FALSE,0,FALSE
+The Killing Room,5,4,Day,Quacksly ,13,AHHHHHHH!,TRUE,Right,Normal,FALSE,0,FALSE
+The Killing Room,5,4,Day,None,0,Main Duck helplessly watches as the <b>killing machine</b> in the center of the room slaughters one of the ducks.,TRUE,Left,Normal,FALSE,0,FALSE
+The Killing Room,5,4,Day,None,0,"Cardboard boxes dripping with blood are stacked beside the machine, and scattered feathers are littered across the floor.",TRUE,Left,Normal,FALSE,0,FALSE
+The Killing Room,5,4,Day,Main Duck,2,"That m-machine, it looks <b>familiar</b>... almost like all the CADs I was assigned to this week!",TRUE,Left,Italics,FALSE,0,FALSE
+The Killing Room,5,4,Day,Main Duck,2,We're not making parts for the new Model G... <b>we're making a killing machine for ducks!</b> But why?!,TRUE,Left,Italics,FALSE,0,FALSE
+The Killing Room,5,4,Day,Main Duck,2,"Maybe Duckette is already... No, no, of course not, that can't be! She must be in one of these cages.",TRUE,Left,Italics,FALSE,0,FALSE
+The Killing Room,5,4,Day,Main Duck,2,I know! <b>I'll try to save as many ducks as I can.</b> Maybe then I'll find Duckette and impress her as the feathered savior.,TRUE,Left,Italics,FALSE,0,FALSE
+The Killing Room,5,4,Day,None,0,"With no time to lose, Main Duck makes it their mission to check every cage in the slaughterhouse in the hopes of finding Duckette alive.",TRUE,Left,Normal,FALSE,0,FALSE
+The Killing Room,5,4,Day,None,0,"Along the way, Main Duck attempts to free the rest of the ducks, but only manages to save a few.",TRUE,Left,Normal,FALSE,0,FALSE
+The Killing Room,5,4,Day,None,0,Most were already dead or too close to those awaiting gates in the sky.,TRUE,Left,Normal,FALSE,0,FALSE
+The Killing Room,5,4,Day,None,0,Others had complex locks that even Donald's lockpicking kit couldn't unlock.,TRUE,Left,Normal,FALSE,0,FALSE
+The Killing Room,5,4,Day,None,0,"And so, Main Duck loses track of time in this numb, rhythmic cycle: Check a cage, find no Duckette, try to save the duck, face a corpse instead or a duck awaiting death, pray Duckette isn't next, and move on to the next cage.",TRUE,Left,Normal,FALSE,0,FALSE
+The Killing Room,5,4,Day,None,0,"By the time Main Duck has triple checked every single cage in the slaughterhouse, only a few ducks have been saved and no Duckette.",TRUE,Left,Normal,FALSE,0,FALSE
+The Killing Room,5,4,Day,Eggna ,14,"Main Duck, you're, like, our feathered angel!",TRUE,Right,Normal,FALSE,0,FALSE
+The Killing Room,5,4,Day,Quacklyn ,15,We would've been a sitting duck without you!,TRUE,Right,Normal,FALSE,0,FALSE
+The Killing Room,5,4,Day,Billtrix ,16,"Thank you for saving us, Main Duck!",TRUE,Right,Normal,FALSE,0,FALSE
+The Killing Room,5,4,Day,Main Duck,2,...,TRUE,Left,Normal,FALSE,0,FALSE
+The Killing Room,5,4,Day,Main Duck,2,Was I too late? <b>Duckette is nowhere to be found!</b>,TRUE,Left,Italics,FALSE,0,FALSE
+The Killing Room,5,4,Day,Main Duck,2,What if... the killing machine already got her?,TRUE,Left,Italics,FALSE,0,FALSE
+The Killing Room,5,4,Day,Main Duck,2,"No, she must still be alive. Maybe there's another slaughterhouse?",TRUE,Left,Italics,FALSE,0,FALSE
+The Killing Room,5,4,Day,Main Duck,2,But... it's already <b>getting late</b>. I can't risk getting caught.,TRUE,Left,Italics,FALSE,0,FALSE
+The Killing Room,5,4,Day,Main Duck,2,I should <b>get everyone out</b> of here first and then <b>report to Donald.</b>,TRUE,Left,Italics,FALSE,0,FALSE
+The Killing Room,5,4,Day,Main Duck,2,"It's getting late. Here, get yourselves in a row and follow me! I'll get us all out of here!",TRUE,Left,Normal,FALSE,0,FALSE
 The Killing Room,5,4,Day,None,0,Main Duck then leads the surviving ducks back through the vents.,FALSE,Left,Normal,FALSE,0,FALSE
 Encounter with Robot Janitor,5,1,Night,Main Duck,2,"Ok, this should take me back to the bathroom.",FALSE,Left,Italics,FALSE,0,FALSE
 Encounter with Robot Janitor,5,1,Night,Main Duck,2,I'll look for Donald first and <b>make sure the office is clear</b> before these ducks can return home.,FALSE,Left,Italics,FALSE,0,FALSE
 Encounter with Robot Janitor,5,1,Night,Main Duck,2,"*Whispers* Ok ducks, stay here while I make sure the coast is clear.",FALSE,Left,Normal,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Ducks,8,*Whispers* Quack!,TRUE,Right,Normal,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,None,0,Main Duck exits the vents and finds themselves in Quackson's stall again with Quackson's rotting body.,TRUE,Left,Normal,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Ducks,8,*Whispers* Quack!,FALSE,Right,Normal,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,None,0,Main Duck exits the vents and finds themselves in Quackson's stall again with Quackson's rotting body.,FALSE,Left,Normal,FALSE,0,FALSE
 Encounter with Robot Janitor,5,1,Night,None,0,"Swallowing the bile rising in their throat, Main Duck opens the stall door.",TRUE,Left,Normal,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Janitor,7,Please leave.,FALSE,Right,Normal,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Main Duck,2,AHHH ITS QUACKSON'S KILLER!,FALSE,Left,Normal,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Main Duck,2,The <b>Janitor?</b> Where did you come from?,FALSE,Left,Normal,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Janitor,7,We are reaching closing hours. Most ducks have left the office. Please leave so I can clean.,FALSE,Right,Normal,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Main Duck,2,"Uhh well, can you make one exception? I'm kinda busy with-",FALSE,Left,Normal,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Main Duck,2,"Wait a quacking second, what are you doing here? ",FALSE,Left,Normal,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Janitor,7,My job is to clean. Please leave or else I will have to kick you out.,FALSE,Right,Normal,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Main Duck,2,Strange. The Janitor hasn't even reacted to Quackson's dead body.,FALSE,Left,Italics,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Main Duck,2,"And isn't this <b>the entrance to the slaughterhouse?</b> The Janitor was right outside this stall door, almost as if...",FALSE,Left,Italics,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Main Duck,2,Were you about to... <b>go into the vents</b> to go to the slaughterhouse? Do you have any idea what is even happening to our kind in there?,FALSE,Left,Normal,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Janitor,7,...,FALSE,Right,Normal,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Janitor,7,<color=red>Error: They are not my kind.</color>,FALSE,Right,Normal,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Main Duck,2,"...What? H-Heh, you're not being a silly goose, right?",FALSE,Left,Normal,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Janitor,7,<color=red>Error: I am not a goose.</color>,FALSE,Right,Normal,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Janitor,7,Ha. Ha. Ha.,FALSE,Right,Normal,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,None,0,"Before Main Duck's very eyes, whirring sounds buzz in the air as the Janitor cranes their neck and lets out a monotonous squawk.",FALSE,Left,Normal,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,None,0,The janitor transforms into some mechanical monstrosity that has Main Duck's feathers standing on end. The janitor is a robot.,FALSE,Left,Normal,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Main Duck,2,"Oh, you gotta be quacking kidding with me...",FALSE,Left,Normal,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Janitor,7,<color=red>WARNING: CLEAN-UP CANNOT PERCEDE WITH INTEREFERING SUBJECT.</color>,FALSE,Right,Normal,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Janitor,7,<color=red>WARNING: ELON DUCK WOULD BE DISPLEASED.</color>,FALSE,Right,Normal,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Janitor,7,<color=red>INITIATE EMERGENCY PROCEDURE: KILL SUBJECT.</color>,FALSE,Right,Normal,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Main Duck,2,HUH?!,FALSE,Left,Normal,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Main Duck,2,"Oh no, this is probably how Quackson died! I can't die here. Then I'll never see Duckette again!",FALSE,Left,Italics,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Main Duck,2,I need to find a way to <b>stop this robot Janitor!</b>,FALSE,Left,Italics,FALSE,0,FALSE
-Deactivate the Janitor,5,0,Night,Main Duck,2,I should try <b>distracting</b> the Janitor so I can make a run for it!,FALSE,Left,Italics,FALSE,0,FALSE
-Deactivate the Janitor,5,0,Night,Main Duck,2,But what would distract the Janitor?,FALSE,Right,Italics,TRUE,0,FALSE
-Deactivate the Janitor_Round1_Option1,5,0,Night,None,0,LOOK! It's Elon Duck!,FALSE,Right,Normal,FALSE,1,FALSE
-Deactivate the Janitor_Round1_Response1,5,0,Night,Janitor,7,<color=red>CHANGE IN ORDERS: INITIATE PROPER GREETING FOR CREATOR.</color>,FALSE,Right,Normal,FALSE,1,FALSE
-Deactivate the Janitor_Round1_Response1,5,0,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",FALSE,Left,Italics,FALSE,1,FALSE
-Deactivate the Janitor_Round1_Response1,5,0,Night,Main Duck,2,"Ok, think Main Duck, think! <b>What should I do now?</b>",FALSE,Left,Italics,TRUE,1,FALSE
-Deactivate the Janitor_Round1_Option2,5,0,Night,None,0,You missed a spot over there!,FALSE,Right,Normal,FALSE,2,FALSE
-Deactivate the Janitor_Round1_Response2,5,0,Night,Janitor,7,<color=red>ERROR: MUST COMPLETE CLEAN-UP. CHECKING FOR SPOT INITIATED.</color>,FALSE,Right,Normal,FALSE,2,FALSE
-Deactivate the Janitor_Round1_Response2,5,0,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",FALSE,Left,Italics,FALSE,2,FALSE
-Deactivate the Janitor_Round1_Response2,5,0,Night,Main Duck,2,"Ok, think Main Duck, think! <b>What should I do now?</b>",FALSE,Left,Italics,TRUE,2,FALSE
-Deactivate the Janitor_Round1_Option3,5,0,Night,None,0,Did you hear something?,FALSE,Right,Normal,FALSE,3,FALSE
-Deactivate the Janitor_Round1_Response3,5,0,Night,Janitor,7,<color=red>ERROR: I DO NOT DETECT ANY ABNORMAL SOUNDS.</color>,FALSE,Right,Normal,FALSE,3,FALSE
-Deactivate the Janitor_Round1_Response3,5,0,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",FALSE,Left,Italics,FALSE,3,FALSE
-Deactivate the Janitor_Round1_Response3,5,0,Night,Main Duck,2,"Ok, think Main Duck, think! <b>What should I do now?</b>",FALSE,Left,Italics,TRUE,3,FALSE
-Deactivate the Janitor_Round1_Option4,5,0,Night,None,0,Please! Have mercy!,FALSE,Right,Normal,FALSE,4,FALSE
-Deactivate the Janitor_Round1_Response4,5,0,Night,Janitor,7,<color=red>ERROR: NO MERCY SHALL BE GRANTED TO SUBJECT WHO INTERFERES WITH CREATOR'S PLAN.</color>,FALSE,Right,Normal,FALSE,4,FALSE
-Deactivate the Janitor_Round1_Response4,5,0,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",FALSE,Left,Italics,FALSE,4,FALSE
-Deactivate the Janitor_Round1_Response4,5,0,Night,Main Duck,2,"Ok, think Main Duck, think! <b>What should I do now?</b>",FALSE,Left,Italics,TRUE,4,FALSE
-Deactivate the Janitor_Round2_Option1,5,0,Night,None,0,Slam the stall door shut.,FALSE,Right,Normal,FALSE,1,FALSE
-Deactivate the Janitor_Round2_Response1,5,0,Night,None,0,"Once the Janitor realizes that Main Duck was trying to distract it, the Janitor lunges for Main Duck.",FALSE,Left,Normal,FALSE,1,FALSE
-Deactivate the Janitor_Round2_Response1,5,0,Night,None,0,"However, Main Duck quickly closes the stall door, and the Janitor slams its head against the cold, hard metal.",FALSE,Left,Normal,FALSE,1,FALSE
-Deactivate the Janitor_Round2_Response1,5,0,Night,None,0,"The Janitor stands there, momentarily stunned, before falling backwards and landing on the floor with a metallic clang.",FALSE,Left,Normal,FALSE,1,FALSE
-Deactivate the Janitor_Round2_Response1,5,0,Night,None,0,Main Duck then leaves the stall and quickly <b>deactivates the Janitor.</b>,FALSE,Left,Normal,FALSE,1,FALSE
-Deactivate the Janitor_Round2_Response1,5,0,Night,Main Duck,2,"Phew, that was a close one!",FALSE,Left,Normal,FALSE,1,FALSE
-Deactivate the Janitor_Round2_Option2,5,0,Night,None,0,Try to sneak past the Janitor.,FALSE,Left,Normal,FALSE,2,FALSE
-Deactivate the Janitor_Round2_Response2,5,0,Night,None,0,"With the Janitor distracted, Main Duck tries to sneak past the Janitor.",FALSE,Left,Normal,FALSE,2,FALSE
-Deactivate the Janitor_Round2_Response2,5,0,Night,None,0,"However, the Janitor immediately detects the change in movement and kills Main Duck in one swift motion.",FALSE,Left,Normal,FALSE,2,FALSE
-Deactivate the Janitor_Round2_Option3,5,0,Night,None,0,Go back into the vent.,FALSE,Left,Normal,FALSE,3,FALSE
-Deactivate the Janitor_Round2_Response3,5,0,Night,None,0,Main Duck goes back into the vents and warns the ducks to run.,FALSE,Left,Normal,FALSE,3,FALSE
-Deactivate the Janitor_Round2_Response3,5,0,Night,None,0,"However, the glint of the Janitor's glowing red eyes appears behind Main Duck, and the Janitor kills Main Duck and the rest of the ducks in the vents before returning to the slaughterhouse.",FALSE,Left,Normal,FALSE,3,FALSE
-Deactivate the Janitor_Round2_Option4,5,0,Night,None,0,Play dead.,FALSE,Left,Normal,FALSE,4,FALSE
-Deactivate the Janitor_Round2_Response4,5,0,Night,None,0,Main Duck slumps against Quackson's body and plays dead.,FALSE,Left,Normal,FALSE,4,FALSE
-Deactivate the Janitor_Round2_Response4,5,0,Night,None,0,"However, Main Duck fails to account for the Janitor's heat detection and the Janitor does not buy Main Duck's acting.",FALSE,Left,Normal,FALSE,4,FALSE
-Deactivate the Janitor_Round2_Response4,5,0,Night,None,0,"And so, the Janitor makes sure Main Duck is dead alongside Quackson.",FALSE,Left,Normal,FALSE,4,FALSE
-Find the Memory Files,5,4,Night,None,0,Main Duck notices something exposed from the Janitor's damaged head.,FALSE,Left,Normal,FALSE,0,FALSE
-Find the Memory Files,5,4,Night,Main Duck,2,"Huh, what's this over here?",FALSE,Left,Normal,FALSE,0,FALSE
-Find the Memory Files,5,4,Night,Main Duck,2,"Oh, these must be-",FALSE,Left,Normal,FALSE,0,FALSE
-Find the Memory Files,5,4,Night,Main Duck,2,<color=red>Memory files!</color>,FALSE,Left,Normal,FALSE,0,FALSE
-Find the Memory Files,5,4,Night,Main Duck,2,"I took one course in robotics, and these are super important for robots to function.",FALSE,Left,Normal,FALSE,0,FALSE
-Find the Memory Files,5,4,Night,Main Duck,2,These things <b>record what the robot sees and does</b> based on their assigned objectives by their creator.,FALSE,Left,Normal,FALSE,0,FALSE
-Find the Memory Files,5,4,Night,Main Duck,2,This is a quacking important piece of evidence! This should be enough to prove what the slaughterhouse is used for and the secret identity of the Janitor.,FALSE,Left,Normal,FALSE,0,FALSE
-Ducks are Saved... But Still No Duckette,5,5,Night,Main Duck,2,T-That was quacking insane... I could've died!,FALSE,Left,Italics,FALSE,0,FALSE
-Ducks are Saved... But Still No Duckette,5,5,Night,Main Duck,2,"But now with the Janitor out of the way, we should be safe for now.",FALSE,Left,Italics,FALSE,0,FALSE
-Ducks are Saved... But Still No Duckette,5,5,Night,Main Duck,2,"But it's already late, and Donald would have come rushing in if he was still in the breakroom. He must've left already.",FALSE,Left,Italics,FALSE,0,FALSE
-Ducks are Saved... But Still No Duckette,5,5,Night,Main Duck,2,I guess I'll have to <b>tell him what I found tomorrow.</b>,FALSE,Left,Italics,FALSE,0,FALSE
-Ducks are Saved... But Still No Duckette,5,5,Night,Main Duck,2,"For now, I'll get the rest of the ducks and leave. There's no way I'm quacking staying here a minute longer!",FALSE,Left,Italics,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Eggwin,3,"Thank you, sir, for meeting with me at such short notice.",TRUE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,"Of course, I'm happy to have the chance to <b>meet with you Eggwin.</b>",TRUE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,"I believe in establishing one-on-one relationships with my employees, so if there are ever any problems, please feel free to reach out to me.",TRUE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,"And from the email you sent me, it seems you have <b>concerns</b> with a fellow duck?",TRUE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Eggwin,3,Yes sir. <b>I am worried about Main Duck.</b>,TRUE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Eggwin,3,"I've only seen Main Duck in the morning today. And Donald, for whatever reason, took up their tasks for today instead of lounging in the breakroom.",TRUE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Eggwin,3,"I also noted that, while Main Duck did complete their tasks yesterday, they were running about and talking a lot with Donald. And we both know about Donald.",TRUE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,"Ah, yes. The delusional one.",TRUE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Eggwin,3,Eggs-actly. I am worried that Main Duck is <b>straying from their role</b> in the team and is <b>distracted</b> by Donald's crazy theories.,TRUE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Eggwin,3,"That is why, for the good of the company, I emailed you for a meeting to talk about Main Duck and hopefully get them back on the right track.",TRUE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,"Well, this is certainly quite a good reason for concern! I saw potential in our new employee, but it saddens me that they have been steered in the wrong direction!",TRUE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,"However, I must commend you for your outstanding observation and dedication to the team! It is quacktastic to see how much you care for Nestla and the employees here.",TRUE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,I will think about the right course of action tonight and get back to you tomorrow. Do you mind if we <b>meet tomorrow before the offices open to discuss more about Main Duck?</b>,TRUE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Eggwin,3,"Of course, sir! I understand it's already late, and I know you're a very busy duck.",TRUE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,"Hahaha, that's the life of a CEO.",TRUE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,"Well, you get on home now Eggwin. You are dismissed.",TRUE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Eggwin,3,"Thank you, sir. Goodnight.",TRUE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,Goodnight.,TRUE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,None,0,"Once Eggwin leaves, Elon Duck checks the notification on his phone. He then frowns when he sees the <b>janitor's location mysteriously disappearing on the map of Nestla.</b>",TRUE,Left,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,Looks like someone stuck their beak where they are not supposed to. Tomorrow will be a long day of cleaning up.,TRUE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,"After all, <b>no duck can know.</b>",TRUE,Right,Normal,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Janitor,7,Please leave.,TRUE,Right,Normal,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Main Duck,2,AHHH ITS QUACKSON'S KILLER!,TRUE,Left,Normal,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Main Duck,2,The <b>Janitor?</b> Where did you come from?,TRUE,Left,Normal,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Janitor,7,We are reaching closing hours. Most ducks have left the office. Please leave so I can clean.,TRUE,Right,Normal,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Main Duck,2,"Uhh well, can you make one exception? I'm kinda busy with-",TRUE,Left,Normal,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Main Duck,2,"Wait a quacking second, what are you doing here? ",TRUE,Left,Normal,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Janitor,7,My job is to clean. Please leave or else I will have to kick you out.,TRUE,Right,Normal,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Main Duck,2,Strange. The Janitor hasn't even reacted to Quackson's dead body.,TRUE,Left,Italics,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Main Duck,2,"And isn't this <b>the entrance to the slaughterhouse?</b> The Janitor was right outside this stall door, almost as if...",TRUE,Left,Italics,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Main Duck,2,Were you about to... <b>go into the vents</b> to go to the slaughterhouse? Do you have any idea what is even happening to our kind in there?,TRUE,Left,Normal,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Janitor,7,...,TRUE,Right,Normal,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Janitor,7,<color=red>Error: They are not my kind.</color>,TRUE,Right,Normal,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Main Duck,2,"...What? H-Heh, you're not being a silly goose, right?",TRUE,Left,Normal,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Janitor,7,<color=red>Error: I am not a goose.</color>,TRUE,Right,Normal,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Janitor,7,Ha. Ha. Ha.,TRUE,Right,Normal,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,None,0,"Before Main Duck's very eyes, whirring sounds buzz in the air as the Janitor cranes their neck and lets out a monotonous squawk.",TRUE,Left,Normal,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,None,0,The janitor transforms into some mechanical monstrosity that has Main Duck's feathers standing on end. The janitor is a robot.,TRUE,Left,Normal,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Main Duck,2,"Oh, you gotta be quacking kidding with me...",TRUE,Left,Normal,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Janitor,7,<color=red>WARNING: CLEAN-UP CANNOT PERCEDE WITH INTEREFERING SUBJECT.</color>,TRUE,Right,Normal,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Janitor,7,<color=red>WARNING: ELON DUCK WOULD BE DISPLEASED.</color>,TRUE,Right,Normal,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Janitor,7,<color=red>INITIATE EMERGENCY PROCEDURE: KILL SUBJECT.</color>,TRUE,Right,Normal,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Main Duck,2,HUH?!,TRUE,Left,Normal,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Main Duck,2,"Oh no, this is probably how Quackson died! I can't die here. Then I'll never see Duckette again!",TRUE,Left,Italics,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Main Duck,2,I need to find a way to <b>stop this robot Janitor!</b>,TRUE,Left,Italics,FALSE,0,FALSE
+Deactivate the Janitor,5,0,Night,Main Duck,2,I should try <b>distracting</b> the Janitor so I can make a run for it!,TRUE,Left,Italics,FALSE,0,FALSE
+Deactivate the Janitor,5,0,Night,Main Duck,2,But what would distract the Janitor?,TRUE,Right,Italics,TRUE,0,FALSE
+Deactivate the Janitor_Round1_Option1,5,0,Night,None,0,LOOK! It's Elon Duck!,TRUE,Right,Normal,FALSE,1,FALSE
+Deactivate the Janitor_Round1_Response1,5,0,Night,Janitor,7,<color=red>CHANGE IN ORDERS: INITIATE PROPER GREETING FOR CREATOR.</color>,TRUE,Right,Normal,FALSE,1,FALSE
+Deactivate the Janitor_Round1_Response1,5,0,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",TRUE,Left,Italics,FALSE,1,FALSE
+Deactivate the Janitor_Round1_Response1,5,0,Night,Main Duck,2,"Ok, think Main Duck, think! <b>What should I do now?</b>",TRUE,Left,Italics,TRUE,1,FALSE
+Deactivate the Janitor_Round1_Option2,5,0,Night,None,0,You missed a spot over there!,TRUE,Right,Normal,FALSE,2,FALSE
+Deactivate the Janitor_Round1_Response2,5,0,Night,Janitor,7,<color=red>ERROR: MUST COMPLETE CLEAN-UP. CHECKING FOR SPOT INITIATED.</color>,TRUE,Right,Normal,FALSE,2,FALSE
+Deactivate the Janitor_Round1_Response2,5,0,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",TRUE,Left,Italics,FALSE,2,FALSE
+Deactivate the Janitor_Round1_Response2,5,0,Night,Main Duck,2,"Ok, think Main Duck, think! <b>What should I do now?</b>",TRUE,Left,Italics,TRUE,2,FALSE
+Deactivate the Janitor_Round1_Option3,5,0,Night,None,0,Did you hear something?,TRUE,Right,Normal,FALSE,3,FALSE
+Deactivate the Janitor_Round1_Response3,5,0,Night,Janitor,7,<color=red>ERROR: I DO NOT DETECT ANY ABNORMAL SOUNDS.</color>,TRUE,Right,Normal,FALSE,3,FALSE
+Deactivate the Janitor_Round1_Response3,5,0,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",TRUE,Left,Italics,FALSE,3,FALSE
+Deactivate the Janitor_Round1_Response3,5,0,Night,Main Duck,2,"Ok, think Main Duck, think! <b>What should I do now?</b>",TRUE,Left,Italics,TRUE,3,FALSE
+Deactivate the Janitor_Round1_Option4,5,0,Night,None,0,Please! Have mercy!,TRUE,Right,Normal,FALSE,4,FALSE
+Deactivate the Janitor_Round1_Response4,5,0,Night,Janitor,7,<color=red>ERROR: NO MERCY SHALL BE GRANTED TO SUBJECT WHO INTERFERES WITH CREATOR'S PLAN.</color>,TRUE,Right,Normal,FALSE,4,FALSE
+Deactivate the Janitor_Round1_Response4,5,0,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",TRUE,Left,Italics,FALSE,4,FALSE
+Deactivate the Janitor_Round1_Response4,5,0,Night,Main Duck,2,"Ok, think Main Duck, think! <b>What should I do now?</b>",TRUE,Left,Italics,TRUE,4,FALSE
+Deactivate the Janitor_Round2_Option1,5,0,Night,None,0,Slam the stall door shut.,TRUE,Right,Normal,FALSE,1,FALSE
+Deactivate the Janitor_Round2_Response1,5,0,Night,None,0,"Once the Janitor realizes that Main Duck was trying to distract it, the Janitor lunges for Main Duck.",TRUE,Left,Normal,FALSE,1,FALSE
+Deactivate the Janitor_Round2_Response1,5,0,Night,None,0,"However, Main Duck quickly closes the stall door, and the Janitor slams its head against the cold, hard metal.",TRUE,Left,Normal,FALSE,1,FALSE
+Deactivate the Janitor_Round2_Response1,5,0,Night,None,0,"The Janitor stands there, momentarily stunned, before falling backwards and landing on the floor with a metallic clang.",TRUE,Left,Normal,FALSE,1,FALSE
+Deactivate the Janitor_Round2_Response1,5,0,Night,None,0,Main Duck then leaves the stall and quickly <b>deactivates the Janitor.</b>,TRUE,Left,Normal,FALSE,1,FALSE
+Deactivate the Janitor_Round2_Response1,5,0,Night,Main Duck,2,"Phew, that was a close one!",TRUE,Left,Normal,FALSE,1,FALSE
+Deactivate the Janitor_Round2_Option2,5,0,Night,None,0,Try to sneak past the Janitor.,TRUE,Left,Normal,FALSE,2,FALSE
+Deactivate the Janitor_Round2_Response2,5,0,Night,None,0,"With the Janitor distracted, Main Duck tries to sneak past the Janitor.",TRUE,Left,Normal,FALSE,2,FALSE
+Deactivate the Janitor_Round2_Response2,5,0,Night,None,0,"However, the Janitor immediately detects the change in movement and kills Main Duck in one swift motion.",TRUE,Left,Normal,FALSE,2,FALSE
+Deactivate the Janitor_Round2_Option3,5,0,Night,None,0,Go back into the vent.,TRUE,Left,Normal,FALSE,3,FALSE
+Deactivate the Janitor_Round2_Response3,5,0,Night,None,0,Main Duck goes back into the vents and warns the ducks to run.,TRUE,Left,Normal,FALSE,3,FALSE
+Deactivate the Janitor_Round2_Response3,5,0,Night,None,0,"However, the glint of the Janitor's glowing red eyes appears behind Main Duck, and the Janitor kills Main Duck and the rest of the ducks in the vents before returning to the slaughterhouse.",TRUE,Left,Normal,FALSE,3,FALSE
+Deactivate the Janitor_Round2_Option4,5,0,Night,None,0,Play dead.,TRUE,Left,Normal,FALSE,4,FALSE
+Deactivate the Janitor_Round2_Response4,5,0,Night,None,0,Main Duck slumps against Quackson's body and plays dead.,TRUE,Left,Normal,FALSE,4,FALSE
+Deactivate the Janitor_Round2_Response4,5,0,Night,None,0,"However, Main Duck fails to account for the Janitor's heat detection and the Janitor does not buy Main Duck's acting.",TRUE,Left,Normal,FALSE,4,FALSE
+Deactivate the Janitor_Round2_Response4,5,0,Night,None,0,"And so, the Janitor makes sure Main Duck is dead alongside Quackson.",TRUE,Left,Normal,FALSE,4,FALSE
+Find the Memory Files,5,4,Night,None,0,Main Duck notices something exposed from the Janitor's damaged head.,TRUE,Left,Normal,FALSE,0,FALSE
+Find the Memory Files,5,4,Night,Main Duck,2,"Huh, what's this over here?",TRUE,Left,Normal,FALSE,0,FALSE
+Find the Memory Files,5,4,Night,Main Duck,2,"Oh, these must be-",TRUE,Left,Normal,FALSE,0,FALSE
+Find the Memory Files,5,4,Night,Main Duck,2,<color=red>Memory files!</color>,TRUE,Left,Normal,FALSE,0,FALSE
+Find the Memory Files,5,4,Night,Main Duck,2,"I took one course in robotics, and these are super important for robots to function.",TRUE,Left,Normal,FALSE,0,FALSE
+Find the Memory Files,5,4,Night,Main Duck,2,These things <b>record what the robot sees and does</b> based on their assigned objectives by their creator.,TRUE,Left,Normal,FALSE,0,FALSE
+Find the Memory Files,5,4,Night,Main Duck,2,This is a quacking important piece of evidence! This should be enough to prove what the slaughterhouse is used for and the secret identity of the Janitor.,TRUE,Left,Normal,FALSE,0,FALSE
+Ducks are Saved... But Still No Duckette,5,5,Night,Main Duck,2,T-That was quacking insane... I could've died!,TRUE,Left,Italics,FALSE,0,FALSE
+Ducks are Saved... But Still No Duckette,5,5,Night,Main Duck,2,"But now with the Janitor out of the way, we should be safe for now.",TRUE,Left,Italics,FALSE,0,FALSE
+Ducks are Saved... But Still No Duckette,5,5,Night,Main Duck,2,"But it's already late, and Donald would have come rushing in if he was still in the breakroom. He must've left already.",TRUE,Left,Italics,FALSE,0,FALSE
+Ducks are Saved... But Still No Duckette,5,5,Night,Main Duck,2,I guess I'll have to <b>tell him what I found tomorrow.</b>,TRUE,Left,Italics,FALSE,0,FALSE
+Ducks are Saved... But Still No Duckette,5,5,Night,Main Duck,2,"For now, I'll get the rest of the ducks and leave. There's no way I'm quacking staying here a minute longer!",TRUE,Left,Italics,FALSE,0,FALSE
+Eggwin is a Snitch,5,6,Night,Eggwin,3,"Thank you, sir, for meeting with me at such short notice.",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,6,Night,Elon Duck,1,"Of course, I'm happy to have the chance to <b>meet with you Eggwin.</b>",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,6,Night,Elon Duck,1,"I believe in establishing one-on-one relationships with my employees, so if there are ever any problems, please feel free to reach out to me.",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,6,Night,Elon Duck,1,"And from the email you sent me, it seems you have <b>concerns</b> with a fellow duck?",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,6,Night,Eggwin,3,Yes sir. <b>I am worried about Main Duck.</b>,FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,6,Night,Eggwin,3,"I've only seen Main Duck in the morning today. And Donald, for whatever reason, took up their tasks for today instead of lounging in the breakroom.",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,6,Night,Eggwin,3,"I also noted that, while Main Duck did complete their tasks yesterday, they were running about and talking a lot with Donald. And we both know about Donald.",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,6,Night,Elon Duck,1,"Ah, yes. The delusional one.",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,6,Night,Eggwin,3,Eggs-actly. I am worried that Main Duck is <b>straying from their role</b> in the team and is <b>distracted</b> by Donald's crazy theories.,FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,6,Night,Eggwin,3,"That is why, for the good of the company, I emailed you for a meeting to talk about Main Duck and hopefully get them back on the right track.",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,6,Night,Elon Duck,1,"Well, this is certainly quite a good reason for concern! I saw potential in our new employee, but it saddens me that they have been steered in the wrong direction!",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,6,Night,Elon Duck,1,"However, I must commend you for your outstanding observation and dedication to the team! It is quacktastic to see how much you care for Nestla and the employees here.",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,6,Night,Elon Duck,1,I will think about the right course of action tonight and get back to you tomorrow. Do you mind if we <b>meet tomorrow before the offices open to discuss more about Main Duck?</b>,FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,6,Night,Eggwin,3,"Of course, sir! I understand it's already late, and I know you're a very busy duck.",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,6,Night,Elon Duck,1,"Hahaha, that's the life of a CEO.",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,6,Night,Elon Duck,1,"Well, you get on home now Eggwin. You are dismissed.",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,6,Night,Eggwin,3,"Thank you, sir. Goodnight.",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,6,Night,Elon Duck,1,Goodnight.,FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,6,Night,None,0,"Once Eggwin leaves, Elon Duck checks the notification on his phone. He then frowns when he sees the <b>janitor's location mysteriously disappearing on the map of Nestla.</b>",FALSE,Left,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,6,Night,Elon Duck,1,Looks like someone stuck their beak where they are not supposed to. Tomorrow will be a long day of cleaning up.,FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,6,Night,Elon Duck,1,"After all, <b>no duck can know.</b>",FALSE,Right,Normal,FALSE,0,FALSE
 Find Donald to Discuss Findings in Killing Room,6,1,Day,Main Duck,2,"After escaping the slaughterhouse with all the ducks I saved, all of us immediately went home. I didn't have time to talk about what I found with Donald.",TRUE,Left,Italics,FALSE,0,FALSE
 Find Donald to Discuss Findings in Killing Room,6,1,Day,Main Duck,2,<b>I should find Donald.</b> He needs to know about what I found out yesterday.,TRUE,Left,Normal,FALSE,0,FALSE
 Gather the Ducks,6,2,Day,Donald,5,There you are! I tried lingering behind after everyone left yesterday but I never saw you.,TRUE,Right,Normal,FALSE,0,FALSE
@@ -787,8 +787,8 @@ Before Uniting the Ducks,6,3,Day,Main Duck,2,And my feathers are still ruffled u
 Before Uniting the Ducks,6,3,Day,Donald,5,"Come on, Main Duck! You have a better chance than me. Look at how well my speech went last time.",TRUE,Right,Normal,FALSE,0,FALSE
 Before Uniting the Ducks,6,3,Day,Main Duck,2,"Ugh, he has a quacking point.",TRUE,Left,Italics,FALSE,0,FALSE
 Before Uniting the Ducks,6,3,Day,Main Duck,2,"Come on, Main Duck. This is for Duckette and all of duck-kind. I got this!",TRUE,Left,Italics,FALSE,0,FALSE
-Before Uniting the Ducks,6,3,Day,Donald,5,What are you waiting for? ,FALSE,Right,Normal,FALSE,0,TRUE
-Before Uniting the Ducks,6,3,Day,Donald,5,We have all the evidence we need. All that's left is convincing them with a big speech.,FALSE,Right,Normal,FALSE,0,TRUE
+Before Uniting the Ducks,6,3,Day,Donald,5,What are you waiting for? ,TRUE,Right,Normal,FALSE,0,TRUE
+Before Uniting the Ducks,6,3,Day,Donald,5,We have all the evidence we need. All that's left is convincing them with a big speech.,TRUE,Right,Normal,FALSE,0,TRUE
 Unite the Ducks,6,4,Day,Main Duck,2,Everyone! Can I have your attention please?,TRUE,Left,Normal,FALSE,0,FALSE
 Unite the Ducks,6,4,Day,Main Duck,2,I have come to report that <b>we know what happened to the missing ducks.</b> And I would like your help in avenging them!,TRUE,Left,Normal,FALSE,0,FALSE
 Unite the Ducks,6,4,Day,Meggan,8,*Sigh* Not another quacking speech.,TRUE,Right,Normal,FALSE,0,FALSE
@@ -1062,9 +1062,9 @@ Heartbroken and replaced by a human,7,3,Day,Main Duck,2,"I made sure to always t
 Heartbroken and replaced by a human,7,3,Day,Main Duck,2,But the one person she falls in love with... is the same human who helped found the Duckberry Farm.,TRUE,Left,Italics,FALSE,0,FALSE
 Heartbroken and replaced by a human,7,3,Day,Main Duck,2,How could she love someone like that?,TRUE,Left,Italics,FALSE,0,FALSE
 Heartbroken and replaced by a human,7,3,Day,Main Duck,2,It's... <b>It's over.</b> She doesn't love me. Not even a little bit.,TRUE,Left,Italics,FALSE,0,FALSE
-Heartbroken and replaced by a human,7,3,Day,Duckette,4,"Hehe, I'm sure Manfred will hear about what happened to Elon Duck and the Duckberry Farm.",FALSE,Right,Normal,FALSE,0,TRUE
-Heartbroken and replaced by a human,7,3,Day,Duckette,4,Which means he'll come to visit! I better greet him outside.,FALSE,Right,Normal,FALSE,0,TRUE
-Heartbroken and replaced by a human,7,3,Day,Main Duck,2,...Quacking Manfred. Just you wait.,FALSE,Left,Italics,FALSE,0,TRUE
+Heartbroken and replaced by a human,7,3,Day,Duckette,4,"Hehe, I'm sure Manfred will hear about what happened to Elon Duck and the Duckberry Farm.",TRUE,Right,Normal,FALSE,0,TRUE
+Heartbroken and replaced by a human,7,3,Day,Duckette,4,Which means he'll come to visit! I better greet him outside.,TRUE,Right,Normal,FALSE,0,TRUE
+Heartbroken and replaced by a human,7,3,Day,Main Duck,2,...Quacking Manfred. Just you wait.,TRUE,Left,Italics,FALSE,0,TRUE
 KABOOM - Part 1,7,4,Day,Donald,5,"Main Duck. I'm... I'm sorry about, well, you know...",TRUE,Right,Normal,FALSE,1,FALSE
 KABOOM - Part 1,7,4,Day,Main Duck,2,...,TRUE,Left,Normal,FALSE,1,FALSE
 KABOOM - Part 1,7,4,Day,Donald,5,"Look, you know what they say, that there are always more ducks in the flock, or something like that.",TRUE,Right,Normal,FALSE,1,FALSE
@@ -1083,212 +1083,212 @@ KABOOM - Part 2,7,5,Day,Donald,5, And it'll be great to see my bomb in action.,T
 KABOOM - Part 2,7,5,Day,Main Duck,2,That makes the two of us.,TRUE,Left,Normal,FALSE,2,FALSE
 KABOOM - Part 2,7,5,Day,Main Duck,2,"Nestla. A place where I've experienced death, experienced heartbreak... yeah, there's only one thing left to do to a place like this.",TRUE,Left,Italics,FALSE,2,FALSE
 KABOOM - Part 2,7,5,Day,Main Duck,2,"*Activates Timer on Bomb* <b>Sayonara, Nestla.</b>",TRUE,Left,Normal,FALSE,2,FALSE
-Locked Room Dialogue - Elon Duck's Office,0,0,Day,Main Duck,2,It's locked. Looks like Elon Duck isn't in the office today.,FALSE,Left,Normal,FALSE,0,FALSE
-Locked Room Dialogue - Closet,0,0,Day,Main Duck,2,It's locked. I wonder what the janitor hides in here.,FALSE,Left,Normal,FALSE,0,FALSE
-Locked Room Dialogue - Killing Room (from vent),0,0,Day,Main Duck,2,"It's locked. Then again, this is a vent. But why is it duck sized?",FALSE,Left,Normal,FALSE,0,FALSE
-Locked Room Dialogue - Killing Room (from Manufacturing),0,0,Day,Main Duck,2,It's locked. I wonder what's behind it.,FALSE,Left,Normal,FALSE,0,FALSE
-Locked Room Dialogue - Different Bathroom Stalls,0,0,Day,Main Duck,2,I really need to use the bathroom. Let me just go in this one- AHHHHHHH!,FALSE,Left,Normal,FALSE,0,FALSE
-Locked Room Dialogue - Different Bathroom Stalls,0,0,Day,Main Duck,2,Traumatized for the rest of my duck years.,FALSE,Left,Normal,FALSE,0,FALSE
-Locked Room Dialogue - Manufacturing Room,0,0,Day,Main Duck,2,Looks like they're still running some simulation tests in there. It's best not to interrupt them.,FALSE,Left,Normal,FALSE,0,FALSE
-Death Dialogue - Killed by Janitor,5,0,Day,None,0,The Janitor killed you... you knew too much. #DeathByRobotJanitor,TRUE,Left,Normal,FALSE,0,FALSE
-Death Dialogue - Killed by Duck Union,6,1,Day,None,0,The Duck Union was formed... but they were formed against you. #LongLiveNestla,TRUE,Left,Normal,FALSE,0,FALSE
-Death Dialogue - Elon Duck Escapes,7,2,Day,None,0,Elon Duck manages to escape... will he create a new Nestla? #ComeBack,TRUE,Left,Normal,FALSE,0,FALSE
-Quackson Dialogue Day 2,2,0,Day,Main Duck,2,You know Quackson-,FALSE,Left,Normal,FALSE,2,FALSE
-Quackson Dialogue Day 2,2,0,Day,Quackson,6,Why are you here again? I'm kinda busy over here.,FALSE,Right,Normal,FALSE,2,FALSE
-Quackson Dialogue Day 2,2,0,Day,Main Duck,2,"On a scale of squawk to quack, what are the chances of me getting with Duckette?",FALSE,Left,Normal,FALSE,2,FALSE
-Quackson Dialogue Day 2,2,0,Day,Quackson,6,...There's an open stall next to mine with your name on it.,FALSE,Right,Normal,FALSE,2,FALSE
-Quackson Dialogue Day 2,2,0,Day,Main Duck,2,Never mind.,FALSE,Left,Normal,FALSE,2,FALSE
-Quackson Dialogue Day 3,3,0,Day,Main Duck,2,"You know, now that I think about it, does the boss know you're always in here?",FALSE,Left,Normal,FALSE,3,FALSE
-Quackson Dialogue Day 3,3,0,Day,Quackson,6,What the boss doesn't know won't hurt him.,FALSE,Right,Normal,FALSE,3,FALSE
-Quackson Dialogue Day 3,3,0,Day,Quackson,6,"Besides, I'll have you know that I'm a producktive duck.",FALSE,Right,Normal,FALSE,3,FALSE
-Quackson Dialogue Day 3,3,0,Day,Main Duck,2,Says the one that doesn't even have an office desk to his name.,FALSE,Left,Italics,FALSE,3,FALSE
-Quackson Dialogue Day 4 - Before Finding Bloody Feather,4,0,Day,Main Duck,2,Quackson! Have you seen Duckette? She's gone missing!,FALSE,Left,Normal,FALSE,0,FALSE
-Quackson Dialogue Day 4 - Before Finding Bloody Feather,4,0,Day,Quackson,6,Who?,FALSE,Right,Normal,FALSE,0,FALSE
-Quackson Dialogue Day 4 - Before Finding Bloody Feather,4,0,Day,Main Duck,2,"You know, Duckette, the Fowl Temptress, the Beak-tiful Angel, the-",FALSE,Left,Normal,FALSE,0,FALSE
-Quackson Dialogue Day 4 - Before Finding Bloody Feather,4,0,Day,Quackson,6,Does it look like I ever left this bathroom stall?,FALSE,Right,Normal,FALSE,0,FALSE
-Quackson Dialogue Day 4 - Before Finding Bloody Feather,4,0,Day,Main Duck,2,...No?,FALSE,Left,Normal,FALSE,0,FALSE
-Quackson Dialogue Day 4 - Before Finding Bloody Feather,4,0,Day,Quackson,6,Then I've never seen her.,FALSE,Right,Normal,FALSE,0,FALSE
-Quackson Dialogue Day 5 - After Finding Body,5,0,Day,Main Duck,2,The bathroom stall is finally open... but at what cost?,FALSE,Left,Normal,FALSE,0,FALSE
-NPD 1 Day 1,1,0,Day,Main Duck,2,Hello! My name is Main Duck.,FALSE,Left,Normal,FALSE,1,FALSE
-NPD 1 Day 1,1,0,Day,Quackie,10,"Oh, are you the new duck? That's so quacking cool!",FALSE,Right,Normal,FALSE,1,FALSE
-NPD 1 Day 1,1,0,Day,Quackie,10,"You know, I was the new duck just last week!",FALSE,Right,Normal,FALSE,1,FALSE
-NPD 1 Day 1,1,0,Day,Quackie,10,"I even joined Nestla with a few of my friends, but they quit within a few days.",FALSE,Right,Normal,FALSE,1,FALSE
-NPD 1 Day 1,1,0,Day,Main Duck,2,"Oh quack, is the work that hard?",FALSE,Left,Normal,FALSE,1,FALSE
-NPD 1 Day 1,1,0,Day,Quackie,10,"Well, producktion for the new Model G has recently started, so it's definitely been busy.",FALSE,Right,Normal,FALSE,1,FALSE
-NPD 1 Day 1,1,0,Day,Quackie,10,I'm sure you'll have a good time here at Nestla though.,FALSE,Right,Normal,FALSE,1,FALSE
-NPD 1 Day 1,1,0,Day,Main Duck,2,I better keep track of my tasks then!,FALSE,Left,Italics,FALSE,1,FALSE
-NPD 2 Day 1,1,0,Day,Billbert,9,...I need another Energy Gooster.,FALSE,Right,Normal,FALSE,1,FALSE
-NPD 2 Day 1,1,0,Day,Main Duck,2,Energy Gooster?,FALSE,Left,Normal,FALSE,1,FALSE
-NPD 2 Day 1,1,0,Day,Billbert,9,"Oh my duck, have you never had an Energy Gooster in your life?",FALSE,Right,Normal,FALSE,1,FALSE
-NPD 2 Day 1,1,0,Day,Main Duck,2,I've had the Red Roadrunner at Purduck University.,FALSE,Left,Normal,FALSE,1,FALSE
-NPD 2 Day 1,1,0,Day,Billbert,9,"Nah, that one tastes like expired pond water mixed with rotting grapes.",FALSE,Right,Normal,FALSE,1,FALSE
-NPD 2 Day 1,1,0,Day,Main Duck,2,Pond water expires?,FALSE,Left,Normal,FALSE,1,FALSE
-NPD 2 Day 1,1,0,Day,Billbert,9,"Look, next time, if you need an ACTUAL drink, take a look at what's in our vending machine. There's quite the selection...",FALSE,Right,Normal,FALSE,1,FALSE
-NPD 2 Day 1,1,0,Day,Billbert,9,...Including Energy Gooster.,FALSE,Right,Normal,FALSE,1,FALSE
-NPD 2 Day 1,1,0,Day,Main Duck,2,"Energy Gooster in the vending machine, noted. Maybe I should give it a try one day.",FALSE,Left,Italics,FALSE,1,FALSE
-NPD 3 Day 1,1,0,Day,Duckelle,8,Hello! Are you my new neighbor?,FALSE,Right,Normal,FALSE,1,FALSE
-NPD 3 Day 1,1,0,Day,Main Duck,2,"Aww quack, I'm not next to Duckette!",FALSE,Left,Italics,FALSE,1,FALSE
-NPD 3 Day 1,1,0,Day,Main Duck,2,"H-Heh, yeah! My name is Main Duck.",FALSE,Left,Normal,FALSE,1,FALSE
-NPD 3 Day 1,1,0,Day,Duckelle,8,Nice to meet you! What do you specialize in?,FALSE,Right,Normal,FALSE,1,FALSE
-NPD 3 Day 1,1,0,Day,Main Duck,2,"Oh, well I studied Mechanical Engineering at Purduck University.",FALSE,Left,Normal,FALSE,1,FALSE
-NPD 3 Day 1,1,0,Day,Duckelle,8,"Purduck, huh?",FALSE,Right,Normal,FALSE,1,FALSE
-NPD 3 Day 1,1,0,Day,Duckelle,8,I graduated from Induckana University.,FALSE,Right,Normal,FALSE,1,FALSE
-NPD 3 Day 1,1,0,Day,Main Duck,2,...,FALSE,Left,Normal,FALSE,1,FALSE
-NPD 3 Day 1,1,0,Day,Duckelle,8,...,FALSE,Right,Normal,FALSE,1,FALSE
-NPD 3 Day 1,1,0,Day,Main Duck,2,I'm gonna return to work now.,FALSE,Left,Normal,FALSE,1,FALSE
-Eggwin Day 1,1,0,Day,Eggwin,3,I hope you have a quacktastic first day here at Nestla.,FALSE,Right,Normal,FALSE,1,FALSE
-Eggwin Day 1,1,0,Day,Main Duck,2,Thanks Eggwin!,FALSE,Left,Normal,FALSE,1,FALSE
-Duckette Day 1,1,0,Day,Main Duck,2,"Ah, I still can't believe I'm working alongside Duckette! What a dream come true!",FALSE,Left,Italics,FALSE,1,FALSE
-Duckette Day 1,1,0,Day,Main Duck,2,"She's even more beak-tiful up close. At Purduck, she always sat at the other end of the classroom, and all the ducks would flock to the seats around her. I was stuck all the way in the back.",FALSE,Left,Italics,FALSE,1,FALSE
-Duckette Day 1,1,0,Day,Main Duck,2,Oh if only my desk was next to hers though.,FALSE,Left,Italics,FALSE,1,FALSE
-Duckette Day 1,1,0,Day,Duckette,4,"Um, can I help you?",FALSE,Right,Normal,FALSE,1,FALSE
-Duckette Day 1,1,0,Day,Main Duck,2,"QUACK! I've been staring for too long! Act cool, act cool.",FALSE,Left,Italics,FALSE,1,FALSE
-Duckette Day 1,1,0,Day,Main Duck,2,I lo-,FALSE,Left,Normal,FALSE,1,FALSE
-Duckette Day 1,1,0,Day,Main Duck,2,*Cough* I lost my pen. Can I borrow one?,FALSE,Left,Normal,FALSE,1,FALSE
-Duckette Day 1,1,0,Day,Duckette,4,There should be a few extra pens at the receptionist's desk.,FALSE,Right,Normal,FALSE,1,FALSE
-Duckette Day 1,1,0,Day,Main Duck,2,Worth a shot.,FALSE,Left,Italics,FALSE,1,FALSE
-Donald Day 1,1,0,Day,Donald,5,Don't get caught slacking.,FALSE,Right,Normal,FALSE,1,FALSE
-Donald Day 1,1,0,Day,Main Duck,2,"Wow, what a pond-erful welcome.",FALSE,Left,Italics,FALSE,1,FALSE
-NPD 3 Day 2,2,0,Day,Main Duck,2,"Hey! You're working on the producktion report with Duckette today, right?",FALSE,Left,Normal,FALSE,2,FALSE
-NPD 3 Day 2,2,0,Day,Duckelle,8,"Yes, why?",FALSE,Right,Normal,FALSE,2,FALSE
-NPD 3 Day 2,2,0,Day,Main Duck,2,Do you want to... trade tasks with me?,FALSE,Left,Normal,FALSE,2,FALSE
-NPD 3 Day 2,2,0,Day,Duckelle,8,No.,FALSE,Right,Normal,FALSE,2,FALSE
-NPD 1 Day 2,2,0,Day,Main Duck,2,"Hey, I have a quacktion for you. You said you've been here for about a week, right?",FALSE,Left,Normal,FALSE,2,FALSE
-NPD 1 Day 2,2,0,Day,Quackie,10,"Quack, you got it! What's up?",FALSE,Right,Normal,FALSE,2,FALSE
-NPD 1 Day 2,2,0,Day,Main Duck,2,"Well, I've been wondering if you know anything about Duckette, and how long she's been working here?",FALSE,Left,Normal,FALSE,2,FALSE
-NPD 1 Day 2,2,0,Day,Quackie,10,"Oh, she's a recent hire too! She came in two days after me.",FALSE,Right,Normal,FALSE,2,FALSE
-NPD 1 Day 2,2,0,Day,Main Duck,2,"Wow... Duckette is new, yet she already fits the bill as a Nestla employee!",FALSE,Left,Italics,FALSE,2,FALSE
-NPD 1 Day 2,2,0,Day,Main Duck,2,I gotta work hard to get to her level too.,FALSE,Left,Italics,FALSE,2,FALSE
-NPD 2 Day 2,2,0,Day,Billbert,9,"Hey, are you grabbing a drink from the vending machine?",FALSE,Right,Normal,FALSE,2,FALSE
-NPD 2 Day 2,2,0,Day,Main Duck,2,"Yes, why?",FALSE,Left,Normal,FALSE,2,FALSE
-NPD 2 Day 2,2,0,Day,Billbert,9,Can you buy me an Energy Gooster too?,FALSE,Right,Normal,FALSE,2,FALSE
-NPD 2 Day 2,2,0,Day,Main Duck,2,What can are you even on?,FALSE,Left,Normal,FALSE,2,FALSE
-NPD 2 Day 2,2,0,Day,Billbert,9,7. Which isn't enough. I haven't felt the caffeine waddle in yet.,FALSE,Right,Normal,FALSE,2,FALSE
-NPD 2 Day 2,2,0,Day,Main Duck,2,...,FALSE,Left,Normal,FALSE,2,FALSE
-NPD 2 Day 2,2,0,Day,Main Duck,2,I think that's plenty enough.,FALSE,Left,Normal,FALSE,2,FALSE
-Duckette Day 2,2,0,Day,Main Duck,2,"Hey Duckette! If you ever need anything, just give me a quack!",FALSE,Left,Normal,FALSE,2,FALSE
-Duckette Day 2,2,0,Day,Duckette,4,...Thanks intern.,FALSE,Right,Normal,FALSE,2,FALSE
-Duckette Day 2,2,0,Day,Main Duck,2,Oh Duckette... when will you even remember my name?,FALSE,Left,Italics,FALSE,2,FALSE
-Duckette Day 2,2,0,Day,Main Duck,2,I need to find a way to win her heart now that I have the chance.,FALSE,Left,Italics,FALSE,2,FALSE
-Donald Day 2,2,0,Day,Donald,5,Is Duckette still there?,FALSE,Right,Normal,FALSE,2,FALSE
-Donald Day 2,2,0,Day,Main Duck,2,"I swear, if Donald even lays a wing on Duckette's feathers...",FALSE,Left,Italics,FALSE,2,FALSE
-Eggwin Day 2,2,0,Day,Eggwin,3,"Working hard today, Main Duck?",FALSE,Right,Normal,FALSE,2,FALSE
-Eggwin Day 2,2,0,Day,Main Duck,2,"Quack, I am!",FALSE,Left,Normal,FALSE,2,FALSE
-Eggwin Day 2,2,0,Day,Main Duck,2,Working hard to win Duckette over.,FALSE,Left,Italics,FALSE,2,FALSE
-NPD 1 Day 3,3,0,Day,Main Duck,2,Can you beak-lieve that Elon Duck is in the office today?,FALSE,Left,Normal,FALSE,3,FALSE
-NPD 1 Day 3,3,0,Day,Quackie,10,I know right? It's rare for Elon Duck to fly in.,FALSE,Right,Normal,FALSE,3,FALSE
-NPD 1 Day 3,3,0,Day,Quackie,10,Last time he came was last week to greet the newcomers and to tell us about hiring new recruits like you.,FALSE,Right,Normal,FALSE,3,FALSE
-NPD 1 Day 3,3,0,Day,Quackie,10,I hope I get a chance to talk to him today! He's such an inspiration for all of duck-kind.,FALSE,Right,Normal,FALSE,3,FALSE
-NPD 2 Day 3,3,0,Day,Main Duck,2,"Hey, are you ok?",FALSE,Left,Normal,FALSE,3,FALSE
-NPD 2 Day 3,3,0,Day,Billbert,9,...,FALSE,Right,Normal,FALSE,3,FALSE
-NPD 2 Day 3,3,0,Day,Main Duck,2,"Huh, did they pass out or something?",FALSE,Left,Normal,FALSE,3,FALSE
-NPD 2 Day 3,3,0,Day,Main Duck,2,There are several empty Energy Gooster cans next to them. They probably just collapsed from all the caffeine.,FALSE,Left,Normal,FALSE,3,FALSE
-NPD 2 Day 3,3,0,Day,Main Duck,2,I'll leave them be for now. They just gotta sleep it off.,FALSE,Left,Normal,FALSE,3,FALSE
-NPD 3 Day 3,3,0,Day,Main Duck,2,Have you heard that-,FALSE,Left,Normal,FALSE,3,FALSE
-NPD 3 Day 3,3,0,Day,Duckelle,8,"Yes, I know. Elon Duck is here. His name is quacking out of everyone's beak today.",FALSE,Right,Normal,FALSE,3,FALSE
-NPD 3 Day 3,3,0,Day,Main Duck,2,Are you not excited? It's <i>Elon Duck!</i>,FALSE,Left,Normal,FALSE,3,FALSE
-NPD 3 Day 3,3,0,Day,Duckelle,8,"Eh, I've already met him when he introduced me and a few others to Nestla. He's more of a celebrity than a CEO, popping up every now and then.",FALSE,Right,Normal,FALSE,3,FALSE
-NPD 3 Day 3,3,0,Day,Duckelle,8,I wonder what is keeping him from coming to the office?,FALSE,Right,Normal,FALSE,3,FALSE
-Duckette Day 3,3,0,Day,Duckette,4,"Hm, so Elon Duck really is here. That means...",FALSE,Right,Normal,FALSE,3,FALSE
-Duckette Day 3,3,0,Day,Duckette,4,"Yes, I should send him an email. This is a great opportunity.",FALSE,Right,Normal,FALSE,3,FALSE
-Duckette Day 3,3,0,Day,Main Duck,2,Opportunity?,FALSE,Left,Normal,FALSE,3,FALSE
-Duckette Day 3,3,0,Day,Duckette,4,*Sigh* Have you been peeping in this whole time?,FALSE,Right,Normal,FALSE,3,FALSE
-Duckette Day 3,3,0,Day,Main Duck,2,"Heh, sorry, I was planning to talk to you, but you seemed busy.",FALSE,Left,Normal,FALSE,3,FALSE
-Duckette Day 3,3,0,Day,Duckette,4,I am busy. I have a few more emails I need to send out before the end of the day.,FALSE,Right,Normal,FALSE,3,FALSE
-Duckette Day 3,3,0,Day,Duckette,4,"Make sure to finish your work in time too! After all, the CEO himself is here.",FALSE,Right,Normal,FALSE,3,FALSE
-Duckette Day 3,3,0,Day,Main Duck,2,"Quack, you're right! I should check to make sure I've finished everything for today.",FALSE,Left,Normal,FALSE,3,FALSE
-Donald Day 3,3,0,Day,Donald,5,"I'm on to you, Elon Duck.",FALSE,Right,Normal,FALSE,3,FALSE
-Donald Day 3,3,0,Day,Main Duck,2,"Oh quack, not another one of Donald's conspiracies...",FALSE,Left,Italics,FALSE,3,FALSE
-Donald Day 3,3,0,Day,Main Duck,2,"You know, I can't help but ponder on how Donald hasn't been fired yet.",FALSE,Left,Italics,FALSE,3,FALSE
-Eggwin Day 3,3,0,Day,Eggwin,3,Remember to leave no task unfinished Main Duck. We gotta do our best to impress Elon Duck!,FALSE,Right,Normal,FALSE,3,FALSE
-Eggwin Day 3,3,0,Day,Main Duck,2,Quack! You got it!,FALSE,Left,Normal,FALSE,3,FALSE
-Eggwin Day 3,3,0,Day,Main Duck,2,"One of my dreams, besides winning Duckette's heart, is to one day work for Elon Duck, and I'm finally living it!",FALSE,Left,Italics,FALSE,3,FALSE
-Eggwin Day 3,3,0,Day,Main Duck,2,So I must show him how much of a producktive duck I am!,FALSE,Left,Italics,FALSE,3,FALSE
-Elon Duck Day 3,3,0,Day,Elon Duck,1,"Ah, you are-?",FALSE,Right,Normal,FALSE,3,FALSE
-Elon Duck Day 3,3,0,Day,Main Duck,2,"I'm Main Duck, sir! It's an honor to meet you!",FALSE,Left,Normal,FALSE,3,FALSE
-Elon Duck Day 3,3,0,Day,Elon Duck,1,"Ah, yes, Main Duck! You're one of our new employees, yes?",FALSE,Right,Normal,FALSE,3,FALSE
-Elon Duck Day 3,3,0,Day,Main Duck,2,"Yes, sir!",FALSE,Left,Normal,FALSE,3,FALSE
-Elon Duck Day 3,3,0,Day,Elon Duck,1,Then I look forward to seeing what you have to offer for Nestla's future.,FALSE,Right,Normal,FALSE,3,FALSE
-NPD 1 Day 4,4,0,Day,Main Duck,2,"Hey, have you seen Duckette?",FALSE,Left,Normal,FALSE,4,FALSE
-NPD 1 Day 4,4,0,Day,Quackie,10,"No, I haven't. But I don't think anyone will.",FALSE,Right,Normal,FALSE,4,FALSE
-NPD 1 Day 4,4,0,Day,Main Duck,2,Why is that?,FALSE,Left,Normal,FALSE,4,FALSE
-NPD 1 Day 4,4,0,Day,Quackie,10,"Because at the end of last week, I couldn't find my friend later. When I asked around, I learned that they quit.",FALSE,Right,Normal,FALSE,4,FALSE
-NPD 1 Day 4,4,0,Day,Quackie,10,Maybe your friend quit too and didn't want to tell anyone.,FALSE,Right,Normal,FALSE,4,FALSE
-NPD 1 Day 4,4,0,Day,Quackie,10,I only wish my friend told me.,FALSE,Right,Normal,FALSE,4,FALSE
-NPD 3 Day 4,4,0,Day,Main Duck,2,"Hey, have you-",FALSE,Left,Normal,FALSE,4,FALSE
-NPD 3 Day 4,4,0,Day,Duckelle,8,"No, return to work.",FALSE,Right,Normal,FALSE,4,FALSE
-NPD 3 Day 4,4,0,Day,Main Duck,2,I didn't even finish my quacktion.,FALSE,Left,Normal,FALSE,4,FALSE
-NPD 3 Day 4,4,0,Day,Duckelle,8,"Look, it's better to just continue working. Once you're here long enough, you'll get used to ducks leaving left and right.",FALSE,Right,Normal,FALSE,4,FALSE
-NPD 3 Day 4,4,0,Day,Duckelle,8,Maybe Nestla is simply not for everyone.,FALSE,Right,Normal,FALSE,4,FALSE
-Donald Day 4,4,0,Day,Donald,5,There's gotta be clues lying around here somewhere.,FALSE,Right,Normal,FALSE,4,FALSE
-Donald Day 4,4,0,Day,Donald,5,Let me know if you find anything!,FALSE,Right,Normal,FALSE,4,FALSE
-Eggwin Day 4,4,0,Day,Eggwin,3,"Something on your mind, Main Duck?",FALSE,Right,Normal,FALSE,4,FALSE
-Eggwin Day 4,4,0,Day,Main Duck,2,Should I ask or...,FALSE,Left,Italics,FALSE,4,FALSE
-Eggwin Day 4,4,0,Day,Main Duck,2,"No, it's probably best to not ask now.",FALSE,Left,Italics,FALSE,4,FALSE
-Eggwin Day 4,4,0,Day,Main Duck,2,Nope! I'm just working hard as usual!,FALSE,Left,Normal,FALSE,4,FALSE
-Eggwin Day 4,4,0,Day,Eggwin,3,Good to hear! Give a quack if you need anything from me.,FALSE,Right,Normal,FALSE,4,FALSE
-NPD 4 Day 5,5,0,Day,Main Duck,2,"Huh, I've never seen this duck before. I wonder what happened to the other one?",FALSE,Left,Italics,FALSE,5,FALSE
-NPD 4 Day 5,5,0,Day,Main Duck,2,Hey! Are you new?,FALSE,Left,Normal,FALSE,5,FALSE
-NPD 4 Day 5,5,0,Day,Quillson,11,Quack! I can't believe I'm actually inside Nestla's offices. It's been my quacking dream ever since I've learned to waddle.,FALSE,Right,Normal,FALSE,5,FALSE
-NPD 4 Day 5,5,0,Day,Quillson,11,"By the way, my first task has something to do with CADs. Do you know where that is?",FALSE,Right,Normal,FALSE,5,FALSE
-NPD 4 Day 5,5,0,Day,Main Duck,2,"Oh, you should have a desk with your name tag on it. You can use the computer to complete your CAD assignment.",FALSE,Left,Normal,FALSE,5,FALSE
-NPD 4 Day 5,5,0,Day,Quillson,11,"Ok, thanks for the help!",FALSE,Right,Normal,FALSE,5,FALSE
-NPD 4 Day 5,5,0,Day,Main Duck,2,No problem!,FALSE,Left,Normal,FALSE,5,FALSE
-NPD 4 Day 5,5,0,Day,Main Duck,2,Strange. Did the other duck simply leave or...,FALSE,Left,Italics,FALSE,5,FALSE
-NPD 4 Day 5,5,0,Day,Main Duck,2,...Have they become the next missing duck in this case?,FALSE,Left,Italics,FALSE,5,FALSE
-NPD 3 Day 5,5,0,Day,Duckelle,8,"Hey, this time I have a quacktion for you.",FALSE,Right,Normal,FALSE,5,FALSE
-NPD 3 Day 5,5,0,Day,Main Duck,2,For me? What is it?,FALSE,Left,Normal,FALSE,5,FALSE
-NPD 3 Day 5,5,0,Day,Duckelle,8,What do you think if I quit?,FALSE,Right,Normal,FALSE,5,FALSE
-NPD 3 Day 5,5,0,Day,Main Duck,2,Quit? As in quit your job?,FALSE,Left,Normal,FALSE,5,FALSE
-NPD 3 Day 5,5,0,Day,Duckelle,8,"Don't be a quackhead, of course that's what I meant.",FALSE,Right,Normal,FALSE,5,FALSE
-NPD 3 Day 5,5,0,Day,Duckelle,8,But I don't know. Everyone's been acting strange lately. Even you.,FALSE,Right,Normal,FALSE,5,FALSE
-NPD 3 Day 5,5,0,Day,Main Duck,2,Me?,FALSE,Left,Normal,FALSE,5,FALSE
-NPD 3 Day 5,5,0,Day,Duckelle,8,"You're rarely at your desk anymore, and you have a weird obsession with that Duckette girl.",FALSE,Right,Normal,FALSE,5,FALSE
-NPD 3 Day 5,5,0,Day,Main Duck,2,"It's not weird, it's true love!",FALSE,Left,Normal,FALSE,5,FALSE
-NPD 3 Day 5,5,0,Day,Duckelle,8,"Yeah, right. I guess that's my answer.",FALSE,Right,Normal,FALSE,5,FALSE
-NPD 3 Day 5,5,0,Day,Duckelle,8,*Sigh* Maybe it's not too late to try my wing at making videogames than quacking cars. ,FALSE,Right,Normal,FALSE,5,FALSE
-Donald Day 5 - Before Killing Room,5,0,Day,Donald,5,I can feel it! We're so close to discovering the truth!,FALSE,Right,Normal,FALSE,0,FALSE
-Donald Day 5 - Before Killing Room,5,0,Day,Donald,5,We just need that one piece of evidence that can stop all the retorts from flying out of each ducks' beak.,FALSE,Right,Normal,FALSE,0,FALSE
-Eggwin Day 5 - Before Killing Room and Eggwin is a Snitch,5,0,Day,Eggwin,3,"Remember our conversation, Main Duck.",FALSE,Right,Normal,FALSE,0,FALSE
-Eggwin Day 5 - Before Killing Room and Eggwin is a Snitch,5,0,Day,Eggwin,3,"We have a responsibility here at Nestla, both to Elon Duck and to all of birdkind.",FALSE,Right,Normal,FALSE,0,FALSE
-Eggwin Day 5 - Before Killing Room and Eggwin is a Snitch,5,0,Day,Eggwin,3,I expect to see more great work from you today.,FALSE,Right,Normal,FALSE,0,FALSE
-NPD 4 Day 6 - Before Duck Union,6,0,Day,Quillson,11,"Huh, it's even emptier today.",FALSE,Right,Normal,FALSE,0,FALSE
-NPD 4 Day 6 - Before Duck Union,6,0,Day,Quillson,11,Where did everyone go?,FALSE,Right,Normal,FALSE,0,FALSE
-NPD 5 Day 6 - Before Duck Union,6,0,Day,Freggerico,12,"I wonder what's going on. Every duck has flocked over here, even from the manufacturing room!",FALSE,Right,Normal,FALSE,0,FALSE
-NPD 6 Day 6 - Before Duck Union,6,0,Day,Mal,13,Is Elon Duck coming? Is that why everyone's here?,FALSE,Right,Normal,FALSE,0,FALSE
-Donald Day 6 - Before Duck Union,6,0,Day,Donald,5,What are you waiting for? ,FALSE,Right,Normal,FALSE,0,FALSE
-Donald Day 6 - Before Duck Union,6,0,Day,Donald,5,We have all the evidence we need. All that's left is convincing them with a big speech.,FALSE,Right,Normal,FALSE,0,FALSE
-NPD 4 Day 6 - After Duck Union,6,0,Day,Quillson,11,My feathers won't stop sticking up!,FALSE,Right,Normal,FALSE,0,FALSE
-NPD 4 Day 6 - After Duck Union,6,0,Day,Quillson,11,And to think I've always dreamed of working here... now I wish I never even applied for this job.,FALSE,Right,Normal,FALSE,0,FALSE
-NPD 4 Day 6 - After Duck Union,6,0,Day,Main Duck,2,Same...,FALSE,Left,Italics,FALSE,0,FALSE
-NPD 5 Day 6 - After Duck Union,6,0,Day,Freggerico,12,Sorry. I... I need a second.,FALSE,Right,Normal,FALSE,0,FALSE
-NPD 5 Day 6 - After Duck Union,6,0,Day,Freggerico,12,M-My twin never came home yesterday. Does that mean they're already-,FALSE,Right,Normal,TRUE,0,FALSE
-NPD 5 Day 6 - After Duck Union_Option1,6,0,Day,None,0,I'm sure they're ok.,FALSE,Right,Normal,FALSE,1,FALSE
-NPD 5 Day 6 - After Duck Union_Response1,6,0,Day,Main Duck,2,Maybe they're somewhere else?,FALSE,Left,Normal,FALSE,1,FALSE
-NPD 5 Day 6 - After Duck Union_Response1,6,0,Day,Freggerico,12,Wherever they are... I hope they're safe.,FALSE,Right,Normal,FALSE,1,FALSE
-NPD 5 Day 6 - After Duck Union_Option2,6,0,Day,None,0,I'm sorry.,FALSE,Right,Normal,FALSE,2,FALSE
-NPD 5 Day 6 - After Duck Union_Response2,6,0,Day,Freggerico,12,...Thank you.,FALSE,Right,Normal,FALSE,2,FALSE
-NPD 5 Day 6 - After Duck Union_Response2,6,0,Day,Freggerico,12,"At least now, I can do something for them by joining the Duck Union.",FALSE,Left,Normal,FALSE,2,FALSE
-NPD 5 Day 6 - After Duck Union_Option3,6,0,Day,None,0,Tell them about saving the ducks.,FALSE,Right,Normal,FALSE,3,FALSE
-NPD 5 Day 6 - After Duck Union_Response3,6,0,Day,Main Duck,2,I managed to save a few ducks when I was in the slaughterhouse.,FALSE,Right,Normal,FALSE,3,FALSE
-NPD 5 Day 6 - After Duck Union_Response3,6,0,Day,Main Duck,2,But many of the others were already dead.,FALSE,Right,Normal,FALSE,3,FALSE
-NPD 5 Day 6 - After Duck Union_Response3,6,0,Day,Main Duck,2,I think one of them looked like you. I'm not sure if they were your twin but...,FALSE,Right,Normal,FALSE,3,FALSE
-NPD 5 Day 6 - After Duck Union_Response3,6,0,Day,Main Duck,2,They were already gone.,FALSE,Right,Normal,FALSE,3,FALSE
-NPD 5 Day 6 - After Duck Union_Response3,6,0,Day,Freggerico,12,...,FALSE,Right,Normal,FALSE,3,FALSE
-NPD 5 Day 6 - After Duck Union_Response3,6,0,Day,Freggerico,12,Thanks for telling me the truth.,FALSE,Right,Normal,FALSE,3,FALSE
-NPD 5 Day 6 - After Duck Union_Response3,6,0,Day,Freggerico,12,Elon Duck... I'll make sure that fowl duck pays for what he's done to my family.,FALSE,Right,Normal,FALSE,3,FALSE
-NPD 5 Day 6 - After Duck Union_Option4,6,0,Day,None,0,Stay quiet.,FALSE,Right,Normal,FALSE,4,FALSE
-NPD 5 Day 6 - After Duck Union_Response4,6,0,Day,Freggerico,12,"They're probably dead, right?",FALSE,Right,Normal,FALSE,4,FALSE
-NPD 5 Day 6 - After Duck Union_Response4,6,0,Day,Freggerico,12,The evidence is all there. There's no other eggs-planation.,FALSE,Right,Normal,FALSE,4,FALSE
-NPD 5 Day 6 - After Duck Union_Response4,6,0,Day,Freggerico,12,*Sob*,FALSE,Right,Normal,FALSE,4,FALSE
-NPD 6 Day 6 - After Duck Union,6,0,Day,Mal,13,Elon Duck... what a fowl villain!,FALSE,Right,Normal,FALSE,0,FALSE
-NPD 6 Day 6 - After Duck Union,6,0,Day,Mal,13,He's no longer a fellow duck in my eyes.,FALSE,Right,Normal,FALSE,0,FALSE
-NPD 6 Day 6 - After Duck Union,6,0,Day,Mal,13,"Just you wait, I'm going to post the Duck Union and our victory against Elon Duck on SnapQuack. Then everyone will know Elon Duck's true feathers.",FALSE,Right,Normal,FALSE,0,FALSE
-NPD 7 Day 7 - Before Finding Elon Duck,7,0,Day,Eggna ,14,To think I'm part of the Duck Union and about to witness the downfall of Elon Duck.,FALSE,Right,Normal,FALSE,0,FALSE
-NPD 7 Day 7 - Before Finding Elon Duck,7,0,Day,Eggna ,14,I'm on the right side of history!,FALSE,Right,Normal,FALSE,0,FALSE
-NPD 8 Day 7 - Before Finding Elon Duck,7,0,Day,Quacklyn ,15,His office is unlocked! He should be in there!,FALSE,Right,Normal,FALSE,0,FALSE
-Donald Day 7 - Before Finding Elon Duck,7,0,Day,Donald,5,There's no time to waste. Let's find that quacking Elon Duck and bring him and the Duckberry Farm down.,FALSE,Right,Normal,FALSE,0,FALSE
-Duckette Day 7 - After Heartbroken,7,0,Day,Duckette,4,"Hehe, I'm sure Manfred will hear about what happened to Elon Duck and the Duckberry Farm.",FALSE,Right,Normal,FALSE,0,FALSE
-Duckette Day 7 - After Heartbroken,7,0,Day,Duckette,4,Which means he'll come to visit! I better greet him outside.,FALSE,Right,Normal,FALSE,0,FALSE
-Duckette Day 7 - After Heartbroken,7,0,Day,Main Duck,2,...Quacking Manfred. Just you wait.,FALSE,Left,Italics,FALSE,0,FALSE
-Donald Day 7 - Before Kaboom 2,7,0,Day,Donald,5,You look like you have a plan. Lead the way.,FALSE,Right,Normal,FALSE,2,FALSE
+Locked Room Dialogue - Elon Duck's Office,0,0,Day,Main Duck,2,It's locked. Looks like Elon Duck isn't in the office today.,TRUE,Left,Normal,FALSE,0,FALSE
+Locked Room Dialogue - Closet,0,0,Day,Main Duck,2,It's locked. I wonder what the janitor hides in here.,TRUE,Left,Normal,FALSE,0,FALSE
+Locked Room Dialogue - Killing Room (from vent),0,0,Day,Main Duck,2,"It's locked. Then again, this is a vent. But why is it duck sized?",TRUE,Left,Normal,FALSE,0,FALSE
+Locked Room Dialogue - Killing Room (from Manufacturing),0,0,Day,Main Duck,2,It's locked. I wonder what's behind it.,TRUE,Left,Normal,FALSE,0,FALSE
+Locked Room Dialogue - Different Bathroom Stalls,0,0,Day,Main Duck,2,I really need to use the bathroom. Let me just go in this one- AHHHHHHH!,TRUE,Left,Normal,FALSE,0,FALSE
+Locked Room Dialogue - Different Bathroom Stalls,0,0,Day,Main Duck,2,Traumatized for the rest of my duck years.,TRUE,Left,Normal,FALSE,0,FALSE
+Locked Room Dialogue - Manufacturing Room,0,0,Day,Main Duck,2,Looks like they're still running some simulation tests in there. It's best not to interrupt them.,TRUE,Left,Normal,FALSE,0,FALSE
+Death Dialogue - Killed by Janitor,5,0,Day,None,0,The Janitor killed you... you knew too much. #DeathByRobotJanitor,FALSE,Left,Normal,FALSE,0,FALSE
+Death Dialogue - Killed by Duck Union,6,1,Day,None,0,The Duck Union was formed... but they were formed against you. #LongLiveNestla,FALSE,Left,Normal,FALSE,0,FALSE
+Death Dialogue - Elon Duck Escapes,7,2,Day,None,0,Elon Duck manages to escape... will he create a new Nestla? #ComeBack,FALSE,Left,Normal,FALSE,0,FALSE
+Quackson Dialogue Day 2,2,0,Day,Main Duck,2,You know Quackson-,TRUE,Left,Normal,FALSE,2,FALSE
+Quackson Dialogue Day 2,2,0,Day,Quackson,6,Why are you here again? I'm kinda busy over here.,TRUE,Right,Normal,FALSE,2,FALSE
+Quackson Dialogue Day 2,2,0,Day,Main Duck,2,"On a scale of squawk to quack, what are the chances of me getting with Duckette?",TRUE,Left,Normal,FALSE,2,FALSE
+Quackson Dialogue Day 2,2,0,Day,Quackson,6,...There's an open stall next to mine with your name on it.,TRUE,Right,Normal,FALSE,2,FALSE
+Quackson Dialogue Day 2,2,0,Day,Main Duck,2,Never mind.,TRUE,Left,Normal,FALSE,2,FALSE
+Quackson Dialogue Day 3,3,0,Day,Main Duck,2,"You know, now that I think about it, does the boss know you're always in here?",TRUE,Left,Normal,FALSE,3,FALSE
+Quackson Dialogue Day 3,3,0,Day,Quackson,6,What the boss doesn't know won't hurt him.,TRUE,Right,Normal,FALSE,3,FALSE
+Quackson Dialogue Day 3,3,0,Day,Quackson,6,"Besides, I'll have you know that I'm a producktive duck.",TRUE,Right,Normal,FALSE,3,FALSE
+Quackson Dialogue Day 3,3,0,Day,Main Duck,2,Says the one that doesn't even have an office desk to his name.,TRUE,Left,Italics,FALSE,3,FALSE
+Quackson Dialogue Day 4 - Before Finding Bloody Feather,4,0,Day,Main Duck,2,Quackson! Have you seen Duckette? She's gone missing!,TRUE,Left,Normal,FALSE,0,FALSE
+Quackson Dialogue Day 4 - Before Finding Bloody Feather,4,0,Day,Quackson,6,Who?,TRUE,Right,Normal,FALSE,0,FALSE
+Quackson Dialogue Day 4 - Before Finding Bloody Feather,4,0,Day,Main Duck,2,"You know, Duckette, the Fowl Temptress, the Beak-tiful Angel, the-",TRUE,Left,Normal,FALSE,0,FALSE
+Quackson Dialogue Day 4 - Before Finding Bloody Feather,4,0,Day,Quackson,6,Does it look like I ever left this bathroom stall?,TRUE,Right,Normal,FALSE,0,FALSE
+Quackson Dialogue Day 4 - Before Finding Bloody Feather,4,0,Day,Main Duck,2,...No?,TRUE,Left,Normal,FALSE,0,FALSE
+Quackson Dialogue Day 4 - Before Finding Bloody Feather,4,0,Day,Quackson,6,Then I've never seen her.,TRUE,Right,Normal,FALSE,0,FALSE
+Quackson Dialogue Day 5 - After Finding Body,5,0,Day,Main Duck,2,The bathroom stall is finally open... but at what cost?,TRUE,Left,Normal,FALSE,0,FALSE
+NPD 1 Day 1,1,0,Day,Main Duck,2,Hello! My name is Main Duck.,TRUE,Left,Normal,FALSE,1,FALSE
+NPD 1 Day 1,1,0,Day,Quackie,10,"Oh, are you the new duck? That's so quacking cool!",TRUE,Right,Normal,FALSE,1,FALSE
+NPD 1 Day 1,1,0,Day,Quackie,10,"You know, I was the new duck just last week!",TRUE,Right,Normal,FALSE,1,FALSE
+NPD 1 Day 1,1,0,Day,Quackie,10,"I even joined Nestla with a few of my friends, but they quit within a few days.",TRUE,Right,Normal,FALSE,1,FALSE
+NPD 1 Day 1,1,0,Day,Main Duck,2,"Oh quack, is the work that hard?",TRUE,Left,Normal,FALSE,1,FALSE
+NPD 1 Day 1,1,0,Day,Quackie,10,"Well, producktion for the new Model G has recently started, so it's definitely been busy.",TRUE,Right,Normal,FALSE,1,FALSE
+NPD 1 Day 1,1,0,Day,Quackie,10,I'm sure you'll have a good time here at Nestla though.,TRUE,Right,Normal,FALSE,1,FALSE
+NPD 1 Day 1,1,0,Day,Main Duck,2,I better keep track of my tasks then!,TRUE,Left,Italics,FALSE,1,FALSE
+NPD 2 Day 1,1,0,Day,Billbert,9,...I need another Energy Gooster.,TRUE,Right,Normal,FALSE,1,FALSE
+NPD 2 Day 1,1,0,Day,Main Duck,2,Energy Gooster?,TRUE,Left,Normal,FALSE,1,FALSE
+NPD 2 Day 1,1,0,Day,Billbert,9,"Oh my duck, have you never had an Energy Gooster in your life?",TRUE,Right,Normal,FALSE,1,FALSE
+NPD 2 Day 1,1,0,Day,Main Duck,2,I've had the Red Roadrunner at Purduck University.,TRUE,Left,Normal,FALSE,1,FALSE
+NPD 2 Day 1,1,0,Day,Billbert,9,"Nah, that one tastes like expired pond water mixed with rotting grapes.",TRUE,Right,Normal,FALSE,1,FALSE
+NPD 2 Day 1,1,0,Day,Main Duck,2,Pond water expires?,TRUE,Left,Normal,FALSE,1,FALSE
+NPD 2 Day 1,1,0,Day,Billbert,9,"Look, next time, if you need an ACTUAL drink, take a look at what's in our vending machine. There's quite the selection...",TRUE,Right,Normal,FALSE,1,FALSE
+NPD 2 Day 1,1,0,Day,Billbert,9,...Including Energy Gooster.,TRUE,Right,Normal,FALSE,1,FALSE
+NPD 2 Day 1,1,0,Day,Main Duck,2,"Energy Gooster in the vending machine, noted. Maybe I should give it a try one day.",TRUE,Left,Italics,FALSE,1,FALSE
+NPD 3 Day 1,1,0,Day,Duckelle,8,Hello! Are you my new neighbor?,TRUE,Right,Normal,FALSE,1,FALSE
+NPD 3 Day 1,1,0,Day,Main Duck,2,"Aww quack, I'm not next to Duckette!",TRUE,Left,Italics,FALSE,1,FALSE
+NPD 3 Day 1,1,0,Day,Main Duck,2,"H-Heh, yeah! My name is Main Duck.",TRUE,Left,Normal,FALSE,1,FALSE
+NPD 3 Day 1,1,0,Day,Duckelle,8,Nice to meet you! What do you specialize in?,TRUE,Right,Normal,FALSE,1,FALSE
+NPD 3 Day 1,1,0,Day,Main Duck,2,"Oh, well I studied Mechanical Engineering at Purduck University.",TRUE,Left,Normal,FALSE,1,FALSE
+NPD 3 Day 1,1,0,Day,Duckelle,8,"Purduck, huh?",TRUE,Right,Normal,FALSE,1,FALSE
+NPD 3 Day 1,1,0,Day,Duckelle,8,I graduated from Induckana University.,TRUE,Right,Normal,FALSE,1,FALSE
+NPD 3 Day 1,1,0,Day,Main Duck,2,...,TRUE,Left,Normal,FALSE,1,FALSE
+NPD 3 Day 1,1,0,Day,Duckelle,8,...,TRUE,Right,Normal,FALSE,1,FALSE
+NPD 3 Day 1,1,0,Day,Main Duck,2,I'm gonna return to work now.,TRUE,Left,Normal,FALSE,1,FALSE
+Eggwin Day 1,1,0,Day,Eggwin,3,I hope you have a quacktastic first day here at Nestla.,TRUE,Right,Normal,FALSE,1,FALSE
+Eggwin Day 1,1,0,Day,Main Duck,2,Thanks Eggwin!,TRUE,Left,Normal,FALSE,1,FALSE
+Duckette Day 1,1,0,Day,Main Duck,2,"Ah, I still can't believe I'm working alongside Duckette! What a dream come true!",TRUE,Left,Italics,FALSE,1,FALSE
+Duckette Day 1,1,0,Day,Main Duck,2,"She's even more beak-tiful up close. At Purduck, she always sat at the other end of the classroom, and all the ducks would flock to the seats around her. I was stuck all the way in the back.",TRUE,Left,Italics,FALSE,1,FALSE
+Duckette Day 1,1,0,Day,Main Duck,2,Oh if only my desk was next to hers though.,TRUE,Left,Italics,FALSE,1,FALSE
+Duckette Day 1,1,0,Day,Duckette,4,"Um, can I help you?",TRUE,Right,Normal,FALSE,1,FALSE
+Duckette Day 1,1,0,Day,Main Duck,2,"QUACK! I've been staring for too long! Act cool, act cool.",TRUE,Left,Italics,FALSE,1,FALSE
+Duckette Day 1,1,0,Day,Main Duck,2,I lo-,TRUE,Left,Normal,FALSE,1,FALSE
+Duckette Day 1,1,0,Day,Main Duck,2,*Cough* I lost my pen. Can I borrow one?,TRUE,Left,Normal,FALSE,1,FALSE
+Duckette Day 1,1,0,Day,Duckette,4,There should be a few extra pens at the receptionist's desk.,TRUE,Right,Normal,FALSE,1,FALSE
+Duckette Day 1,1,0,Day,Main Duck,2,Worth a shot.,TRUE,Left,Italics,FALSE,1,FALSE
+Donald Day 1,1,0,Day,Donald,5,Don't get caught slacking.,TRUE,Right,Normal,FALSE,1,FALSE
+Donald Day 1,1,0,Day,Main Duck,2,"Wow, what a pond-erful welcome.",TRUE,Left,Italics,FALSE,1,FALSE
+NPD 3 Day 2,2,0,Day,Main Duck,2,"Hey! You're working on the producktion report with Duckette today, right?",TRUE,Left,Normal,FALSE,2,FALSE
+NPD 3 Day 2,2,0,Day,Duckelle,8,"Yes, why?",TRUE,Right,Normal,FALSE,2,FALSE
+NPD 3 Day 2,2,0,Day,Main Duck,2,Do you want to... trade tasks with me?,TRUE,Left,Normal,FALSE,2,FALSE
+NPD 3 Day 2,2,0,Day,Duckelle,8,No.,TRUE,Right,Normal,FALSE,2,FALSE
+NPD 1 Day 2,2,0,Day,Main Duck,2,"Hey, I have a quacktion for you. You said you've been here for about a week, right?",TRUE,Left,Normal,FALSE,2,FALSE
+NPD 1 Day 2,2,0,Day,Quackie,10,"Quack, you got it! What's up?",TRUE,Right,Normal,FALSE,2,FALSE
+NPD 1 Day 2,2,0,Day,Main Duck,2,"Well, I've been wondering if you know anything about Duckette, and how long she's been working here?",TRUE,Left,Normal,FALSE,2,FALSE
+NPD 1 Day 2,2,0,Day,Quackie,10,"Oh, she's a recent hire too! She came in two days after me.",TRUE,Right,Normal,FALSE,2,FALSE
+NPD 1 Day 2,2,0,Day,Main Duck,2,"Wow... Duckette is new, yet she already fits the bill as a Nestla employee!",TRUE,Left,Italics,FALSE,2,FALSE
+NPD 1 Day 2,2,0,Day,Main Duck,2,I gotta work hard to get to her level too.,TRUE,Left,Italics,FALSE,2,FALSE
+NPD 2 Day 2,2,0,Day,Billbert,9,"Hey, are you grabbing a drink from the vending machine?",TRUE,Right,Normal,FALSE,2,FALSE
+NPD 2 Day 2,2,0,Day,Main Duck,2,"Yes, why?",TRUE,Left,Normal,FALSE,2,FALSE
+NPD 2 Day 2,2,0,Day,Billbert,9,Can you buy me an Energy Gooster too?,TRUE,Right,Normal,FALSE,2,FALSE
+NPD 2 Day 2,2,0,Day,Main Duck,2,What can are you even on?,TRUE,Left,Normal,FALSE,2,FALSE
+NPD 2 Day 2,2,0,Day,Billbert,9,7. Which isn't enough. I haven't felt the caffeine waddle in yet.,TRUE,Right,Normal,FALSE,2,FALSE
+NPD 2 Day 2,2,0,Day,Main Duck,2,...,TRUE,Left,Normal,FALSE,2,FALSE
+NPD 2 Day 2,2,0,Day,Main Duck,2,I think that's plenty enough.,TRUE,Left,Normal,FALSE,2,FALSE
+Duckette Day 2,2,0,Day,Main Duck,2,"Hey Duckette! If you ever need anything, just give me a quack!",TRUE,Left,Normal,FALSE,2,FALSE
+Duckette Day 2,2,0,Day,Duckette,4,...Thanks intern.,TRUE,Right,Normal,FALSE,2,FALSE
+Duckette Day 2,2,0,Day,Main Duck,2,Oh Duckette... when will you even remember my name?,TRUE,Left,Italics,FALSE,2,FALSE
+Duckette Day 2,2,0,Day,Main Duck,2,I need to find a way to win her heart now that I have the chance.,TRUE,Left,Italics,FALSE,2,FALSE
+Donald Day 2,2,0,Day,Donald,5,Is Duckette still there?,TRUE,Right,Normal,FALSE,2,FALSE
+Donald Day 2,2,0,Day,Main Duck,2,"I swear, if Donald even lays a wing on Duckette's feathers...",TRUE,Left,Italics,FALSE,2,FALSE
+Eggwin Day 2,2,0,Day,Eggwin,3,"Working hard today, Main Duck?",TRUE,Right,Normal,FALSE,2,FALSE
+Eggwin Day 2,2,0,Day,Main Duck,2,"Quack, I am!",TRUE,Left,Normal,FALSE,2,FALSE
+Eggwin Day 2,2,0,Day,Main Duck,2,Working hard to win Duckette over.,TRUE,Left,Italics,FALSE,2,FALSE
+NPD 1 Day 3,3,0,Day,Main Duck,2,Can you beak-lieve that Elon Duck is in the office today?,TRUE,Left,Normal,FALSE,3,FALSE
+NPD 1 Day 3,3,0,Day,Quackie,10,I know right? It's rare for Elon Duck to fly in.,TRUE,Right,Normal,FALSE,3,FALSE
+NPD 1 Day 3,3,0,Day,Quackie,10,Last time he came was last week to greet the newcomers and to tell us about hiring new recruits like you.,TRUE,Right,Normal,FALSE,3,FALSE
+NPD 1 Day 3,3,0,Day,Quackie,10,I hope I get a chance to talk to him today! He's such an inspiration for all of duck-kind.,TRUE,Right,Normal,FALSE,3,FALSE
+NPD 2 Day 3,3,0,Day,Main Duck,2,"Hey, are you ok?",TRUE,Left,Normal,FALSE,3,FALSE
+NPD 2 Day 3,3,0,Day,Billbert,9,...,TRUE,Right,Normal,FALSE,3,FALSE
+NPD 2 Day 3,3,0,Day,Main Duck,2,"Huh, did they pass out or something?",TRUE,Left,Normal,FALSE,3,FALSE
+NPD 2 Day 3,3,0,Day,Main Duck,2,There are several empty Energy Gooster cans next to them. They probably just collapsed from all the caffeine.,TRUE,Left,Normal,FALSE,3,FALSE
+NPD 2 Day 3,3,0,Day,Main Duck,2,I'll leave them be for now. They just gotta sleep it off.,TRUE,Left,Normal,FALSE,3,FALSE
+NPD 3 Day 3,3,0,Day,Main Duck,2,Have you heard that-,TRUE,Left,Normal,FALSE,3,FALSE
+NPD 3 Day 3,3,0,Day,Duckelle,8,"Yes, I know. Elon Duck is here. His name is quacking out of everyone's beak today.",TRUE,Right,Normal,FALSE,3,FALSE
+NPD 3 Day 3,3,0,Day,Main Duck,2,Are you not excited? It's <i>Elon Duck!</i>,TRUE,Left,Normal,FALSE,3,FALSE
+NPD 3 Day 3,3,0,Day,Duckelle,8,"Eh, I've already met him when he introduced me and a few others to Nestla. He's more of a celebrity than a CEO, popping up every now and then.",TRUE,Right,Normal,FALSE,3,FALSE
+NPD 3 Day 3,3,0,Day,Duckelle,8,I wonder what is keeping him from coming to the office?,TRUE,Right,Normal,FALSE,3,FALSE
+Duckette Day 3,3,0,Day,Duckette,4,"Hm, so Elon Duck really is here. That means...",TRUE,Right,Normal,FALSE,3,FALSE
+Duckette Day 3,3,0,Day,Duckette,4,"Yes, I should send him an email. This is a great opportunity.",TRUE,Right,Normal,FALSE,3,FALSE
+Duckette Day 3,3,0,Day,Main Duck,2,Opportunity?,TRUE,Left,Normal,FALSE,3,FALSE
+Duckette Day 3,3,0,Day,Duckette,4,*Sigh* Have you been peeping in this whole time?,TRUE,Right,Normal,FALSE,3,FALSE
+Duckette Day 3,3,0,Day,Main Duck,2,"Heh, sorry, I was planning to talk to you, but you seemed busy.",TRUE,Left,Normal,FALSE,3,FALSE
+Duckette Day 3,3,0,Day,Duckette,4,I am busy. I have a few more emails I need to send out before the end of the day.,TRUE,Right,Normal,FALSE,3,FALSE
+Duckette Day 3,3,0,Day,Duckette,4,"Make sure to finish your work in time too! After all, the CEO himself is here.",TRUE,Right,Normal,FALSE,3,FALSE
+Duckette Day 3,3,0,Day,Main Duck,2,"Quack, you're right! I should check to make sure I've finished everything for today.",TRUE,Left,Normal,FALSE,3,FALSE
+Donald Day 3,3,0,Day,Donald,5,"I'm on to you, Elon Duck.",TRUE,Right,Normal,FALSE,3,FALSE
+Donald Day 3,3,0,Day,Main Duck,2,"Oh quack, not another one of Donald's conspiracies...",TRUE,Left,Italics,FALSE,3,FALSE
+Donald Day 3,3,0,Day,Main Duck,2,"You know, I can't help but ponder on how Donald hasn't been fired yet.",TRUE,Left,Italics,FALSE,3,FALSE
+Eggwin Day 3,3,0,Day,Eggwin,3,Remember to leave no task unfinished Main Duck. We gotta do our best to impress Elon Duck!,TRUE,Right,Normal,FALSE,3,FALSE
+Eggwin Day 3,3,0,Day,Main Duck,2,Quack! You got it!,TRUE,Left,Normal,FALSE,3,FALSE
+Eggwin Day 3,3,0,Day,Main Duck,2,"One of my dreams, besides winning Duckette's heart, is to one day work for Elon Duck, and I'm finally living it!",TRUE,Left,Italics,FALSE,3,FALSE
+Eggwin Day 3,3,0,Day,Main Duck,2,So I must show him how much of a producktive duck I am!,TRUE,Left,Italics,FALSE,3,FALSE
+Elon Duck Day 3,3,0,Day,Elon Duck,1,"Ah, you are-?",TRUE,Right,Normal,FALSE,3,FALSE
+Elon Duck Day 3,3,0,Day,Main Duck,2,"I'm Main Duck, sir! It's an honor to meet you!",TRUE,Left,Normal,FALSE,3,FALSE
+Elon Duck Day 3,3,0,Day,Elon Duck,1,"Ah, yes, Main Duck! You're one of our new employees, yes?",TRUE,Right,Normal,FALSE,3,FALSE
+Elon Duck Day 3,3,0,Day,Main Duck,2,"Yes, sir!",TRUE,Left,Normal,FALSE,3,FALSE
+Elon Duck Day 3,3,0,Day,Elon Duck,1,Then I look forward to seeing what you have to offer for Nestla's future.,TRUE,Right,Normal,FALSE,3,FALSE
+NPD 1 Day 4,4,0,Day,Main Duck,2,"Hey, have you seen Duckette?",TRUE,Left,Normal,FALSE,4,FALSE
+NPD 1 Day 4,4,0,Day,Quackie,10,"No, I haven't. But I don't think anyone will.",TRUE,Right,Normal,FALSE,4,FALSE
+NPD 1 Day 4,4,0,Day,Main Duck,2,Why is that?,TRUE,Left,Normal,FALSE,4,FALSE
+NPD 1 Day 4,4,0,Day,Quackie,10,"Because at the end of last week, I couldn't find my friend later. When I asked around, I learned that they quit.",TRUE,Right,Normal,FALSE,4,FALSE
+NPD 1 Day 4,4,0,Day,Quackie,10,Maybe your friend quit too and didn't want to tell anyone.,TRUE,Right,Normal,FALSE,4,FALSE
+NPD 1 Day 4,4,0,Day,Quackie,10,I only wish my friend told me.,TRUE,Right,Normal,FALSE,4,FALSE
+NPD 3 Day 4,4,0,Day,Main Duck,2,"Hey, have you-",TRUE,Left,Normal,FALSE,4,FALSE
+NPD 3 Day 4,4,0,Day,Duckelle,8,"No, return to work.",TRUE,Right,Normal,FALSE,4,FALSE
+NPD 3 Day 4,4,0,Day,Main Duck,2,I didn't even finish my quacktion.,TRUE,Left,Normal,FALSE,4,FALSE
+NPD 3 Day 4,4,0,Day,Duckelle,8,"Look, it's better to just continue working. Once you're here long enough, you'll get used to ducks leaving left and right.",TRUE,Right,Normal,FALSE,4,FALSE
+NPD 3 Day 4,4,0,Day,Duckelle,8,Maybe Nestla is simply not for everyone.,TRUE,Right,Normal,FALSE,4,FALSE
+Donald Day 4,4,0,Day,Donald,5,There's gotta be clues lying around here somewhere.,TRUE,Right,Normal,FALSE,4,FALSE
+Donald Day 4,4,0,Day,Donald,5,Let me know if you find anything!,TRUE,Right,Normal,FALSE,4,FALSE
+Eggwin Day 4,4,0,Day,Eggwin,3,"Something on your mind, Main Duck?",TRUE,Right,Normal,FALSE,4,FALSE
+Eggwin Day 4,4,0,Day,Main Duck,2,Should I ask or...,TRUE,Left,Italics,FALSE,4,FALSE
+Eggwin Day 4,4,0,Day,Main Duck,2,"No, it's probably best to not ask now.",TRUE,Left,Italics,FALSE,4,FALSE
+Eggwin Day 4,4,0,Day,Main Duck,2,Nope! I'm just working hard as usual!,TRUE,Left,Normal,FALSE,4,FALSE
+Eggwin Day 4,4,0,Day,Eggwin,3,Good to hear! Give a quack if you need anything from me.,TRUE,Right,Normal,FALSE,4,FALSE
+NPD 4 Day 5,5,0,Day,Main Duck,2,"Huh, I've never seen this duck before. I wonder what happened to the other one?",TRUE,Left,Italics,FALSE,5,FALSE
+NPD 4 Day 5,5,0,Day,Main Duck,2,Hey! Are you new?,TRUE,Left,Normal,FALSE,5,FALSE
+NPD 4 Day 5,5,0,Day,Quillson,11,Quack! I can't believe I'm actually inside Nestla's offices. It's been my quacking dream ever since I've learned to waddle.,TRUE,Right,Normal,FALSE,5,FALSE
+NPD 4 Day 5,5,0,Day,Quillson,11,"By the way, my first task has something to do with CADs. Do you know where that is?",TRUE,Right,Normal,FALSE,5,FALSE
+NPD 4 Day 5,5,0,Day,Main Duck,2,"Oh, you should have a desk with your name tag on it. You can use the computer to complete your CAD assignment.",TRUE,Left,Normal,FALSE,5,FALSE
+NPD 4 Day 5,5,0,Day,Quillson,11,"Ok, thanks for the help!",TRUE,Right,Normal,FALSE,5,FALSE
+NPD 4 Day 5,5,0,Day,Main Duck,2,No problem!,TRUE,Left,Normal,FALSE,5,FALSE
+NPD 4 Day 5,5,0,Day,Main Duck,2,Strange. Did the other duck simply leave or...,TRUE,Left,Italics,FALSE,5,FALSE
+NPD 4 Day 5,5,0,Day,Main Duck,2,...Have they become the next missing duck in this case?,TRUE,Left,Italics,FALSE,5,FALSE
+NPD 3 Day 5,5,0,Day,Duckelle,8,"Hey, this time I have a quacktion for you.",TRUE,Right,Normal,FALSE,5,FALSE
+NPD 3 Day 5,5,0,Day,Main Duck,2,For me? What is it?,TRUE,Left,Normal,FALSE,5,FALSE
+NPD 3 Day 5,5,0,Day,Duckelle,8,What do you think if I quit?,TRUE,Right,Normal,FALSE,5,FALSE
+NPD 3 Day 5,5,0,Day,Main Duck,2,Quit? As in quit your job?,TRUE,Left,Normal,FALSE,5,FALSE
+NPD 3 Day 5,5,0,Day,Duckelle,8,"Don't be a quackhead, of course that's what I meant.",TRUE,Right,Normal,FALSE,5,FALSE
+NPD 3 Day 5,5,0,Day,Duckelle,8,But I don't know. Everyone's been acting strange lately. Even you.,TRUE,Right,Normal,FALSE,5,FALSE
+NPD 3 Day 5,5,0,Day,Main Duck,2,Me?,TRUE,Left,Normal,FALSE,5,FALSE
+NPD 3 Day 5,5,0,Day,Duckelle,8,"You're rarely at your desk anymore, and you have a weird obsession with that Duckette girl.",TRUE,Right,Normal,FALSE,5,FALSE
+NPD 3 Day 5,5,0,Day,Main Duck,2,"It's not weird, it's true love!",TRUE,Left,Normal,FALSE,5,FALSE
+NPD 3 Day 5,5,0,Day,Duckelle,8,"Yeah, right. I guess that's my answer.",TRUE,Right,Normal,FALSE,5,FALSE
+NPD 3 Day 5,5,0,Day,Duckelle,8,*Sigh* Maybe it's not too late to try my wing at making videogames than quacking cars. ,TRUE,Right,Normal,FALSE,5,FALSE
+Donald Day 5 - Before Killing Room,5,0,Day,Donald,5,I can feel it! We're so close to discovering the truth!,TRUE,Right,Normal,FALSE,0,FALSE
+Donald Day 5 - Before Killing Room,5,0,Day,Donald,5,We just need that one piece of evidence that can stop all the retorts from flying out of each ducks' beak.,TRUE,Right,Normal,FALSE,0,FALSE
+Eggwin Day 5 - Before Killing Room and Eggwin is a Snitch,5,0,Day,Eggwin,3,"Remember our conversation, Main Duck.",TRUE,Right,Normal,FALSE,0,FALSE
+Eggwin Day 5 - Before Killing Room and Eggwin is a Snitch,5,0,Day,Eggwin,3,"We have a responsibility here at Nestla, both to Elon Duck and to all of birdkind.",TRUE,Right,Normal,FALSE,0,FALSE
+Eggwin Day 5 - Before Killing Room and Eggwin is a Snitch,5,0,Day,Eggwin,3,I expect to see more great work from you today.,TRUE,Right,Normal,FALSE,0,FALSE
+NPD 4 Day 6 - Before Duck Union,6,0,Day,Quillson,11,"Huh, it's even emptier today.",TRUE,Right,Normal,FALSE,0,FALSE
+NPD 4 Day 6 - Before Duck Union,6,0,Day,Quillson,11,Where did everyone go?,TRUE,Right,Normal,FALSE,0,FALSE
+NPD 5 Day 6 - Before Duck Union,6,0,Day,Freggerico,12,"I wonder what's going on. Every duck has flocked over here, even from the manufacturing room!",TRUE,Right,Normal,FALSE,0,FALSE
+NPD 6 Day 6 - Before Duck Union,6,0,Day,Mal,13,Is Elon Duck coming? Is that why everyone's here?,TRUE,Right,Normal,FALSE,0,FALSE
+Donald Day 6 - Before Duck Union,6,0,Day,Donald,5,What are you waiting for? ,TRUE,Right,Normal,FALSE,0,FALSE
+Donald Day 6 - Before Duck Union,6,0,Day,Donald,5,We have all the evidence we need. All that's left is convincing them with a big speech.,TRUE,Right,Normal,FALSE,0,FALSE
+NPD 4 Day 6 - After Duck Union,6,0,Day,Quillson,11,My feathers won't stop sticking up!,TRUE,Right,Normal,FALSE,0,FALSE
+NPD 4 Day 6 - After Duck Union,6,0,Day,Quillson,11,And to think I've always dreamed of working here... now I wish I never even applied for this job.,TRUE,Right,Normal,FALSE,0,FALSE
+NPD 4 Day 6 - After Duck Union,6,0,Day,Main Duck,2,Same...,TRUE,Left,Italics,FALSE,0,FALSE
+NPD 5 Day 6 - After Duck Union,6,0,Day,Freggerico,12,Sorry. I... I need a second.,TRUE,Right,Normal,FALSE,0,FALSE
+NPD 5 Day 6 - After Duck Union,6,0,Day,Freggerico,12,M-My twin never came home yesterday. Does that mean they're already-,TRUE,Right,Normal,TRUE,0,FALSE
+NPD 5 Day 6 - After Duck Union_Option1,6,0,Day,None,0,I'm sure they're ok.,TRUE,Right,Normal,FALSE,1,FALSE
+NPD 5 Day 6 - After Duck Union_Response1,6,0,Day,Main Duck,2,Maybe they're somewhere else?,TRUE,Left,Normal,FALSE,1,FALSE
+NPD 5 Day 6 - After Duck Union_Response1,6,0,Day,Freggerico,12,Wherever they are... I hope they're safe.,TRUE,Right,Normal,FALSE,1,FALSE
+NPD 5 Day 6 - After Duck Union_Option2,6,0,Day,None,0,I'm sorry.,TRUE,Right,Normal,FALSE,2,FALSE
+NPD 5 Day 6 - After Duck Union_Response2,6,0,Day,Freggerico,12,...Thank you.,TRUE,Right,Normal,FALSE,2,FALSE
+NPD 5 Day 6 - After Duck Union_Response2,6,0,Day,Freggerico,12,"At least now, I can do something for them by joining the Duck Union.",TRUE,Left,Normal,FALSE,2,FALSE
+NPD 5 Day 6 - After Duck Union_Option3,6,0,Day,None,0,Tell them about saving the ducks.,TRUE,Right,Normal,FALSE,3,FALSE
+NPD 5 Day 6 - After Duck Union_Response3,6,0,Day,Main Duck,2,I managed to save a few ducks when I was in the slaughterhouse.,TRUE,Right,Normal,FALSE,3,FALSE
+NPD 5 Day 6 - After Duck Union_Response3,6,0,Day,Main Duck,2,But many of the others were already dead.,TRUE,Right,Normal,FALSE,3,FALSE
+NPD 5 Day 6 - After Duck Union_Response3,6,0,Day,Main Duck,2,I think one of them looked like you. I'm not sure if they were your twin but...,TRUE,Right,Normal,FALSE,3,FALSE
+NPD 5 Day 6 - After Duck Union_Response3,6,0,Day,Main Duck,2,They were already gone.,TRUE,Right,Normal,FALSE,3,FALSE
+NPD 5 Day 6 - After Duck Union_Response3,6,0,Day,Freggerico,12,...,TRUE,Right,Normal,FALSE,3,FALSE
+NPD 5 Day 6 - After Duck Union_Response3,6,0,Day,Freggerico,12,Thanks for telling me the truth.,TRUE,Right,Normal,FALSE,3,FALSE
+NPD 5 Day 6 - After Duck Union_Response3,6,0,Day,Freggerico,12,Elon Duck... I'll make sure that fowl duck pays for what he's done to my family.,TRUE,Right,Normal,FALSE,3,FALSE
+NPD 5 Day 6 - After Duck Union_Option4,6,0,Day,None,0,Stay quiet.,TRUE,Right,Normal,FALSE,4,FALSE
+NPD 5 Day 6 - After Duck Union_Response4,6,0,Day,Freggerico,12,"They're probably dead, right?",TRUE,Right,Normal,FALSE,4,FALSE
+NPD 5 Day 6 - After Duck Union_Response4,6,0,Day,Freggerico,12,The evidence is all there. There's no other eggs-planation.,TRUE,Right,Normal,FALSE,4,FALSE
+NPD 5 Day 6 - After Duck Union_Response4,6,0,Day,Freggerico,12,*Sob*,TRUE,Right,Normal,FALSE,4,FALSE
+NPD 6 Day 6 - After Duck Union,6,0,Day,Mal,13,Elon Duck... what a fowl villain!,TRUE,Right,Normal,FALSE,0,FALSE
+NPD 6 Day 6 - After Duck Union,6,0,Day,Mal,13,He's no longer a fellow duck in my eyes.,TRUE,Right,Normal,FALSE,0,FALSE
+NPD 6 Day 6 - After Duck Union,6,0,Day,Mal,13,"Just you wait, I'm going to post the Duck Union and our victory against Elon Duck on SnapQuack. Then everyone will know Elon Duck's true feathers.",TRUE,Right,Normal,FALSE,0,FALSE
+NPD 7 Day 7 - Before Finding Elon Duck,7,0,Day,Eggna ,14,To think I'm part of the Duck Union and about to witness the downfall of Elon Duck.,TRUE,Right,Normal,FALSE,0,FALSE
+NPD 7 Day 7 - Before Finding Elon Duck,7,0,Day,Eggna ,14,I'm on the right side of history!,TRUE,Right,Normal,FALSE,0,FALSE
+NPD 8 Day 7 - Before Finding Elon Duck,7,0,Day,Quacklyn ,15,His office is unlocked! He should be in there!,TRUE,Right,Normal,FALSE,0,FALSE
+Donald Day 7 - Before Finding Elon Duck,7,0,Day,Donald,5,There's no time to waste. Let's find that quacking Elon Duck and bring him and the Duckberry Farm down.,TRUE,Right,Normal,FALSE,0,FALSE
+Duckette Day 7 - After Heartbroken,7,0,Day,Duckette,4,"Hehe, I'm sure Manfred will hear about what happened to Elon Duck and the Duckberry Farm.",TRUE,Right,Normal,FALSE,0,FALSE
+Duckette Day 7 - After Heartbroken,7,0,Day,Duckette,4,Which means he'll come to visit! I better greet him outside.,TRUE,Right,Normal,FALSE,0,FALSE
+Duckette Day 7 - After Heartbroken,7,0,Day,Main Duck,2,...Quacking Manfred. Just you wait.,TRUE,Left,Italics,FALSE,0,FALSE
+Donald Day 7 - Before Kaboom 2,7,0,Day,Donald,5,You look like you have a plan. Lead the way.,TRUE,Right,Normal,FALSE,2,FALSE
