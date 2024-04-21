@@ -177,6 +177,9 @@ public class UIManager : MonoBehaviour
                 case string x when x.Contains("Door"):
                     interactableName = "Door";
                     break;
+                case string x when x.Contains("BathroomStalls"):
+                    interactableName = "Empty Stall";
+                    break;
                 case string x when x.Contains("InteractCad"):
                     interactableName = "Computer";
                     break;
@@ -189,7 +192,7 @@ public class UIManager : MonoBehaviour
                 case string x when x.Contains("EmailDecrypt"):
                     interactableName = "Elon Duck's Computer";
                     break;
-                default: interactableName = PlayerMove.GetInteractable().name;
+                default: interactableName = "Interact";
                     break;
             }
             InteractionPopup.SetActive(true);
