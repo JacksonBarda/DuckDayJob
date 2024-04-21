@@ -73,15 +73,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cb0185cca4a2a52449e452ef04fdb04a, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2557612985409383229
@@ -100,7 +100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2811709577699129521
 Transform:
   m_ObjectHideFlags: 0
@@ -110,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 2557612985409383229}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.33, y: 0.485, z: 0}
+  m_LocalPosition: {x: -0.063, y: 0.485, z: 0}
   m_LocalScale: {x: 0.060539823, y: 0.060539823, z: 0.060539823}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -156,16 +156,16 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: ca03bde2a27f2d04982419228cfdc4ad, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 46965d51f0a6eb640b97c56158d1f077, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10, y: 10}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8161731065144322017
@@ -245,19 +245,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 667ce02360b613a4c93e8500d9d9ae32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activatePostPuzzle: 0
   repeatable: 0
-  forcePlay: 0
+  counted: 0
+  puzzleToActivate: {fileID: 0}
+  fade: {fileID: 0}
+  player: {fileID: 0}
   taskName: 
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
-  activatePostPuzzle: 0
-  puzzleToActivate: {fileID: 0}
-  fade: {fileID: 0}
-  player: {fileID: 0}
-  mainUI: {fileID: 0}
-  counted: 0
   puzzleUI: {fileID: 0}
+  mainUI: {fileID: 0}
+  forcePlay: 0
   MainDisplay: {fileID: 0}
   DialogueDisplay: {fileID: 0}
   Tasklist: {fileID: 0}
@@ -267,11 +267,10 @@ MonoBehaviour:
   Dialogue: {fileID: 0}
   DialogueManager: {fileID: 0}
   Options: {fileID: 0}
-  gameScene: 
+  scene: Introduction
   increasePriority: 0
   optionButtonPrefab: {fileID: 3741148585713256696, guid: 8d6318746227bea4fa19349685a9f366, type: 3}
   SLDR_Progress: {fileID: 0}
-  DialogueIndicator: {fileID: 2557612985409383229}
   DialogueList: []
   talkAgainList: []
   index: 0

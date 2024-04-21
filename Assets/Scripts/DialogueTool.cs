@@ -32,9 +32,9 @@ public class DialogueTool : Interactable
     [SerializeField]
     private GameObject Options;
     [SerializeField]
-    private string gameScene;
-    [SerializeField]
-    private bool increasePriority;
+    private string scene;
+   // [SerializeField]
+   // private bool increasePriority;
     [SerializeField]
     private GameObject optionButtonPrefab;
     [SerializeField]
@@ -156,11 +156,13 @@ public class DialogueTool : Interactable
         // below is placeholder if there is no code. If there is code, can delete
         ResetTool();
         roundNum = 1;
+        /*
         if (increasePriority)
         {
             DialogueManager.GetComponent<ReadDialogueData>().priority++;
             DialogueManager.GetComponent<ReadDialogueData>().setDialogueTools();
         }
+        */
 
         if (inOptionDialog)
         {

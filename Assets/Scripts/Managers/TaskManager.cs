@@ -24,6 +24,8 @@ public class TaskManager : MonoBehaviour
     [SerializeField]
     public DayTask Day7;
 
+    [SerializeField]
+    private List<GameObject> duckSpritesForDays = new List<GameObject>();
 
     public GameObject deathScreen;
     private int health;
@@ -78,6 +80,7 @@ public class TaskManager : MonoBehaviour
         ptCount = 0;
         day = 1;
 
+
     }
 
     private void TaskFailed(Interactable _task)
@@ -104,7 +107,7 @@ public class TaskManager : MonoBehaviour
 
     private void TaskCompleted(Interactable _task)
     {
-        
+        bool countCheck = true;
 
 
         foreach (Interactable task in tasksByDay[day - 1].GetInteractables(currentPt))
@@ -122,6 +125,22 @@ public class TaskManager : MonoBehaviour
                 task.gameObject.SetActive(false);
             }
             currentPt++;
+            while(countCheck)
+            {
+                if(tasksByDay[day - 1].GetInteractables(currentPt).Count == 0)
+                {
+                    currentPt++;
+                    if((int)currentPt >= 4)
+                    {
+                        ChangeDay();
+                        currentPt = PartIdentifier.Pt1;
+                    }
+                }
+                else
+                {
+                    countCheck = false;
+                }
+            }
             foreach (Interactable task in tasksByDay[day - 1].GetInteractables(currentPt))
             {
                 if (task.isVisibleOnStart)
@@ -150,7 +169,7 @@ public class TaskManager : MonoBehaviour
         {
             _task.gameObject.SetActive(false);
         }
-        if (tasksByDay[day - 1].GetInteractables(currentPt)[count].forcePlay)
+        if (tasksByDay[day - 1].GetInteractables(currentPt)[count] != null && tasksByDay[day - 1].GetInteractables(currentPt)[count].forcePlay)
         {
             tasksByDay[day - 1].GetInteractables(currentPt)[count].Interact();
         }
@@ -159,8 +178,15 @@ public class TaskManager : MonoBehaviour
 
     private void ChangeDay()
     {
-
+        if (duckSpritesForDays.Count >= day)
+        {
+            duckSpritesForDays[day-1].gameObject.SetActive(false);
+        }
         day++;
+        if (duckSpritesForDays.Count > day)
+        {
+            duckSpritesForDays[day - 1].gameObject.SetActive(true);
+        }
         currentPt = 0;
             
         SaveGame();
