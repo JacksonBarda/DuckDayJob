@@ -18,12 +18,19 @@ public class UIManager : MonoBehaviour
     private GameObject MainUI;
     [SerializeField]
     private GameObject DialogueUI;
+    [SerializeField]
+    private PlayerMove PlayerMove;
+    [SerializeField]
+    private GameObject InteractionPopup;
+    [SerializeField]
+    private TMP_Text interactableText;
 
     public int dayNumber = 1;
     public DayEnum dayOrNight = DayEnum.Day;
     private int hour = 9;
     private string meridiem = "a.m.";
     private Locations startingLocation = Locations.LOBBY;
+    private string interactableName;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +43,8 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        SetInteractPopupText();
+
     }
 
     public void UpdateLocation(string newLocation)
@@ -137,4 +145,62 @@ public class UIManager : MonoBehaviour
         UpdateLocation(room);
     }
 
+    private void SetInteractPopupText()
+    {
+        if (PlayerMove.GetInteractable() != null)
+        {
+            //Debug.Log("The Interactable: " + interactableName);
+
+            switch (PlayerMove.GetInteractable().name)
+            {
+                case string x when x.Contains("Duckette"):
+                    interactableName = "Duckette";
+                    break;
+                case string x when x.Contains("Eggwin"):
+                    interactableName = "Eggwin";
+                    break;
+                case string x when x.Contains("Donald"):
+                    interactableName = "Donald";
+                    break;
+                case string x when x.Contains("Quackson"):
+                    interactableName = "Quackson";
+                    break;
+                case string x when x.Contains("ElonDuck"):
+                    interactableName = "Elon Duck";
+                    break;
+                case string x when x.Contains("Janitor"):
+                    interactableName = "Janitor";
+                    break;
+                case string x when x.Contains("NPC"):
+                    interactableName = "NPC";
+                    break;
+                case string x when x.Contains("Door"):
+                    interactableName = "Door";
+                    break;
+                case string x when x.Contains("BathroomStalls"):
+                    interactableName = "Empty Stall";
+                    break;
+                case string x when x.Contains("InteractCad"):
+                    interactableName = "Computer";
+                    break;
+                case string x when x.Contains("InteractVendingMachine"):
+                    interactableName = "Vending Machine";
+                    break;
+                case string x when x.Contains("DeskDragger"):
+                    interactableName = "Duckette's Computer";
+                    break;
+                case string x when x.Contains("EmailDecrypt"):
+                    interactableName = "Elon Duck's Computer";
+                    break;
+                default: interactableName = "Interact";
+                    break;
+            }
+            InteractionPopup.SetActive(true);
+            interactableText.text = interactableName;
+        }
+        else
+        {
+            InteractionPopup.SetActive(false);
+        }
+    }
 }

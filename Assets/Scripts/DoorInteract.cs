@@ -21,20 +21,32 @@ public class DoorInteract : Interactable
     private Locations endRoom;
     [SerializeField]
     private FollowPlayer followPlayer;
+    [SerializeField]
+    private bool isLocked;
+    [SerializeField]
+    private DialogueTool lockedDialogue;
 
     public override void Interact()
     {
-        fade.FadeImageOverTime(0.7f, this);
-
+        if (isLocked)
+        {
+            lockedDialogue.Interact();
+        }
+        else
+        {
+            fade.FadeImageOverTime(0.7f, this);
+        }
     }
     public override void Action()
     {
-        playerMove.Maze(false);
-        rigid.useGravity = true;
-        Player.transform.position = endLocation.position;
-        manager.setLocation(endRoom);
-        followPlayer.SetBumps(endRoom);
-
+        if (!isLocked)
+        {
+            playerMove.Maze(false);
+            rigid.useGravity = true;
+            Player.transform.position = endLocation.position;
+            manager.setLocation(endRoom);
+            followPlayer.SetBumps(endRoom);
+        }
     }
     public override void Complete()
     {

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -84,19 +85,25 @@ public class PlayerMove : MonoBehaviour
         moveValUpHolder = value.Get<float>();
         if (interactable != null && !mazeMode && !puzzleMode)
         {
-            Interactable holder;
-            holder = interactable[0];
-            interactable[0].Interact();
-            moveValDown = 0;
-            moveValRight = 0;
-            moveValLeft = 0;
-            moveValUp = 0;
-            rigid.velocity = new Vector3(moveValRight - moveValLeft, moveValUp - moveValDown, 0f) * moveSpeed;
-            animator.SetBool("isMoving", false);
+            //Interactable holder;
+            //holder = interactable[0];
+            try
+            {
+                Debug.Log("interacted: " + interactable[0]);
+                interactable[0].Interact();
+                moveValDown = 0;
+                moveValRight = 0;
+                moveValLeft = 0;
+                moveValUp = 0;
+                rigid.velocity = new Vector3(moveValRight - moveValLeft, moveValUp - moveValDown, 0f) * moveSpeed;
+                animator.SetBool("isMoving", false);
 
-            interactable.Clear();
-
-            Debug.Log("interacted");
+                interactable.Clear();
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                Debug.LogWarning("No interactable found");
+            } 
         }
         if (mazeMode)
         {
@@ -118,12 +125,17 @@ public class PlayerMove : MonoBehaviour
         if(interactable != null)
         {
            foreach(Interactable task in interactable)
-            {
+           {
                 if (!task.gameObject.activeSelf)
                 {
                     interactable.Remove(task);
                 }
+                //Debug.Log("Active task: " + task + ". list length: " + interactable.Count);
+                //Debug.Log("Interactable[0]: " + interactable[0]);
             }
+
+
+            
         }
  
         grounded = Physics.Raycast(transform.position, -Vector3.up, 0.75f);
@@ -224,4 +236,19 @@ public class PlayerMove : MonoBehaviour
     {
         transform.position = customLocation;
     }
+    public Interactable GetInteractable() 
+    {
+        if (interactable != null && interactable.Count > 0)
+        {
+            //Debug.Log("not null");
+            return interactable[0];
+        }
+        else
+        {
+            //Debug.Log("null");
+            return null;
+        }
+    }
+
+
 }
