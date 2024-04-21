@@ -41,6 +41,10 @@ public class DialogueTool : Interactable
     private Slider SLDR_Progress;
     [SerializeField]
     private Button nextButton;
+    [SerializeField]
+    private Image backgroundImage;
+    [SerializeField]
+    private Sprite customizedBackgroundImage;
 
     private string duckname;
 
@@ -85,6 +89,7 @@ public class DialogueTool : Interactable
 
         talkAgain = false;
         inOptionDialog = false;
+        backgroundImage.enabled = false;
     }
 
     // Update is called once per frame
@@ -495,6 +500,20 @@ public class DialogueTool : Interactable
 
     }
 
+    public void setBackground()
+    {
+        if (DialogueList[index].normalUI == false)
+        {
+            Debug.Log("Show Background");
+            backgroundImage.sprite = customizedBackgroundImage;
+            backgroundImage.enabled = true;
+        }
+        else
+        {
+            backgroundImage.enabled = false;
+        }
+    }
+
     public void setDialogueUI()
     {
         if (talkAgain)
@@ -510,6 +529,7 @@ public class DialogueTool : Interactable
                     setProfile();
                     setName();
                     setLine();
+                    setBackground();
                     if (quackscompleted == 0)
                     {
                         AudioManager.Instance.PlayDialogue(duckname);
@@ -543,6 +563,7 @@ public class DialogueTool : Interactable
                     setProfile();
                     setName();
                     setLine();
+                    setBackground();
                     if (quackscompleted == 0)
                     {
                         AudioManager.Instance.PlayDialogue(duckname);
