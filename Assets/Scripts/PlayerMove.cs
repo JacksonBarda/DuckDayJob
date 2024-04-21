@@ -118,12 +118,17 @@ public class PlayerMove : MonoBehaviour
         if(interactable != null)
         {
            foreach(Interactable task in interactable)
-            {
+           {
                 if (!task.gameObject.activeSelf)
                 {
                     interactable.Remove(task);
                 }
+                //Debug.Log("Active task: " + task + ". list length: " + interactable.Count);
+                //Debug.Log("Interactable[0]: " + interactable[0]);
             }
+
+
+            
         }
  
         grounded = Physics.Raycast(transform.position, -Vector3.up, 0.75f);
@@ -224,4 +229,19 @@ public class PlayerMove : MonoBehaviour
     {
         transform.position = customLocation;
     }
+    public Interactable GetInteractable() 
+    {
+        if (interactable != null && interactable.Count > 0)
+        {
+            Debug.Log("not null");
+            return interactable[0];
+        }
+        else
+        {
+            Debug.Log("null");
+            return null;
+        }
+    }
+
+
 }
