@@ -32,7 +32,7 @@ public class DialogueTool : Interactable
     [SerializeField]
     private GameObject Options;
     [SerializeField]
-    private string scene;
+    private string gameScene;
    // [SerializeField]
    // private bool increasePriority;
     [SerializeField]
@@ -41,6 +41,7 @@ public class DialogueTool : Interactable
     private Slider SLDR_Progress;
     //[SerializeField]
     //private GameObject nextButton;
+    private GameObject DialogueIndicator;
     [SerializeField]
     private Button nextButton;
     [SerializeField]
@@ -86,9 +87,10 @@ public class DialogueTool : Interactable
     {
         if(taskName == null) 
         {
-            taskName = gameScene;
+            //taskName = gameScene;
         }
-
+        if(name.Contains("MainDuck")) DialogueIndicator.SetActive(false);
+        else DialogueIndicator.SetActive(true);
         talkAgain = false;
         inOptionDialog = false;
         backgroundImage.enabled = false;
