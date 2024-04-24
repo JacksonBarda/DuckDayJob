@@ -148,8 +148,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   optionNumber: 0
   OptionResponseList: []
-  dialogueToolPrefab: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
   originalDialogueTool: {fileID: 0}
+  firstLine:
+    scene: 
+    day: 0
+    order_priority: 0
+    dayOrNight: 0
+    name: 
+    profileNumber: 0
+    dialogue: 
+    normalUI: 0
+    align: 0
+    fontStyle: 0
+    options: 0
+    optionNumber: 0
+    talkAgain: 0
 --- !u!1 &6596580377218667982
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,12 +255,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
+  m_fontSize: 8
   m_fontSizeBase: 12
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 8
+  m_fontSizeMax: 12
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -264,7 +277,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
-  m_enableExtraPadding: 0
+  m_enableExtraPadding: 1
   checkPaddingRequired: 0
   m_isRichText: 1
   m_parseCtrlCharacters: 1
@@ -278,7 +291,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 5, y: 5, z: 5, w: 5}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

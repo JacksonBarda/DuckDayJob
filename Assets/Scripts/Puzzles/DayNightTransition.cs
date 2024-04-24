@@ -84,8 +84,8 @@ public class DayNightTransition : Interactable
         mainUI.SetActive(false);
         moonOut.FadeImageOverTime(1.0f, this);
         sunOut.FadeImageOverTime(1.0f, this);
-        coverOut.FadeImageOverTime(1.0f, this);
-        backgroundOut.FadeImageOverTime(1.0f, this);
+        coverOut.FadeImageOverTime(0.2f, this);
+        backgroundOut.FadeImageOverTime(0.2f, this);
         counted = false;
     }
 
@@ -115,8 +115,8 @@ public class DayNightTransition : Interactable
     }
     public void OnContPressed()
     {
-        StartCoroutine(moonIn.FadeInCoroutine(1.0f, this));
-        StartCoroutine(sunIn.FadeInCoroutine(1.0f, this));
+        StartCoroutine(moonIn.FadeInCoroutine(0.2f, this));
+        StartCoroutine(sunIn.FadeInCoroutine(0.2f, this));
         StartCoroutine(coverIn.FadeInCoroutine(1.0f, this));
         StartCoroutine(backgroundIn.FadeInCoroutine(1.0f, this));
     }
