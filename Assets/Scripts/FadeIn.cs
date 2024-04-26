@@ -18,12 +18,12 @@ public class FadeIn : MonoBehaviour
         // Store the original alpha value of the image
         originalAlpha = image.color.a;
     }
-    public void FadeImageInOverTime(float fadeTime, Interactable targetObject)
+    public void FadeImageInOverTime(float fadeTime, Interactable targetObject, bool callComplete)
     {
         // Start the fade-out coroutine
-        StartCoroutine(FadeInCoroutine(fadeTime, targetObject));
+        StartCoroutine(FadeInCoroutine(fadeTime, targetObject, callComplete));
     }
-    public IEnumerator FadeInCoroutine(float fadeTime, Interactable task)
+    public IEnumerator FadeInCoroutine(float fadeTime, Interactable task, bool callComplete)
     {
         // Calculate the target alpha (original alpha)
         float targetAlpha = originalAlpha;
@@ -46,7 +46,7 @@ public class FadeIn : MonoBehaviour
         Color finalColor = image.color;
         finalColor.a = originalAlpha;
         image.color = finalColor;
-        if (!task.isCompleted)
+        if (!task.isCompleted && callComplete)
         {
             task.Complete();
         }

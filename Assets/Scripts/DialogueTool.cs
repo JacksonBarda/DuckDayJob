@@ -33,21 +33,25 @@ public class DialogueTool : Interactable
     private GameObject Options;
     [SerializeField]
     private string gameScene;
-   // [SerializeField]
-   // private bool increasePriority;
+    [SerializeField]
+    private bool retrieval;
+    // [SerializeField]
+    // private bool increasePriority;
     [SerializeField]
     private GameObject optionButtonPrefab;
     [SerializeField]
     private Slider SLDR_Progress;
-    //[SerializeField]
-    //private GameObject nextButton;
-    private GameObject DialogueIndicator;
     [SerializeField]
     private Button nextButton;
+    [SerializeField]
+    private GameObject DialogueIndicator;
+   // [SerializeField]
+   // private Button nextButton;
     [SerializeField]
     private Image backgroundImage;
     [SerializeField]
     private Sprite customizedBackgroundImage;
+
 
     private string duckname;
 
@@ -83,8 +87,9 @@ public class DialogueTool : Interactable
     private int attempts = 0;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        DialogueIndicator = this.transform.GetChild(1).gameObject;
         if(taskName == null) 
         {
             //taskName = gameScene;
@@ -93,7 +98,11 @@ public class DialogueTool : Interactable
         else DialogueIndicator.SetActive(true);
         talkAgain = false;
         inOptionDialog = false;
-        backgroundImage.enabled = false;
+        if (backgroundImage != null)
+        {
+            backgroundImage.enabled = false;
+        }
+
     }
 
     // Update is called once per frame
@@ -147,14 +156,17 @@ public class DialogueTool : Interactable
         // set first line
         DialogueManager.GetComponent<ReadDialogueData>().DialogTool = this.gameObject;
         setDialogueUI();
-
+        if(DialogueIndicator == null)
+        {
+            DialogueIndicator = this.transform.GetChild(1).gameObject;
+        }
         DialogueIndicator.SetActive(false);
     }
    
 
     public override void Complete()
     {
-        base.Complete();
+
         // call it anytime inside the function and have your stuff that finished the interact, like close all the dialogue and bring back the main UI
         // below is placeholder if there is no code. If there is code, can delete
         ResetTool();
@@ -185,8 +197,9 @@ public class DialogueTool : Interactable
             talkAgain = true;
         }
         index = 0;
+        base.Complete();
         //Tasklist.SetText(taskName);
-        SLDR_Progress.value++;
+        //SLDR_Progress.value++;
     }
 
    
@@ -536,7 +549,11 @@ public class DialogueTool : Interactable
                     setProfile();
                     setName();
                     setLine();
-                    setBackground();
+                    if(backgroundImage != null)
+                    {
+                        setBackground();
+                    }
+
                     if (quackscompleted == 0)
                     {
                         AudioManager.Instance.PlayDialogue(duckname);
@@ -550,7 +567,7 @@ public class DialogueTool : Interactable
             if (index > DialogueList.Count - 1)
             {
                 Debug.Log("End of List");
-                if (activatePostPuzzle && !correct)
+                if (retrieval && !correct)
                 {
                     
                     DialogueList = retrievalDialogueList;
@@ -570,7 +587,10 @@ public class DialogueTool : Interactable
                     setProfile();
                     setName();
                     setLine();
-                    setBackground();
+                    if (backgroundImage != null)
+                    {
+                        setBackground();
+                    }
                     if (quackscompleted == 0)
                     {
                         AudioManager.Instance.PlayDialogue(duckname);

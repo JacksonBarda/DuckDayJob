@@ -9,7 +9,8 @@ using Enums;
 
 public class DayNightTransition : Interactable
 {
-
+    [SerializeField]
+    private bool dayToNight;
     [SerializeField]
     private UIManager UIManager;
     [SerializeField]
@@ -37,9 +38,9 @@ public class DayNightTransition : Interactable
     [SerializeField]
     private Locations endRoom;
     [SerializeField]
-    private FollowPlayer camera;
+    private FollowPlayer playerCamera;
     private bool actionCalled = false;
-
+    private Quaternion pivotStartRot = new Quaternion();
 
 
 
@@ -78,7 +79,9 @@ public class DayNightTransition : Interactable
 
     public override void Interact()
     {
+        counted = false;
         base.Interact();
+        pivotStartRot = pivot.rotation;
         //player.puzzleMode = true;
         puzzleUI.SetActive(true);
         mainUI.SetActive(false);
@@ -93,16 +96,17 @@ public class DayNightTransition : Interactable
     {
         actionCalled = true;
         player.gameObject.transform.position = endLocation.position;
-        camera.SetBumps(endRoom);
+        playerCamera.SetBumps(endRoom);
         UIManager.setLocation(endRoom);
 
     }
 
     public override void Complete()
     {
-        base.Complete();
+
+        pivot.rotation = pivotStartRot;
         contButton.SetActive(false);
-        if (190f > pivot.rotation.z && pivot.rotation.z > 170f)
+        if (dayToNight)
         {
             UIManager.SetNightTime();
 
@@ -111,13 +115,15 @@ public class DayNightTransition : Interactable
         {
             UIManager.SetMorningTime();
         }
-
+        base.Complete();
+        Debug.Log("FadeIn Completed");
     }
     public void OnContPressed()
     {
-        StartCoroutine(moonIn.FadeInCoroutine(0.2f, this));
-        StartCoroutine(sunIn.FadeInCoroutine(0.2f, this));
-        StartCoroutine(coverIn.FadeInCoroutine(1.0f, this));
-        StartCoroutine(backgroundIn.FadeInCoroutine(1.0f, this));
+        StartCoroutine(moonIn.FadeInCoroutine(0.2f, this, false));
+        StartCoroutine(sunIn.FadeInCoroutine(0.2f, this, false));
+        StartCoroutine(coverIn.FadeInCoroutine(0.7f, this, false));
+        StartCoroutine(backgroundIn.FadeInCoroutine(1.3f, this, true));
+        
     }
 }

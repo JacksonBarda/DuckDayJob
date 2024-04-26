@@ -156,6 +156,9 @@ public class UIManager : MonoBehaviour
                 case string x when x.Contains("Duckette"):
                     interactableName = "Duckette";
                     break;
+                case string x when x.Contains("MainDuck"):
+                    interactableName = PlayerPrefs.GetString("playerName") != null ? PlayerPrefs.GetString("playerName"): "MainDuck";
+                    break;
                 case string x when x.Contains("Eggwin"):
                     interactableName = "Eggwin";
                     break;

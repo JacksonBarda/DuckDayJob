@@ -13,6 +13,7 @@ public class Interactable : MonoBehaviour
     public bool isCompleted;
     public bool hasFailed;
     public bool isVisibleOnStart = true;
+    public bool stayActive = false;
     public bool activatePostPuzzle = false;
     public Interactable puzzleToActivate;
 

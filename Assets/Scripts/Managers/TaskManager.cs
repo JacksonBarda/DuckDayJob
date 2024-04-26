@@ -64,6 +64,10 @@ public class TaskManager : MonoBehaviour
         InitializeTasks();
         onTaskComplete += TaskCompleted;
         onTaskFailed += TaskFailed;
+        if (tasksByDay[day - 1].GetInteractables(currentPt)[count] != null && tasksByDay[day - 1].GetInteractables(currentPt)[count].forcePlay)
+        {
+            tasksByDay[day - 1].GetInteractables(currentPt)[count].Interact();
+        }
     }
 
 
@@ -80,6 +84,14 @@ public class TaskManager : MonoBehaviour
         ptCount = 0;
         day = 1;
 
+        foreach (Interactable task in tasksByDay[day - 1].GetInteractables(currentPt))
+        {
+            if (task.isVisibleOnStart)
+            {
+                task.gameObject.SetActive(true);
+            }
+
+        }
 
     }
 
@@ -90,7 +102,7 @@ public class TaskManager : MonoBehaviour
             _task.puzzleUI.SetActive(false);
         if (_task.mainUI != null)
             _task.mainUI.SetActive(true);
-        health -= 1;
+        //health -= 1;
         if(health == 0)
         {
             OnDeath();
@@ -122,7 +134,11 @@ public class TaskManager : MonoBehaviour
         {
             foreach (Interactable task in tasksByDay[day - 1].GetInteractables(currentPt))
             {
-                task.gameObject.SetActive(false);
+                if(task.stayActive != true)
+                {
+                    task.gameObject.SetActive(false);
+                }
+
             }
             currentPt++;
             while(countCheck)
