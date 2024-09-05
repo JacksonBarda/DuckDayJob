@@ -6,7 +6,7 @@ using UnityEngine;
 public class FollowPlayer : MonoBehaviour
 {
     [SerializeField]
-    private Transform Player;
+    public Transform Player;
     [SerializeField]
     private Camera mainCamera;
     [SerializeField]
@@ -21,8 +21,12 @@ public class FollowPlayer : MonoBehaviour
     {
         SetBumps(Locations.LOBBY);
         cameraTransform = mainCamera.transform;
-        cameraTransform.position = new Vector3(Player.position.x, Player.position.y + yBump, zBump);
+        SetCamTrans();
         //cameraTransform.position = transform.position;
+    }
+    public void SetCamTrans()
+    {
+        cameraTransform.position = new Vector3(Player.position.x, Player.position.y + yBump, zBump);
     }
 
     // Update is called once per frame

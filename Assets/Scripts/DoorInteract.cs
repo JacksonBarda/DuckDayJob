@@ -8,7 +8,7 @@ public class DoorInteract : Interactable
 {
 
     [SerializeField]
-    private Transform endLocation;
+    public Transform endLocation;
     [SerializeField]
     private Transform Player;
     [SerializeField]
@@ -18,7 +18,7 @@ public class DoorInteract : Interactable
     [SerializeField]
     private UIManager manager;
     [SerializeField]
-    private Locations endRoom;
+    public Locations endRoom;
     [SerializeField]
     private FollowPlayer followPlayer;
     [SerializeField]
