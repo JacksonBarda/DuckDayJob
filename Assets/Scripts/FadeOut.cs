@@ -46,8 +46,10 @@ public class FadeOut : MonoBehaviour
         }
         running = false;
         // Call the function on the target object
-        targetObject.Action();
-
+        if (targetObject != null)
+        {
+            targetObject.Action();
+        }
         // Start the fade-in coroutine
         //StartCoroutine(Wait(fadeTime));
     }

@@ -6,7 +6,10 @@ using Enums;
 
 public class DoorInteract : Interactable
 {
-
+    [SerializeField]
+    private FadeIn fadeIn;
+    [SerializeField]
+    private FadeOut fadeOut;
     [SerializeField]
     public Transform endLocation;
     [SerializeField]
@@ -34,7 +37,7 @@ public class DoorInteract : Interactable
         }
         else
         {
-            fade.FadeImageOverTime(0.7f, this);
+            fadeOut.FadeImageOverTime(0.5f, this);
         }
     }
     public override void Action()
@@ -46,6 +49,7 @@ public class DoorInteract : Interactable
             Player.transform.position = endLocation.position;
             manager.setLocation(endRoom);
             followPlayer.SetBumps(endRoom);
+            StartCoroutine(fadeIn.FadeInCoroutine(1.0f, this, false));
         }
     }
     public override void Complete()

@@ -16,8 +16,6 @@ public class Interactable : MonoBehaviour
     public bool stayActive = false;
     public bool activatePostPuzzle = false;
     public Interactable puzzleToActivate;
-
-    public FadeController fade;
     public PlayerMove player;
 
     public GameObject mainUI;

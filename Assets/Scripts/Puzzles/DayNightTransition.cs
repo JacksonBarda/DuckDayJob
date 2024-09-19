@@ -10,25 +10,17 @@ using Enums;
 public class DayNightTransition : Interactable
 {
     [SerializeField]
+    private FadeIn dayNightIn;
+    [SerializeField]
+    private FadeOut dayNightOut;
+    [SerializeField]
+    private FadeIn fadeIn;
+    [SerializeField]
+    private FadeOut fadeOut;
+    [SerializeField]
     private bool dayToNight;
     [SerializeField]
     private UIManager UIManager;
-    [SerializeField]
-    private FadeIn moonIn;
-    [SerializeField]
-    private FadeIn sunIn;
-    [SerializeField]
-    private FadeIn coverIn;
-    [SerializeField]
-    private FadeIn backgroundIn;
-    [SerializeField]
-    private FadeOut moonOut;
-    [SerializeField]
-    private FadeOut sunOut;
-    [SerializeField]
-    private FadeOut coverOut;
-    [SerializeField]
-    private FadeOut backgroundOut;
     [SerializeField]
     private RectTransform pivot;
     [SerializeField] 
@@ -48,9 +40,17 @@ public class DayNightTransition : Interactable
     {
         if (actionCalled)
         {
-            float rotatePivot = pivot.rotation.z + 180;
-            // Calculate the difference between current rotation and target rotation
-            float angleDifference = rotatePivot - pivot.eulerAngles.z;
+            float rotatePivot;
+            if (dayToNight)
+            {
+                rotatePivot = 360f;
+            }
+            else
+            {
+                rotatePivot = 180f;
+            }
+                // Calculate the difference between current rotation and target rotation
+                float angleDifference = rotatePivot - pivot.eulerAngles.z;
 
             // Normalize the angle to ensure it's within -180 to 180 range
             if (angleDifference > 180f)
@@ -85,15 +85,15 @@ public class DayNightTransition : Interactable
         //player.puzzleMode = true;
         puzzleUI.SetActive(true);
         mainUI.SetActive(false);
-        moonOut.FadeImageOverTime(1.0f, this);
-        sunOut.FadeImageOverTime(1.0f, this);
-        coverOut.FadeImageOverTime(0.2f, this);
-        backgroundOut.FadeImageOverTime(0.2f, this);
+        fadeOut.FadeImageOverTime(1.0f, this);
+
+
         counted = false;
     }
 
     public override void Action()
     {
+        dayNightOut.FadeImageOverTime(1.0f, null);
         actionCalled = true;
         player.gameObject.transform.position = endLocation.position;
         playerCamera.SetBumps(endRoom);
@@ -120,10 +120,9 @@ public class DayNightTransition : Interactable
     }
     public void OnContPressed()
     {
-        StartCoroutine(moonIn.FadeInCoroutine(0.2f, this, false));
-        StartCoroutine(sunIn.FadeInCoroutine(0.2f, this, false));
-        StartCoroutine(coverIn.FadeInCoroutine(0.7f, this, false));
-        StartCoroutine(backgroundIn.FadeInCoroutine(1.3f, this, true));
-        
+
+        StartCoroutine(dayNightIn.FadeInCoroutine(1.3f, this, true));
+        StartCoroutine(fadeIn.FadeInCoroutine(1.3f, this, false));
+
     }
 }

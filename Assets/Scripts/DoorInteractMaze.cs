@@ -6,7 +6,10 @@ using UnityEngine;
 
 public class DoorInteractMaze : Interactable
 {
-
+    [SerializeField]
+    private FadeIn fadeIn;
+    [SerializeField]
+    private FadeOut fadeOut;
     [SerializeField]
     private Transform endLocation;
     [SerializeField]
@@ -22,15 +25,18 @@ public class DoorInteractMaze : Interactable
 
     public override void Interact()
     {
-        fade.FadeImageOverTime(0.5f, this);
+        fadeOut.FadeImageOverTime(0.5f, this);
+
 
     }
     public override void Action()
     {
+        
         playerMove.Maze(true);
         rigid.useGravity = false;
         Player.transform.position = endLocation.position;
         manager.setLocation(endRoom);
+        StartCoroutine(fadeIn.FadeInCoroutine(0.5f, this, false));
     }
     public override void Complete()
     {

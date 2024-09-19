@@ -35,8 +35,6 @@ public class DialogueTool : Interactable
     private string gameScene;
     [SerializeField]
     private bool retrieval;
-    // [SerializeField]
-    // private bool increasePriority;
     [SerializeField]
     private GameObject optionButtonPrefab;
     [SerializeField]
@@ -45,8 +43,6 @@ public class DialogueTool : Interactable
     private Button nextButton;
     [SerializeField]
     private GameObject DialogueIndicator;
-   // [SerializeField]
-   // private Button nextButton;
     [SerializeField]
     private Image backgroundImage;
     [SerializeField]
@@ -54,8 +50,6 @@ public class DialogueTool : Interactable
 
 
     private string duckname;
-
-    // Dialogue counter
     private int quackscompleted;
     private string previousName;
 
@@ -105,11 +99,6 @@ public class DialogueTool : Interactable
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public void setList()
     {
@@ -140,10 +129,10 @@ public class DialogueTool : Interactable
         
 
     }
-    
+
     public override void Interact()
     {
-        Debug.Log("Talked");
+        //Debug.Log("Talked");
         index = 0;
 
         // as you press w, it does this
@@ -156,11 +145,18 @@ public class DialogueTool : Interactable
         // set first line
         DialogueManager.GetComponent<ReadDialogueData>().DialogTool = this.gameObject;
         setDialogueUI();
-        if(DialogueIndicator == null)
+        if (DialogueIndicator == null)
         {
-            DialogueIndicator = this.transform.GetChild(1).gameObject;
+            if(this.transform.childCount == 1)
+            {
+                DialogueIndicator = this.transform.GetChild(1).gameObject;
+            }
+            
         }
-        DialogueIndicator.SetActive(false);
+        if (DialogueIndicator != null)
+        {
+            DialogueIndicator.SetActive(false);
+        }
     }
    
 
@@ -171,13 +167,7 @@ public class DialogueTool : Interactable
         // below is placeholder if there is no code. If there is code, can delete
         ResetTool();
         roundNum = 1;
-        /*
-        if (increasePriority)
-        {
-            DialogueManager.GetComponent<ReadDialogueData>().priority++;
-            DialogueManager.GetComponent<ReadDialogueData>().setDialogueTools();
-        }
-        */
+
 
         if (inOptionDialog)
         {

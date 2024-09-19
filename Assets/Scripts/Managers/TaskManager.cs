@@ -7,6 +7,8 @@ using static TaskManager;
 
 public class TaskManager : MonoBehaviour
 {
+    [SerializeField]
+    public List<DailyGameObjects> duckSpritesForDays = new List<DailyGameObjects>();
     public int count = 0;
     private List<DayTask> tasksByDay = new List<DayTask>();
     [SerializeField]
@@ -24,8 +26,7 @@ public class TaskManager : MonoBehaviour
     [SerializeField]
     public DayTask Day7;
 
-    [SerializeField]
-    private List<GameObject> duckSpritesForDays = new List<GameObject>();
+    
 
     public GameObject deathScreen;
     private int health;
@@ -194,14 +195,14 @@ public class TaskManager : MonoBehaviour
 
     private void ChangeDay()
     {
-        if (duckSpritesForDays.Count >= day)
+        foreach(GameObject dayObject in duckSpritesForDays[day - 1].dayGO)
         {
-            duckSpritesForDays[day-1].gameObject.SetActive(false);
+            dayObject.SetActive(false);
         }
         day++;
-        if (duckSpritesForDays.Count > day)
+        foreach (GameObject dayObject in duckSpritesForDays[day - 1].dayGO)
         {
-            duckSpritesForDays[day - 1].gameObject.SetActive(true);
+            dayObject.SetActive(true);
         }
         currentPt = 0;
             
@@ -212,7 +213,7 @@ public class TaskManager : MonoBehaviour
     private void LoadDay()
     {
         day = PlayerPrefs.GetInt("dayCount", day);
-        ptCount =PlayerPrefs.GetInt("ptCount", ptCount);
+        ptCount = PlayerPrefs.GetInt("ptCount", ptCount);
         health = PlayerPrefs.GetInt("Health", health);
         deathScreen.SetActive(false);
         currentPt = GetCurrentPt(ptCount);
@@ -235,6 +236,7 @@ public class TaskManager : MonoBehaviour
         PlayerPrefs.SetInt("Health", health);
         PlayerPrefs.Save();
     }
+
     private PartIdentifier GetCurrentPt(int _ptCount)
     {
         switch(_ptCount)
@@ -265,7 +267,12 @@ public class TaskManager : MonoBehaviour
 
 
 }
+[System.Serializable]
+public struct DailyGameObjects
+{
+    public List<GameObject> dayGO;
 
+}
 [System.Serializable]
 public struct DayTask
 {
