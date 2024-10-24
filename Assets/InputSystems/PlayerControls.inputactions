@@ -9,7 +9,7 @@
                     "name": "Jump",
                     "type": "Button",
                     "id": "5beb2edc-7cdf-414f-ae72-d4102c73371a",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -27,7 +27,7 @@
                     "name": "Left",
                     "type": "Value",
                     "id": "35deb001-532f-4108-97f1-4f7bbb8b9abf",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -54,7 +54,7 @@
                     "name": "Leave",
                     "type": "Button",
                     "id": "1a126cad-95ea-45c9-bfc1-af489f990780",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false

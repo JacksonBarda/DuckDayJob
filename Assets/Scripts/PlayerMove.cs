@@ -66,18 +66,7 @@ public class PlayerMove : MonoBehaviour
         }
         
     }
-    void OnJump(InputValue value)
-    {
-        if (interactable[0] != null && mazeMode)
-        {
-            interactable[0].Interact();
-        }
-        if (grounded && !mazeMode && !puzzleMode)
-        {
-            moveValUp = value.Get<float>();
-            rigid.velocity = new Vector3(moveValRight - moveValLeft, (rigid.velocity.y / moveSpeed) + moveValUp, 0f) * moveSpeed;
-        }
-    }
+
 
 
     void OnInteract(InputValue value)

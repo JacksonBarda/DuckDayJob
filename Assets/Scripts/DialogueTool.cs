@@ -42,11 +42,17 @@ public class DialogueTool : Interactable
     [SerializeField]
     private Button nextButton;
     [SerializeField]
-    private GameObject DialogueIndicator;
+    private GameObject DialogueIndicator = null;
     [SerializeField]
     private Image backgroundImage;
     [SerializeField]
     private Sprite customizedBackgroundImage;
+    [SerializeField]
+    private bool playAnim;
+    [SerializeField]
+    private int whichLine;
+    [SerializeField]
+    private PlayAnimation playAnimation;
 
 
     private string duckname;
@@ -83,13 +89,25 @@ public class DialogueTool : Interactable
     // Start is called before the first frame update
     void Awake()
     {
-        DialogueIndicator = this.transform.GetChild(1).gameObject;
+		if (!name.Contains("MainDuck"))
+        {
+			if (this.transform.childCount > 0 && DialogueIndicator == null)
+            {
+                DialogueIndicator = this.transform.GetChild(1).gameObject;
+
+			}
+			DialogueIndicator.SetActive(true);
+
+		}
+		else
+        {
+            DialogueIndicator = null;
+        }
+
         if(taskName == null) 
         {
             //taskName = gameScene;
         }
-        if(name.Contains("MainDuck")) DialogueIndicator.SetActive(false);
-        else DialogueIndicator.SetActive(true);
         talkAgain = false;
         inOptionDialog = false;
         if (backgroundImage != null)
@@ -99,7 +117,7 @@ public class DialogueTool : Interactable
 
     }
 
-
+    
     public void setList()
     {
         refDialogueList = DialogueManager.GetComponent<ReadDialogueData>().DialogList;
@@ -145,14 +163,15 @@ public class DialogueTool : Interactable
         // set first line
         DialogueManager.GetComponent<ReadDialogueData>().DialogTool = this.gameObject;
         setDialogueUI();
-        if (DialogueIndicator == null)
-        {
-            if(this.transform.childCount == 1)
+		if (!name.Contains("MainDuck"))
+			if (DialogueIndicator == null)
             {
-                DialogueIndicator = this.transform.GetChild(1).gameObject;
-            }
+                if(this.transform.childCount == 1)
+                {
+                    DialogueIndicator = this.transform.GetChild(1).gameObject;
+                }
             
-        }
+            }
         if (DialogueIndicator != null)
         {
             DialogueIndicator.SetActive(false);
@@ -184,7 +203,21 @@ public class DialogueTool : Interactable
         // only sets talk again if there is a talk again dialogue. otherwise, if talk with the duck again, will play the same dialogue
         if (talkAgainList.Count != 0)
         {
-            talkAgain = true;
+			if (!name.Contains("MainDuck"))
+			{
+				if (this.transform.childCount > 0 && DialogueIndicator == null)
+				{
+					DialogueIndicator = this.transform.GetChild(1).gameObject;
+
+				}
+				DialogueIndicator.SetActive(true);
+
+			}
+			else
+			{
+				DialogueIndicator = null;
+			}
+			talkAgain = true;
         }
         index = 0;
         base.Complete();
@@ -526,6 +559,12 @@ public class DialogueTool : Interactable
 
     public void setDialogueUI()
     {
+        if(playAnim)
+            if(index-1 == whichLine)
+            {
+                playAnimation.PlayAnimInteract(this);
+                SetAnimMode();
+            }
         if (talkAgain)
         {
             if (index > talkAgainList.Count - 1)
@@ -603,7 +642,8 @@ public class DialogueTool : Interactable
         // need to delete option buttons
         foreach (GameObject button in buttonList)
         {
-            Destroy(button);
+            button.SetActive(false);
+            Destroy(button,0.1f);
         }
         if (activatePostPuzzle)
         {
@@ -621,6 +661,8 @@ public class DialogueTool : Interactable
                 attempts++;
             }
         }
+        nextButton.interactable = false;
+        nextButton.interactable = true;
         ResetTool();
     }
 
@@ -657,18 +699,15 @@ public class DialogueTool : Interactable
         }
         return newText;
     }
-
-    public void assignVariables() 
+    public void SetAnimMode()
     {
-    //    MainDisplay = GameObject.Find("Main Display");
-    //    DialogueDisplay = GameObject.Find("DialogueDisplay");
-    //    Profile = GameObject.Find("Profile");
-    //    Profile = FindObjectsOfType<Image>().na
-    //    //Profile2 = GameObject.Find("Profile2");
-    //    //Name = GameObject.Find("NameText");
-    //    //Dialogue = GameObject.Find("DialogueText");
-    //    DialogueManager = GameObject.Find("DialogueManager");
-    //    Options = GameObject.Find("OptionHolder");
-    //    //SLDR_Progress = GameObject.Find("SLDR_Progress");
-    }
+        nextButton.interactable = false;
+		DialogueDisplay.SetActive(false);
+	}
+	public void SetDisplayMode()
+	{
+		nextButton.interactable = true;
+		DialogueDisplay.SetActive(true);
+
+	}
 }

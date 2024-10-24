@@ -43,8 +43,6 @@ public class VendingMachine : Interactable
     public override void Complete()
     {
 
-        //Location of Puzzle
-        AudioManager.Instance.PlayMusic("Lobby");
         Debug.Log("Complete");
     }
 
@@ -106,15 +104,16 @@ public class VendingMachine : Interactable
         enteredNumber = null;
         enteredNumber = "";
         UpdateDisplay();
-        puzzleUI.SetActive(false);
-        mainUI.SetActive(true);
-        AudioManager.Instance.PlayMusic("Lobby");
-        PlayerMove.puzzleMode = false;
+		puzzleUI.SetActive(false);
+		mainUI.SetActive(true);
+		AudioManager.Instance.PlayMusic("Lobby");
+		PlayerMove.puzzleMode = false;
 
-        if (lastBoughtItem != "" || lastBoughtItem != null)
+		if (lastBoughtItem != "" || lastBoughtItem != null)
         {
             dialoguesActive = true;
             CheckForCorrectItem();
+            Complete();
         }
         Debug.Log("VMExit");
     }
@@ -133,28 +132,22 @@ public class VendingMachine : Interactable
     }
     private void PurchaseItem(int itemIndex)
     {
-        //Debug.Log("PurchaseItem() itemIndex: " + itemIndex);
-        if (itemIndex >= 0 && playerCoins >= 5)
-        {
-            StartCoroutine(DisplayMessage("SUCCESS"));
-            playerCoins -= 5;
-            UpdateDisplay();
-            //itemCosts[itemIndex].SetActive(false);
-            //Debug.Log(itemIndex);
-            Debug.Log("Purchased item: " + itemArray[itemIndex]);
-            lastBoughtItem = itemArray[itemIndex];
-        }
-        else
-        {
-            StartCoroutine(DisplayMessage("NO FUNDS"));
-            //Debug.Log("Not enough coins or invalid item index: " + itemIndex);
-        }
+
+
+        StartCoroutine(DisplayMessage("SUCCESS"));
+        //playerCoins -= 5;
+        UpdateDisplay();
+        //itemCosts[itemIndex].SetActive(false);
+        //Debug.Log(itemIndex);
+        Debug.Log("Purchased item: " + itemArray[itemIndex]);
+        lastBoughtItem = itemArray[itemIndex];
+
     }
 
     private void UpdateDisplay()
     {
         displayText.text = enteredNumber;
-        playerCoinsText.text = "" + playerCoins;
+        //playerCoinsText.text = "" + playerCoins;
     }
 
     private void CheckForCorrectItem()      
@@ -164,14 +157,14 @@ public class VendingMachine : Interactable
 
         if (lastBoughtItem == correctItem) //if correct item bought, hide wrong item dialogue
         {
-            incorrectDialogue.GetComponent<DialogueTool>().Complete();
+            //incorrectDialogue.GetComponent<DialogueTool>().Complete();
             incorrectDialogue.SetActive(false);
 
             correctDialogue.SetActive(true);
         }
         else if (lastBoughtItem != correctItem)
         {
-            correctDialogue.GetComponent<DialogueTool>().Complete();
+            //correctDialogue.GetComponent<DialogueTool>().Complete();
             correctDialogue.SetActive(false);
 
             incorrectDialogue.SetActive(true);

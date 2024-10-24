@@ -10,13 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 8832907202415859541}
   - component: {fileID: 8866254512280165129}
+  - component: {fileID: 4745783841747387909}
   m_Layer: 0
   m_Name: CharacterSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8832907202415859541
 Transform:
   m_ObjectHideFlags: 0
@@ -84,6 +85,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4745783841747387909
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947565714714897106}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2557612985409383229
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,9 +273,9 @@ MonoBehaviour:
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
+  stayActive: 0
   activatePostPuzzle: 0
   puzzleToActivate: {fileID: 0}
-  fade: {fileID: 0}
   player: {fileID: 0}
   mainUI: {fileID: 0}
   counted: 0
@@ -268,11 +290,16 @@ MonoBehaviour:
   DialogueManager: {fileID: 0}
   Options: {fileID: 0}
   gameScene: 
+  retrieval: 0
   optionButtonPrefab: {fileID: 3741148585713256696, guid: 8d6318746227bea4fa19349685a9f366, type: 3}
   SLDR_Progress: {fileID: 0}
+  nextButton: {fileID: 0}
   DialogueIndicator: {fileID: 0}
   backgroundImage: {fileID: 0}
   customizedBackgroundImage: {fileID: 0}
+  playAnim: 0
+  whichLine: 0
+  playAnimation: {fileID: 0}
   DialogueList: []
   talkAgainList: []
   refDialogueList: []

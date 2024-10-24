@@ -149,6 +149,7 @@ public class UIManager : MonoBehaviour
 
     private void SetInteractPopupText()
     {
+        bool playerName = false;
         if (PlayerMove.GetInteractable() != null)
         {
             //Debug.Log("The Interactable: " + interactableName);
@@ -161,7 +162,8 @@ public class UIManager : MonoBehaviour
                     break;
                 case string x when x.Contains("MainDuck"):
                     interactableName = PlayerPrefs.GetString("playerName") != null ? PlayerPrefs.GetString("playerName"): "MainDuck";
-                    SetInteractionPopupLoc();
+                    playerName = true;
+                    //SetInteractionPopupLoc();
                     break;
                 case string x when x.Contains("Eggwin"):
                     interactableName = "Eggwin";
@@ -216,11 +218,14 @@ public class UIManager : MonoBehaviour
                     break;
             }
 
+            if(!playerName)
+            {
+                InteractionPopup.transform.LookAt(cameraTransfrom, Vector3.up);
+                InteractionPopup.transform.eulerAngles = new Vector3(InteractionPopup.transform.eulerAngles.x, InteractionPopup.transform.eulerAngles.y +180f , InteractionPopup.transform.eulerAngles.z);
+                InteractionPopup.SetActive(true);
+                interactableText.text = interactableName;
+            }
 
-            InteractionPopup.transform.LookAt(cameraTransfrom, Vector3.up);
-            InteractionPopup.transform.eulerAngles = new Vector3(InteractionPopup.transform.eulerAngles.x, InteractionPopup.transform.eulerAngles.y +180f , InteractionPopup.transform.eulerAngles.z);
-            InteractionPopup.SetActive(true);
-            interactableText.text = interactableName;
 
         }
         else

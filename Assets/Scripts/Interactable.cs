@@ -23,6 +23,13 @@ public class Interactable : MonoBehaviour
     [Header("Custom puzzle Variable")]
     public GameObject puzzleUI;
 
+    private void Start()
+    {
+        if (forcePlay)
+        {
+            this.Interact();
+        }
+    }
     public virtual void Interact()
     {
         PlayerMove.puzzleMode = true;

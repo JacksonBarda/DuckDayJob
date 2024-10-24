@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1650722492}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6089,6 +6088,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   darkTime: 0
   image: {fileID: 119284086}
+  running: 0
 --- !u!114 &119284089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11002,6 +11002,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   darkTime: 0
   image: {fileID: 230529177}
+  running: 0
 --- !u!114 &230529176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19930,19 +19931,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52794bbca86824a46b2543f21f1b3cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatePostPuzzle: 0
   repeatable: 0
-  counted: 0
-  puzzleToActivate: {fileID: 0}
-  fade: {fileID: 1463816534}
-  player: {fileID: 1614031491}
+  forcePlay: 0
   taskName: 
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
-  puzzleUI: {fileID: 0}
+  stayActive: 0
+  activatePostPuzzle: 0
+  puzzleToActivate: {fileID: 0}
+  player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
-  forcePlay: 0
+  counted: 0
+  puzzleUI: {fileID: 0}
+  fadeIn: {fileID: 0}
+  fadeOut: {fileID: 0}
+  timeToFade: 0.5
   endLocation: {fileID: 599291928}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -19950,6 +19954,8 @@ MonoBehaviour:
   manager: {fileID: 1206418959}
   endRoom: 4
   followPlayer: {fileID: 273295041}
+  isLocked: 0
+  lockedDialogue: {fileID: 0}
 --- !u!65 &423796995
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23406,19 +23412,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52794bbca86824a46b2543f21f1b3cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatePostPuzzle: 0
   repeatable: 0
-  counted: 0
-  puzzleToActivate: {fileID: 0}
-  fade: {fileID: 1463816534}
-  player: {fileID: 1614031491}
+  forcePlay: 0
   taskName: 
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
-  puzzleUI: {fileID: 0}
+  stayActive: 0
+  activatePostPuzzle: 0
+  puzzleToActivate: {fileID: 0}
+  player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
-  forcePlay: 0
+  counted: 0
+  puzzleUI: {fileID: 0}
+  fadeIn: {fileID: 0}
+  fadeOut: {fileID: 0}
+  timeToFade: 0.5
   endLocation: {fileID: 1425548276}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -23426,6 +23435,8 @@ MonoBehaviour:
   manager: {fileID: 1206418959}
   endRoom: 1
   followPlayer: {fileID: 273295041}
+  isLocked: 0
+  lockedDialogue: {fileID: 0}
 --- !u!65 &481234086
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29570,19 +29581,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 602fb349e28f13340a2493ee43522650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatePostPuzzle: 0
   repeatable: 1
-  counted: 0
-  puzzleToActivate: {fileID: 0}
-  fade: {fileID: 1463816534}
-  player: {fileID: 1614031491}
+  forcePlay: 0
   taskName: 
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
-  puzzleUI: {fileID: 2060156169}
+  stayActive: 0
+  activatePostPuzzle: 0
+  puzzleToActivate: {fileID: 0}
+  player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
-  forcePlay: 0
+  counted: 0
+  puzzleUI: {fileID: 2060156169}
   fragments:
   - {fileID: 164771820}
   - {fileID: 265423988}
@@ -38169,19 +38180,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6fe11575b5ce745a55465683fde315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatePostPuzzle: 0
   repeatable: 0
-  counted: 0
-  puzzleToActivate: {fileID: 0}
-  fade: {fileID: 1463816534}
-  player: {fileID: 1614031491}
+  forcePlay: 0
   taskName: 
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
-  puzzleUI: {fileID: 1929315102}
+  stayActive: 0
+  activatePostPuzzle: 0
+  puzzleToActivate: {fileID: 0}
+  player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
-  forcePlay: 0
+  counted: 0
+  puzzleUI: {fileID: 1929315102}
   displayText: {fileID: 425846089}
   playerCoinsText: {fileID: 66307707}
   numberButtons:
@@ -38199,6 +38210,9 @@ MonoBehaviour:
   deleteButton: {fileID: 1695944321}
   exitButton: {fileID: 2043282133}
   lastBoughtItem: 
+  correctItem: 
+  correctDialogue: {fileID: 0}
+  incorrectDialogue: {fileID: 0}
   itemCosts: []
   itemArray: []
 --- !u!65 &781347150
@@ -39645,19 +39659,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52794bbca86824a46b2543f21f1b3cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatePostPuzzle: 0
   repeatable: 0
-  counted: 0
-  puzzleToActivate: {fileID: 0}
-  fade: {fileID: 1463816534}
-  player: {fileID: 1614031491}
+  forcePlay: 0
   taskName: 
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
-  puzzleUI: {fileID: 0}
+  stayActive: 0
+  activatePostPuzzle: 0
+  puzzleToActivate: {fileID: 0}
+  player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
-  forcePlay: 0
+  counted: 0
+  puzzleUI: {fileID: 0}
+  fadeIn: {fileID: 0}
+  fadeOut: {fileID: 0}
+  timeToFade: 0.5
   endLocation: {fileID: 965009575}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -39665,6 +39682,8 @@ MonoBehaviour:
   manager: {fileID: 1206418959}
   endRoom: 9
   followPlayer: {fileID: 273295041}
+  isLocked: 0
+  lockedDialogue: {fileID: 0}
 --- !u!65 &817187968
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47744,6 +47763,7 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+  m_ScrollDeltaPerTick: 6
 --- !u!1 &991327065
 GameObject:
   m_ObjectHideFlags: 0
@@ -48496,19 +48516,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 602fb349e28f13340a2493ee43522650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatePostPuzzle: 0
   repeatable: 0
-  counted: 0
-  puzzleToActivate: {fileID: 0}
-  fade: {fileID: 1463816534}
-  player: {fileID: 1614031491}
+  forcePlay: 0
   taskName: 
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
-  puzzleUI: {fileID: 1173611599}
+  stayActive: 0
+  activatePostPuzzle: 0
+  puzzleToActivate: {fileID: 0}
+  player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
-  forcePlay: 0
+  counted: 0
+  puzzleUI: {fileID: 1173611599}
   fragments:
   - {fileID: 1763719892}
   - {fileID: 642668044}
@@ -53520,19 +53540,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52794bbca86824a46b2543f21f1b3cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatePostPuzzle: 0
   repeatable: 0
-  counted: 0
-  puzzleToActivate: {fileID: 0}
-  fade: {fileID: 1463816534}
-  player: {fileID: 1614031491}
+  forcePlay: 0
   taskName: 
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
-  puzzleUI: {fileID: 0}
+  stayActive: 0
+  activatePostPuzzle: 0
+  puzzleToActivate: {fileID: 0}
+  player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
-  forcePlay: 0
+  counted: 0
+  puzzleUI: {fileID: 0}
+  fadeIn: {fileID: 0}
+  fadeOut: {fileID: 0}
+  timeToFade: 0.5
   endLocation: {fileID: 1821505991}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -53540,6 +53563,8 @@ MonoBehaviour:
   manager: {fileID: 1206418959}
   endRoom: 3
   followPlayer: {fileID: 273295041}
+  isLocked: 0
+  lockedDialogue: {fileID: 0}
 --- !u!65 &1115113777
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55115,33 +55140,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d1831d4955787b4c9dcc1d0efe46b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatePostPuzzle: 0
   repeatable: 0
-  counted: 0
-  puzzleToActivate: {fileID: 0}
-  fade: {fileID: 0}
-  player: {fileID: 1614031491}
+  forcePlay: 1
   taskName: 
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
-  puzzleUI: {fileID: 119284083}
+  stayActive: 0
+  activatePostPuzzle: 0
+  puzzleToActivate: {fileID: 0}
+  player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
-  forcePlay: 1
+  counted: 0
+  puzzleUI: {fileID: 119284083}
+  dayNightIn: {fileID: 0}
+  dayNightOut: {fileID: 0}
+  fadeIn: {fileID: 0}
+  fadeOut: {fileID: 0}
+  dayToNight: 0
   UIManager: {fileID: 1206418959}
-  moonIn: {fileID: 1804272887}
-  sunIn: {fileID: 1745270656}
-  coverIn: {fileID: 230529176}
-  backgroundIn: {fileID: 119284089}
-  moonOut: {fileID: 1804272886}
-  sunOut: {fileID: 1745270655}
-  coverOut: {fileID: 230529175}
-  backgroundOut: {fileID: 119284088}
   pivot: {fileID: 1711563799}
   contButton: {fileID: 167986623}
   endLocation: {fileID: 1262099916}
   endRoom: 0
-  camera: {fileID: 273295041}
+  playerCamera: {fileID: 0}
 --- !u!1 &1144923998
 GameObject:
   m_ObjectHideFlags: 0
@@ -58101,6 +58123,10 @@ MonoBehaviour:
   time: {fileID: 421105984}
   MainUI: {fileID: 1213719444}
   DialogueUI: {fileID: 2075323091}
+  PlayerMove: {fileID: 0}
+  InteractionPopup: {fileID: 0}
+  interactableText: {fileID: 0}
+  cameraTransfrom: {fileID: 0}
   dayNumber: 1
   dayOrNight: 0
 --- !u!1 &1207470402
@@ -60900,19 +60926,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b8958ba5bcc0d4a8595b31c32ffb05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatePostPuzzle: 0
   repeatable: 0
-  counted: 0
-  puzzleToActivate: {fileID: 0}
-  fade: {fileID: 1463816534}
-  player: {fileID: 1614031491}
+  forcePlay: 0
   taskName: 
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
-  puzzleUI: {fileID: 2036683039}
+  stayActive: 0
+  activatePostPuzzle: 0
+  puzzleToActivate: {fileID: 0}
+  player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
-  forcePlay: 0
+  counted: 0
+  puzzleUI: {fileID: 2036683039}
   puzzleBarUI: {fileID: 1502067828}
   fragments: []
   outlines: []
@@ -63744,19 +63770,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52794bbca86824a46b2543f21f1b3cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatePostPuzzle: 0
   repeatable: 0
-  counted: 0
-  puzzleToActivate: {fileID: 0}
-  fade: {fileID: 1463816534}
-  player: {fileID: 1614031491}
+  forcePlay: 0
   taskName: 
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
-  puzzleUI: {fileID: 0}
+  stayActive: 0
+  activatePostPuzzle: 0
+  puzzleToActivate: {fileID: 0}
+  player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
-  forcePlay: 0
+  counted: 0
+  puzzleUI: {fileID: 0}
+  fadeIn: {fileID: 0}
+  fadeOut: {fileID: 0}
+  timeToFade: 0.5
   endLocation: {fileID: 1074068080}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -63764,6 +63793,8 @@ MonoBehaviour:
   manager: {fileID: 1206418959}
   endRoom: 3
   followPlayer: {fileID: 273295041}
+  isLocked: 0
+  lockedDialogue: {fileID: 0}
 --- !u!65 &1366080085
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -64557,78 +64588,130 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197c8e351d93f0f46bcae96d070d49ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duckSpritesForDays:
+  - spriteToMove: []
+    dayLocation: []
   count: 0
+  tasksByDay: []
   Day1:
     day: 0
+    gameObjectToShowHidePT1: []
     pt1:
     - {fileID: 1804512341}
+    gameObjectToShowHidePT2: []
     pt2: []
+    gameObjectToShowHidePT3: []
     pt3: []
+    gameObjectToShowHidePT4: []
     pt4: []
+    gameObjectToShowHidePT5: []
     pt5: []
+    gameObjectToShowHidePT6: []
+    pt6: []
   Day2:
     day: 1
+    gameObjectToShowHidePT1: []
     pt1: []
+    gameObjectToShowHidePT2: []
     pt2: []
+    gameObjectToShowHidePT3: []
     pt3: []
+    gameObjectToShowHidePT4: []
     pt4: []
+    gameObjectToShowHidePT5: []
     pt5: []
+    gameObjectToShowHidePT6: []
+    pt6: []
   Day3:
     day: 2
+    gameObjectToShowHidePT1: []
     pt1: []
+    gameObjectToShowHidePT2: []
     pt2: []
+    gameObjectToShowHidePT3: []
     pt3: []
+    gameObjectToShowHidePT4: []
     pt4: []
+    gameObjectToShowHidePT5: []
     pt5: []
+    gameObjectToShowHidePT6: []
+    pt6: []
   Day4:
     day: 3
+    gameObjectToShowHidePT1: []
     pt1: []
+    gameObjectToShowHidePT2: []
     pt2: []
+    gameObjectToShowHidePT3: []
     pt3: []
+    gameObjectToShowHidePT4: []
     pt4: []
+    gameObjectToShowHidePT5: []
     pt5: []
+    gameObjectToShowHidePT6: []
+    pt6: []
   Day5:
     day: 4
+    gameObjectToShowHidePT1: []
     pt1: []
+    gameObjectToShowHidePT2: []
     pt2: []
+    gameObjectToShowHidePT3: []
     pt3: []
+    gameObjectToShowHidePT4: []
     pt4: []
+    gameObjectToShowHidePT5: []
     pt5: []
+    gameObjectToShowHidePT6: []
+    pt6: []
   Day6:
     day: 5
+    gameObjectToShowHidePT1: []
     pt1:
     - {fileID: 2056320756}
     - {fileID: 141319253}
+    gameObjectToShowHidePT2: []
     pt2:
     - {fileID: 1920087753}
     - {fileID: 298724301}
+    gameObjectToShowHidePT3: []
     pt3:
     - {fileID: 1155980560}
     - {fileID: 1498420022}
+    gameObjectToShowHidePT4: []
     pt4:
     - {fileID: 1973330882}
     - {fileID: 618392026}
     - {fileID: 2067078939}
     - {fileID: 1010963469}
+    gameObjectToShowHidePT5: []
     pt5:
     - {fileID: 1090650827}
+    gameObjectToShowHidePT6: []
+    pt6: []
   Day7:
     day: 6
+    gameObjectToShowHidePT1: []
     pt1:
     - {fileID: 46587260}
+    gameObjectToShowHidePT2: []
     pt2:
     - {fileID: 287241202}
     - {fileID: 1553243773}
     - {fileID: 218436603}
+    gameObjectToShowHidePT3: []
     pt3:
     - {fileID: 133902050}
+    gameObjectToShowHidePT4: []
     pt4: []
+    gameObjectToShowHidePT5: []
     pt5: []
-  duckSpritesForDays:
-  - {fileID: 1771501864}
+    gameObjectToShowHidePT6: []
+    pt6: []
   deathScreen: {fileID: 2025634329}
   maxDays: 7
   ptCount: 0
+  day: 1
   uiManager: {fileID: 1206418959}
 --- !u!4 &1380391820
 Transform:
@@ -67596,19 +67679,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 662ba0f0d3d1bfd44ae570622da60492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatePostPuzzle: 0
   repeatable: 0
-  counted: 0
-  puzzleToActivate: {fileID: 0}
-  fade: {fileID: 1463816534}
-  player: {fileID: 1614031491}
+  forcePlay: 0
   taskName: 
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
-  puzzleUI: {fileID: 498680367}
+  stayActive: 0
+  activatePostPuzzle: 0
+  puzzleToActivate: {fileID: 0}
+  player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
-  forcePlay: 0
+  counted: 0
+  puzzleUI: {fileID: 498680367}
   wires:
   - {fileID: 453863459}
   - {fileID: 1129034480}
@@ -70245,19 +70328,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52794bbca86824a46b2543f21f1b3cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatePostPuzzle: 0
   repeatable: 0
-  counted: 0
-  puzzleToActivate: {fileID: 0}
-  fade: {fileID: 1463816534}
-  player: {fileID: 1614031491}
+  forcePlay: 0
   taskName: 
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
-  puzzleUI: {fileID: 0}
+  stayActive: 0
+  activatePostPuzzle: 0
+  puzzleToActivate: {fileID: 0}
+  player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
-  forcePlay: 0
+  counted: 0
+  puzzleUI: {fileID: 0}
+  fadeIn: {fileID: 0}
+  fadeOut: {fileID: 0}
+  timeToFade: 0.5
   endLocation: {fileID: 1599853320}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -70265,6 +70351,8 @@ MonoBehaviour:
   manager: {fileID: 1206418959}
   endRoom: 5
   followPlayer: {fileID: 273295041}
+  isLocked: 0
+  lockedDialogue: {fileID: 0}
 --- !u!65 &1484249550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -77365,19 +77453,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52794bbca86824a46b2543f21f1b3cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatePostPuzzle: 0
   repeatable: 0
-  counted: 0
-  puzzleToActivate: {fileID: 0}
-  fade: {fileID: 1463816534}
-  player: {fileID: 1614031491}
+  forcePlay: 0
   taskName: 
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
-  puzzleUI: {fileID: 0}
+  stayActive: 0
+  activatePostPuzzle: 0
+  puzzleToActivate: {fileID: 0}
+  player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
-  forcePlay: 0
+  counted: 0
+  puzzleUI: {fileID: 0}
+  fadeIn: {fileID: 0}
+  fadeOut: {fileID: 0}
+  timeToFade: 0.5
   endLocation: {fileID: 1025982150}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -77385,6 +77476,8 @@ MonoBehaviour:
   manager: {fileID: 1206418959}
   endRoom: 2
   followPlayer: {fileID: 273295041}
+  isLocked: 0
+  lockedDialogue: {fileID: 0}
 --- !u!65 &1620884719
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -78161,19 +78254,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa728175e8b4d0744af5a139f29cca5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatePostPuzzle: 0
   repeatable: 0
-  counted: 0
-  puzzleToActivate: {fileID: 0}
-  fade: {fileID: 1463816534}
-  player: {fileID: 1614031491}
+  forcePlay: 0
   taskName: 
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
-  puzzleUI: {fileID: 2045637376}
+  stayActive: 0
+  activatePostPuzzle: 0
+  puzzleToActivate: {fileID: 0}
+  player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
-  forcePlay: 0
+  counted: 0
+  puzzleUI: {fileID: 2045637376}
   ducksParent: {fileID: 489357779}
   background: {fileID: 1015896283}
   canvasObject: {fileID: 2122831127}
@@ -82073,19 +82166,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52794bbca86824a46b2543f21f1b3cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatePostPuzzle: 0
   repeatable: 0
-  counted: 0
-  puzzleToActivate: {fileID: 0}
-  fade: {fileID: 1463816534}
-  player: {fileID: 1614031491}
+  forcePlay: 0
   taskName: 
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
-  puzzleUI: {fileID: 0}
+  stayActive: 0
+  activatePostPuzzle: 0
+  puzzleToActivate: {fileID: 0}
+  player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
-  forcePlay: 0
+  counted: 0
+  puzzleUI: {fileID: 0}
+  fadeIn: {fileID: 0}
+  fadeOut: {fileID: 0}
+  timeToFade: 0.5
   endLocation: {fileID: 1013256614}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -82093,6 +82189,8 @@ MonoBehaviour:
   manager: {fileID: 1206418959}
   endRoom: 2
   followPlayer: {fileID: 273295041}
+  isLocked: 0
+  lockedDialogue: {fileID: 0}
 --- !u!65 &1742529205
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -82596,6 +82694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   darkTime: 0
   image: {fileID: 1745270657}
+  running: 0
 --- !u!114 &1745270656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85643,6 +85742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   darkTime: 0
   image: {fileID: 1804272888}
+  running: 0
 --- !u!114 &1804272887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85727,19 +85827,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 667ce02360b613a4c93e8500d9d9ae32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatePostPuzzle: 0
   repeatable: 0
-  counted: 0
-  puzzleToActivate: {fileID: 0}
-  fade: {fileID: 1463816534}
-  player: {fileID: 1614031491}
+  forcePlay: 0
   taskName: Talk To Ducks!
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
-  puzzleUI: {fileID: 0}
+  stayActive: 0
+  activatePostPuzzle: 0
+  puzzleToActivate: {fileID: 0}
+  player: {fileID: 1614031491}
   mainUI: {fileID: 0}
-  forcePlay: 0
+  counted: 0
+  puzzleUI: {fileID: 0}
   MainDisplay: {fileID: 1213719444}
   DialogueDisplay: {fileID: 2075323091}
   Tasklist: {fileID: 443456424}
@@ -85749,15 +85849,24 @@ MonoBehaviour:
   Dialogue: {fileID: 1516238098}
   DialogueManager: {fileID: 23854522}
   Options: {fileID: 718715262}
-  scene: Welcome to Nestla
+  gameScene: 
+  retrieval: 0
   optionButtonPrefab: {fileID: 3741148585713256696, guid: 8d6318746227bea4fa19349685a9f366, type: 3}
   SLDR_Progress: {fileID: 1696000672}
+  nextButton: {fileID: 0}
+  DialogueIndicator: {fileID: 0}
+  backgroundImage: {fileID: 0}
+  customizedBackgroundImage: {fileID: 0}
+  playAnim: 0
+  whichLine: 0
+  playAnimation: {fileID: 0}
   DialogueList: []
   talkAgainList: []
+  refDialogueList: []
+  retrievalDialogueList: []
   index: 0
   roundNum: 1
-  Round1Answer: 0
-  Round2Answer: 0
+  Answers: 
 --- !u!65 &1804512342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -86459,19 +86568,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52794bbca86824a46b2543f21f1b3cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatePostPuzzle: 0
   repeatable: 0
-  counted: 0
-  puzzleToActivate: {fileID: 0}
-  fade: {fileID: 1463816534}
-  player: {fileID: 1614031491}
+  forcePlay: 0
   taskName: 
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
-  puzzleUI: {fileID: 0}
+  stayActive: 0
+  activatePostPuzzle: 0
+  puzzleToActivate: {fileID: 0}
+  player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
-  forcePlay: 0
+  counted: 0
+  puzzleUI: {fileID: 0}
+  fadeIn: {fileID: 0}
+  fadeOut: {fileID: 0}
+  timeToFade: 0.5
   endLocation: {fileID: 1353576128}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -86479,6 +86591,8 @@ MonoBehaviour:
   manager: {fileID: 1206418959}
   endRoom: 0
   followPlayer: {fileID: 273295041}
+  isLocked: 0
+  lockedDialogue: {fileID: 0}
 --- !u!65 &1816935076
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -89517,19 +89631,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52794bbca86824a46b2543f21f1b3cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatePostPuzzle: 0
   repeatable: 0
-  counted: 0
-  puzzleToActivate: {fileID: 0}
-  fade: {fileID: 1463816534}
-  player: {fileID: 1614031491}
+  forcePlay: 0
   taskName: 
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
-  puzzleUI: {fileID: 0}
+  stayActive: 0
+  activatePostPuzzle: 0
+  puzzleToActivate: {fileID: 0}
+  player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
-  forcePlay: 0
+  counted: 0
+  puzzleUI: {fileID: 0}
+  fadeIn: {fileID: 0}
+  fadeOut: {fileID: 0}
+  timeToFade: 0.5
   endLocation: {fileID: 514441649}
   Player: {fileID: 1614031488}
   playerMove: {fileID: 1614031491}
@@ -89537,6 +89654,8 @@ MonoBehaviour:
   manager: {fileID: 1206418959}
   endRoom: 2
   followPlayer: {fileID: 273295041}
+  isLocked: 0
+  lockedDialogue: {fileID: 0}
 --- !u!65 &1894209185
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -100221,19 +100340,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 602fb349e28f13340a2493ee43522650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatePostPuzzle: 0
   repeatable: 0
-  counted: 0
-  puzzleToActivate: {fileID: 0}
-  fade: {fileID: 1463816534}
-  player: {fileID: 1614031491}
+  forcePlay: 0
   taskName: 
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
-  puzzleUI: {fileID: 1463234969}
+  stayActive: 0
+  activatePostPuzzle: 0
+  puzzleToActivate: {fileID: 0}
+  player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
-  forcePlay: 0
+  counted: 0
+  puzzleUI: {fileID: 1463234969}
   fragments:
   - {fileID: 2108048202}
   - {fileID: 1977141981}

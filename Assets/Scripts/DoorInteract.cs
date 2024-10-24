@@ -11,6 +11,8 @@ public class DoorInteract : Interactable
     [SerializeField]
     private FadeOut fadeOut;
     [SerializeField]
+    private float timeToFade = 0.5f;
+    [SerializeField]
     public Transform endLocation;
     [SerializeField]
     private Transform Player;
@@ -37,7 +39,7 @@ public class DoorInteract : Interactable
         }
         else
         {
-            fadeOut.FadeImageOverTime(0.5f, this);
+            fadeOut.FadeImageOverTime(timeToFade, this);
         }
     }
     public override void Action()
@@ -49,12 +51,18 @@ public class DoorInteract : Interactable
             Player.transform.position = endLocation.position;
             manager.setLocation(endRoom);
             followPlayer.SetBumps(endRoom);
-            StartCoroutine(fadeIn.FadeInCoroutine(1.0f, this, false));
+
+            StartCoroutine(Wait(1.0f));
         }
     }
     public override void Complete()
     {
         
     }
+    public IEnumerator Wait(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+		StartCoroutine(fadeIn.FadeInCoroutine(1.0f, this, false));
+	}
 
 }

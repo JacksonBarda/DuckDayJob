@@ -9,6 +9,8 @@ public class PlayAnimation : MonoBehaviour
     [SerializeField]
     private Animator anim = null;
     [SerializeField]
+    private string clipToPlay;
+    [SerializeField]
     private bool camFollow = false;
     [SerializeField] 
     private bool willMove = false;
@@ -21,14 +23,17 @@ public class PlayAnimation : MonoBehaviour
     [SerializeField]
     float totalMovementTime = 5f; //the amount of time you want the movement to take
 
+
     private Transform taskTransform = null;
     private Vector3 PHStartAnimPos;
     private Vector3 PHEndAnimPos;
     private Transform ph;
-    private AnimInteractable task;
+    private Interactable task;
+
 
     void Start()
     {
+        anim.StopPlayback();
         PHStartAnimPos = startAnimTrans.position;
         PHEndAnimPos = endAnimTrans.position;
     }
@@ -38,12 +43,12 @@ public class PlayAnimation : MonoBehaviour
     {
         
     }
-    public void PlayAnimInteract(AnimInteractable _task)
+    public void PlayAnimInteract(Interactable _task)
     {
         task = _task;
         taskTransform = task.transform;
-        anim.Play("EggwinWalk");
-        if(willMove )
+        anim.Play(clipToPlay);
+        if(willMove)
         {
             if( camAnchor != null)
             {                
@@ -53,9 +58,9 @@ public class PlayAnimation : MonoBehaviour
                     camAnchor.Player = taskTransform;
                 }
             }
-            StartCoroutine(moveObject());
         }
-    }
+		StartCoroutine(moveObject());
+	}
     public IEnumerator moveObject()
     {
 
@@ -69,7 +74,9 @@ public class PlayAnimation : MonoBehaviour
 
         }
         camAnchor.Player = ph;
-        
-        task.Complete();
+        if(task is AnimInteractable)
+            task.Complete();
+        if(task is DialogueTool)
+            task.Complete();
     }
 }

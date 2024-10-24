@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using static TaskManager;
-
+[System.Serializable]
 public class TaskManager : MonoBehaviour
 {
-    [SerializeField]
+
+	[SerializeField]
     public List<DailyGameObjects> duckSpritesForDays = new List<DailyGameObjects>();
     public int count = 0;
-    private List<DayTask> tasksByDay = new List<DayTask>();
+    public List<DayTask> tasksByDay = new List<DayTask>();
     [SerializeField]
     public DayTask Day1;
     [SerializeField]
@@ -35,7 +36,7 @@ public class TaskManager : MonoBehaviour
     //public int dayCount = 0;
     public int ptCount = 0;
 
-    private int day = 1;
+    public int day = 1;
 
 
     public UIManager uiManager;
@@ -141,13 +142,13 @@ public class TaskManager : MonoBehaviour
                 }
 
             }
-            currentPt++;
+			currentPt++;
             while(countCheck)
             {
                 if(tasksByDay[day - 1].GetInteractables(currentPt).Count == 0)
                 {
                     currentPt++;
-                    if((int)currentPt >= 4)
+                    if((int)currentPt >= 5)
                     {
                         ChangeDay();
                         currentPt = PartIdentifier.Pt1;
@@ -164,19 +165,19 @@ public class TaskManager : MonoBehaviour
                 {
                     task.gameObject.SetActive(true);
                 }
+            }
+            foreach(GameObject GO in tasksByDay[day - 1].GetGameObjects(currentPt))
+            {
+
+                GO.SetActive(!GO.activeSelf);
 
             }
             count = 0;
             SaveGame();
 
         }
-        else
-        {
-                
-        }
 
         uiManager.UpdateTime(1);
-        //Change day time here
         PlayerMove.puzzleMode = false;
         if (_task.puzzleUI != null)
             _task.puzzleUI.SetActive(false);
@@ -186,26 +187,24 @@ public class TaskManager : MonoBehaviour
         {
             _task.gameObject.SetActive(false);
         }
-        if (tasksByDay[day - 1].GetInteractables(currentPt)[count] != null && tasksByDay[day - 1].GetInteractables(currentPt)[count].forcePlay)
-        {
-            tasksByDay[day - 1].GetInteractables(currentPt)[count].Interact();
-        }
+       // if (tasksByDay[day - 1].GetInteractables(currentPt)[count] != null && tasksByDay[day - 1].GetInteractables(currentPt)[count].forcePlay)
+        //{
+        //    tasksByDay[day - 1].GetInteractables(currentPt)[count].Interact();
+        //}
              
     }
 
     private void ChangeDay()
     {
-        foreach(GameObject dayObject in duckSpritesForDays[day - 1].dayGO)
+        int listLoc = 0;
+        foreach(GameObject dayObject in duckSpritesForDays[day - 1].spriteToMove)
         {
-            dayObject.SetActive(false);
-        }
-        day++;
-        foreach (GameObject dayObject in duckSpritesForDays[day - 1].dayGO)
-        {
-            dayObject.SetActive(true);
-        }
-        currentPt = 0;
             
+            dayObject.transform.position = duckSpritesForDays[day - 1].dayLocation[listLoc].transform.position;
+            listLoc++;
+		}
+        currentPt = 0;
+        day++;
         SaveGame();
         LoadDay();  
     }
@@ -236,7 +235,11 @@ public class TaskManager : MonoBehaviour
         PlayerPrefs.SetInt("Health", health);
         PlayerPrefs.Save();
     }
+    public Interactable findCurrentInteractable()
+    {
+        return tasksByDay[day - 1].GetInteractables(currentPt)[count];
 
+	}
     private PartIdentifier GetCurrentPt(int _ptCount)
     {
         switch(_ptCount)
@@ -267,25 +270,36 @@ public class TaskManager : MonoBehaviour
 
 
 }
+
+
 [System.Serializable]
 public struct DailyGameObjects
 {
-    public List<GameObject> dayGO;
+    public List<GameObject> spriteToMove;
+    public List<Transform> dayLocation;
 
 }
 [System.Serializable]
 public struct DayTask
 {
     [Tooltip ("Put the actual day - 1 EX: day1 = 0 for the days attribute")]
-    public int day;
-    public List<Interactable> pt1;
-    public List<Interactable> pt2;
-    public List<Interactable> pt3;
-    public List<Interactable> pt4;
-    public List<Interactable> pt5;
-    public List<Interactable> pt6;
 
-    public List<Interactable> GetInteractables(PartIdentifier point)
+    public int day;
+	public List<GameObject> gameObjectToShowHidePT1;
+	public List<Interactable> pt1;
+	public List<GameObject> gameObjectToShowHidePT2;
+	public List<Interactable> pt2;
+	public List<GameObject> gameObjectToShowHidePT3;
+	public List<Interactable> pt3;
+	public List<GameObject> gameObjectToShowHidePT4;
+	public List<Interactable> pt4;
+	public List<GameObject> gameObjectToShowHidePT5;
+	public List<Interactable> pt5;
+	public List<GameObject> gameObjectToShowHidePT6;
+	public List<Interactable> pt6;
+	
+
+	public List<Interactable> GetInteractables(PartIdentifier point)
     {
         switch (point)
         {
@@ -305,5 +319,25 @@ public struct DayTask
                 return new List<Interactable>();
         }
     }
+	public List<GameObject> GetGameObjects(PartIdentifier point)
+	{
+		switch (point)
+		{
+			case PartIdentifier.Pt1:
+				return gameObjectToShowHidePT1;
+			case PartIdentifier.Pt2:
+				return gameObjectToShowHidePT2;
+			case PartIdentifier.Pt3:
+				return gameObjectToShowHidePT3;
+			case PartIdentifier.Pt4:
+				return gameObjectToShowHidePT4;
+			case PartIdentifier.Pt5:
+				return gameObjectToShowHidePT5;
+			case PartIdentifier.Pt6:
+				return gameObjectToShowHidePT6;
+			default:
+				return new List<GameObject>();
+		}
+	}
 }
 

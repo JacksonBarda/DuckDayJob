@@ -67,7 +67,7 @@ public class ReadDialogueData : MonoBehaviour
     public List<GameObject> DialogueToolsList = new List<GameObject>(); 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         getData();
 
@@ -77,12 +77,12 @@ public class ReadDialogueData : MonoBehaviour
             dTool.GetComponent<DialogueTool>().setList();
         }
 
-        DialogTool = DialogueToolsList[0];
-        DialogTool.GetComponent<DialogueTool>().Interact();
+        //DialogTool = DialogueToolsList[0];
+       // DialogTool.GetComponent<DialogueTool>().Interact();
 
         // set which dialogue tools are active
         //priority = 1;
-        setDialogueTools();
+        //setDialogueTools();
     }
 
     // Update is called once per frame
