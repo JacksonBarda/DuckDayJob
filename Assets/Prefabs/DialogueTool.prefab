@@ -178,8 +178,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8894409726330564798}
   - component: {fileID: 6014696403406345891}
+  - component: {fileID: -727074025573611078}
   - component: {fileID: 9070408940447087709}
   - component: {fileID: 6844564806619983327}
+  - component: {fileID: 5290081979438441546}
   m_Layer: 0
   m_Name: DialogueTool
   m_TagString: Interactable
@@ -212,6 +214,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8161731065144322017}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &-727074025573611078
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8161731065144322017}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &9070408940447087709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -251,6 +280,7 @@ MonoBehaviour:
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
+  stayActive: 0
   activatePostPuzzle: 0
   puzzleToActivate: {fileID: 0}
   fade: {fileID: 0}
@@ -268,8 +298,10 @@ MonoBehaviour:
   DialogueManager: {fileID: 0}
   Options: {fileID: 0}
   gameScene: 
+  retrieval: 0
   optionButtonPrefab: {fileID: 3741148585713256696, guid: 8d6318746227bea4fa19349685a9f366, type: 3}
   SLDR_Progress: {fileID: 0}
+  nextButton: {fileID: 0}
   DialogueIndicator: {fileID: 0}
   backgroundImage: {fileID: 0}
   customizedBackgroundImage: {fileID: 0}
@@ -280,3 +312,23 @@ MonoBehaviour:
   index: 0
   roundNum: 1
   Answers: 
+--- !u!114 &5290081979438441546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8161731065144322017}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 618b0245cc23ac6448deb466756253be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleWalking: 0
+  walkAfterDialogue: 0
+  currentRoom: location
+  isWalking: 0
+  moveSpeed: 0.8
+  setDirection: 0
+  animator: {fileID: 0}
+  spriteRenderer: {fileID: 0}

@@ -33,11 +33,13 @@ public class PlayerMove : MonoBehaviour
     public static bool puzzleMode = false;
     public bool mazeMode = false;
 
+
    
     
     private void Start()
     {
         rigid = gameObject.GetComponent<Rigidbody>();
+        rigid.useGravity = true;
         interactable.Remove(interactable[0]);
         //animator = GetComponent<Animator>();
     }
@@ -161,15 +163,19 @@ public class PlayerMove : MonoBehaviour
                 }
                 moveValRight = moveValRightHolder;
                 moveValLeft = moveValLeftHolder;
+                rigid.useGravity = true;
             }
+
             if(mazeMode)
             {
                 moveValDown = moveValDownHolder;
                 moveValRight = moveValRightHolder;
                 moveValLeft = moveValLeftHolder;
                 moveValUp = moveValUpHolder;
-                rigid.velocity = new Vector3(moveValRight - moveValLeft, moveValUp-moveValDown, 0f) * moveSpeed;
+                rigid.velocity = new Vector3(moveValRight - moveValLeft, moveValUp-moveValDown, 0f) * moveSpeed * 3;
+                rigid.useGravity = false;
             }
+
             if (Input.GetKeyDown(KeyCode.R))
             {
               //  customLocation = 
@@ -216,6 +222,7 @@ public class PlayerMove : MonoBehaviour
         if (collision.gameObject.tag == "Interactable")
         {
             if (interactable != null)
+                Debug.Log(collision.gameObject.name);
                 interactable.Add(collision.gameObject.GetComponent<Interactable>());
 
         }

@@ -135,6 +135,9 @@ public class UIManager : MonoBehaviour
             case Locations.BOSSROOM:
                 room = "BOSS'S OFFICE";
                 break;
+            case Locations.VENTILATION:
+                room = "VENTILATION";
+                break;
 
             default:
                 room = "NONE";
@@ -147,14 +150,14 @@ public class UIManager : MonoBehaviour
 
     private void SetInteractPopupText()
     {
-        if (PlayerMove.GetInteractable() != null)
+        if (PlayerMove.GetInteractable() != null)// && PlayerMove.GetInteractable().name != "Vent2")
         {
             //Debug.Log("The Interactable: " + interactableName);
 
             switch (PlayerMove.GetInteractable().name)
             {
                 case string x when x.Contains("Duckette"):
-                    interactableName = "Duckette";
+                    interactableName = "Duckette" ;
                     break;
                 case string x when x.Contains("MainDuck"):
                     interactableName = PlayerPrefs.GetString("playerName") != null ? PlayerPrefs.GetString("playerName"): "MainDuck";
@@ -180,6 +183,9 @@ public class UIManager : MonoBehaviour
                 case string x when x.Contains("Door"):
                     interactableName = "Door";
                     break;
+                case string x when x.Contains("Vent"):
+                    interactableName = "Vent";
+                    break;
                 case string x when x.Contains("BathroomStalls"):
                     interactableName = "Empty Stall";
                     break;
@@ -195,7 +201,7 @@ public class UIManager : MonoBehaviour
                 case string x when x.Contains("EmailDecrypt"):
                     interactableName = "Elon Duck's Computer";
                     break;
-                default: interactableName = "Interact";
+                default: interactableName = "UIMan MissingInteractable";
                     break;
             }
             InteractionPopup.SetActive(true);

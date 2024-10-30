@@ -7,24 +7,15 @@ using Enums;
 public class DoorInteract : Interactable
 {
 
-    [SerializeField]
-    private Transform endLocation;
-    [SerializeField]
-    private Transform Player;
-    [SerializeField]
-    private PlayerMove playerMove;
-    [SerializeField]
-    private Rigidbody rigid;
-    [SerializeField]
-    private UIManager manager;
-    [SerializeField]
-    private Locations endRoom;
-    [SerializeField]
-    private FollowPlayer followPlayer;
-    [SerializeField]
-    private bool isLocked;
-    [SerializeField]
-    private DialogueTool lockedDialogue;
+    public Transform endLocation;
+    public Transform Player;
+    public PlayerMove playerMove;
+    public Rigidbody rigid;
+    public UIManager manager;
+    public Locations endRoom;
+    public FollowPlayer followPlayer;
+    public bool isLocked;
+    public DialogueTool lockedDialogue;
 
     public override void Interact()
     {

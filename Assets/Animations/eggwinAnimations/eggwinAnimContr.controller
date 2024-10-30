@@ -76,7 +76,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mainDuckStopWalk
+  m_Name: eggwinStopWalk
   m_Speed: 0.2
   m_CycleOffset: 0
   m_Transitions:
@@ -90,7 +90,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 01f135fcbb49c8a49b199fb2becd1b19, type: 2}
+  m_Motion: {fileID: 7400000, guid: 5697c96fb36307041a3e8194f1ffc7f0, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -130,7 +130,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mainDuckStartWalk
+  m_Name: eggwinStartWalk
   m_Speed: 0.2
   m_CycleOffset: 0
   m_Transitions:
@@ -144,7 +144,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 47383ada45ecf6c4f84e62247982517a, type: 2}
+  m_Motion: {fileID: 7400000, guid: 1132bfb5567fcd3469f6cf5303bdd0e0, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -183,7 +183,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mainDuckAnimContr
+  m_Name: eggwinAnimContr
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Input
