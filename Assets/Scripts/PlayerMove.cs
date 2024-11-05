@@ -68,20 +68,7 @@ public class PlayerMove : MonoBehaviour
         }
         
     }
-    void OnJump(InputValue value)
-    {
-        if (interactable[0] != null && mazeMode)
-        {
-            interactable[0].Interact();
-        }
-        if (grounded && !mazeMode && !puzzleMode)
-        {
-            moveValUp = value.Get<float>();
-            rigid.velocity = new Vector3(moveValRight - moveValLeft, (rigid.velocity.y / moveSpeed) + moveValUp, 0f) * moveSpeed;
-        }
-    }
-
-
+    
     void OnInteract(InputValue value)
     {
         moveValUpHolder = value.Get<float>();
@@ -112,6 +99,7 @@ public class PlayerMove : MonoBehaviour
             moveValUp = moveValUpHolder;
         }
     }
+
     void OnDuck(InputValue value)
     {
         moveValDownHolder = value.Get<float>();
@@ -222,8 +210,8 @@ public class PlayerMove : MonoBehaviour
         if (collision.gameObject.tag == "Interactable")
         {
             if (interactable != null)
-                Debug.Log(collision.gameObject.name);
-                interactable.Add(collision.gameObject.GetComponent<Interactable>());
+            Debug.Log(collision.gameObject.name);
+            interactable.Add(collision.gameObject.GetComponent<Interactable>());
 
         }
     }

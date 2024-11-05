@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class VentInteract : DoorInteract
 {
+    [Header("Vent Custom Variables")]
     [SerializeField]
     private Image vignette;
     [SerializeField]
@@ -20,7 +21,7 @@ public class VentInteract : DoorInteract
 
     public override void Interact()
     {
-        fade.FadeImageOverTime(0.7f, this);
+        fadeOut.FadeImageOverTime(timeToFade, this);
 
         StartCoroutine(VignetteLoading());
 
@@ -32,11 +33,12 @@ public class VentInteract : DoorInteract
     }
     public override void Action()
     {
-        
+
         Player.transform.position = endLocation.position;
         followPlayer.SetBumps(endRoom);
         manager.setLocation(endRoom);
-        
+
+        //StartCoroutine(Wait(1.0f));
     }
     public override void Complete()
     {
@@ -46,10 +48,8 @@ public class VentInteract : DoorInteract
     private void OnTriggerEnter(Collider collision)
     {
         Debug.Log("collision");
-        if (autoInteract == true)
         {
             Interact();
-            Debug.Log("auto interact");
         }
     }
 

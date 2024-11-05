@@ -6,16 +6,30 @@ using Enums;
 
 public class DoorInteract : Interactable
 {
-
+    [SerializeField]
+    protected FadeIn fadeIn;
+    [SerializeField]
+    protected FadeOut fadeOut;
+    [SerializeField]
+    protected float timeToFade = 0.5f;
+    [SerializeField]
     public Transform endLocation;
-    public Transform Player;
-    public PlayerMove playerMove;
-    public Rigidbody rigid;
-    public UIManager manager;
+    [SerializeField]
+    protected Transform Player;
+    [SerializeField]
+    protected PlayerMove playerMove;
+    [SerializeField]
+    protected Rigidbody rigid;
+    [SerializeField]
+    protected UIManager manager;
+    [SerializeField]
     public Locations endRoom;
-    public FollowPlayer followPlayer;
-    public bool isLocked;
-    public DialogueTool lockedDialogue;
+    [SerializeField]
+    protected FollowPlayer followPlayer;
+    [SerializeField]
+    protected bool isLocked;
+    [SerializeField]
+    protected DialogueTool lockedDialogue;
 
     public override void Interact()
     {

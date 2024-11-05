@@ -138,7 +138,7 @@ public class UIManager : MonoBehaviour
             case Locations.VENTILATION:
                 room = "VENTILATION";
                 break;
-
+                
             default:
                 room = "NONE";
                 break;

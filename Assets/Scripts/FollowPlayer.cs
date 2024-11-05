@@ -16,7 +16,6 @@ public class FollowPlayer : MonoBehaviour
     private float zBump;
     private float xMin;
     private float xMax;
-
     private float xRot;
     private float yMin;
     private float yMax;
@@ -57,7 +56,6 @@ public class FollowPlayer : MonoBehaviour
                 yMin = .5f;
                 yMax = 12.3f;
                 xRot = 12.36f;
-
                 break;
 
             case Locations.CLOSET:
@@ -153,10 +151,6 @@ public class FollowPlayer : MonoBehaviour
             case Locations.VENTILATION:
                 zBump = -8.29f;
                 yBump = 0;
-                //xMin = -31.88f;
-                //xMax = -21.36f;
-                //yMin = .5f;
-                //yMax = 12.3f;
                 xMin = -41.88f;
                 xMax = -11.36f;
                 yMin = -10.5f;
