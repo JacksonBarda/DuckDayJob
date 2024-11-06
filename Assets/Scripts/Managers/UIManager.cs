@@ -137,6 +137,9 @@ public class UIManager : MonoBehaviour
             case Locations.BOSSROOM:
                 room = "BOSS'S OFFICE";
                 break;
+            case Locations.VENTILATION:
+                room = "VENTILATION";
+                break;
 
             default:
                 room = "NONE";
@@ -192,6 +195,10 @@ public class UIManager : MonoBehaviour
                 case string x when x.Contains("Door"):
                     DoorInteract door = (DoorInteract)PlayerMove.GetInteractable();
                     interactableName = door.endRoom.ToString();
+                    SetInteractionPopupLocForDoor();
+                    break;
+                case string x when x.Contains("Vent"):
+                    interactableName = "Vent";
                     SetInteractionPopupLocForDoor();
                     break;
                 case string x when x.Contains("BathroomStalls"):

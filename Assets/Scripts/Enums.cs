@@ -11,7 +11,8 @@ namespace Enums
         MAZE,
         MANUFACTURING,
         KILLINGFLOOR,
-        BOSSROOM
+        BOSSROOM,
+        VENTILATION
     }
 
     public enum DayEnum
