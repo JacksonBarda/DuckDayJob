@@ -12,6 +12,7 @@ public class FollowPlayer : MonoBehaviour
     [SerializeField]
     private UIManager uiManager;
     private Transform cameraTransform;
+    private bool cinematicMode = false;
     private float yBump;
     private float zBump;
     private float xMin;
@@ -28,6 +29,7 @@ public class FollowPlayer : MonoBehaviour
         cameraTransform = mainCamera.transform;
         SetCamTrans();
         //cameraTransform.position = transform.position;
+
     }
     public void SetCamTrans()
     {
@@ -37,10 +39,12 @@ public class FollowPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        cameraTransform.position = new Vector3(Player.position.x, Player.position.y + yBump, zBump);
-        cameraTransform.position = new Vector3(Mathf.Clamp(cameraTransform.position.x, xMin, xMax), Mathf.Clamp(cameraTransform.position.y, yMin, yMax), cameraTransform.position.z);
-        cameraTransform.eulerAngles = new Vector3(xRot, 0, 0);
+        if (!cinematicMode)
+        {
+            cameraTransform.position = new Vector3(Player.position.x, Player.position.y + yBump, zBump);
+            cameraTransform.position = new Vector3(Mathf.Clamp(cameraTransform.position.x, xMin, xMax), Mathf.Clamp(cameraTransform.position.y, yMin, yMax), cameraTransform.position.z);
+            cameraTransform.eulerAngles = new Vector3(xRot, 0, 0);
+        }
     }
     public void SetBumps(Locations currentLocation)
     {

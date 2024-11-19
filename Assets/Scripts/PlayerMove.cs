@@ -92,7 +92,7 @@ public class PlayerMove : MonoBehaviour
             }
             catch (ArgumentOutOfRangeException)
             {
-                Debug.LogWarning("No interactable found");
+                Debug.LogWarning("No interactable found. Nothing to worry about (maybe).");
             } 
         }
         if (mazeMode)

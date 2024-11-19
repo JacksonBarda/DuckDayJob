@@ -159,8 +159,7 @@ public class ReadDialogueData : MonoBehaviour
        // if (DialogTool.GetComponent<DialogueTool>().hadOption == false){
             DialogTool.GetComponent<DialogueTool>().index++;
             DialogTool.GetComponent<DialogueTool>().setDialogueUI();
-       // }
-        
+        // }
     }
 
     public void setDialogueTools()

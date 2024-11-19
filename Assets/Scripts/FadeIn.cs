@@ -52,4 +52,37 @@ public class FadeIn : MonoBehaviour
         }
         
     }
+
+
+    // < -----   Cinematic use only   ----->
+    public void FadeImageInOverTime(float fadeTime)
+    {
+        // Start the fade-out coroutine
+        StartCoroutine(FadeInCoroutine(fadeTime));
+    }
+    public IEnumerator FadeInCoroutine(float fadeTime)
+    {
+        // Calculate the target alpha (original alpha)
+        float targetAlpha = originalAlpha;
+
+        // Calculate the alpha increment per frame
+        float alphaIncrement = (targetAlpha + image.color.a) / (fadeTime / 2);
+
+        // Fade in the image
+        while (image.color.a > targetAlpha)
+        {
+            // Update the alpha value of the image
+            Color currentColor = image.color;
+            currentColor.a -= alphaIncrement * Time.deltaTime;
+            image.color = currentColor;
+
+            yield return null;
+        }
+
+        // Ensure the final alpha value is exactly the original alpha
+        Color finalColor = image.color;
+        finalColor.a = originalAlpha;
+        image.color = finalColor;
+
+    }
 }

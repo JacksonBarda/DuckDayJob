@@ -10,6 +10,8 @@ public class VentInteract : DoorInteract
     [SerializeField]
     private Image vignette;
     [SerializeField]
+    private CinemaManager cinemaManager;
+    [SerializeField]
     private bool isVent2 = false;
 
     private void Start()
@@ -25,7 +27,7 @@ public class VentInteract : DoorInteract
 
         if (isVent2)
         {
-            //load killing room sequence      
+            cinemaManager.ActivateSequence();    
         }
 
     }
