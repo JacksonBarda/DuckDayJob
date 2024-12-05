@@ -5,10 +5,13 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 using Enums;
+using System.Runtime.CompilerServices;
+using System.Threading;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField]
+	public static UIManager Instance { get; private set; }
+	[SerializeField]
     private TMP_Text location;
     [SerializeField]
     private TMP_Text day;
@@ -20,12 +23,17 @@ public class UIManager : MonoBehaviour
     private GameObject DialogueUI;
     [SerializeField]
     private PlayerMove PlayerMove;
-    [SerializeField]
-    private GameObject InteractionPopup;
+	[SerializeField]
+	private GameObject interactionPopuphold;
+    public static GameObject InteractionPopup;
     [SerializeField]
     private TMP_Text interactableText;
     [SerializeField]
     private Transform cameraTransfrom;
+    [SerializeField]
+    private List<GameObject> taskList;
+    [SerializeField]
+    private List<GameObject> progressDucks;
 
     public int dayNumber = 1;
     public DayEnum dayOrNight = DayEnum.Day;
@@ -37,7 +45,19 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        setLocation(startingLocation);
+		InteractionPopup = interactionPopuphold;
+		// Check if there is already an instance of UIManager
+		if (Instance != null && Instance != this)
+		{
+			Destroy(gameObject); // Destroy this if it's a duplicate
+			return;
+		}
+
+		Instance = this; // Assign the instance to this object
+
+		// Optionally, you can use this line to preserve the UIManager across scene changes
+		DontDestroyOnLoad(gameObject);
+		setLocation(startingLocation);
         day.text = "Day " + dayNumber;
         time.text = hour + ":00 " + meridiem;
     }
@@ -46,6 +66,75 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         SetInteractPopupText();
+
+    }
+    public void SetTaskListText(String newTask, int count, GameObject interact, bool completed)
+    {
+
+		if (string.IsNullOrEmpty(newTask))
+		{
+			Debug.LogError("newTask is null or empty.");
+			return;
+		}
+
+		// Validate task index
+		if (count < 0 || count >= taskList.Count)
+		{
+			Debug.LogError($"Invalid index {count}. taskList has {taskList.Count} items.");
+			return;
+		}
+
+		GameObject task = taskList[count];
+
+		// Validate task GameObject
+		if (task == null)
+		{
+			Debug.LogError($"Task at index {count} is null. Check taskList initialization.");
+			return;
+		}
+
+		// Validate TextMeshPro component
+		var textMeshPro = task.GetComponent<TextMeshProUGUI>();
+		if (textMeshPro == null)
+		{
+			Debug.LogError($"Task GameObject at index {count} does not have a TextMeshPro component.");
+			return;
+		}
+
+		// Update task text logic
+		if (interact.activeSelf)
+		{			
+
+            if (completed)
+            {
+				textMeshPro.text = "<s>" + textMeshPro.text + "</s>";
+            }
+            else
+            {
+				textMeshPro.SetText(newTask);
+			}
+
+		}
+		else if (newTask == textMeshPro.text)
+		{
+			textMeshPro.text = "<s>" + textMeshPro.text + "</s>";
+		}
+	}
+    public void ClearTaskList()
+    {
+        foreach (var task in taskList)
+        {
+            var textMeshPro = task.GetComponent<TextMeshProUGUI>();
+			textMeshPro.SetText("");
+		}
+	}
+    public void SetProgressBar(int _count)
+    {
+        foreach(GameObject GO in progressDucks)
+        {
+            GO.SetActive(false);
+        }
+        progressDucks[_count].SetActive(true);
 
     }
 
@@ -72,27 +161,43 @@ public class UIManager : MonoBehaviour
         meridiem = "a.m.";
         UpdateDay();
     }
+    int minuteCount;
+	public void UpdateTime(float addHours)
+	{
 
-    public void UpdateTime(int addHours)
-    {
-        hour += addHours;
-        if (hour > 12)
-        {
-            hour = hour - 12;
-            if (meridiem.Equals("a.m."))
-            {
-                meridiem = "p.m.";
-            }
-            else
-            {
-                meridiem = "a.m.";
-            }
-        }
+		// Convert the added time to minutes
+		int totalMinutesToAdd = Mathf.RoundToInt(addHours * 60);
 
-        time.text = hour + ":00 " + meridiem;
-    }
+		// Calculate the new time in minutes
+		int currentMinutes = (hour % 12) * 60 + (meridiem == "p.m." ? 720 : 0); // Convert hour and meridiem to total minutes
+		currentMinutes += totalMinutesToAdd + minuteCount;
 
-    public void setLocation(Locations currentLocation)
+		// Wrap around if the time exceeds 24 hours (1440 minutes)
+		currentMinutes %= 1440;
+
+		// Calculate the new hour and minute values
+		int newHour = currentMinutes / 60;
+		int newMinute = currentMinutes % 60;
+        minuteCount = newMinute;
+		// Determine the meridiem (AM/PM)
+		if (newHour >= 12)
+		{
+			meridiem = "p.m.";
+		}
+		else
+		{
+			meridiem = "a.m.";
+		}
+
+		// Convert hour to 12-hour format
+		hour = newHour % 12;
+		if (hour == 0) hour = 12; // Midnight or Noon should display as 12
+
+		// Update the displayed time
+		time.text = $"{hour}:{newMinute:00} {meridiem}";
+	}
+
+	public void setLocation(Locations currentLocation)
     {
         string room = "";
 
@@ -147,91 +252,96 @@ public class UIManager : MonoBehaviour
         UpdateLocation(room);
     }
 
-    private void SetInteractPopupText()
+    public void SetInteractPopupText()
     {
         bool playerName = false;
-        if (PlayerMove.GetInteractable() != null)
-        {
-            //Debug.Log("The Interactable: " + interactableName);
 
-            switch (PlayerMove.GetInteractable().name)
-            {
-                case string x when x.Contains("Duckette"):
-                    interactableName = "Duckette";
-                    SetInteractionPopupLoc();
-                    break;
-                case string x when x.Contains("MainDuck"):
-                    interactableName = PlayerPrefs.GetString("playerName") != null ? PlayerPrefs.GetString("playerName"): "MainDuck";
-                    playerName = true;
-                    //SetInteractionPopupLoc();
-                    break;
-                case string x when x.Contains("Eggwin"):
-                    interactableName = "Eggwin";
-                    SetInteractionPopupLoc();
-                    break;
-                case string x when x.Contains("Donald"):
-                    interactableName = "Donald";
-                    SetInteractionPopupLoc();
-                    break;
-                case string x when x.Contains("Quackson"):
-                    interactableName = "Quackson";
-                    SetInteractionPopupLoc();
-                    break;
-                case string x when x.Contains("ElonDuck"):
-                    interactableName = "Elon Duck";
-                    SetInteractionPopupLoc();
-                    break;
-                case string x when x.Contains("Janitor"):
-                    interactableName = "Janitor";
-                    SetInteractionPopupLoc();
-                    break;
-                case string x when x.Contains("NPC"):
-                    interactableName = "NPC";
-                    SetInteractionPopupLoc();
-                    break;
-                case string x when x.Contains("Door"):
-                    DoorInteract door = (DoorInteract)PlayerMove.GetInteractable();
-                    interactableName = door.endRoom.ToString();
-                    SetInteractionPopupLocForDoor();
-                    break;
-                case string x when x.Contains("BathroomStalls"):
-                    interactableName = "Empty Stall";
-                    SetInteractionPopupLoc();
-                    break;
-                case string x when x.Contains("InteractCad"):
-                    interactableName = "Computer";
-                    SetInteractionPopupLoc();
-                    break;
-                case string x when x.Contains("InteractVendingMachine"):
-                    interactableName = "Vending Machine";
-                    SetInteractionPopupLoc();
-                    break;
-                case string x when x.Contains("DeskDragger"):
-                    interactableName = "Duckette's Computer";
-                    SetInteractionPopupLoc();
-                    break;
-                case string x when x.Contains("EmailDecrypt"):
-                    interactableName = "Elon Duck's Computer";
-                    SetInteractionPopupLoc();
-                    break;
-                default: interactableName = "Interact";
-                    break;
-            }
+			if (PlayerMove.GetInteractable() != null && !PlayerMove.puzzleMode)
+			{
+				//Debug.Log("The Interactable: " + interactableName);
 
-            if(!playerName)
-            {
-                InteractionPopup.transform.LookAt(cameraTransfrom, Vector3.up);
-                InteractionPopup.transform.eulerAngles = new Vector3(InteractionPopup.transform.eulerAngles.x, InteractionPopup.transform.eulerAngles.y +180f , InteractionPopup.transform.eulerAngles.z);
-                InteractionPopup.SetActive(true);
-                interactableText.text = interactableName;
-            }
+				switch (PlayerMove.GetInteractable().name)
+				{
+					case string x when x.Contains("Duckette"):
+						interactableName = "Duckette";
+						SetInteractionPopupLoc();
+						break;
+					case string x when x.Contains("MainDuck"):
+						interactableName = PlayerPrefs.GetString("playerName") != null ? PlayerPrefs.GetString("playerName") : "MainDuck";
+						playerName = true;
+						//SetInteractionPopupLoc();
+						break;
+					case string x when x.Contains("Eggwin"):
+						interactableName = "Eggwin";
+						SetInteractionPopupLoc();
+						break;
+					case string x when x.Contains("Donald"):
+						interactableName = "Donald";
+						SetInteractionPopupLoc();
+						break;
+					case string x when x.Contains("Quackson"):
+						interactableName = "Quackson";
+						SetInteractionPopupLoc();
+						break;
+					case string x when x.Contains("ElonDuck"):
+						interactableName = "Elon Duck";
+						SetInteractionPopupLoc();
+						break;
+					case string x when x.Contains("Janitor"):
+						interactableName = "Janitor";
+						SetInteractionPopupLoc();
+						break;
+					case string x when x.Contains("NPC"):
+						interactableName = "NPC";
+						SetInteractionPopupLoc();
+						break;
+					case string x when x.Contains("Door"):
+						DoorInteract door = (DoorInteract)PlayerMove.GetInteractable();
+						interactableName = door.endRoom.ToString();
+						SetInteractionPopupLocForDoor();
+						break;
+					case string x when x.Contains("BathroomStalls"):
+						interactableName = "Empty Stall";
+						SetInteractionPopupLoc();
+						break;
+					case string x when x.Contains("InteractCad"):
+						interactableName = "Computer";
+						SetInteractionPopupLoc();
+						break;
+					case string x when x.Contains("InteractVendingMachine"):
+						interactableName = "Vending Machine";
+						SetInteractionPopupLoc();
+						break;
+					case string x when x.Contains("DeskDragger"):
+						interactableName = "Duckette's Computer";
+						SetInteractionPopupLoc();
+						break;
+					case string x when x.Contains("EmailDecrypt"):
+						interactableName = "Elon Duck's Computer";
+						SetInteractionPopupLoc();
+						break;
+					default:
+						interactableName = "Interact";
+						break;
+				}
 
+				if (!playerName)
+				{
+					InteractionPopup.SetActive(true);
+					InteractionPopup.transform.LookAt(cameraTransfrom, Vector3.up);
+					InteractionPopup.transform.eulerAngles = new Vector3(InteractionPopup.transform.eulerAngles.x, InteractionPopup.transform.eulerAngles.y + 180f, InteractionPopup.transform.eulerAngles.z);
 
-        }
-        else
-        {
-            InteractionPopup.SetActive(false);
-        }
+					interactableText.text = interactableName;
+				}
+				
+
+			}
+			else
+			{
+				InteractionPopup.SetActive(false);
+			}
+		
+        
     }
     private void SetInteractionPopupLoc()
     {

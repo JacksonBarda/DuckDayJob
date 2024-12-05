@@ -15,7 +15,7 @@ public class Interactable : MonoBehaviour
     public bool isVisibleOnStart = true;
     public bool stayActive = false;
     public bool activatePostPuzzle = false;
-    public Interactable puzzleToActivate;
+    public List<GameObject> puzzleToActivate;
     public PlayerMove player;
 
     public GameObject mainUI;
@@ -33,17 +33,23 @@ public class Interactable : MonoBehaviour
     public virtual void Interact()
     {
         PlayerMove.puzzleMode = true;
+        UIManager.InteractionPopup.SetActive(false);
     }
     public virtual void Action() { }
     public virtual void Complete()
     {
-        if (activatePostPuzzle)
+
+		if (activatePostPuzzle)
         {
-            if(puzzleToActivate != null)
-                puzzleToActivate.gameObject.SetActive(true);
+            foreach (GameObject thingToActivate in puzzleToActivate)
+            {
+                if (thingToActivate != null)
+                    thingToActivate.gameObject.SetActive(!thingToActivate.gameObject.activeSelf);
+            }
         }
         isCompleted = true;
-        TaskManager.onTaskComplete(this);
+		UIManager.InteractionPopup.SetActive(true);
+		TaskManager.onTaskComplete(this);
     }
     public virtual void Failed()
     {

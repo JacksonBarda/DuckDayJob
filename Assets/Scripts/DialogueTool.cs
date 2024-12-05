@@ -54,8 +54,7 @@ public class DialogueTool : Interactable
     [SerializeField]
     private PlayAnimation playAnimation;
 
-
-    private string duckname;
+	private string duckname;
     private int quackscompleted;
     private string previousName;
 
@@ -203,20 +202,20 @@ public class DialogueTool : Interactable
         // only sets talk again if there is a talk again dialogue. otherwise, if talk with the duck again, will play the same dialogue
         if (talkAgainList.Count != 0)
         {
-			if (!name.Contains("MainDuck"))
-			{
-				if (this.transform.childCount > 0 && DialogueIndicator == null)
-				{
-					DialogueIndicator = this.transform.GetChild(1).gameObject;
+            //if (!name.Contains("MainDuck"))
+            //{
+            //    if (this.transform.childCount > 0 && DialogueIndicator == null)
+            //    {
+            //        DialogueIndicator = this.transform.GetChild(1).gameObject;
 
-				}
-				DialogueIndicator.SetActive(true);
+            //    }
+            //    DialogueIndicator.SetActive(true);
 
-			}
-			else
-			{
-				DialogueIndicator = null;
-			}
+            //}
+            //else
+			//{
+			DialogueIndicator = null;
+			//}
 			talkAgain = true;
         }
         index = 0;

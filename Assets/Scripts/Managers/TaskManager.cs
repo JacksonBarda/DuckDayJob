@@ -9,7 +9,7 @@ public class TaskManager : MonoBehaviour
 {
 
 	[SerializeField]
-    public List<DailyGameObjects> duckSpritesForDays = new List<DailyGameObjects>();
+	public List<DailyGameObjects> duckSpritesForDays = new List<DailyGameObjects>();
     public int count = 0;
     public List<DayTask> tasksByDay = new List<DayTask>();
     [SerializeField]
@@ -39,7 +39,6 @@ public class TaskManager : MonoBehaviour
     public int day = 1;
 
 
-    public UIManager uiManager;
 
     public delegate void OnTaskComplete(Interactable _task);
     public static OnTaskComplete onTaskComplete;
@@ -109,7 +108,7 @@ public class TaskManager : MonoBehaviour
         {
             OnDeath();
         }
-        uiManager.UpdateTime(1);
+        //uiManager.UpdateTime(1);
         SaveGame();
         
     }
@@ -130,7 +129,8 @@ public class TaskManager : MonoBehaviour
             {
                 count++;
                 task.counted = true;
-            }
+				UIManager.Instance.UpdateTime(UnityEngine.Random.Range(0.1f, 0.5f));
+			}
         }
         if (count >= tasksByDay[day - 1].GetInteractables(currentPt).Count)
         {
@@ -142,11 +142,15 @@ public class TaskManager : MonoBehaviour
                 }
 
             }
+			UIManager.Instance.ClearTaskList();
+			UIManager.Instance.UpdateTime(UnityEngine.Random.Range(0.4f, 0.8f));
 			currentPt++;
-            while(countCheck)
+
+			while (countCheck)
             {
                 if(tasksByDay[day - 1].GetInteractables(currentPt).Count == 0)
                 {
+
                     currentPt++;
                     if((int)currentPt >= 5)
                     {
@@ -177,8 +181,8 @@ public class TaskManager : MonoBehaviour
 
         }
 
-        uiManager.UpdateTime(1);
-        PlayerMove.puzzleMode = false;
+		UIManager.Instance.SetProgressBar((int)currentPt);
+		PlayerMove.puzzleMode = false;
         if (_task.puzzleUI != null)
             _task.puzzleUI.SetActive(false);
         if (_task.mainUI != null)
@@ -187,12 +191,24 @@ public class TaskManager : MonoBehaviour
         {
             _task.gameObject.SetActive(false);
         }
-       // if (tasksByDay[day - 1].GetInteractables(currentPt)[count] != null && tasksByDay[day - 1].GetInteractables(currentPt)[count].forcePlay)
+        // if (tasksByDay[day - 1].GetInteractables(currentPt)[count] != null && tasksByDay[day - 1].GetInteractables(currentPt)[count].forcePlay)
         //{
         //    tasksByDay[day - 1].GetInteractables(currentPt)[count].Interact();
-        //}
-             
-    }
+        //} 
+
+
+        int holdCount = count;
+        count = 0;
+		foreach (Interactable task in tasksByDay[day - 1].GetInteractables(currentPt))
+        {
+
+            String textToShow = task.name;
+            UIManager.Instance.SetTaskListText(textToShow, count, task.gameObject, task.isCompleted);
+			count++;
+		}
+        count = holdCount;
+
+	}
 
     private void ChangeDay()
     {

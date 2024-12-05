@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Linq;
+using Unity.VisualScripting;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -67,31 +69,35 @@ public class PlayerMove : MonoBehaviour
         
     }
 
-
+    private Interactable holder;
 
     void OnInteract(InputValue value)
     {
         moveValUpHolder = value.Get<float>();
         if (interactable != null && !mazeMode && !puzzleMode)
         {
-            //Interactable holder;
-            //holder = interactable[0];
+
+            holder = interactable[0];
             try
             {
                 Debug.Log("interacted: " + interactable[0]);
-                interactable[0].Interact();
+                interactable.Clear();
+                UIManager.Instance.SetInteractPopupText();
                 moveValDown = 0;
                 moveValRight = 0;
                 moveValLeft = 0;
                 moveValUp = 0;
                 rigid.velocity = new Vector3(moveValRight - moveValLeft, moveValUp - moveValDown, 0f) * moveSpeed;
                 animator.SetBool("isMoving", false);
+                holder.Interact();
 
-                interactable.Clear();
-            }
+				interactable.Add(holder);
+
+				//interactable.Clear();
+			}
             catch (ArgumentOutOfRangeException)
             {
-                Debug.LogWarning("No interactable found");
+                //Debug.LogWarning("No interactable found");
             } 
         }
         if (mazeMode)
@@ -113,7 +119,7 @@ public class PlayerMove : MonoBehaviour
     {
         if(interactable != null)
         {
-           foreach(Interactable task in interactable)
+           foreach(Interactable task in interactable.ToList())
            {
                 if (!task.gameObject.activeSelf)
                 {
@@ -213,8 +219,27 @@ public class PlayerMove : MonoBehaviour
     {
         if (collision.gameObject.tag == "Interactable")
         {
-            if (interactable != null)
-                interactable.Remove(collision.gameObject.GetComponent<Interactable>());
+            if (interactable.Count > 0)
+            {
+
+                foreach (Interactable interactableObject in interactable)
+                {
+
+                    // Check if the interactable's name contains the target name
+                    if (interactableObject.name.Contains(collision.gameObject.GetComponent<Interactable>().name))
+                    {
+                        // Assuming interactable is a list or collection that holds interactable objects
+
+                        if (interactableObject != null)
+                        {
+                            // Remove the interactable component from the collection
+                            interactable.Remove(interactableObject);
+                        }
+                    }
+                }
+            }
+
+
         }
     }
     public void Maze(bool value)
@@ -227,6 +252,8 @@ public class PlayerMove : MonoBehaviour
     }
     public Interactable GetInteractable() 
     {
+
+
         if (interactable != null && interactable.Count > 0)
         {
             //Debug.Log("not null");
