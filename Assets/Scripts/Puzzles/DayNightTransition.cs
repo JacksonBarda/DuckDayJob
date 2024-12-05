@@ -85,7 +85,7 @@ public class DayNightTransition : Interactable
         //player.puzzleMode = true;
         puzzleUI.SetActive(true);
         mainUI.SetActive(false);
-        fadeOut.FadeImageOverTime(1.0f, this);
+        fadeOut.FadeImageOutOverTime(1.0f, this);
 
 
         counted = false;
@@ -93,7 +93,7 @@ public class DayNightTransition : Interactable
 
     public override void Action()
     {
-        dayNightOut.FadeImageOverTime(1.0f, null);
+        dayNightOut.FadeImageOutOverTime(1.0f, null);
         actionCalled = true;
         player.gameObject.transform.position = endLocation.position;
         playerCamera.SetBumps(endRoom);

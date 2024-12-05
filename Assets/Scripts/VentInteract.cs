@@ -13,31 +13,38 @@ public class VentInteract : DoorInteract
     private CinemaManager cinemaManager;
     [SerializeField]
     private bool isVent2 = false;
+    private bool alreadyInteracted = false;
 
     private void Start()
     {
-        vignette.color = new Color(255, 255, 255, 0);
+        vignette.color = new Color(1f, 1f, 1f, 0);
     }
 
     public override void Interact()
     {
-        fadeOut.FadeImageOverTime(timeToFade, this);
-
-        StartCoroutine(VignetteLoading());
-
-        if (isVent2)
+        if (alreadyInteracted == false)
         {
-            cinemaManager.ActivateSequence();    
-        }
+            StartCoroutine(VignetteLoading());
 
+            if (isVent2)
+            {
+                cinemaManager.ActivateSequence();
+                alreadyInteracted = true;
+            }
+            else
+            {
+                fadeOut.FadeImageOutOverTime(timeToFade, this);
+            }
+        }
     }
     public override void Action()
     {
-        
-        Player.transform.position = endLocation.position;
-        followPlayer.SetBumps(endRoom);
-        manager.setLocation(endRoom);
-
+        if (alreadyInteracted == false)
+        {
+            Player.transform.position = endLocation.position;
+            followPlayer.SetBumps(endRoom);
+            manager.setLocation(endRoom);
+        }
     }
     public override void Complete()
     {
@@ -46,31 +53,29 @@ public class VentInteract : DoorInteract
 
     private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("collision");
         if (isVent2 == true)
         {
             Interact();
-            Debug.Log("auto interact");
         }
     }
 
     private IEnumerator VignetteLoading()
     {
         yield return new WaitForSeconds(1.0f);
-        StartCoroutine(fadeIn.FadeInCoroutine(1.0f, this, false));
+        
 
         if (player.mazeMode == false)
         {
-            vignette.color = new Color(255, 255, 255, 1);
+            StartCoroutine(fadeIn.FadeInCoroutine(1.0f, this, false));
+            vignette.color = new Color(1f, 1f, 1f, 1f);
             playerMove.Maze(true);
-            Debug.Log("Maze(true)");
             rigid.useGravity = false;
         }
         else
         {
-            vignette.color = new Color(255, 255, 255, 0);
+            //StartCoroutine(fadeOut.FadeImageOutOverTime(1.0f));
+            vignette.color = new Color(0, 0, 0, 0);
             playerMove.Maze(false);
-            Debug.Log("Maze(false)");
             rigid.useGravity = true;
         }
     }

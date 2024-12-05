@@ -13,20 +13,18 @@ public class CinematicSequenceTool : Interactable
     [SerializeField]
     private DialogueTool dialogue;
     [SerializeField]
-    //[Tooltip("Number of lines in scene minus 1")]
-    //private int lengthOfDialogue;
+    private FadeIn blackoutFadeIn;
+    [SerializeField]
+    private FadeOut blackoutFadeOut;
     [Tooltip("Starts at zero when sequence begins, increases by 1 with each dialogue line")]
     public int dialogueIndex;
-    //[SerializeField]
-    //private FadeIn fadeIn;
-    //[SerializeField]
-    //private FadeOut fadeOut;
 
     [SerializeField]
     private List<Shot> listOfShots;
     [SerializeField]
     private int shotIndex;
-
+    private Shot currentShot;
+    private Shot lastShot;
 
 
     // Start is called before the first frame update
@@ -40,6 +38,7 @@ public class CinematicSequenceTool : Interactable
         dialogue.Interact();
         mainCamera.gameObject.SetActive(false);
         cinematicCamera.gameObject.SetActive(true);
+        NextLine();
     }
 
     //public override void Action()
@@ -56,95 +55,90 @@ public class CinematicSequenceTool : Interactable
 
     //}
 
-    public void NextLine()                                                          // this code will run once each time a new dialogue line is displayed
+    public void NextLine()                                              // this code will run once each time a new dialogue line is displayed
     {
-        Shot currentShot = listOfShots[shotIndex];
-        Shot lastShot;
+        Debug.Log("-------------------------------------------------------------------------------------");
+        currentShot = listOfShots[shotIndex];
         dialogueIndex = dialogue.index;
+        Debug.Log("dialogueIndex: " + dialogue.index);
+        Debug.Log("currentShot: " + currentShot);
         try
         {
-            lastShot = listOfShots[shotIndex - 1];                                  
+            lastShot = listOfShots[shotIndex - 1];
+            Debug.Log("lastshot: " + lastShot);
         }
         catch (ArgumentOutOfRangeException)
         {
             lastShot = currentShot;
+            Debug.Log("lastshot = currentshot");
         }
 
 
-
+        Debug.Log("dialogueIndex:" + dialogueIndex + "currentShot.indexFirstLine:" + currentShot.indexFirstLine);
         if (dialogueIndex == currentShot.indexFirstLine)                            // if it is time for this shot to load
         {
-            Debug.Log("CineSeqTool: first line index match");
-            if (shotIndex != 0 && lastShot.isStillImage)                            // if this is not the first shot in the list
+            Debug.Log("shotIndex: " + shotIndex);
+            if (shotIndex == 0)                                                         // if this is the first shot of sequence
             {
-                lastShot.stillImage.color = new Color(255, 255, 255, 0);            // then unload previous shot
-                if (lastShot.fadeOut) lastShot.FadeOut();
+                Debug.Log("first shot of sequence");                                // immediately go to black
+                blackoutFadeOut.InstantFadeOut();
+                blackoutFadeIn.FadeImageInOverTime(currentShot.fadeTime);
             }
-
-            if (currentShot.isStillImage)                                           // if it is an image
+            else if (shotIndex != 0)                                                    // if this is not the first shot                          
             {
-                currentShot.stillImage.color = new Color(255, 255, 255, 255);       // then load image
-            }
-            else                                                                    // if it is camera position
-            {
-                Debug.Log("CineSeqTool: new camera position");
-                cinematicCamera.transform.position = currentShot.cameraPosition;    // and set camera's position and rotation.
-                cinematicCamera.transform.eulerAngles = currentShot.cameraRotation;
-            }
-
-            if (currentShot.fadeIn)                                                 // if current shot is configured to fade in
-            {
-                currentShot.FadeIn();                                               // do it
+                Debug.Log("lastShot.fadeTransition: " + lastShot.fadeTransition);
+                if (lastShot.fadeTransition)
+                {
+                    FadeCoroutine();
+                }
+                SwitchShot();
             }
         }
-
 
         else if (dialogueIndex == currentShot.indexLastLine)                        // if it is time for this shot to unload
         {
-            Debug.Log("CineSeqTool: last line index match");
-            if (shotIndex < listOfShots.Count-1)                                      // if this is not the last shot, next shot will be assigned to currentShot
-            {
-                Debug.Log("Shot index:" + shotIndex);
-                Debug.Log("list length:" + listOfShots.Count);
+            //Debug.Log("CineSeqTool: last line index match");
+            if (shotIndex < listOfShots.Count-1)                                    // if this is not the last shot, next shot will be assigned to currentShot
+            {                                                                       // this shot unloads after one more click
                 shotIndex++;
             }
-                                      
-                                                                                    // this shot unloads after one more click
-
+            else
+            {
+                FadeCoroutine();
+            }
         }
     }
 
+    public void SwitchShot()
+    {
+        // unloading procedure
+        
+        if (lastShot.isStillImage && shotIndex != 0) lastShot.stillImage.gameObject.SetActive(false);
 
+        // load new shot
+        if (currentShot.isStillImage)                                           // if it is an image
+        {
+            currentShot.stillImage.gameObject.SetActive(true);                  // then load image
+        }
+        else                                                                    // if it is camera position
+        {
+            cinematicCamera.transform.position = currentShot.cameraPosition;    // and set camera's position and rotation.
+            cinematicCamera.transform.eulerAngles = currentShot.cameraRotation;
+        }
 
+        if (shotIndex == listOfShots.Count - 1)
+        {
+            mainCamera.gameObject.SetActive(true);
+            cinematicCamera.gameObject.SetActive(false);
+        }
+    }
 
+    public IEnumerator FadeCoroutine()          //fade to black, switch image/camera position, fade out from black
+    {
+        blackoutFadeOut.FadeImageOutOverTime(lastShot.fadeTime);
+        yield return new WaitForSeconds(1);
+        blackoutFadeIn.FadeImageInOverTime(currentShot.fadeTime);
+        //SwitchShot();
+    }
 
-
-
-    //public void PlayShot(Shot shot)
-    //{
-    //    int duration = shot.indexCutOut - shot.indexCutIn;
-
-    //    for (int x = 0; x < duration; x++)      //  <---------------------- NEEDS WORK --------------------------->
-    //    {                                       //this code will run once each time a new dialogue line is displayed
-            
-    //        if (dialogueIndex == shot.indexCutIn)
-    //        {
-    //            if (shot.fadeIn)
-    //            {
-    //                //fade-in code
-    //            }
-    //        }
-    //        if (dialogueIndex == shot.indexCutOut)
-    //        {
-    //            if (shot.fadeOut)
-    //            {
-    //                //fade-out code
-    //            }
-
-    //            //code to deactivate current shot, activate next shot
-    //            break;
-    //        }
-    //        //await this.CheckIndexForEvent(shot);
-    //    }
-    //}
 }

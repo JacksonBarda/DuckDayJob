@@ -541,8 +541,6 @@ public class DialogueTool : Interactable
 
             }
         }
-
-        Debug.Log("index: " + index);
     }
 
     public void setBackground()

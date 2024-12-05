@@ -39,7 +39,7 @@ public class DoorInteract : Interactable
         }
         else
         {
-            fadeOut.FadeImageOverTime(timeToFade, this);
+            fadeOut.FadeImageOutOverTime(timeToFade, this);
         }
     }
     public override void Action()

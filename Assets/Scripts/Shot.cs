@@ -14,14 +14,10 @@ public class Shot : MonoBehaviour
     public int indexFirstLine;
     [Tooltip("Last line of shot. 0 is first line of scene.")]
     public int indexLastLine;
-    public FadeIn blackoutFadeIn;
-    public FadeOut blackoutFadeOut;
-    [Tooltip("Fade effect if true, hard cut if false.")]
-    public bool fadeIn;
-    public float fadeInTime = 0.5f;
-    [Tooltip("Fade effect if true, hard cut if false.")]
-    public bool fadeOut;
-    public float fadeOutTime = 0.5f;
+
+    [Tooltip("Fade to black, then fade in to new shot if true, hard cut if false. Transition refers to end of this shot, beginning of next shot")]
+    public bool fadeTransition;
+    public float fadeTime = 0.5f;
 
     public bool isActive;
 
@@ -34,20 +30,23 @@ public class Shot : MonoBehaviour
     void Start()
     {
         if (stillImage != null)
-            stillImage.color = new Color(255, 255, 255, 0);
+        {
+            stillImage.gameObject.SetActive(false);
+            stillImage.color = new Color(1f, 1f, 1f, 1f);
+        }
+            
     }
 
-
-
-
-    public void FadeIn()
-    {
-        blackoutFadeIn.FadeImageInOverTime(fadeInTime);
-    }
-    public void FadeOut()
-    {
-        blackoutFadeOut.FadeImageOverTime(fadeOutTime);
-    }
+    //public void FadeIn()
+    //{
+    //    blackoutFadeIn.FadeImageInOverTime(fadeTime);
+    //    Debug.Log("fade IN");
+    //}
+    //public void FadeOut()
+    //{
+    //    blackoutFadeOut.FadeImageOverTime(fadeTime);
+    //    Debug.Log("fade OUT");
+    //}
 
 
 

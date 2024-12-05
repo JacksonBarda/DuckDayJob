@@ -16,7 +16,8 @@ public class FadeIn : MonoBehaviour
         //image = this.gameObject.GetComponent<Image>();
 
         // Store the original alpha value of the image
-        originalAlpha = image.color.a;
+        originalAlpha = 0; //= image.color.a;
+        //Debug.Log("FI - originalAlpha: " + originalAlpha);
     }
     public void FadeImageInOverTime(float fadeTime, Interactable targetObject, bool callComplete)
     {
@@ -30,14 +31,17 @@ public class FadeIn : MonoBehaviour
 
         // Calculate the alpha increment per frame
         float alphaIncrement = (targetAlpha + image.color.a) / (fadeTime / 2);
+        //Debug.Log("FI - alphaIncrement: " + alphaIncrement);
 
         // Fade in the image
+        //Debug.Log("FI - image.color: " + image.color);
         while (image.color.a > targetAlpha)
         {
             // Update the alpha value of the image
             Color currentColor = image.color;
             currentColor.a -= alphaIncrement * Time.deltaTime;
             image.color = currentColor;
+            //Debug.Log("FI - currentColor: " + currentColor);
 
             yield return null;
         }
@@ -60,6 +64,7 @@ public class FadeIn : MonoBehaviour
         // Start the fade-out coroutine
         StartCoroutine(FadeInCoroutine(fadeTime));
     }
+
     public IEnumerator FadeInCoroutine(float fadeTime)
     {
         // Calculate the target alpha (original alpha)

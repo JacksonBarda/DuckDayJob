@@ -155,7 +155,7 @@ public class ReadDialogueData : MonoBehaviour
 
     public void nextLine()
     {
-        Debug.Log("Clicky");
+        //Debug.Log("Clicky");
        // if (DialogTool.GetComponent<DialogueTool>().hadOption == false){
             DialogTool.GetComponent<DialogueTool>().index++;
             DialogTool.GetComponent<DialogueTool>().setDialogueUI();
