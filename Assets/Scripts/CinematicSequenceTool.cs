@@ -23,6 +23,8 @@ public class CinematicSequenceTool : Interactable
     private List<Shot> listOfShots;
     [SerializeField]
     private int shotIndex;
+    [SerializeField]
+    private GameObject DialogueButton;
     private Shot currentShot;
     private Shot lastShot;
 
@@ -89,9 +91,13 @@ public class CinematicSequenceTool : Interactable
                 Debug.Log("lastShot.fadeTransition: " + lastShot.fadeTransition);
                 if (lastShot.fadeTransition)
                 {
-                    FadeCoroutine();
+					StartCoroutine(FadeCoroutine());
                 }
-                SwitchShot();
+                else
+                {
+					SwitchShot();
+				}
+
             }
         }
 
@@ -104,8 +110,8 @@ public class CinematicSequenceTool : Interactable
             }
             else
             {
-                FadeCoroutine();
-            }
+				StartCoroutine(FadeCoroutine());
+			}
         }
     }
 
@@ -135,10 +141,14 @@ public class CinematicSequenceTool : Interactable
 
     public IEnumerator FadeCoroutine()          //fade to black, switch image/camera position, fade out from black
     {
+        DialogueButton.SetActive(false);
         blackoutFadeOut.FadeImageOutOverTime(lastShot.fadeTime);
-        yield return new WaitForSeconds(1);
-        blackoutFadeIn.FadeImageInOverTime(currentShot.fadeTime);
-        //SwitchShot();
-    }
+
+		yield return new WaitForSeconds(1.0f);
+		SwitchShot();
+		blackoutFadeIn.FadeImageInOverTime(currentShot.fadeTime);
+		//SwitchShot();
+		DialogueButton.SetActive(true);
+	}
 
 }

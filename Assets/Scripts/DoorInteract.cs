@@ -61,6 +61,7 @@ public class DoorInteract : Interactable
     }
     public IEnumerator Wait(float delay)
     {
+        UnityEngine.Debug.Log("Waiting to fade in");
         yield return new WaitForSeconds(delay);
 		StartCoroutine(fadeIn.FadeInCoroutine(1.0f, this, false));
 	}

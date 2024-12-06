@@ -6,45 +6,46 @@ using UnityEngine.UI;
 
 public class VentInteract : DoorInteract
 {
-    [Header("Vent Custom Variables")]
     [SerializeField]
     private Image vignette;
     [SerializeField]
-    private CinemaManager cinemaManager;
+    private bool autoInteract = false;
     [SerializeField]
     private bool isVent2 = false;
+    [SerializeField]
+    private CinemaManager cinemaManager;
     private bool alreadyInteracted = false;
 
     private void Start()
     {
-        vignette.color = new Color(1f, 1f, 1f, 0);
+        vignette.color = new Color(255, 255, 255, 0);
     }
 
-    public override void Interact()
-    {
-        if (alreadyInteracted == false)
-        {
-            StartCoroutine(VignetteLoading());
+	public override void Interact()
+	{
+		if (alreadyInteracted == false)
+		{
+			StartCoroutine(VignetteLoading());
 
-            if (isVent2)
-            {
-                cinemaManager.ActivateSequence();
-                alreadyInteracted = true;
-            }
-            else
-            {
-                fadeOut.FadeImageOutOverTime(timeToFade, this);
-            }
-        }
-    }
-    public override void Action()
+			if (isVent2)
+			{
+				fadeOut.FadeImageOutOverTime(timeToFade, this);
+
+				alreadyInteracted = true;
+			}
+			else
+			{
+				fadeOut.FadeImageOutOverTime(timeToFade, this);
+			}
+		}
+	}
+	public override void Action()
     {
-        if (alreadyInteracted == false)
-        {
-            Player.transform.position = endLocation.position;
-            followPlayer.SetBumps(endRoom);
-            manager.setLocation(endRoom);
-        }
+        
+        Player.transform.position = endLocation.position;
+        followPlayer.SetBumps(endRoom);
+        manager.setLocation(endRoom);
+        
     }
     public override void Complete()
     {
@@ -53,31 +54,49 @@ public class VentInteract : DoorInteract
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (isVent2 == true)
+        Debug.Log("collision");
+        if (autoInteract == true)
         {
             Interact();
+            Debug.Log("auto interact");
         }
     }
 
     private IEnumerator VignetteLoading()
     {
-        yield return new WaitForSeconds(1.0f);
-        
-
+ 
+        yield return new WaitForSeconds(0.7f);
         if (player.mazeMode == false)
         {
-            StartCoroutine(fadeIn.FadeInCoroutine(1.0f, this, false));
-            vignette.color = new Color(1f, 1f, 1f, 1f);
-            playerMove.Maze(true);
-            rigid.useGravity = false;
+			StartCoroutine(Wait(1.0f));
+
         }
         else
         {
-            //StartCoroutine(fadeOut.FadeImageOutOverTime(1.0f));
-            vignette.color = new Color(0, 0, 0, 0);
-            playerMove.Maze(false);
-            rigid.useGravity = true;
-        }
-    }
+			StartCoroutine(Wait2(1.0f));
 
+        }       
+
+    }
+	public IEnumerator Wait(float delay)
+	{
+		vignette.color = new Color(255, 255, 255, 1);
+		playerMove.Maze(true);
+		Debug.Log("Maze(true)");
+		rigid.useGravity = false;
+		UnityEngine.Debug.Log("Waiting to fade in");
+		yield return new WaitForSeconds(delay);
+		StartCoroutine(fadeIn.FadeInCoroutine(1.0f, this, false));
+	}
+	public IEnumerator Wait2(float delay)
+	{
+		vignette.color = new Color(255, 255, 255, 0);
+		playerMove.Maze(false);
+		Debug.Log("Maze(false)");
+		rigid.useGravity = true;
+		UnityEngine.Debug.Log("Waiting to fade in");
+		yield return new WaitForSeconds(delay);
+		StartCoroutine(fadeIn.FadeInCoroutine(1.0f, this, false));
+		cinemaManager.ActivateSequence();
+	}
 }

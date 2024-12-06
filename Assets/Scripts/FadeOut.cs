@@ -55,7 +55,7 @@ public class FadeOut : MonoBehaviour
             targetObject.Action();
         }
         // Start the fade-in coroutine
-        //StartCoroutine(Wait(fadeTime));
+        //FadeImageOutOverTime(fadeTime);
     }
 
 
@@ -63,7 +63,7 @@ public class FadeOut : MonoBehaviour
     public void FadeImageOutOverTime(float fadeTime)
     {
         // Start the fade-out coroutine
-        StartCoroutine(FadeOutCoroutine(fadeTime));
+        StartCoroutine(FadeOutCoroutine2(fadeTime));
         
     }
 
@@ -72,8 +72,9 @@ public class FadeOut : MonoBehaviour
         image.color = new Color(0, 0, 0, 1f);
     }
 
-    private IEnumerator FadeOutCoroutine(float fadeTime)
+    private IEnumerator FadeOutCoroutine2(float fadeTime)
     {
+
         running = true;
         // Calculate the target alpha (fully transparent)
         float targetAlpha = 1f;
