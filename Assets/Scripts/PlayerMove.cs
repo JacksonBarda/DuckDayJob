@@ -219,29 +219,33 @@ public class PlayerMove : MonoBehaviour
     {
         if (collision.gameObject.tag == "Interactable")
         {
-            if (interactable.Count > 0)
-            {
+			if (interactable.Count > 0)
+			{
+				// Create a temporary list to store items to remove
+				List<Interactable> itemsToRemove = new List<Interactable>();
 
-                foreach (Interactable interactableObject in interactable)
-                {
+				foreach (Interactable interactableObject in interactable)
+				{
+					// Check if the interactable's name contains the target name
+					if (interactableObject != null &&
+						interactableObject.name.Contains(collision.gameObject.GetComponent<Interactable>().name))
+					{
+						// Add the interactable object to the removal list
+						itemsToRemove.Add(interactableObject);
+					}
+				}
 
-                    // Check if the interactable's name contains the target name
-                    if (interactableObject.name.Contains(collision.gameObject.GetComponent<Interactable>().name))
-                    {
-                        // Assuming interactable is a list or collection that holds interactable objects
-
-                        if (interactableObject != null)
-                        {
-                            // Remove the interactable component from the collection
-                            interactable.Remove(interactableObject);
-                        }
-                    }
-                }
-            }
+				// Remove all items in the temporary list
+				foreach (Interactable item in itemsToRemove)
+				{
+					interactable.Remove(item);
+				}
+			}
 
 
-        }
+		}
     }
+    
     public void Maze(bool value)
     {
         mazeMode = value;
