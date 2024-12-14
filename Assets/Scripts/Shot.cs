@@ -17,9 +17,10 @@ public class Shot : MonoBehaviour
 
     [Tooltip("Fade to black, then fade in to new shot if true, hard cut if false. Transition refers to end of this shot, beginning of next shot")]
     public bool fadeTransition;
+    [HideInInspector]
     public float fadeTime = 0.5f;
 
-    public bool isActive;
+    public List<GameObject> listOfSprites;
 
     [Tooltip("Developer use; does not affect gameplay")]
     [Multiline(5)]
@@ -34,7 +35,14 @@ public class Shot : MonoBehaviour
             stillImage.gameObject.SetActive(false);
             stillImage.color = new Color(1f, 1f, 1f, 1f);
         }
-            
+        
+        if (listOfSprites != null)
+        {
+            foreach (GameObject npd in listOfSprites)
+            {
+                npd.SetActive(false);
+            }
+        }
     }
 
     //public void FadeIn()

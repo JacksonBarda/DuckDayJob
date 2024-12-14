@@ -15,6 +15,8 @@ public class VentInteract : DoorInteract
     [SerializeField]
     private CinemaManager cinemaManager;
     private bool alreadyInteracted = false;
+    [SerializeField]
+    private DialogueTool preinteractDialogue;
 
     private void Start()
     {
@@ -66,9 +68,10 @@ public class VentInteract : DoorInteract
     {
  
         yield return new WaitForSeconds(0.7f);
-        if (player.mazeMode == false)
+        if (isVent2 == false)
         {
 			StartCoroutine(Wait(1.0f));
+            if (preinteractDialogue != null) preinteractDialogue.Interact();
 
         }
         else
@@ -84,7 +87,7 @@ public class VentInteract : DoorInteract
 		playerMove.Maze(true);
 		Debug.Log("Maze(true)");
 		rigid.useGravity = false;
-		UnityEngine.Debug.Log("Waiting to fade in");
+		Debug.Log("Waiting to fade in");
 		yield return new WaitForSeconds(delay);
 		StartCoroutine(fadeIn.FadeInCoroutine(1.0f, this, false));
 	}
@@ -94,7 +97,7 @@ public class VentInteract : DoorInteract
 		playerMove.Maze(false);
 		Debug.Log("Maze(false)");
 		rigid.useGravity = true;
-		UnityEngine.Debug.Log("Waiting to fade in");
+		Debug.Log("Waiting to fade in");
 		yield return new WaitForSeconds(delay);
 		StartCoroutine(fadeIn.FadeInCoroutine(1.0f, this, false));
 		cinemaManager.ActivateSequence();

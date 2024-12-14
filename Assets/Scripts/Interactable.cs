@@ -10,6 +10,7 @@ public class Interactable : MonoBehaviour
 
     public bool forcePlay = false;
     public string taskName;
+    public string customPopupName;
     public bool isCompleted;
     public bool hasFailed;
     public bool isVisibleOnStart = true;

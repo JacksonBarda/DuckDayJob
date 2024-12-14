@@ -7,11 +7,12 @@ public class CinemaManager : MonoBehaviour
     [SerializeField]
     private CinematicSequenceTool currentSequence;
     [SerializeField]
-    private bool cinemaMode = false;
+    public bool cinemaMode = false;
     [SerializeField]
     private List<CinematicSequenceTool> listOfSequences;
     [SerializeField]
     private int sequenceIndex;
+    public ReadDialogueData DialogueManager;
 
     // Start is called before the first frame update
     void Start()
@@ -40,9 +41,16 @@ public class CinemaManager : MonoBehaviour
 
     public void OnNextDialogueLine()
     {
+        Debug.Log("clicky ------------------");
         if (currentSequence != null && cinemaMode == true)
         {
             currentSequence.NextLine();
         }
+    }
+
+    public void IterateDialogue()
+    {
+        Debug.Log("iterated -----------------");
+        DialogueManager.nextLine(true);
     }
 }

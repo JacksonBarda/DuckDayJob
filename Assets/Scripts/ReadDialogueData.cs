@@ -14,6 +14,9 @@ public class ReadDialogueData : MonoBehaviour
 {
     [SerializeField]
     private GameObject UIManager;
+
+    [SerializeField]
+    private CinemaManager CinemaManager;
     
     [SerializeField]
     private TextAsset DialogData;
@@ -153,13 +156,24 @@ public class ReadDialogueData : MonoBehaviour
         }
     }
 
-    public void nextLine()
+    public void nextLine(bool fromCM)
     {
-        //Debug.Log("Clicky");
-       // if (DialogTool.GetComponent<DialogueTool>().hadOption == false){
+        if ((fromCM && CinemaManager.cinemaMode == true) || (!fromCM && CinemaManager.cinemaMode == false))     // during cinematic sequence, DialogueButton cannot be used to call this method,
+        {                                                                                                       // instead is called by CinemaManager
             DialogTool.GetComponent<DialogueTool>().index++;
             DialogTool.GetComponent<DialogueTool>().setDialogueUI();
-        // }
+        }
+        //    //Debug.Log("Clicky");
+        //   // if (DialogTool.GetComponent<DialogueTool>().hadOption == false){
+        //        //DialogTool.GetComponent<DialogueTool>().index++;
+        //        //DialogTool.GetComponent<DialogueTool>().setDialogueUI();
+        //    // }
+        //}
+
+        //    public void nextLine()
+        //{
+        //    DialogTool.GetComponent<DialogueTool>().index++;
+        //    DialogTool.GetComponent<DialogueTool>().setDialogueUI();
     }
 
     public void setDialogueTools()
