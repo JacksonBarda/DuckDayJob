@@ -396,31 +396,33 @@ public class DialogueTool : Interactable
         }
         else
         {
-            switch (DialogueList[index].align)
-            {
-                case Alignment.Left:
-                    Profile.gameObject.SetActive(true);
-                    Profile2.gameObject.SetActive(false);
-                    Profile.sprite = DialogueManager.GetComponent<ReadDialogueData>().ProfileImages[DialogueList[index].profileNumber - 1];
-                    break;
-
-                case Alignment.Right:
-                    Profile.gameObject.SetActive(false);
-                    Profile2.gameObject.SetActive(true);
-                    Profile2.sprite = DialogueManager.GetComponent<ReadDialogueData>().ProfileImages[DialogueList[index].profileNumber - 1];
-                    break;
-
-                default:
-                    Profile.gameObject.SetActive(true);
-                    Profile2.gameObject.SetActive(false);
-                    Profile.sprite = DialogueManager.GetComponent<ReadDialogueData>().ProfileImages[DialogueList[index].profileNumber - 1];
-                    break;
-            }
-
             if (DialogueList[index].profileNumber == 0)
             {
                 Profile.gameObject.SetActive(false);
                 Profile2.gameObject.SetActive(false);
+            }
+            else
+            {
+                switch (DialogueList[index].align)
+                {
+                    case Alignment.Left:
+                        Profile.gameObject.SetActive(true);
+                        Profile2.gameObject.SetActive(false);
+                        Profile.sprite = DialogueManager.GetComponent<ReadDialogueData>().ProfileImages[DialogueList[index].profileNumber - 1];
+                        break;
+
+                    case Alignment.Right:
+                        Profile.gameObject.SetActive(false);
+                        Profile2.gameObject.SetActive(true);
+                        Profile2.sprite = DialogueManager.GetComponent<ReadDialogueData>().ProfileImages[DialogueList[index].profileNumber - 1];
+                        break;
+
+                    default:
+                        Profile.gameObject.SetActive(true);
+                        Profile2.gameObject.SetActive(false);
+                        Profile.sprite = DialogueManager.GetComponent<ReadDialogueData>().ProfileImages[DialogueList[index].profileNumber - 1];
+                        break;
+                }
             }
         }
         
@@ -538,8 +540,6 @@ public class DialogueTool : Interactable
 
             }
         }
-        
-
     }
 
     public void setBackground()

@@ -7,29 +7,29 @@ using Enums;
 public class DoorInteract : Interactable
 {
     [SerializeField]
-    private FadeIn fadeIn;
+    protected FadeIn fadeIn;
     [SerializeField]
-    private FadeOut fadeOut;
+    protected FadeOut fadeOut;
     [SerializeField]
-    private float timeToFade = 0.5f;
+    protected float timeToFade = 0.5f;
     [SerializeField]
-    public Transform endLocation;
+    protected Transform endLocation;
     [SerializeField]
-    private Transform Player;
+    protected Transform Player;
     [SerializeField]
-    private PlayerMove playerMove;
+    protected PlayerMove playerMove;
     [SerializeField]
-    private Rigidbody rigid;
+    protected Rigidbody rigid;
     [SerializeField]
-    private UIManager manager;
+    protected UIManager manager;
     [SerializeField]
     public Locations endRoom;
     [SerializeField]
-    private FollowPlayer followPlayer;
+    protected FollowPlayer followPlayer;
     [SerializeField]
-    private bool isLocked;
+    protected bool isLocked;
     [SerializeField]
-    private DialogueTool lockedDialogue;
+    protected DialogueTool lockedDialogue;
 
     public override void Interact()
     {
@@ -39,7 +39,7 @@ public class DoorInteract : Interactable
         }
         else
         {
-            fadeOut.FadeImageOverTime(timeToFade, this);
+            fadeOut.FadeImageOutOverTime(timeToFade, this);
         }
     }
     public override void Action()
@@ -61,6 +61,7 @@ public class DoorInteract : Interactable
     }
     public IEnumerator Wait(float delay)
     {
+        UnityEngine.Debug.Log("Waiting to fade in");
         yield return new WaitForSeconds(delay);
 		StartCoroutine(fadeIn.FadeInCoroutine(1.0f, this, false));
 	}

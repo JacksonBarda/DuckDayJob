@@ -242,6 +242,9 @@ public class UIManager : MonoBehaviour
             case Locations.BOSSROOM:
                 room = "BOSS'S OFFICE";
                 break;
+            case Locations.VENTILATION:
+                room = "VENTILATION";
+                break;
 
             default:
                 room = "NONE";

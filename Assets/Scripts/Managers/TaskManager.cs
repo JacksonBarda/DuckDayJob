@@ -57,8 +57,18 @@ public class TaskManager : MonoBehaviour
         Pt6
     }
     private PartIdentifier currentPt = PartIdentifier.Pt1;
-
-    private void Start()
+	private void Awake()
+	{
+		if (TMInstance == null)
+		{
+			TMInstance = this; // Assign the instance of TaskManager to the static field
+		}
+		else
+		{
+			Destroy(gameObject); // Prevent duplicate instances if you don't want them
+		}
+	}
+	private void Start()
     {
 
         health = 3;
@@ -261,7 +271,47 @@ public class TaskManager : MonoBehaviour
         return tasksByDay[day - 1].GetInteractables(currentPt)[count];
 
 	}
-    private PartIdentifier GetCurrentPt(int _ptCount)
+	public void AddInteractableToDay(Interactable newInteractable, int dayCount, int pt)
+	{
+
+		if (tasksByDay.Count >= dayCount) // Adjusting for zero-based indexing
+		{
+			DayTask dayTask = tasksByDay[dayCount - 1];
+
+			// Add the interactable to the correct part list based on the pt value
+			switch (pt)
+			{
+				case 1:
+					dayTask.pt1.Add(newInteractable);
+					break;
+				case 2:
+					dayTask.pt2.Add(newInteractable);
+					break;
+				case 3:
+					dayTask.pt3.Add(newInteractable);
+					break;
+				case 4:
+					dayTask.pt4.Add(newInteractable);
+					break;
+				case 5:
+					dayTask.pt5.Add(newInteractable);
+					break;
+				case 6:
+					dayTask.pt6.Add(newInteractable);
+					break;
+				default:
+					Debug.LogWarning("Invalid part identifier: " + pt);
+					return;
+			}
+
+			Debug.Log("New Interactable added to part " + pt + " of day " + dayCount);
+		}
+		else
+		{
+			Debug.LogWarning("Invalid day count: " + dayCount);
+		}
+	}
+	private PartIdentifier GetCurrentPt(int _ptCount)
     {
         switch(_ptCount)
         {

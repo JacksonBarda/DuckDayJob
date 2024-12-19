@@ -628,9 +628,6 @@ Travel through the vent	5	3	Day	None	0	Main Duck takes a deep breath before hopp
 Travel through the vent	5	3	Day	None	0	Main Duck notes the stray feathers scattered throughout the vent and uses this trail to waddle their way in the dark.	FALSE	Left	Normal	FALSE	0	FALSE
 Travel through the vent	5	3	Day	None	0	"Surprisingly, it's not as dusty as Main Duck expected it to be, which means this vent has either been frequently used for discreetly traveling from place to place..."	FALSE	Left	Normal	FALSE	0	FALSE
 Travel through the vent	5	3	Day	None	0	...or that the Janitor really likes to keep every corner of the place clean.	FALSE	Left	Normal	FALSE	0	FALSE
-Travel through the vent	5	3	Day	None	0	"Before long, dim light floods through the cracks of another vent to Main Duck's right, along with a metallic, rusty stench."	FALSE	Left	Normal	FALSE	0	FALSE
-Travel through the vent	5	3	Day	Main Duck	2	This must be the exit. Is this the <b>secret room?</b>	FALSE	Left	Normal	FALSE	0	FALSE
-Travel through the vent	5	3	Day	Main Duck	2	Only one way to find out!	FALSE	Left	Normal	FALSE	0	FALSE
 The Killing Room	5	4	Day	Main Duck	2	"Finally, freedom at last!"	TRUE	Left	Normal	FALSE	0	FALSE
 The Killing Room	5	4	Day	Main Duck	2	Who would've thought that Donald was right? There really is a secret room in Nest-	TRUE	Left	Normal	FALSE	0	FALSE
 The Killing Room	5	4	Day	Main Duck	2	AHHH! WHAT THE QUACK IS ALL THIS?!	TRUE	Left	Normal	FALSE	0	FALSE

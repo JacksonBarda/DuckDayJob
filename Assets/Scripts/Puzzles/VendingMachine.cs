@@ -44,6 +44,7 @@ public class VendingMachine : Interactable
     {
 
         Debug.Log("Complete");
+        base.Complete();
     }
 
     private void Start()
@@ -157,15 +158,17 @@ public class VendingMachine : Interactable
 
         if (lastBoughtItem == correctItem) //if correct item bought, hide wrong item dialogue
         {
-            //incorrectDialogue.GetComponent<DialogueTool>().Complete();
-            incorrectDialogue.SetActive(false);
+			//incorrectDialogue.GetComponent<DialogueTool>().Complete();
+			TaskManager.TMInstance.AddInteractableToDay(correctDialogue.GetComponent<Interactable>(),2,2);
+			incorrectDialogue.SetActive(false);
 
             correctDialogue.SetActive(true);
         }
         else if (lastBoughtItem != correctItem)
         {
-            //correctDialogue.GetComponent<DialogueTool>().Complete();
-            correctDialogue.SetActive(false);
+			//correctDialogue.GetComponent<DialogueTool>().Complete();
+			TaskManager.TMInstance.AddInteractableToDay(incorrectDialogue.GetComponent<Interactable>(), 2, 2);
+			correctDialogue.SetActive(false);
 
             incorrectDialogue.SetActive(true);
         }

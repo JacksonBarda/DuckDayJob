@@ -25,7 +25,7 @@ public class DoorInteractMaze : Interactable
 
     public override void Interact()
     {
-        fadeOut.FadeImageOverTime(0.5f, this);
+        fadeOut.FadeImageOutOverTime(0.5f, this);
 
 
     }

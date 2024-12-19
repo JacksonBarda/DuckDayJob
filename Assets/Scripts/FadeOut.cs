@@ -18,8 +18,9 @@ public class FadeOut : MonoBehaviour
 
         // Store the original alpha value of the image
         originalAlpha = image.color.a;
+        //Debug.Log("FO - originalAlpha: " + originalAlpha);
     }
-    public void FadeImageOverTime(float fadeTime, Interactable targetObject)
+    public void FadeImageOutOverTime(float fadeTime, Interactable targetObject)
     {
         // Start the fade-out coroutine
         StartCoroutine(FadeOutCoroutine(fadeTime, targetObject));
@@ -33,6 +34,54 @@ public class FadeOut : MonoBehaviour
 
         // Calculate the alpha increment per frame
         float alphaIncrement = (originalAlpha + targetAlpha) / fadeTime;
+        //Debug.Log("FO - alphaIncrement: " + alphaIncrement);
+
+        // Fade out the image
+        //Debug.Log("FO - image.color: " + image.color);
+        while (image.color.a < targetAlpha)
+        {
+            // Update the alpha value of the image
+            Color currentColor = image.color;
+            currentColor.a += alphaIncrement * Time.deltaTime;
+            image.color = currentColor;
+            //Debug.Log("FO - currentColor: " + currentColor);
+
+            yield return null;
+        }
+        running = false;
+        // Call the function on the target object
+        if (targetObject != null)
+        {
+            targetObject.Action();
+        }
+        // Start the fade-in coroutine
+        //FadeImageOutOverTime(fadeTime);
+    }
+
+
+    // < -----   Cinematic use only   ----->
+    public void FadeImageOutOverTime(float fadeTime)
+    {
+        // Start the fade-out coroutine
+        StartCoroutine(FadeOutCoroutine2(fadeTime));
+        
+    }
+
+    public void InstantFadeOut()
+    {
+        image.color = new Color(0, 0, 0, 1f);
+    }
+
+    private IEnumerator FadeOutCoroutine2(float fadeTime)
+    {
+
+        running = true;
+        // Calculate the target alpha (fully transparent)
+        float targetAlpha = 1f;
+
+        // Calculate the alpha increment per frame
+
+        float alphaIncrement = (originalAlpha + targetAlpha) / fadeTime;
 
         // Fade out the image
         while (image.color.a < targetAlpha)
@@ -45,11 +94,6 @@ public class FadeOut : MonoBehaviour
             yield return null;
         }
         running = false;
-        // Call the function on the target object
-        if (targetObject != null)
-        {
-            targetObject.Action();
-        }
         // Start the fade-in coroutine
         //StartCoroutine(Wait(fadeTime));
     }

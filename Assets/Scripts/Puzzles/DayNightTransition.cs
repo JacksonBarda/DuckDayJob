@@ -79,13 +79,14 @@ public class DayNightTransition : Interactable
 
     public override void Interact()
     {
-        counted = false;
+		isCompleted = false;
+		counted = false;
         base.Interact();
         pivotStartRot = pivot.rotation;
         //player.puzzleMode = true;
         puzzleUI.SetActive(true);
         mainUI.SetActive(false);
-        fadeOut.FadeImageOverTime(1.0f, this);
+        fadeOut.FadeImageOutOverTime(1.0f, this);
 
 
         counted = false;
@@ -93,19 +94,30 @@ public class DayNightTransition : Interactable
 
     public override void Action()
     {
-        dayNightOut.FadeImageOverTime(1.0f, null);
+        dayNightOut.FadeImageOutOverTime(1.0f, null);
         actionCalled = true;
         player.gameObject.transform.position = endLocation.position;
         playerCamera.SetBumps(endRoom);
         UIManager.setLocation(endRoom);
+		if (activatePostPuzzle)
+		{
+			foreach (GameObject thingToActivate in objectToActivate)
+			{
+				if (thingToActivate != null)
+					thingToActivate.gameObject.SetActive(!thingToActivate.gameObject.activeSelf);
+			}
+		}
 
-    }
+		UIManager.InteractionPopup.SetActive(true);
+
+
+	}
 
     public override void Complete()
     {
 
         pivot.rotation = pivotStartRot;
-        contButton.SetActive(false);
+
         if (dayToNight)
         {
             UIManager.SetNightTime();
@@ -115,13 +127,16 @@ public class DayNightTransition : Interactable
         {
             UIManager.SetMorningTime();
         }
-        base.Complete();
-        Debug.Log("FadeIn Completed");
-    }
+		isCompleted = true;
+		TaskManager.onTaskComplete(this);
+		Debug.Log("FadeIn Completed");
+
+
+	}
     public void OnContPressed()
     {
-
-        StartCoroutine(dayNightIn.FadeInCoroutine(1.3f, this, true));
+		contButton.SetActive(false);
+		StartCoroutine(dayNightIn.FadeInCoroutine(1.3f, this, true));
         StartCoroutine(fadeIn.FadeInCoroutine(1.3f, this, false));
 
     }
