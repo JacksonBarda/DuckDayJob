@@ -4,7 +4,8 @@ using UnityEngine.UI;
 
 public class FragmentDragger : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler
 {
-    public CADPuzzle CadPuzzle;
+    [SerializeField]
+    private CADPuzzle CadPuzzle;
 
     [HideInInspector]
     public Vector3 originalPosition;
