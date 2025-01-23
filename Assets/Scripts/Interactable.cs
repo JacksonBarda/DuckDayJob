@@ -44,8 +44,9 @@ public class Interactable : MonoBehaviour
         {
             foreach (GameObject thingToActivate in objectToActivate)
             {
-                if (thingToActivate != null)
-                    thingToActivate.gameObject.SetActive(!thingToActivate.gameObject.activeSelf);
+                if(!counted)
+                    if (thingToActivate != null)
+                        thingToActivate.gameObject.SetActive(!thingToActivate.gameObject.activeSelf);
             }
         }
         isCompleted = true;

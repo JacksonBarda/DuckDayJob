@@ -215,10 +215,11 @@ public class TaskManager : MonoBehaviour
 			if (task.taskName != null &&  task.taskName.Length > 0)
             {
 				textToShow = task.taskName;
+				UIManager.Instance.SetTaskListText(textToShow, count, task.gameObject, task.isCompleted);
 			}
 
             
-            UIManager.Instance.SetTaskListText(textToShow, count, task.gameObject, task.isCompleted);
+
 			count++;
 		}
         count = holdCount;
