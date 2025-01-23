@@ -22,6 +22,7 @@ public class CADPuzzle : Interactable
 
     [HideInInspector]
     public Image selectedFragment;
+    [HideInInspector]
 
     private int count = 0;
 
@@ -58,6 +59,7 @@ public class CADPuzzle : Interactable
             fragment.rectTransform.position = outlines[index].rectTransform.position;
             fragment.rectTransform.rotation = outlines[index].rectTransform.rotation;
             count++;
+            selectedFragment.gameObject.GetComponent<FragmentDragger>().FragmentPlaced();
             AudioManager.Instance.PlaySFX("SFX_VendingButton");
         }
         else

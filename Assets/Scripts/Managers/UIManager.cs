@@ -242,6 +242,9 @@ public class UIManager : MonoBehaviour
             case Locations.BOSSROOM:
                 room = "BOSS'S OFFICE";
                 break;
+            case Locations.VENTILATION:
+                room = "VENTILATION";
+                break;
 
             default:
                 room = "NONE";
@@ -256,75 +259,87 @@ public class UIManager : MonoBehaviour
     {
         bool playerName = false;
 
+
 			if (PlayerMove.GetInteractable() != null && !PlayerMove.puzzleMode)
 			{
-				//Debug.Log("The Interactable: " + interactableName);
-
-				switch (PlayerMove.GetInteractable().name)
+				if (PlayerMove.GetInteractable().customPopupName != null && PlayerMove.GetInteractable().customPopupName != "")
 				{
-					case string x when x.Contains("Duckette"):
-						interactableName = "Duckette";
-						SetInteractionPopupLoc();
-						break;
-					case string x when x.Contains("MainDuck"):
-						interactableName = PlayerPrefs.GetString("playerName") != null ? PlayerPrefs.GetString("playerName") : "MainDuck";
-						playerName = true;
-						//SetInteractionPopupLoc();
-						break;
-					case string x when x.Contains("Eggwin"):
-						interactableName = "Eggwin";
-						SetInteractionPopupLoc();
-						break;
-					case string x when x.Contains("Donald"):
-						interactableName = "Donald";
-						SetInteractionPopupLoc();
-						break;
-					case string x when x.Contains("Quackson"):
-						interactableName = "Quackson";
-						SetInteractionPopupLoc();
-						break;
-					case string x when x.Contains("ElonDuck"):
-						interactableName = "Elon Duck";
-						SetInteractionPopupLoc();
-						break;
-					case string x when x.Contains("Janitor"):
-						interactableName = "Janitor";
-						SetInteractionPopupLoc();
-						break;
-					case string x when x.Contains("NPC"):
-						interactableName = "NPC";
-						SetInteractionPopupLoc();
-						break;
-					case string x when x.Contains("Door"):
-						DoorInteract door = (DoorInteract)PlayerMove.GetInteractable();
-						interactableName = door.endRoom.ToString();
-						SetInteractionPopupLocForDoor();
-						break;
-					case string x when x.Contains("BathroomStalls"):
-						interactableName = "Empty Stall";
-						SetInteractionPopupLoc();
-						break;
-					case string x when x.Contains("InteractCad"):
-						interactableName = "Computer";
-						SetInteractionPopupLoc();
-						break;
-					case string x when x.Contains("InteractVendingMachine"):
-						interactableName = "Vending Machine";
-						SetInteractionPopupLoc();
-						break;
-					case string x when x.Contains("DeskDragger"):
-						interactableName = "Duckette's Computer";
-						SetInteractionPopupLoc();
-						break;
-					case string x when x.Contains("EmailDecrypt"):
-						interactableName = "Elon Duck's Computer";
-						SetInteractionPopupLoc();
-						break;
-					default:
-						interactableName = "Interact";
-						break;
+					interactableName = PlayerMove.GetInteractable().customPopupName;
+					SetInteractionPopupLoc();
 				}
+				else
+				{
+					//Debug.Log("The Interactable: " + interactableName);
 
+					switch (PlayerMove.GetInteractable().name)
+					{
+						case string x when x.Contains("Duckette"):
+							interactableName = "Duckette";
+							SetInteractionPopupLoc();
+							break;
+						case string x when x.Contains("MainDuck"):
+							interactableName = PlayerPrefs.GetString("playerName") != null ? PlayerPrefs.GetString("playerName") : "MainDuck";
+							playerName = true;
+							//SetInteractionPopupLoc();
+							break;
+						case string x when x.Contains("Eggwin"):
+							interactableName = "Eggwin";
+							SetInteractionPopupLoc();
+							break;
+						case string x when x.Contains("Donald"):
+							interactableName = "Donald";
+							SetInteractionPopupLoc();
+							break;
+						case string x when x.Contains("Quackson"):
+							interactableName = "Quackson";
+							SetInteractionPopupLoc();
+							break;
+						case string x when x.Contains("ElonDuck"):
+							interactableName = "Elon Duck";
+							SetInteractionPopupLoc();
+							break;
+						case string x when x.Contains("Janitor"):
+							interactableName = "Janitor";
+							SetInteractionPopupLoc();
+							break;
+						case string x when x.Contains("NPC"):
+							interactableName = "NPC";
+							SetInteractionPopupLoc();
+							break;
+						case string x when x.Contains("Door"):
+							DoorInteract door = (DoorInteract)PlayerMove.GetInteractable();
+							interactableName = door.endRoom.ToString();
+							SetInteractionPopupLocForDoor();
+							break;
+						case string x when x.Contains("BathroomStalls"):
+							interactableName = "Empty Stall";
+							SetInteractionPopupLoc();
+							break;
+						case string x when x.Contains("InteractCad"):
+							interactableName = "Computer";
+							SetInteractionPopupLoc();
+							break;
+						case string x when x.Contains("InteractVendingMachine"):
+							interactableName = "Vending Machine";
+							SetInteractionPopupLoc();
+							break;
+						case string x when x.Contains("DucketteHack"):
+							interactableName = "Duckette's Computer";
+							SetInteractionPopupLoc();
+							break;
+						case string x when x.Contains("EmailDecrypt"):
+							interactableName = "Elon Duck's Computer";
+							SetInteractionPopupLoc();
+							break;
+						default:
+							interactableName = "Interact";
+							break;
+					}
+
+
+
+
+				}
 				if (!playerName)
 				{
 					InteractionPopup.SetActive(true);
@@ -333,16 +348,14 @@ public class UIManager : MonoBehaviour
 
 					interactableText.text = interactableName;
 				}
-				
 
 			}
 			else
 			{
 				InteractionPopup.SetActive(false);
 			}
-		
-        
-    }
+
+	}
     private void SetInteractionPopupLoc()
     {
         InteractionPopup.transform.position = new Vector3(PlayerMove.GetInteractable().transform.position.x,

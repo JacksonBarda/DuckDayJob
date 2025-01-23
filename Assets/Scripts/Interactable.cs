@@ -10,12 +10,13 @@ public class Interactable : MonoBehaviour
 
     public bool forcePlay = false;
     public string taskName;
+    public string customPopupName;
     public bool isCompleted;
     public bool hasFailed;
     public bool isVisibleOnStart = true;
     public bool stayActive = false;
     public bool activatePostPuzzle = false;
-    public List<GameObject> puzzleToActivate;
+    public List<GameObject> objectToActivate;
     public PlayerMove player;
 
     public GameObject mainUI;
@@ -41,10 +42,11 @@ public class Interactable : MonoBehaviour
 
 		if (activatePostPuzzle)
         {
-            foreach (GameObject thingToActivate in puzzleToActivate)
+            foreach (GameObject thingToActivate in objectToActivate)
             {
-                if (thingToActivate != null)
-                    thingToActivate.gameObject.SetActive(!thingToActivate.gameObject.activeSelf);
+                if(!counted)
+                    if (thingToActivate != null)
+                        thingToActivate.gameObject.SetActive(!thingToActivate.gameObject.activeSelf);
             }
         }
         isCompleted = true;
