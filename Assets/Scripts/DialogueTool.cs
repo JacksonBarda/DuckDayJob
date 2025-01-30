@@ -92,7 +92,7 @@ public class DialogueTool : Interactable
         {
 			if (this.transform.childCount > 0 && DialogueIndicator == null)
             {
-                DialogueIndicator = this.transform.GetChild(1).gameObject;
+                DialogueIndicator = this.transform.GetChild(0).gameObject;
 
 			}
 			DialogueIndicator.SetActive(true);
@@ -167,7 +167,7 @@ public class DialogueTool : Interactable
             {
                 if(this.transform.childCount == 1)
                 {
-                    DialogueIndicator = this.transform.GetChild(1).gameObject;
+                    DialogueIndicator = this.transform.GetChild(0).gameObject;
                 }
             
             }

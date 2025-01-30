@@ -57,6 +57,39 @@ public class TaskManager : MonoBehaviour
         Pt6
     }
     private PartIdentifier currentPt = PartIdentifier.Pt1;
+
+
+    // ----------- DAY SKIPPING CHEATS ---------------//
+
+    public void CheatSkipToDay(int dayInput)
+    {
+        for (int i = 0; i < dayInput-1; i++)
+        {
+            for (int j = 0; j < 5; j++)
+            {
+                foreach (Interactable task in tasksByDay[i].GetInteractables((PartIdentifier)j))
+                {
+
+                    //if (task.GetComponent<DayNightTransition>() != null && task.objectToActivate != null)
+                    //{
+                    //    foreach (GameObject obj in task.objectToActivate)
+                    //    {
+                    //         obj.gameObject.SetActive(!obj.gameObject.activeSelf);
+                    //    }
+
+                    //}
+                    //else task.Complete();
+                    foreach (GameObject obj in task.objectToActivate)
+                    {
+                        obj.gameObject.SetActive(!obj.gameObject.activeSelf);
+                    }
+                    task.Complete();
+                }
+            }
+            
+        }
+    }
+
 	private void Awake()
 	{
 		if (TMInstance == null)
