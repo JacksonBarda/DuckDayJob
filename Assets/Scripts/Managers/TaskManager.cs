@@ -213,12 +213,7 @@ public class TaskManager : MonoBehaviour
                     task.gameObject.SetActive(true);
                 }
             }
-            foreach(GameObject GO in tasksByDay[day - 1].GetGameObjects(currentPt))
-            {
 
-                GO.SetActive(!GO.activeSelf);
-
-            }
             count = 0;
             SaveGame();
 
@@ -390,17 +385,11 @@ public struct DayTask
     [Tooltip ("Put the actual day - 1 EX: day1 = 0 for the days attribute")]
 
     public int day;
-	public List<GameObject> gameObjectToShowHidePT1;
 	public List<Interactable> pt1;
-	public List<GameObject> gameObjectToShowHidePT2;
 	public List<Interactable> pt2;
-	public List<GameObject> gameObjectToShowHidePT3;
 	public List<Interactable> pt3;
-	public List<GameObject> gameObjectToShowHidePT4;
-	public List<Interactable> pt4;
-	public List<GameObject> gameObjectToShowHidePT5;
+    public List<Interactable> pt4;
 	public List<Interactable> pt5;
-	public List<GameObject> gameObjectToShowHidePT6;
 	public List<Interactable> pt6;
 	
 
@@ -424,25 +413,6 @@ public struct DayTask
                 return new List<Interactable>();
         }
     }
-	public List<GameObject> GetGameObjects(PartIdentifier point)
-	{
-		switch (point)
-		{
-			case PartIdentifier.Pt1:
-				return gameObjectToShowHidePT1;
-			case PartIdentifier.Pt2:
-				return gameObjectToShowHidePT2;
-			case PartIdentifier.Pt3:
-				return gameObjectToShowHidePT3;
-			case PartIdentifier.Pt4:
-				return gameObjectToShowHidePT4;
-			case PartIdentifier.Pt5:
-				return gameObjectToShowHidePT5;
-			case PartIdentifier.Pt6:
-				return gameObjectToShowHidePT6;
-			default:
-				return new List<GameObject>();
-		}
-	}
+
 }
 
