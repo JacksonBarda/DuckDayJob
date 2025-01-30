@@ -262,6 +262,7 @@ public class UIManager : MonoBehaviour
 
 			if (PlayerMove.GetInteractable() != null && !PlayerMove.puzzleMode)
 			{
+				//Debug.Log("UIManager: GetInteractable(): " + PlayerMove.GetInteractable());
 				if (PlayerMove.GetInteractable().customPopupName != null && PlayerMove.GetInteractable().customPopupName != "")
 				{
 					interactableName = PlayerMove.GetInteractable().customPopupName;
@@ -306,7 +307,7 @@ public class UIManager : MonoBehaviour
 							interactableName = "NPC";
 							SetInteractionPopupLoc();
 							break;
-						case string x when x.Contains("Door"):
+						case string x when x.Contains("Door") || x.Contains("Vent"):
 							DoorInteract door = (DoorInteract)PlayerMove.GetInteractable();
 							interactableName = door.endRoom.ToString();
 							SetInteractionPopupLocForDoor();

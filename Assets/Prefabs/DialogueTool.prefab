@@ -30,7 +30,8 @@ Transform:
   m_LocalPosition: {x: 0, y: -0.505, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2811709577699129521}
   m_Father: {fileID: 8894409726330564798}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8866254512280165129
@@ -132,11 +133,11 @@ Transform:
   m_GameObject: {fileID: 2557612985409383229}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.063, y: 0.485, z: 0}
-  m_LocalScale: {x: 0.060539823, y: 0.060539823, z: 0.060539823}
+  m_LocalPosition: {x: 0, y: 6.5, z: 0}
+  m_LocalScale: {x: 0.40359882, y: 0.40359882, z: 0.40359882}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 8894409726330564798}
+  m_Father: {fileID: 8832907202415859541}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7945745924742226535
 SpriteRenderer:
@@ -223,7 +224,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8832907202415859541}
-  - {fileID: 2811709577699129521}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6014696403406345891
@@ -270,12 +270,13 @@ MonoBehaviour:
   repeatable: 0
   forcePlay: 0
   taskName: 
+  customPopupName: 
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
   activatePostPuzzle: 0
-  puzzleToActivate: {fileID: 0}
+  objectToActivate: []
   player: {fileID: 0}
   mainUI: {fileID: 0}
   counted: 0

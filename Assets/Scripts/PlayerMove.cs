@@ -78,10 +78,10 @@ public class PlayerMove : MonoBehaviour
         if (interactable.Count > 0 && !mazeMode && !puzzleMode)
         {
 
-            holder = interactable[0];
+            holder = interactable[interactable.Count-1];
             try
             {
-                Debug.Log("interacted: " + interactable[0]);
+                Debug.Log("interacted: " + interactable[interactable.Count - 1]);
                 interactable.Clear();
                 UIManager.Instance.SetInteractPopupText();
                 moveValDown = 0;
@@ -126,10 +126,20 @@ public class PlayerMove : MonoBehaviour
                 {
                     interactable.Remove(task);
                 }
-                //Debug.Log("Active task: " + task + ". list length: " + interactable.Count);
-                //Debug.Log("Interactable[0]: " + interactable[0]);
             }
 
+           //for (int i = 0; i < interactable.Count-1; i++)
+           // {
+           //     if (!interactable[i].gameObject.activeSelf)
+           //     {
+           //         interactable.Remove(interactable[i]);
+           //     }
+
+           //     if (i == interactable.Count - 1)
+           //     {
+           //         interactable[i]
+           //     }
+           // }
 
             
         }
@@ -170,11 +180,7 @@ public class PlayerMove : MonoBehaviour
                 rigid.useGravity = false;
             }
 
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-              //  customLocation = 
-                MoveToCustomLocation();
-            }
+
 
             movingThreshold = new Vector3(.01f, .01f, .01f);
             if ((rigid.velocity - movingThreshold).sqrMagnitude > .1f)
@@ -244,7 +250,7 @@ public class PlayerMove : MonoBehaviour
 				// Remove all items in the temporary list
 				foreach (Interactable item in itemsToRemove)
 				{
-					interactable.Remove(item);
+                    interactable.Remove(item);
 				}
 			}
 
@@ -256,7 +262,7 @@ public class PlayerMove : MonoBehaviour
     {
         mazeMode = value;
     }
-    private void MoveToCustomLocation()
+    public void CheatMoveToCustomLocation()
     {
         transform.position = customLocation.transform.position;
     }
@@ -267,7 +273,7 @@ public class PlayerMove : MonoBehaviour
         if (interactable != null && interactable.Count > 0)
         {
             //Debug.Log("not null");
-            return interactable[0];
+            return interactable[interactable.Count - 1];
         }
         else
         {

@@ -49,7 +49,7 @@ public class DucketteDeskPuzzle : Interactable
     }
     public void OnEnterPressed()
     {
-        if (password.text.ToLower() != correctPassword.ToLower())
+        if (password.text.ToLower() == correctPassword.ToLower())
         {
             tryAgainText.SetActive(false);
             Complete();
