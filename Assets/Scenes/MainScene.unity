@@ -1617,7 +1617,7 @@ Transform:
   m_GameObject: {fileID: 31042019}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 20.900208, y: 0.30000305, z: -7.5887947}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1914,6 +1914,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 0
   stayActive: 1
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -5143,6 +5144,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 0
   stayActive: 1
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -9655,6 +9657,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 1
   objectToActivate:
   - {fileID: 1271433086}
@@ -9840,7 +9843,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &185599396
 Transform:
   m_ObjectHideFlags: 0
@@ -9896,6 +9899,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -12272,6 +12276,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 1
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -12864,6 +12869,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 0
   stayActive: 1
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -13834,6 +13840,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -14725,6 +14732,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 0
   stayActive: 1
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -17028,6 +17036,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 0
   stayActive: 1
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -17923,6 +17932,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 0
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 1
   objectToActivate:
   - {fileID: 1342287274}
@@ -19644,6 +19654,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -20106,12 +20117,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   repeatable: 0
   forcePlay: 0
-  taskName: 
+  taskName: Buy Elon a drink
   customPopupName: 
   isCompleted: 0
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -20135,9 +20147,9 @@ MonoBehaviour:
   deleteButton: {fileID: 1695944321}
   exitButton: {fileID: 2043282133}
   lastBoughtItem: 
-  correctItem: 
-  correctDialogue: {fileID: 0}
-  incorrectDialogue: {fileID: 0}
+  correctItem: Energy Gooster
+  correctDialogue: {fileID: 729312018}
+  incorrectDialogue: {fileID: 1232243365}
   itemCosts: []
   itemArray: []
 --- !u!65 &426450289
@@ -20940,7 +20952,7 @@ Transform:
   m_GameObject: {fileID: 443702301}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 46.510193, y: 0.73831177, z: -7.2217946}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22189,6 +22201,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 0
   stayActive: 1
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -22683,6 +22696,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -25850,6 +25864,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -26997,6 +27012,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -29474,8 +29490,9 @@ MonoBehaviour:
   customPopupName: 
   isCompleted: 0
   hasFailed: 0
-  isVisibleOnStart: 1
+  isVisibleOnStart: 0
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -33403,6 +33420,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -35536,7 +35554,7 @@ Transform:
   m_GameObject: {fileID: 759333603}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 6.76001, y: 0.31115723, z: -9.223698}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36280,12 +36298,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   repeatable: 0
   forcePlay: 0
-  taskName: Buy a treat
+  taskName: Buy a treat for Duckette
   customPopupName: 
   isCompleted: 0
   hasFailed: 0
-  isVisibleOnStart: 0
+  isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -38363,6 +38382,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -41191,6 +41211,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 0
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -41391,6 +41412,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 0
   stayActive: 1
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -49374,6 +49396,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -53879,6 +53902,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -55518,7 +55542,7 @@ Transform:
   m_GameObject: {fileID: 1141344212}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 39.787994, y: 0.16999817, z: -7.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55577,6 +55601,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 1
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -56948,6 +56973,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 0
   stayActive: 1
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -57666,6 +57692,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -61606,6 +61633,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: isOptional
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: nextButton
       value: 
       objectReference: {fileID: 1832684912}
@@ -61703,7 +61734,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_LocalPosition.y
@@ -61756,6 +61787,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
   m_PrefabInstance: {fileID: 1271433085}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1271433089 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+  m_PrefabInstance: {fileID: 1271433085}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271433086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667ce02360b613a4c93e8500d9d9ae32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1274068312
 GameObject:
   m_ObjectHideFlags: 0
@@ -62510,6 +62552,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -63372,6 +63415,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 0
   stayActive: 1
+  isOptional: 0
   activatePostPuzzle: 1
   objectToActivate:
   - {fileID: 886542310}
@@ -64716,6 +64760,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 0
   stayActive: 1
+  isOptional: 0
   activatePostPuzzle: 1
   objectToActivate:
   - {fileID: 185599395}
@@ -65811,6 +65856,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -66286,7 +66332,7 @@ Transform:
   m_GameObject: {fileID: 1370804415}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3, y: -0.505, z: 0}
+  m_LocalPosition: {x: 0, y: -0.505, z: 0}
   m_LocalScale: {x: 0.12, y: 0.12, z: 0.12}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -66946,9 +66992,10 @@ MonoBehaviour:
     - {fileID: 2083553164}
     - {fileID: 1732882037}
     - {fileID: 1714699571}
-    - {fileID: 1642026945}
+    - {fileID: 1271433089}
     gameObjectToShowHidePT3: []
     pt3:
+    - {fileID: 1642026945}
     - {fileID: 629151440}
     gameObjectToShowHidePT4: []
     pt4:
@@ -66978,9 +67025,9 @@ MonoBehaviour:
     - {fileID: 758068052}
     - {fileID: 966014211}
     - {fileID: 1260524174}
-    - {fileID: 781347149}
     gameObjectToShowHidePT3: []
     pt3:
+    - {fileID: 781347149}
     - {fileID: 1674163709}
     gameObjectToShowHidePT4: []
     pt4:
@@ -70519,7 +70566,7 @@ Transform:
   m_GameObject: {fileID: 1465177813}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 46.510193, y: 0.73831177, z: -7.2217946}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -71024,6 +71071,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -73442,7 +73490,7 @@ Transform:
   m_GameObject: {fileID: 1525935370}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 14.710205, y: 0.2899933, z: -9.1513}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -76142,6 +76190,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 0
   stayActive: 1
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -77624,7 +77673,6 @@ GameObject:
   - component: {fileID: 1614031489}
   - component: {fileID: 1614031491}
   - component: {fileID: 1614031492}
-  - component: {fileID: 1614031493}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -77746,22 +77794,6 @@ MonoBehaviour:
   m_DefaultActionMap: Movement
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 519420031}
---- !u!114 &1614031493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1614031485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef8948f01e1a3054da00a8bb0ad9ab27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CheatMenu: {fileID: 0}
-  TaskManager: {fileID: 1380391819}
-  PlayerMove: {fileID: 0}
-  STD_Input: {fileID: 0}
 --- !u!1 &1620265136 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
@@ -77860,6 +77892,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -78544,6 +78577,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 1
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -79259,7 +79293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: isVisibleOnStart
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: puzzleToActivate
@@ -79271,8 +79305,16 @@ PrefabInstance:
       objectReference: {fileID: 160237563}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: activatePostPuzzle
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: objectToActivate.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: objectToActivate.Array.data[0]
+      value: 
+      objectReference: {fileID: 629151438}
     - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_Name
       value: DT1_Eggwin3
@@ -79534,6 +79576,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -79596,6 +79639,15 @@ MonoBehaviour:
   - {fileID: 21300000, guid: cfba243bcea989347b62e5fcddf07de2, type: 3}
   - {fileID: 21300000, guid: 5c563a7c1b2159b4fa2cab880d3d736d, type: 3}
   - {fileID: 21300000, guid: d0be1f88696506d4ab11f2bc3b0e6acc, type: 3}
+  - {fileID: 21300000, guid: ffa5288f641bd414c862c49296b07a79, type: 3}
+  - {fileID: 21300000, guid: cbad4fb83d99a2a4281a7f29081ae8c1, type: 3}
+  - {fileID: 21300000, guid: 67d0feaec31c42d49b6d482e457b2eab, type: 3}
+  - {fileID: 21300000, guid: 3019844703d241d41a9107d866586074, type: 3}
+  - {fileID: 21300000, guid: f9bb70a8f5e4f54449e6d70133be32f2, type: 3}
+  - {fileID: 21300000, guid: 97abcf90503649046a11d00719d48fb4, type: 3}
+  - {fileID: 21300000, guid: 7e9f6bd2e1525684a9c314f51c75a7f7, type: 3}
+  - {fileID: 21300000, guid: 58bb4cd86ed4f5d43a5eb32edbc5ef3c, type: 3}
+  - {fileID: 21300000, guid: 1db53b25a8c521a4faa8066a378396d4, type: 3}
   DialogTool: {fileID: 1000999049}
   DialogueToolsList:
   - {fileID: 1000999049}
@@ -80616,6 +80668,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 0
   stayActive: 1
+  isOptional: 0
   activatePostPuzzle: 1
   objectToActivate:
   - {fileID: 1322129366}
@@ -81362,6 +81415,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -81610,6 +81664,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 0
   stayActive: 1
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -82434,7 +82489,8 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 0
   stayActive: 1
-  activatePostPuzzle: 0
+  isOptional: 0
+  activatePostPuzzle: 1
   objectToActivate:
   - {fileID: 1322129366}
   - {fileID: 886542310}
@@ -83696,7 +83752,7 @@ Transform:
   m_GameObject: {fileID: 1736815017}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7.64, y: 0.3111572, z: -9.223698}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -87054,6 +87110,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -88288,6 +88345,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -89862,7 +89920,7 @@ Transform:
   m_GameObject: {fileID: 1885792387}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 10.45, y: -0.4888428, z: -9.223698}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -90351,6 +90409,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -90749,6 +90808,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 0
   objectToActivate: []
   player: {fileID: 1614031491}
@@ -91785,7 +91845,7 @@ Transform:
   m_GameObject: {fileID: 1913186875}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.8, y: 0.1699982, z: -8.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -101053,6 +101113,7 @@ MonoBehaviour:
   hasFailed: 0
   isVisibleOnStart: 1
   stayActive: 0
+  isOptional: 0
   activatePostPuzzle: 1
   objectToActivate: []
   player: {fileID: 1614031491}
