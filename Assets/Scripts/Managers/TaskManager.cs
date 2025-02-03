@@ -84,6 +84,7 @@ public class TaskManager : MonoBehaviour
                         obj.gameObject.SetActive(!obj.gameObject.activeSelf);
                     }
                     task.Complete();
+                    task.gameObject.SetActive(false);
                 }
             }
             
@@ -168,7 +169,7 @@ public class TaskManager : MonoBehaviour
 
         foreach (Interactable task in tasksByDay[day - 1].GetInteractables(currentPt))
         {
-            if (task.isCompleted && !task.counted)
+            if ((task.isCompleted || task.isOptional) && !task.counted)
             {
                 count++;
                 task.counted = true;
@@ -257,11 +258,13 @@ public class TaskManager : MonoBehaviour
     private void ChangeDay()
     {
         int listLoc = 0;
-        foreach(GameObject dayObject in duckSpritesForDays[day - 1].spriteToMove)
+        foreach(GameObject dayObject in duckSpritesForDays[day].spriteToMove)
         {
             
-            dayObject.transform.position = duckSpritesForDays[day - 1].dayLocation[listLoc].transform.position;
+            dayObject.transform.position = duckSpritesForDays[day].dayLocation[listLoc].transform.position;
+            Debug.Log("TaskManager.cs: Moved duck " + dayObject + "to " + duckSpritesForDays[day].dayLocation[listLoc]);
             listLoc++;
+
 		}
         currentPt = 0;
         day++;

@@ -15,6 +15,7 @@ public class Interactable : MonoBehaviour
     public bool hasFailed;
     public bool isVisibleOnStart = true;
     public bool stayActive = false;
+    public bool isOptional = false;
     public bool activatePostPuzzle = false;
     public List<GameObject> objectToActivate;
     public PlayerMove player;
