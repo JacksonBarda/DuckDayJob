@@ -71,8 +71,11 @@ public class VentInteract : DoorInteract
         if (isVent2 == false)
         {
 			StartCoroutine(Wait(1.0f));
-            if (preinteractDialogue != null) preinteractDialogue.Interact();
-
+            if (preinteractDialogue != null)
+            {
+                preinteractDialogue.gameObject.SetActive(true); 
+                preinteractDialogue.Interact();
+            }
         }
         else
         {

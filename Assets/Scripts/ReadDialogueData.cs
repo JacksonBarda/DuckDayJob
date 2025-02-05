@@ -156,13 +156,6 @@ public class ReadDialogueData : MonoBehaviour
         }
     }
 
-
-	public void nextLine()
-    {
-		DialogTool.GetComponent<DialogueTool>().index++;
-		DialogTool.GetComponent<DialogueTool>().setDialogueUI();
-	}
-
 	public void nextLine(bool fromCM)
     {
         if ((fromCM && CinemaManager.cinemaMode == true) || (!fromCM && CinemaManager.cinemaMode == false))     // during cinematic sequence, DialogueButton cannot be used to call this method,
