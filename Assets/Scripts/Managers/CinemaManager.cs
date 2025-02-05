@@ -26,11 +26,10 @@ public class CinemaManager : MonoBehaviour
         
     //}
 
-    public void ActivateSequence()
+    public void ActivateSequence(CinematicSequenceTool sequence)
     {
         cinemaMode = true;
-        currentSequence = listOfSequences[sequenceIndex];
-        currentSequence.Interact();
+        currentSequence = sequence;
     }
 
     public void DeactivateSequence()

@@ -27,7 +27,7 @@ public class DoorInteract : Interactable
     [SerializeField]
     protected FollowPlayer followPlayer;
     [SerializeField]
-    protected bool isLocked;
+    public bool isLocked;
     [SerializeField]
     protected DialogueTool lockedDialogue;
 

@@ -19,7 +19,7 @@ public class CinematicSequenceTool : Interactable
     [Tooltip("Starts at zero when sequence begins, increases by 1 with each dialogue line")]
     public int dialogueIndex;
     [SerializeField]
-    private CinemaManager CinemaManager;
+    private CinemaManager CM;
 
     [SerializeField]
     private List<Shot> listOfShots;
@@ -43,6 +43,7 @@ public class CinematicSequenceTool : Interactable
 
     public override void Interact()
     {
+        CM.ActivateSequence(this);
         dialogue.Interact();
         mainCamera.gameObject.SetActive(false);
         cinematicCamera.gameObject.SetActive(true);
@@ -126,7 +127,7 @@ public class CinematicSequenceTool : Interactable
     {
         if (alreadyIterated == false)
         {
-            CinemaManager.IterateDialogue();
+            CM.IterateDialogue();
         }
         
     }
@@ -182,7 +183,7 @@ public class CinematicSequenceTool : Interactable
         {
             cinematicCamera.gameObject.SetActive(false);
             mainCamera.gameObject.SetActive(true);
-            CinemaManager.DeactivateSequence();
+            CM.DeactivateSequence();
         }
 
 		blackoutFadeIn.FadeImageInOverTime(currentShot.fadeTime);
@@ -200,6 +201,6 @@ public class CinematicSequenceTool : Interactable
 
         cinematicCamera.gameObject.SetActive(false);
         mainCamera.gameObject.SetActive(true);
-        CinemaManager.DeactivateSequence();
+        CM.DeactivateSequence();
     }
 }

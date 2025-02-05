@@ -47,7 +47,15 @@ public class Interactable : MonoBehaviour
             {
                 if(!counted)
                     if (thingToActivate != null)
-                        thingToActivate.gameObject.SetActive(!thingToActivate.gameObject.activeSelf);
+                        if (thingToActivate.GetComponent<DoorInteract>() != null)   //if GameObject is a door, toggle isLocked bool
+                        {
+                            thingToActivate.GetComponent<DoorInteract>().isLocked = !thingToActivate.GetComponent<DoorInteract>().isLocked;
+                            Debug.Log("Interactable.cs: Toggled door lock");
+                        }
+                        else
+                        {
+                            thingToActivate.gameObject.SetActive(!thingToActivate.gameObject.activeSelf);
+                        }
             }
         }
         isCompleted = true;

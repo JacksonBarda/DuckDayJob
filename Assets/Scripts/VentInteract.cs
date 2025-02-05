@@ -13,7 +13,7 @@ public class VentInteract : DoorInteract
     [SerializeField]
     private bool isVent2 = false;
     [SerializeField]
-    private CinemaManager cinemaManager;
+    private CinematicSequenceTool cmSequence;
     private bool alreadyInteracted = false;
     [SerializeField]
     private DialogueTool preinteractDialogue;
@@ -103,6 +103,6 @@ public class VentInteract : DoorInteract
 		Debug.Log("Waiting to fade in");
 		yield return new WaitForSeconds(delay);
 		StartCoroutine(fadeIn.FadeInCoroutine(1.0f, this, false));
-		cinemaManager.ActivateSequence();
+        cmSequence.Interact();
 	}
 }
