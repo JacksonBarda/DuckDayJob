@@ -164,20 +164,20 @@ If Main Duck Chose Wrong Drink for Duckette	2	0	Day	Main Duck	2	Hello Duckette! 
 If Main Duck Chose Wrong Drink for Duckette	2	0	Day	Duckette	4	"Thanks intern, just leave it on my desk."	TRUE	Right	Normal	FALSE	0	FALSE
 If Main Duck Chose Wrong Drink for Duckette	2	0	Day	Main Duck	2	She barely looked at the drink!	TRUE	Left	Italics	FALSE	0	FALSE
 If Main Duck Chose Wrong Drink for Duckette	2	0	Day	Main Duck	2	"Oh Duckette, when will I ever be more than an intern to you?"	TRUE	Left	Italics	FALSE	0	FALSE
-Hack into Duckette's Computer Part I	2	1	Night	Main Duck	2	"Finally, all the ducks are gone."	TRUE	Left	Italics	FALSE	0	FALSE
-Hack into Duckette's Computer Part I	2	1	Night	Main Duck	2	"I didn't have much luck catching Duckette's attention today, so my only beakon of hope is to see <b>who she was emailing in the morning.</b>"	TRUE	Left	Italics	FALSE	0	FALSE
-Hack into Duckette's Computer Part I	2	1	Night	Main Duck	2	Desperate times call for desperate measures! Time to find Duckette's cubicle.	TRUE	Left	Italics	FALSE	0	FALSE
-Hack into Duckette's Computer Part II	2	2	Night	Main Duck	2	Quack! I was praying she would forget to sign out. I need to find out what her <b>password</b> is.	TRUE	Left	Italics	FALSE	0	FALSE
-Hack into Duckette's Computer Part III	2	3	Night	Main Duck	2	I'm in! Time to open her emails...	FALSE	Left	Normal	FALSE	0	FALSE
-Hack into Duckette's Computer Part III	2	3	Night	Main Duck	2	"Looks like there is an <b>email from Elon Duck asking for the latest reports</b>, so that's why she asked for my help."	FALSE	Left	Normal	FALSE	0	FALSE
-Hack into Duckette's Computer Part III	2	3	Night	Main Duck	2	...And there's <b>an email from a Manfred?</b> Who is that? I've never seen them in the office.	FALSE	Left	Normal	FALSE	0	FALSE
-Hack into Duckette's Computer Part III	2	3	Night	Main Duck	2	IS SHE ALREADY IN LOVE WITH SOMEONE ELSE?!	FALSE	Left	Normal	FALSE	0	FALSE
-Hack into Duckette's Computer Part III	2	3	Night	Main Duck	2	"No, no, it can't be! Nestla is huge! I probably haven't met everyone yet. Duckette is one popular duck, after all."	FALSE	Left	Normal	FALSE	0	FALSE
-Hack into Duckette's Computer Part III	2	3	Night	Main Duck	2	Let's just open this email up just in case...	FALSE	Left	Normal	FALSE	0	FALSE
-Hack into Duckette's Computer Part III	2	3	Night	Janitor	7	(Footsteps echo in the distance)	FALSE	Right	Normal	FALSE	0	FALSE
-Hack into Duckette's Computer Part III	2	3	Night	Main Duck	2	"Quack, it's the <b>Janitor!</b> It must be closing hours now!"	FALSE	Left	Normal	FALSE	0	FALSE
-Hack into Duckette's Computer Part III	2	3	Night	Main Duck	2	"I already got in trouble yesterday, no need to keep that streak."	FALSE	Left	Normal	FALSE	0	FALSE
-Hack into Duckette's Computer Part III	2	3	Night	Main Duck	2	I'll leave for the day.	FALSE	Left	Normal	FALSE	0	FALSE
+Snooping on Duckette's Computer	2	1	Night	Main Duck	2	"Finally, all the ducks are gone."	TRUE	Left	Italics	FALSE	0	FALSE
+Snooping on Duckette's Computer	2	1	Night	Main Duck	2	"I didn't have much luck catching Duckette's attention today, so my only beakon of hope is to see <b>who she was emailing in the morning.</b>"	TRUE	Left	Italics	FALSE	0	FALSE
+Snooping on Duckette's Computer	2	1	Night	Main Duck	2	Desperate times call for desperate measures! Time to find Duckette's cubicle.	TRUE	Left	Italics	FALSE	0	FALSE
+Before Hacking Duckette's Computer	2	2	Night	Main Duck	2	Quack! I was praying she would forget to sign out. I need to find out what her <b>password</b> is.	TRUE	Left	Italics	FALSE	0	FALSE
+After Hacking Duckette's Computer	2	3	Night	Main Duck	2	I'm in! Time to open her emails...	FALSE	Left	Normal	FALSE	0	FALSE
+After Hacking Duckette's Computer	2	3	Night	Main Duck	2	"Looks like there is an <b>email from Elon Duck asking for the latest reports</b>, so that's why she asked for my help."	FALSE	Left	Normal	FALSE	0	FALSE
+After Hacking Duckette's Computer	2	3	Night	Main Duck	2	...And there's <b>an email from a Manfred?</b> Who is that? I've never seen them in the office.	FALSE	Left	Normal	FALSE	0	FALSE
+After Hacking Duckette's Computer	2	3	Night	Main Duck	2	IS SHE ALREADY IN LOVE WITH SOMEONE ELSE?!	FALSE	Left	Normal	FALSE	0	FALSE
+After Hacking Duckette's Computer	2	3	Night	Main Duck	2	"No, no, it can't be! Nestla is huge! I probably haven't met everyone yet. Duckette is one popular duck, after all."	FALSE	Left	Normal	FALSE	0	FALSE
+After Hacking Duckette's Computer	2	3	Night	Main Duck	2	Let's just open this email up just in case...	FALSE	Left	Normal	FALSE	0	FALSE
+After Hacking Duckette's Computer	2	3	Night	Janitor	7	(Footsteps echo in the distance)	FALSE	Right	Normal	FALSE	0	FALSE
+After Hacking Duckette's Computer	2	3	Night	Main Duck	2	"Quack, it's the <b>Janitor!</b> It must be closing hours now!"	FALSE	Left	Normal	FALSE	0	FALSE
+After Hacking Duckette's Computer	2	3	Night	Main Duck	2	"I already got in trouble yesterday, no need to keep that streak."	FALSE	Left	Normal	FALSE	0	FALSE
+After Hacking Duckette's Computer	2	3	Night	Main Duck	2	I'll leave for the day.	FALSE	Left	Normal	FALSE	0	FALSE
 Elon Duck is in the Office	3	1	Day	Sybill	8	Have you heard? <b>He's coming today!</b>	TRUE	Right	Normal	FALSE	0	FALSE
 Elon Duck is in the Office	3	1	Day	Billy	9	"No quacking way, are you pulling my feathers?"	TRUE	Right	Normal	FALSE	0	FALSE
 Elon Duck is in the Office	3	1	Day	Sybill	8	"No, it's true! He's finally going to show up in the office!"	TRUE	Right	Normal	FALSE	0	FALSE

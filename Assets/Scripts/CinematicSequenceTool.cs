@@ -43,6 +43,7 @@ public class CinematicSequenceTool : Interactable
 
     public override void Interact()
     {
+        Debug.Log("CineSeqTool: Interact()");
         CM.ActivateSequence(this);
         dialogue.Interact();
         mainCamera.gameObject.SetActive(false);

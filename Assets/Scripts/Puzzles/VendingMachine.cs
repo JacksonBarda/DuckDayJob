@@ -161,6 +161,7 @@ public class VendingMachine : Interactable
 			//incorrectDialogue.GetComponent<DialogueTool>().Complete();
 			//TaskManager.TMInstance.AddInteractableToDay(correctDialogue.GetComponent<Interactable>(),2,2);
 			incorrectDialogue.SetActive(false);
+            incorrectDialogue.GetComponent<DialogueTool>().Complete();
 
             correctDialogue.SetActive(true);
         }
@@ -169,6 +170,7 @@ public class VendingMachine : Interactable
 			//correctDialogue.GetComponent<DialogueTool>().Complete();
 			//TaskManager.TMInstance.AddInteractableToDay(incorrectDialogue.GetComponent<Interactable>(), 2, 2);
 			correctDialogue.SetActive(false);
+            correctDialogue.GetComponent<DialogueTool>().Complete();
 
             incorrectDialogue.SetActive(true);
         }
