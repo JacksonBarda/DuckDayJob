@@ -111,6 +111,7 @@ public class TaskManager : MonoBehaviour
         onTaskFailed += TaskFailed;
         if (tasksByDay[day - 1].GetInteractables(currentPt)[count] != null && tasksByDay[day - 1].GetInteractables(currentPt)[count].forcePlay)
         {
+            Debug.Log("TaskManager: Force play " + tasksByDay[day - 1].GetInteractables(currentPt)[count] + "---------------------------------------");
             tasksByDay[day - 1].GetInteractables(currentPt)[count].Interact();
         }
     }
@@ -262,7 +263,7 @@ public class TaskManager : MonoBehaviour
         {
             
             dayObject.transform.position = duckSpritesForDays[day].dayLocation[listLoc].transform.position;
-            Debug.Log("TaskManager.cs: Moved duck " + dayObject + "to " + duckSpritesForDays[day].dayLocation[listLoc]);
+            //Debug.Log("TaskManager.cs: Moved duck " + dayObject + "to " + duckSpritesForDays[day].dayLocation[listLoc]);
             listLoc++;
 
 		}

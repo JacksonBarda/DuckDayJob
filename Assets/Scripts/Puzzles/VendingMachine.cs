@@ -22,7 +22,7 @@ public class VendingMachine : Interactable
     public GameObject incorrectDialogue;
     private bool dialoguesActive = false;
     private string enteredNumber = "";
-    private int playerCoins = 20;
+    //private int playerCoins = 20;
     public List<GameObject> itemCosts;
     public string[] itemArray;
 

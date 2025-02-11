@@ -103,6 +103,7 @@ public class VentInteract : DoorInteract
 		Debug.Log("Waiting to fade in");
 		yield return new WaitForSeconds(delay);
 		StartCoroutine(fadeIn.FadeInCoroutine(1.0f, this, false));
+        cmSequence.gameObject.SetActive(true);
         cmSequence.Interact();
 	}
 }

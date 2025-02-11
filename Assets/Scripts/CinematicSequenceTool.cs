@@ -6,10 +6,10 @@ using System;
 
 public class CinematicSequenceTool : Interactable
 {
-    [SerializeField]
-    private Camera mainCamera;
-    [SerializeField]
-    private Camera cinematicCamera;
+    
+    private Camera camMain;
+    private Camera camCinematic;
+
     [SerializeField]
     private DialogueTool dialogue;
     [SerializeField]
@@ -33,21 +33,20 @@ public class CinematicSequenceTool : Interactable
     private bool alreadyIterated = false;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        cinematicCamera.gameObject.SetActive(false);
-        mainCamera.gameObject.SetActive(true);
-        
-    }
+    //// Start is called before the first frame update
+    //new void Start()
+    //{
+    //    base.Start();
+    //}
 
     public override void Interact()
     {
-        Debug.Log("CineSeqTool: Interact()");
+        camMain = CM.mainCamera;
+        camCinematic = CM.cinematicCamera;
         CM.ActivateSequence(this);
         dialogue.Interact();
-        mainCamera.gameObject.SetActive(false);
-        cinematicCamera.gameObject.SetActive(true);
+        camMain.gameObject.SetActive(false);
+        camCinematic.gameObject.SetActive(true);
         dialogueIndex = 0;
         NextLine();
         
@@ -87,6 +86,8 @@ public class CinematicSequenceTool : Interactable
         {
             if (shotIndex == 0)                                                         // if this is the first shot of sequence
             {
+                Debug.Log("CST: First shot <<<<<<<<<<<<<<<<<<<<<<<<");
+                Debug.Log("CST: 1   +-+-+-+-+-+-+-+-+-+-+-+-");
                 //blackoutFadeOut.InstantFadeOut();
                 blackoutFadeIn.FadeImageInOverTime(currentShot.fadeTime);
                 SwitchShot();
@@ -96,10 +97,12 @@ public class CinematicSequenceTool : Interactable
                 //Debug.Log("lastShot.fadeTransition: " + lastShot.fadeTransition);
                 if (lastShot.fadeTransition)
                 {
+                    Debug.Log("CST: 2   +-+-+-+-+-+-+-+-+-+-+-+-");
                     StartCoroutine(FadeCoroutine());
                 }
                 else
                 {
+                    Debug.Log("CST: 3   +-+-+-+-+-+-+-+-+-+-+-+-");
                     SwitchShot();
                 }
 
@@ -113,9 +116,11 @@ public class CinematicSequenceTool : Interactable
             if (shotIndex < listOfShots.Count - 1)                                    // if this is not the last shot, next shot will be assigned to currentShot
             {                                                                       // this shot unloads after one more click
                 shotIndex++;
+                Debug.Log("CST: 4   +-+-+-+-+-+-+-+-+-+-+-+-");
             }
             else
             {
+                Debug.Log("CST: 5   +-+-+-+-+-+-+-+-+-+-+-+-");
                 Debug.Log("LAST LINE OF SEQUENCE <<<<<<<<<<<<<<<<<<<<<<<");
                 //StartCoroutine(EndingFadeCoroutine());
             }
@@ -135,11 +140,17 @@ public class CinematicSequenceTool : Interactable
 
     public void SwitchShot()
     {
+        //Debug.Log("CST: SwitchShot() from " + lastShot + " to " + currentShot);
         // unloading procedure
-        
-        if (lastShot.isStillImage && shotIndex != 0) lastShot.stillImage.gameObject.SetActive(false);
+
+        if (lastShot.isStillImage && shotIndex != 0)
+        {
+            Debug.Log("CST: 6   +-+-+-+-+-+-+-+-+-+-+-+-");
+            lastShot.stillImage.gameObject.SetActive(false);
+        }
         else if (!lastShot.isStillImage && shotIndex != 0)
         {
+            Debug.Log("CST: 7   +-+-+-+-+-+-+-+-+-+-+-+-");
             foreach (GameObject npd in lastShot.listOfSprites)
             {
                 npd.SetActive(false);
@@ -149,12 +160,15 @@ public class CinematicSequenceTool : Interactable
         // load new shot
         if (currentShot.isStillImage)                                           // if it is an image
         {
+            Debug.Log("CST: 8   +-+-+-+-+-+-+-+-+-+-+-+-");
+            Debug.Log("CST: Load still image");
             currentShot.stillImage.gameObject.SetActive(true);                  // then load image
         }
         else                                                                    // if it is camera position
         {
-            cinematicCamera.transform.position = currentShot.cameraPosition;    // and set camera's position and rotation.
-            cinematicCamera.transform.eulerAngles = currentShot.cameraRotation;
+            Debug.Log("CST: 9   +-+-+-+-+-+-+-+-+-+-+-+-");
+            camCinematic.transform.position = currentShot.cameraPosition;    // and set camera's position and rotation.
+            camCinematic.transform.eulerAngles = currentShot.cameraRotation;
             foreach (GameObject npd in currentShot.listOfSprites)
             {
                 npd.SetActive(true);
@@ -163,8 +177,8 @@ public class CinematicSequenceTool : Interactable
 
         if (shotIndex == listOfShots.Count)
         {
-            mainCamera.gameObject.SetActive(true);
-            cinematicCamera.gameObject.SetActive(false);
+            camMain.gameObject.SetActive(true);
+            camCinematic.gameObject.SetActive(false);
         }
         //CinemaManager.IterateDialogue();
     }
@@ -182,8 +196,8 @@ public class CinematicSequenceTool : Interactable
         
         if (shotIndex == listOfShots.Count-1 && dialogueIndex == currentShot.indexLastLine)
         {
-            cinematicCamera.gameObject.SetActive(false);
-            mainCamera.gameObject.SetActive(true);
+            camCinematic.gameObject.SetActive(false);
+            camMain.gameObject.SetActive(true);
             CM.DeactivateSequence();
         }
 
@@ -200,8 +214,8 @@ public class CinematicSequenceTool : Interactable
         blackoutFadeIn.FadeImageInOverTime(currentShot.fadeTime);
         DialogueButton.SetActive(true);
 
-        cinematicCamera.gameObject.SetActive(false);
-        mainCamera.gameObject.SetActive(true);
+        camCinematic.gameObject.SetActive(false);
+        camMain.gameObject.SetActive(true);
         CM.DeactivateSequence();
     }
 }

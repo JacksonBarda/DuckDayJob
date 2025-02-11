@@ -13,11 +13,20 @@ public class CinemaManager : MonoBehaviour
     [SerializeField]
     private int sequenceIndex;
     public ReadDialogueData DialogueManager;
+    public Camera mainCamera;
+    public Camera cinematicCamera;
 
     // Start is called before the first frame update
     void Start()
     {
         sequenceIndex = 0;
+        cinematicCamera.gameObject.SetActive(false);
+        mainCamera.gameObject.SetActive(true);
+
+        foreach (CinematicSequenceTool sequence in listOfSequences)
+        {
+            sequence.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -40,9 +49,9 @@ public class CinemaManager : MonoBehaviour
 
     public void OnNextDialogueLine()
     {
-        Debug.Log("clicky ------------------");
         if (currentSequence != null && cinemaMode == true)
         {
+            Debug.Log("clicky ------------------");
             currentSequence.NextLine();
         }
     }
