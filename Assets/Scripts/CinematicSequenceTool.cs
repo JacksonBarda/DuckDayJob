@@ -24,7 +24,7 @@ public class CinematicSequenceTool : Interactable
     [SerializeField]
     private List<Shot> listOfShots;
     [SerializeField]
-    private int shotIndex;
+    private int shotIndex = 0;
     [SerializeField]
     private GameObject DialogueButton;
     private Shot currentShot;
@@ -74,11 +74,7 @@ public class CinematicSequenceTool : Interactable
             Debug.Log("lastshot = currentshot");
         }
 
-        if (dialogueIndex > listOfShots[listOfShots.Count - 1].indexLastLine)
-        {
-            StartCoroutine(EndingFadeCoroutine());
-        }
-
+        // if 
         if (!(dialogueIndex == currentShot.indexFirstLine && lastShot.fadeTransition && shotIndex != 0) && dialogueIndex != 0) IterateDialogue();
 
         //Debug.Log("dialogueIndex:" + dialogueIndex + "; currentShot.indexFirstLine:" + currentShot.indexFirstLine);
@@ -127,6 +123,12 @@ public class CinematicSequenceTool : Interactable
         }
 
         dialogueIndex++;
+
+        if (dialogueIndex > listOfShots[listOfShots.Count - 1].indexLastLine+1)
+        {
+            StartCoroutine(EndingFadeCoroutine());
+            Debug.Log("CST: EndingFadeCoroutine()");
+        }
     }
 
     public void IterateDialogue()
@@ -217,5 +219,6 @@ public class CinematicSequenceTool : Interactable
         camCinematic.gameObject.SetActive(false);
         camMain.gameObject.SetActive(true);
         CM.DeactivateSequence();
+        base.Complete();
     }
 }

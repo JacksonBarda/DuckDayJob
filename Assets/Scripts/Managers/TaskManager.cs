@@ -59,7 +59,7 @@ public class TaskManager : MonoBehaviour
     private PartIdentifier currentPt = PartIdentifier.Pt1;
 
 
-    // ----------- DAY SKIPPING CHEATS ---------------//
+    // ----------- CHEATS ---------------//
 
     public void CheatSkipToDay(int dayInput)
     {
@@ -89,6 +89,10 @@ public class TaskManager : MonoBehaviour
             }
             
         }
+    }
+    public PartIdentifier GetCurrentPart()
+    {
+        return currentPt;
     }
 
 	private void Awake()
@@ -279,7 +283,7 @@ public class TaskManager : MonoBehaviour
         ptCount = PlayerPrefs.GetInt("ptCount", ptCount);
         health = PlayerPrefs.GetInt("Health", health);
         deathScreen.SetActive(false);
-        currentPt = GetCurrentPt(ptCount);
+        currentPt = GetPart(ptCount);
         foreach (Interactable task in tasksByDay[day - 1].GetInteractables(currentPt))
         {
             if (task.isVisibleOnStart)
@@ -344,7 +348,7 @@ public class TaskManager : MonoBehaviour
 			Debug.LogWarning("Invalid day count: " + dayCount);
 		}
 	}
-	private PartIdentifier GetCurrentPt(int _ptCount)
+	private PartIdentifier GetPart(int _ptCount)
     {
         switch(_ptCount)
         {

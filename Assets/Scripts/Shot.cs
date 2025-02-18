@@ -26,9 +26,7 @@ public class Shot : MonoBehaviour
     [Multiline(5)]
     public string notes;
 
-
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (stillImage != null)
         {
@@ -41,6 +39,7 @@ public class Shot : MonoBehaviour
             foreach (GameObject npd in listOfSprites)
             {
                 npd.SetActive(false);
+                Debug.Log("Shot: " + npd + ".SetActive(false)");
             }
         }
     }

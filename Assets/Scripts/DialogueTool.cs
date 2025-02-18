@@ -594,7 +594,7 @@ public class DialogueTool : Interactable
         {
             if (index > DialogueList.Count - 1)
             {
-                Debug.Log("End of List");
+                Debug.Log("DialogueTool: End of List");
                 if (retrieval && !correct)
                 {
                     

@@ -24,6 +24,7 @@ public class FadeOut : MonoBehaviour
     {
         // Start the fade-out coroutine
         StartCoroutine(FadeOutCoroutine(fadeTime, targetObject));
+        Debug.Log("FadeOut.cs: FadeOutCoroutine <<<<<<<<<<<<<<<<<<<");
     }
 
     private IEnumerator FadeOutCoroutine(float fadeTime, Interactable targetObject)

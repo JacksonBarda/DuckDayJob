@@ -22,7 +22,7 @@ public class CheatsForDebug : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
             CheatMenu.SetActive(!CheatMenu.activeSelf);
         }
@@ -30,11 +30,33 @@ public class CheatsForDebug : MonoBehaviour
     
     public void SkipToDay()
     {
-        TaskManager.CheatSkipToDay(int.Parse(STD_Input.text));
+        int day = int.Parse(STD_Input.text);
+        Debug.Log("CheatsForDebug: Skipping to day " + day + "...");
+        TaskManager.CheatSkipToDay(day);
     }
 
     public void Teleport()
     {
+        Debug.Log("CheatsForDebug: Teleporting player...");
         PlayerMove.CheatMoveToCustomLocation();
+    }
+
+    public void SkipNextTask()
+    {
+        List<Interactable> taskList = TaskManager.tasksByDay[TaskManager.day - 1].GetInteractables(TaskManager.GetCurrentPart());
+        foreach (Interactable task in taskList)
+        {
+            if (task.isCompleted)
+            {
+                continue;
+            }
+            else
+            {
+                Debug.Log("CheatsForDebug: Skipping " + task + "...");
+                task.Complete();
+                break;
+            }
+        }
+        
     }
 }

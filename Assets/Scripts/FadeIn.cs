@@ -11,6 +11,8 @@ public class FadeIn : MonoBehaviour
     private Image image;
     private float originalAlpha;
 
+    // -------------  TRANSITION FROM CAMERA VIEW TO BLACK ------------------------
+
     public void Start()
     {
         //image = this.gameObject.GetComponent<Image>();
@@ -23,6 +25,7 @@ public class FadeIn : MonoBehaviour
     {
         // Start the fade-out coroutine
         StartCoroutine(FadeInCoroutine(fadeTime, targetObject, callComplete));
+        Debug.Log("FadeIn.cs: FadeInCoroutine >>>>>>>>>>>>>>>>>>>");
     }
     public IEnumerator FadeInCoroutine(float fadeTime, Interactable task, bool callComplete)
     {

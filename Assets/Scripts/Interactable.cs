@@ -25,12 +25,15 @@ public class Interactable : MonoBehaviour
     [Header("Custom puzzle Variable")]
     public GameObject puzzleUI;
 
+    // Start will be called before before first frame ONLY if GameObject is enabled; if disabled, will be called upon enabling
     private void Start()
     {
         if (forcePlay)
         {
             this.Interact();
+            Debug.Log(this + " Force Play +++++++++++++++++++");
         }
+        Debug.Log(this + ".Start()");
     }
     public virtual void Interact()
     {
