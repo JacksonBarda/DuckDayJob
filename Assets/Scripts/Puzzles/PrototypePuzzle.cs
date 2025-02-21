@@ -74,7 +74,7 @@ public class PrototypePuzzle : Interactable
             scrollSpeed = .3f + timePassed / 65;        //control scroll speed; initial speed is .3f
 
             mousePosition.x = 400;
-            mousePosition.y = Input.mousePosition.y;
+            mousePosition.y = Math.Clamp(Input.mousePosition.y, -200f, 200f);
             mousePosition.z = 4;
             car.transform.position = mousePosition;     //car follow mouse Y position
 

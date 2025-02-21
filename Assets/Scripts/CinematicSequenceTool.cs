@@ -19,6 +19,9 @@ public class CinematicSequenceTool : Interactable
     [Tooltip("Starts at zero when sequence begins, increases by 1 with each dialogue line")]
     public int dialogueIndex;
     [SerializeField]
+    [Tooltip("Disable if another fade transition precedes this sequence, ex. if sequence is activated after door interaction")]
+    private bool disableBeginningFade = false;
+    [SerializeField]
     private CinemaManager CM;
 
     [SerializeField]
@@ -41,14 +44,15 @@ public class CinematicSequenceTool : Interactable
 
     public override void Interact()
     {
-        camMain = CM.mainCamera;
-        camCinematic = CM.cinematicCamera;
-        CM.ActivateSequence(this);
-        dialogue.Interact();
-        camMain.gameObject.SetActive(false);
-        camCinematic.gameObject.SetActive(true);
-        dialogueIndex = 0;
-        NextLine();
+        StartCoroutine(InitializeCoroutine());
+        //camMain = CM.mainCamera;
+        //camCinematic = CM.cinematicCamera;
+        //CM.ActivateSequence(this);
+        //dialogue.Interact();
+        //camMain.gameObject.SetActive(false);
+        //camCinematic.gameObject.SetActive(true);
+        //dialogueIndex = 0;
+        //NextLine();
         
     }
 
@@ -85,7 +89,7 @@ public class CinematicSequenceTool : Interactable
                 Debug.Log("CST: First shot <<<<<<<<<<<<<<<<<<<<<<<<");
                 Debug.Log("CST: 1   +-+-+-+-+-+-+-+-+-+-+-+-");
                 //blackoutFadeOut.InstantFadeOut();
-                blackoutFadeIn.FadeImageInOverTime(currentShot.fadeTime);
+                //blackoutFadeOut.FadeImageOutOverTime(currentShot.fadeTime);
                 SwitchShot();
             }
             else if (shotIndex != 0)                                                    // if this is not the first shot                          
@@ -126,7 +130,7 @@ public class CinematicSequenceTool : Interactable
 
         if (dialogueIndex > listOfShots[listOfShots.Count - 1].indexLastLine+1)
         {
-            StartCoroutine(EndingFadeCoroutine());
+            StartCoroutine(EndingCoroutine());
             Debug.Log("CST: EndingFadeCoroutine()");
         }
     }
@@ -208,7 +212,27 @@ public class CinematicSequenceTool : Interactable
 		DialogueButton.SetActive(true);
 	}
 
-    public IEnumerator EndingFadeCoroutine()
+    public IEnumerator InitializeCoroutine()
+    {
+        if (!disableBeginningFade)
+        {
+            blackoutFadeOut.FadeImageOutOverTime(0.5f);
+            yield return new WaitForSeconds(1.0f);
+            blackoutFadeIn.FadeImageInOverTime(0.5f);
+        }
+        camMain = CM.mainCamera;
+        camCinematic = CM.cinematicCamera;
+        CM.ActivateSequence(this);
+        dialogue.Interact();
+
+        camMain.gameObject.SetActive(false);
+        camCinematic.gameObject.SetActive(true);
+        player.gameObject.SetActive(false);
+        dialogueIndex = 0;
+        NextLine();
+    }
+
+    public IEnumerator EndingCoroutine()
     {
         DialogueButton.SetActive(false);
         blackoutFadeOut.FadeImageOutOverTime(lastShot.fadeTime);
@@ -218,6 +242,7 @@ public class CinematicSequenceTool : Interactable
 
         camCinematic.gameObject.SetActive(false);
         camMain.gameObject.SetActive(true);
+        player.gameObject.SetActive(true);
         CM.DeactivateSequence();
         base.Complete();
     }

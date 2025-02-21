@@ -56,8 +56,8 @@ public class VentInteract : DoorInteract
 
     private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("collision");
-        if (autoInteract == true)
+        Debug.Log("collision with " + collision);
+        if (autoInteract == true && collision.gameObject.tag == "Player")
         {
             Interact();
             Debug.Log("auto interact");

@@ -207,7 +207,7 @@ If Main Duck Chose Right Drink (Energy Gooster),3,0,Day,Elon Duck,1,Oh? Is that 
 If Main Duck Chose Right Drink (Energy Gooster),3,0,Day,Main Duck,2,"Heh, y-yeah! It's my favorite too.",TRUE,Left,Normal,FALSE,0,FALSE
 If Main Duck Chose Right Drink (Energy Gooster),3,0,Day,Elon Duck,1,"Why thank you for going out of your way to get me a drink, Main Duck. I'm ducklighted that there is another Energy Gooster fan out there!",TRUE,Right,Normal,FALSE,0,FALSE
 If Main Duck Chose Right Drink (Energy Gooster),3,0,Day,Main Duck,2,"You're welcome, sir!",TRUE,Left,Normal,FALSE,0,FALSE
-If Main Duck Chose Wrong Drink for Elon Duck,3,0,Day,Main Duck,2,YES! He likes it! That's sure to give me some bonus points. Maybe he'll even write me a recommendation on PeepedIn.,TRUE,Left,Italics,FALSE,0,FALSE
+If Main Duck Chose Right Drink (Energy Gooster),3,0,Day,Main Duck,2,YES! He likes it! That's sure to give me some bonus points. Maybe he'll even write me a recommendation on PeepedIn.,TRUE,Left,Italics,FALSE,0,FALSE
 If Main Duck Chose Wrong Drink for Elon Duck,3,0,Day,Main Duck,2,Here sir! I bought you a drink from the vending machine before the meeting.,TRUE,Left,Normal,FALSE,0,FALSE
 If Main Duck Chose Wrong Drink for Elon Duck,3,0,Day,Elon Duck,1,Oh? What's this?,TRUE,Right,Normal,FALSE,0,FALSE
 If Main Duck Chose Wrong Drink for Elon Duck,3,0,Day,Elon Duck,1,"Ah, I appreciate the gesture, intern, but I'm afraid this isn't my cup of tea. You can have it. I must prepare for the meeting.",TRUE,Right,Normal,FALSE,0,FALSE
