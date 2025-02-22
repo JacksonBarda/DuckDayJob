@@ -33,7 +33,7 @@ public class Interactable : MonoBehaviour
             this.Interact();
             Debug.Log(this + " Force Play +++++++++++++++++++");
         }
-        Debug.Log(this + ".Start()");
+        Debug.Log(this + ".Start() <<<<<<<<<<<<<<<<<<<<<<<<<<<");
     }
     public virtual void Interact()
     {

@@ -59,7 +59,7 @@ public class TaskManager : MonoBehaviour
     private PartIdentifier currentPt = PartIdentifier.Pt1;
 
 
-    // ----------- CHEATS ---------------//
+    // ----------- CHEATS --------------- //
 
     public void CheatSkipToDay(int dayInput)
     {
@@ -95,7 +95,9 @@ public class TaskManager : MonoBehaviour
         return currentPt;
     }
 
-	private void Awake()
+    // --------------------------------- //
+
+    private void Awake()
 	{
 		if (TMInstance == null)
 		{

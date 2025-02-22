@@ -24,7 +24,7 @@ public class PrototypePuzzle : Interactable
     public Text textScore;
     public GameObject popupUI;
     public Text displayText;
-    public float scrollSpeed;
+    public float scrollSpeed = .3f;
     public int score;
     public int ducksHit;
 
@@ -50,7 +50,7 @@ public class PrototypePuzzle : Interactable
 
     public override void Action()
     {
-        throw new System.NotImplementedException();
+        throw new NotImplementedException();
     }
 
     public override void Complete()
@@ -61,7 +61,7 @@ public class PrototypePuzzle : Interactable
         AudioManager.Instance.PlayMusic("ManufacturingRoom");
     }
 
-    void Start()
+    void Awake()
     {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
     }
@@ -74,9 +74,11 @@ public class PrototypePuzzle : Interactable
             scrollSpeed = .3f + timePassed / 65;        //control scroll speed; initial speed is .3f
 
             mousePosition.x = 400;
-            mousePosition.y = Math.Clamp(Input.mousePosition.y, -200f, 200f);
+            mousePosition.y = Math.Clamp(Input.mousePosition.y, 50f, 550f);
             mousePosition.z = 4;
             car.transform.position = mousePosition;     //car follow mouse Y position
+
+            Debug.Log("PP: Car y-pos: " + car.transform.position.y);
 
             if (recordScore){
                 timePassed += Time.deltaTime;

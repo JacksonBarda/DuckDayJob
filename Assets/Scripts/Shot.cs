@@ -39,7 +39,7 @@ public class Shot : MonoBehaviour
             foreach (GameObject npd in listOfSprites)
             {
                 npd.SetActive(false);
-                Debug.Log("Shot: " + npd + ".SetActive(false)");
+                //Debug.Log("Shot: " + npd + ".SetActive(false)");
             }
         }
     }

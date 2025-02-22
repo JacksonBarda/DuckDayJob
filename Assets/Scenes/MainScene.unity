@@ -868,7 +868,7 @@ PrefabInstance:
       objectReference: {fileID: 926431083}
     - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_Name
-      value: DT4_Donald4
+      value: DT4_Donald3
       objectReference: {fileID: 0}
     - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_IsActive
@@ -2957,6 +2957,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1643477341}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: customPopupName
+      value: Donald's notes
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: isVisibleOnStart
       value: 0
       objectReference: {fileID: 0}
@@ -4280,203 +4284,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 95595489}
   m_Mesh: {fileID: 8706939884630363337, guid: bc735893544d6d1488cf944ed60b4f25, type: 3}
---- !u!1001 &95688855
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1173893080}
-    m_Modifications:
-    - target: {fileID: 947565714714897106, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2557612985409383229, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: Name
-      value: 
-      objectReference: {fileID: 1071378096}
-    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: fade
-      value: 
-      objectReference: {fileID: 1463816534}
-    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: scene
-      value: Give Requested Item to Donald
-      objectReference: {fileID: 0}
-    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: mainUI
-      value: 
-      objectReference: {fileID: 1213719444}
-    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1614031491}
-    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: Options
-      value: 
-      objectReference: {fileID: 718715262}
-    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: Profile
-      value: 
-      objectReference: {fileID: 2122043642}
-    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: Dialogue
-      value: 
-      objectReference: {fileID: 1516238098}
-    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: Profile2
-      value: 
-      objectReference: {fileID: 1638869473}
-    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: puzzleUI
-      value: 
-      objectReference: {fileID: 2075323091}
-    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: gameScene
-      value: Begin the Investigation
-      objectReference: {fileID: 0}
-    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: NextButton
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: nextButton
-      value: 
-      objectReference: {fileID: 1832684912}
-    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: repeatable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: MainDisplay
-      value: 
-      objectReference: {fileID: 1213719444}
-    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: SLDR_Progress
-      value: 
-      objectReference: {fileID: 1696000672}
-    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: DialogueDisplay
-      value: 
-      objectReference: {fileID: 2075323091}
-    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: DialogueManager
-      value: 
-      objectReference: {fileID: 1643477341}
-    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: DialogueIndicator
-      value: 
-      objectReference: {fileID: 926431083}
-    - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: m_Name
-      value: DT4_Donald2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8832907202415859541, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8832907202415859541, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.263
-      objectReference: {fileID: 0}
-    - target: {fileID: 8832907202415859541, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.567
-      objectReference: {fileID: 0}
-    - target: {fileID: 8832907202415859541, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8832907202415859541, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8832907202415859541, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8866254512280165129, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 35b113ad997c5764a943c94cc0a6606b, type: 3}
-    - target: {fileID: 8866254512280165129, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8866254512280165129, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.433
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e2257740d732250458728bd650853967, type: 3}
---- !u!4 &95688856 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
-  m_PrefabInstance: {fileID: 95688855}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &95688857 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
-  m_PrefabInstance: {fileID: 95688855}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2112128752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 667ce02360b613a4c93e8500d9d9ae32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &96478435
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4583,7 +4390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_Name
-      value: DT4_Donald3
+      value: DT4_Donald2
       objectReference: {fileID: 0}
     - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_IsActive
@@ -14198,7 +14005,6 @@ Transform:
   m_Children:
   - {fileID: 781347148}
   - {fileID: 426450287}
-  - {fileID: 1178675120}
   m_Father: {fileID: 1652403702}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &273752380
@@ -20305,7 +20111,7 @@ GameObject:
   - component: {fileID: 426450289}
   - component: {fileID: 426450288}
   m_Layer: 0
-  m_Name: InteractVM_Elon
+  m_Name: InteractVM_Day3
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23502,7 +23308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.3200097
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_LocalPosition.y
@@ -25821,6 +25627,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 548915530}
   m_CullTransparentMesh: 1
+--- !u!1 &554288867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 554288868}
+  m_Layer: 0
+  m_Name: DonaldDay4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &554288868
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554288867}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 39.787994, y: 0.16999817, z: -7.52}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1455095139}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &557629958
 GameObject:
   m_ObjectHideFlags: 0
@@ -28639,7 +28476,7 @@ PrefabInstance:
       objectReference: {fileID: 467960379}
     - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_Name
-      value: DT4_Donald8
+      value: DT4_Donald7
       objectReference: {fileID: 0}
     - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_IsActive
@@ -29930,7 +29767,7 @@ GameObject:
   - component: {fileID: 629151441}
   - component: {fileID: 629151440}
   m_Layer: 0
-  m_Name: InteractCad
+  m_Name: InteractCad_Day1
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31229,7 +31066,7 @@ PrefabInstance:
       objectReference: {fileID: 926431083}
     - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_Name
-      value: DT4_Donald6
+      value: DT4_Donald5
       objectReference: {fileID: 0}
     - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_IsActive
@@ -32589,6 +32426,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693868072}
   m_Mesh: {fileID: 7477180693810564338, guid: bc735893544d6d1488cf944ed60b4f25, type: 3}
+--- !u!1 &694351964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 694351965}
+  m_Layer: 0
+  m_Name: JanitorDay4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &694351965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694351964}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.710205, y: 0.2899933, z: -9.1513}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1455095139}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &694374933
 GameObject:
   m_ObjectHideFlags: 0
@@ -33524,8 +33392,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2075323091}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: taskName
+      value: Collect piece of evidence
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: forcePlay
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: gameScene
@@ -33560,9 +33432,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1643477341}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
-      propertyPath: activatePostPuzzle
-      value: 0
+      propertyPath: customPopupName
+      value: Bloody feather
       objectReference: {fileID: 0}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: activatePostPuzzle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: objectToActivate.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: objectToActivate.Array.data[0]
+      value: 
+      objectReference: {fileID: 2110338599}
     - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_Name
       value: DT4_MainDuck2
@@ -37087,7 +36971,7 @@ GameObject:
   - component: {fileID: 781347150}
   - component: {fileID: 781347149}
   m_Layer: 0
-  m_Name: InteractVM_Duckette
+  m_Name: InteractVM_Day2
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37493,6 +37377,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: isOptional
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: nextButton
       value: 
       objectReference: {fileID: 1832684912}
@@ -37517,6 +37405,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1643477341}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: isVisibleOnStart
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: puzzleToActivate
       value: 
       objectReference: {fileID: 1846701003}
@@ -37526,7 +37418,7 @@ PrefabInstance:
       objectReference: {fileID: 1449172124}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: activatePostPuzzle
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_Name
@@ -45934,37 +45826,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 239553164}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &924852799
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 924852800}
-  m_Layer: 0
-  m_Name: ElonDuckDay5
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &924852800
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 924852799}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1703178639}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &926431083
 GameObject:
   m_ObjectHideFlags: 0
@@ -48537,7 +48398,7 @@ PrefabInstance:
       objectReference: {fileID: 926431083}
     - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_Name
-      value: DT4_Donald5
+      value: DT4_Donald4
       objectReference: {fileID: 0}
     - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_IsActive
@@ -50554,7 +50415,7 @@ GameObject:
   - component: {fileID: 1003667810}
   - component: {fileID: 1003667809}
   m_Layer: 0
-  m_Name: InteractCad2
+  m_Name: InteractCad_Day2
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51707,6 +51568,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2075323091}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: taskName
+      value: Give the report to Duckette
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: gameScene
       value: Hand Nestla Prototype Testing Results to Duckette
       objectReference: {fileID: 0}
@@ -51754,6 +51619,14 @@ PrefabInstance:
       propertyPath: activatePostPuzzle
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: objectToActivate.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: objectToActivate.Array.data[0]
+      value: 
+      objectReference: {fileID: 1583133830}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: puzzleToActivate.Array.data[0]
       value: 
@@ -58656,7 +58529,6 @@ Transform:
   - {fileID: 97474891}
   - {fileID: 413809621}
   - {fileID: 2022008780}
-  - {fileID: 95688856}
   - {fileID: 96478436}
   - {fileID: 15091531}
   - {fileID: 976848867}
@@ -58920,161 +58792,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178671484}
   m_Mesh: {fileID: -659858102003374074, guid: bc735893544d6d1488cf944ed60b4f25, type: 3}
---- !u!1 &1178675119
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1178675120}
-  - component: {fileID: 1178675124}
-  - component: {fileID: 1178675123}
-  - component: {fileID: 1178675122}
-  - component: {fileID: 1178675121}
-  m_Layer: 0
-  m_Name: InteractVendingMachine (2)
-  m_TagString: Interactable
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1178675120
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1178675119}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -56.72, y: 0.4, z: 4.12}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 273698802}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1178675121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1178675119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa6fe11575b5ce745a55465683fde315, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  repeatable: 0
-  forcePlay: 0
-  taskName: 
-  customPopupName: 
-  isCompleted: 0
-  hasFailed: 0
-  isVisibleOnStart: 1
-  stayActive: 0
-  isOptional: 0
-  activatePostPuzzle: 0
-  objectToActivate: []
-  player: {fileID: 1614031491}
-  mainUI: {fileID: 1213719444}
-  counted: 0
-  puzzleUI: {fileID: 1929315102}
-  displayText: {fileID: 425846089}
-  playerCoinsText: {fileID: 66307707}
-  numberButtons:
-  - {fileID: 95038136}
-  - {fileID: 412823479}
-  - {fileID: 603111324}
-  - {fileID: 97029262}
-  - {fileID: 1929247292}
-  - {fileID: 145129113}
-  - {fileID: 660615042}
-  - {fileID: 1917891141}
-  - {fileID: 1422249119}
-  - {fileID: 1942717513}
-  enterButton: {fileID: 2026626835}
-  deleteButton: {fileID: 1695944321}
-  exitButton: {fileID: 2043282133}
-  lastBoughtItem: 
-  correctItem: 
-  correctDialogue: {fileID: 0}
-  incorrectDialogue: {fileID: 0}
-  itemCosts: []
-  itemArray: []
---- !u!65 &1178675122
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1178675119}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.8072586, y: 1.605676, z: 4.9968863}
-  m_Center: {x: -0.64360046, y: -0.30283803, z: -1.9984431}
---- !u!23 &1178675123
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1178675119}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1178675124
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1178675119}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1181211445
 GameObject:
   m_ObjectHideFlags: 0
@@ -59872,6 +59589,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200451073}
   m_Mesh: {fileID: 4056815487165001361, guid: bc735893544d6d1488cf944ed60b4f25, type: 3}
+--- !u!1 &1203170875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1203170876}
+  m_Layer: 0
+  m_Name: JanitorDay5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1203170876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203170875}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.710205, y: 0.2899933, z: -9.1513}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1703178639}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1205408822
 GameObject:
   m_ObjectHideFlags: 0
@@ -61375,37 +61123,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1234635294}
   m_Mesh: {fileID: 6306668505771446232, guid: bc735893544d6d1488cf944ed60b4f25, type: 3}
---- !u!1 &1235091603
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1235091604}
-  m_Layer: 0
-  m_Name: DucketteDay5
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1235091604
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1235091603}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1703178639}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1237582172
 GameObject:
   m_ObjectHideFlags: 0
@@ -66703,6 +66420,37 @@ Transform:
   - {fileID: 2101655016}
   m_Father: {fileID: 422073415}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1346260723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1346260724}
+  m_Layer: 0
+  m_Name: EggwinDay4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1346260724
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346260723}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.76001, y: 0.31115723, z: -9.223698}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1455095139}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1347563829
 GameObject:
   m_ObjectHideFlags: 0
@@ -67924,6 +67672,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366416396}
   m_Mesh: {fileID: 1848998083325067084, guid: bc735893544d6d1488cf944ed60b4f25, type: 3}
+--- !u!1 &1366885468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1366885469}
+  m_Layer: 0
+  m_Name: QuacksonDay4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1366885469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366885468}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 46.510193, y: 0.73831177, z: -7.2217946}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1455095139}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1369894713
 GameObject:
   m_ObjectHideFlags: 0
@@ -68584,32 +68363,24 @@ MonoBehaviour:
     - {fileID: 1940691734}
   - spriteToMove:
     - {fileID: 886542310}
-    - {fileID: 1322129366}
     - {fileID: 1173893079}
     - {fileID: 471802668}
-    - {fileID: 1887298315}
     - {fileID: 185599395}
     dayLocation:
-    - {fileID: 1921218196}
-    - {fileID: 1684967367}
-    - {fileID: 1400363857}
-    - {fileID: 1873962025}
-    - {fileID: 1602829911}
-    - {fileID: 1722429577}
+    - {fileID: 1346260724}
+    - {fileID: 554288868}
+    - {fileID: 1366885469}
+    - {fileID: 694351965}
   - spriteToMove:
     - {fileID: 886542310}
-    - {fileID: 1322129366}
     - {fileID: 1173893079}
     - {fileID: 471802668}
-    - {fileID: 1887298315}
     - {fileID: 185599395}
     dayLocation:
-    - {fileID: 2140791366}
-    - {fileID: 1235091604}
-    - {fileID: 1901203407}
-    - {fileID: 1921077500}
-    - {fileID: 924852800}
-    - {fileID: 1608316179}
+    - {fileID: 1507132012}
+    - {fileID: 1690474569}
+    - {fileID: 1840425527}
+    - {fileID: 1203170876}
   - spriteToMove:
     - {fileID: 886542310}
     - {fileID: 1322129366}
@@ -68715,7 +68486,6 @@ MonoBehaviour:
     - {fileID: 1645015476}
     - {fileID: 1731426947}
     - {fileID: 2022008781}
-    - {fileID: 95688857}
     pt2:
     - {fileID: 718663162}
     - {fileID: 783688691}
@@ -69686,37 +69456,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1396731775}
   m_Mesh: {fileID: -5933138760823730880, guid: bc735893544d6d1488cf944ed60b4f25, type: 3}
---- !u!1 &1400363856
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1400363857}
-  m_Layer: 0
-  m_Name: DonaldDay4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1400363857
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1400363856}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1455095139}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1402457483
 GameObject:
   m_ObjectHideFlags: 0
@@ -71619,12 +71358,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1921218196}
-  - {fileID: 1684967367}
-  - {fileID: 1400363857}
-  - {fileID: 1873962025}
-  - {fileID: 1602829911}
-  - {fileID: 1722429577}
+  - {fileID: 1346260724}
+  - {fileID: 554288868}
+  - {fileID: 1366885469}
+  - {fileID: 694351965}
   m_Father: {fileID: 891594540}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1455328319
@@ -74496,6 +74233,37 @@ Transform:
   - {fileID: 1816731319}
   m_Father: {fileID: 2013260399}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1507132011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1507132012}
+  m_Layer: 0
+  m_Name: EggwinDay5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1507132012
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507132011}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.76001, y: 0.31115723, z: -9.223698}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1703178639}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1508971699
 GameObject:
   m_ObjectHideFlags: 0
@@ -76301,8 +76069,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2075323091}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: taskName
+      value: Collect piece of evidence
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: forcePlay
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: gameScene
@@ -76336,6 +76108,10 @@ PrefabInstance:
       propertyPath: DialogueManager
       value: 
       objectReference: {fileID: 1643477341}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: customPopupName
+      value: Delivery record
+      objectReference: {fileID: 0}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: isVisibleOnStart
       value: 0
@@ -78954,37 +78730,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
   m_PrefabInstance: {fileID: 1602464184}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1602829910
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1602829911}
-  m_Layer: 0
-  m_Name: ElonDuckDay4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1602829911
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602829910}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1455095139}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1603836363
 GameObject:
   m_ObjectHideFlags: 0
@@ -79092,37 +78837,6 @@ Transform:
   - {fileID: 759509494}
   - {fileID: 875445058}
   m_Father: {fileID: 251200636}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1608316178
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1608316179}
-  m_Layer: 0
-  m_Name: JanitorDay5
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1608316179
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1608316178}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1703178639}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1608467003
 GameObject:
@@ -81558,7 +81272,6 @@ MonoBehaviour:
   - {fileID: 1620265136}
   - {fileID: 1076601864}
   - {fileID: 148614962}
-  - {fileID: 2112128752}
   - {fileID: 147718768}
   - {fileID: 2110338599}
   - {fileID: 1156948384}
@@ -82737,7 +82450,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1676654956}
   m_CullTransparentMesh: 1
---- !u!1 &1684967366
+--- !u!1 &1690474568
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -82745,28 +82458,28 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1684967367}
+  - component: {fileID: 1690474569}
   m_Layer: 0
-  m_Name: DucketteDay4
+  m_Name: DonaldDay5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1684967367
+--- !u!4 &1690474569
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1684967366}
+  m_GameObject: {fileID: 1690474568}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 39.787994, y: 0.16999817, z: -7.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1455095139}
+  m_Father: {fileID: 1703178639}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1692815272
 GameObject:
@@ -83670,12 +83383,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2140791366}
-  - {fileID: 1235091604}
-  - {fileID: 1901203407}
-  - {fileID: 1921077500}
-  - {fileID: 924852800}
-  - {fileID: 1608316179}
+  - {fileID: 1507132012}
+  - {fileID: 1690474569}
+  - {fileID: 1840425527}
+  - {fileID: 1203170876}
   m_Father: {fileID: 891594540}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1709445369
@@ -84727,37 +84438,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1720343955}
   m_CullTransparentMesh: 1
---- !u!1 &1722429576
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1722429577}
-  m_Layer: 0
-  m_Name: JanitorDay4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1722429577
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1722429576}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1455095139}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1723434608
 GameObject:
   m_ObjectHideFlags: 0
@@ -84935,7 +84615,7 @@ PrefabInstance:
       objectReference: {fileID: 926431083}
     - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_Name
-      value: DT4_Donald7
+      value: DT4_Donald6
       objectReference: {fileID: 0}
     - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_IsActive
@@ -85242,6 +84922,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2075323091}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: taskName
+      value: Ask Eggwin about Duckette
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: forcePlay
       value: 0
       objectReference: {fileID: 0}
@@ -85283,8 +84967,16 @@ PrefabInstance:
       objectReference: {fileID: 160237563}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: activatePostPuzzle
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: objectToActivate.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: objectToActivate.Array.data[0]
+      value: 
+      objectReference: {fileID: 148614962}
     - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_Name
       value: DT4_Eggwin1
@@ -85347,7 +85039,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.3200097
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 8894409726330564798, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_LocalPosition.y
@@ -90672,6 +90364,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840067567}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1840425526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1840425527}
+  m_Layer: 0
+  m_Name: QuacksonDay5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1840425527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840425526}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 46.510193, y: 0.73831177, z: -7.2217946}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1703178639}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1843892248
 GameObject:
   m_ObjectHideFlags: 0
@@ -90891,8 +90614,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2075323091}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: taskName
+      value: Collect piece of evidence
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: forcePlay
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: gameScene
@@ -90926,6 +90653,10 @@ PrefabInstance:
       propertyPath: DialogueManager
       value: 
       objectReference: {fileID: 1643477341}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: customPopupName
+      value: Necklace
+      objectReference: {fileID: 0}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: isVisibleOnStart
       value: 0
@@ -91677,37 +91408,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872680639}
   m_CullTransparentMesh: 1
---- !u!1 &1873962024
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1873962025}
-  m_Layer: 0
-  m_Name: QuacksonDay4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1873962025
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1873962024}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1455095139}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1877535601
 GameObject:
   m_ObjectHideFlags: 0
@@ -92192,7 +91892,7 @@ Transform:
   m_GameObject: {fileID: 1885792387}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.45, y: -0.4888428, z: -9.223698}
+  m_LocalPosition: {x: 20.900208, y: 0.30000305, z: -7.5887947}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -93842,37 +93542,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1900349576}
   m_Mesh: {fileID: -9155199529327828016, guid: bc735893544d6d1488cf944ed60b4f25, type: 3}
---- !u!1 &1901203406
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1901203407}
-  m_Layer: 0
-  m_Name: DonaldDay5
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1901203407
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1901203406}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1703178639}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1907598605
 GameObject:
   m_ObjectHideFlags: 0
@@ -94926,68 +94595,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1920060542}
   m_Mesh: {fileID: 8691157720953070068, guid: bc735893544d6d1488cf944ed60b4f25, type: 3}
---- !u!1 &1921077499
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1921077500}
-  m_Layer: 0
-  m_Name: QuacksonDay5
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1921077500
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1921077499}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1703178639}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1921218195
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1921218196}
-  m_Layer: 0
-  m_Name: EggwinDay4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1921218196
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1921218195}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1455095139}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1922605222
 GameObject:
   m_ObjectHideFlags: 0
@@ -98610,6 +98217,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2075323091}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: taskName
+      value: Find Donald
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: gameScene
       value: Teaming up with Donald
       objectReference: {fileID: 0}
@@ -98641,6 +98252,10 @@ PrefabInstance:
       propertyPath: DialogueManager
       value: 
       objectReference: {fileID: 1643477341}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: isVisibleOnStart
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: DialogueIndicator
       value: 
@@ -98799,6 +98414,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2075323091}
     - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: forcePlay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: gameScene
       value: Ducks Chosen to Stay Behind
       objectReference: {fileID: 0}
@@ -98838,6 +98457,14 @@ PrefabInstance:
       propertyPath: activatePostPuzzle
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: objectToActivate.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844564806619983327, guid: e2257740d732250458728bd650853967, type: 3}
+      propertyPath: objectToActivate.Array.data[0]
+      value: 
+      objectReference: {fileID: 100101251}
     - target: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
       propertyPath: m_Name
       value: DT3_ElonDuck3
@@ -100853,7 +100480,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00012207031, y: 0.000061035156}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 806.74, y: 537.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2045661775
@@ -103612,7 +103239,7 @@ GameObject:
   - component: {fileID: 2108394314}
   - component: {fileID: 2108394313}
   m_Layer: 0
-  m_Name: InteractCad3
+  m_Name: InteractCad_Day4
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103837,11 +103464,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2110650979}
   m_CullTransparentMesh: 1
---- !u!1 &2112128752 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8161731065144322017, guid: e2257740d732250458728bd650853967, type: 3}
-  m_PrefabInstance: {fileID: 95688855}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2114335503
 GameObject:
   m_ObjectHideFlags: 0
@@ -105951,37 +105573,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!1 &2140791365
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2140791366}
-  m_Layer: 0
-  m_Name: EggwinDay5
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2140791366
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2140791365}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1703178639}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2140933805
 GameObject:
   m_ObjectHideFlags: 0

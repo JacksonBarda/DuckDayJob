@@ -376,17 +376,17 @@ Teaming up with Donald	4	3	Day	Main Duck	2	"He does make a good point. And besid
 Teaming up with Donald	4	3	Day	Main Duck	2	"Fine, I'll work with you... for Duckette!"	TRUE	Left	Normal	FALSE	0	FALSE
 Teaming up with Donald	4	3	Day	Donald	5	"Haha, I can already feel that we're closer to solving this disappearance case!"	TRUE	Right	Normal	FALSE	0	FALSE
 Teaming up with Donald	4	3	Day	Main Duck	2	...WE HAVEN'T EVEN STARTED YET!	TRUE	Left	Normal	FALSE	0	FALSE
-Begin the Investigation	4	4	Day	Donald	5	The first thing we need is <b>evidence.</b>	TRUE	Right	Normal	FALSE	0	FALSE
-Begin the Investigation	4	4	Day	Main Duck	2	Evidence?	TRUE	Left	Normal	FALSE	0	FALSE
-Begin the Investigation	4	4	Day	Donald	5	Of course! No one will believe us if we don't have evidence.	TRUE	Right	Normal	FALSE	0	FALSE
-Begin the Investigation	4	4	Day	Main Duck	2	Says the same duck who is known for his crazy conspiracies. Barely any of the ducks paid attention to his speech yesterday.	TRUE	Left	Italics	FALSE	0	FALSE
-Begin the Investigation	4	4	Day	Donald	5	"The most recent batch of ducks that have gone missing was last night. So, there's got to be evidence lying around here somewhere."	TRUE	Right	Normal	FALSE	0	FALSE
-Begin the Investigation	4	4	Day	Main Duck	2	*Sniffs* Poor Duckette.	TRUE	Left	Normal	FALSE	0	FALSE
-Begin the Investigation	4	4	Day	Donald	5	"Oh, for quacking out loud, smooth your ruffled feathers already. Crying won't save Duckette."	TRUE	Right	Normal	FALSE	0	FALSE
-Begin the Investigation	4	4	Day	Donald	5	"If you really want to save her, help me <b>search around the offices for clues.</b>"	TRUE	Right	Normal	FALSE	0	FALSE
-Begin the Investigation	4	4	Day	Main Duck	2	"Y-You're right, maybe Duckette left something behind for us!"	TRUE	Left	Normal	FALSE	0	FALSE
-Begin the Investigation	4	4	Day	Donald	5	There must be something around this place that's connected to the missing ducks.	TRUE	Right	Normal	FALSE	0	TRUE
-Begin the Investigation	4	4	Day	Donald	5	I suggest <b>searching around the offices for clues.</b>	TRUE	Right	Normal	FALSE	0	TRUE
+Teaming up with Donald	4	4	Day	Donald	5	The first thing we need is <b>evidence.</b>	TRUE	Right	Normal	FALSE	0	FALSE
+Teaming up with Donald	4	4	Day	Main Duck	2	Evidence?	TRUE	Left	Normal	FALSE	0	FALSE
+Teaming up with Donald	4	4	Day	Donald	5	Of course! No one will believe us if we don't have evidence.	TRUE	Right	Normal	FALSE	0	FALSE
+Teaming up with Donald	4	4	Day	Main Duck	2	Says the same duck who is known for his crazy conspiracies. Barely any of the ducks paid attention to his speech yesterday.	TRUE	Left	Italics	FALSE	0	FALSE
+Teaming up with Donald	4	4	Day	Donald	5	"The most recent batch of ducks that have gone missing was last night. So, there's got to be evidence lying around here somewhere."	TRUE	Right	Normal	FALSE	0	FALSE
+Teaming up with Donald	4	4	Day	Main Duck	2	*Sniffs* Poor Duckette.	TRUE	Left	Normal	FALSE	0	FALSE
+Teaming up with Donald	4	4	Day	Donald	5	"Oh, for quacking out loud, smooth your ruffled feathers already. Crying won't save Duckette."	TRUE	Right	Normal	FALSE	0	FALSE
+Teaming up with Donald	4	4	Day	Donald	5	"If you really want to save her, help me <b>search around the offices for clues.</b>"	TRUE	Right	Normal	FALSE	0	FALSE
+Teaming up with Donald	4	4	Day	Main Duck	2	"Y-You're right, maybe Duckette left something behind for us!"	TRUE	Left	Normal	FALSE	0	FALSE
+Teaming up with Donald	4	4	Day	Donald	5	There must be something around this place that's connected to the missing ducks.	TRUE	Right	Normal	FALSE	0	TRUE
+Teaming up with Donald	4	4	Day	Donald	5	I suggest <b>searching around the offices for clues.</b>	TRUE	Right	Normal	FALSE	0	TRUE
 Optional - Talk to Ducks about Investigation 1	4	5	Day	Main Duck	2	Hey! Have you seen anything suspicious?	TRUE	Right	Normal	FALSE	1	FALSE
 Optional - Talk to Ducks about Investigation 1	4	5	Day	Meggan	8	Suspicious? Like what?	TRUE	Left	Normal	FALSE	1	FALSE
 Optional - Talk to Ducks about Investigation 1	4	5	Day	Main Duck	2	Something related to the missing ducks?	TRUE	Left	Normal	FALSE	1	FALSE

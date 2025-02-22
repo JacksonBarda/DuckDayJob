@@ -320,7 +320,7 @@ public class UIManager : MonoBehaviour
 							interactableName = "Computer";
 							SetInteractionPopupLoc();
 							break;
-						case string x when x.Contains("InteractVendingMachine"):
+						case string x when x.Contains("InteractVM"):
 							interactableName = "Vending Machine";
 							SetInteractionPopupLoc();
 							break;
@@ -365,7 +365,7 @@ public class UIManager : MonoBehaviour
     }
     private void SetInteractionPopupLocForDoor()
     {
-        InteractionPopup.transform.position = new Vector3(PlayerMove.GetInteractable().transform.position.x,
+		InteractionPopup.transform.position = new Vector3(PlayerMove.GetInteractable().transform.position.x,
                                                     PlayerMove.GetInteractable().transform.position.y,
                                                     PlayerMove.GetInteractable().transform.position.z);
     }
