@@ -631,7 +631,6 @@ Travel through the vent	5	3	Day	None	0	...or that the Janitor really likes to ke
 The Killing Room	5	4	Day	Main Duck	2	"Finally, freedom at last!"	TRUE	Left	Normal	FALSE	0	FALSE
 The Killing Room	5	4	Day	Main Duck	2	Who would've thought that Donald was right? There really is a secret room in Nest-	TRUE	Left	Normal	FALSE	0	FALSE
 The Killing Room	5	4	Day	Main Duck	2	AHHH! WHAT THE QUACK IS ALL THIS?!	TRUE	Left	Normal	FALSE	0	FALSE
-The Killing Room	5	4	Day	Eggwardo	11	"Help!!! Don't just stand there, quacking do something!"	TRUE	Right	Normal	FALSE	0	FALSE
 The Killing Room	5	4	Day	Eggric	12	"Help!!! Don't just stand there, quacking do something!"	TRUE	Right	Normal	FALSE	0	FALSE
 The Killing Room	5	4	Day	Peeper 	13	mAmA!!!	TRUE	Right	Normal	FALSE	0	FALSE
 The Killing Room	5	4	Day	Main Duck	2	W-What? Huh?	TRUE	Left	Normal	FALSE	0	FALSE
