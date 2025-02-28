@@ -151,20 +151,7 @@ public class PlayerMove : MonoBehaviour
             if (!mazeMode)
             {
                 rigid.velocity = new Vector3(moveValRight - moveValLeft +((rigid.velocity.x) - (rigid.velocity.x * 0.1f)), (rigid.velocity.y), 0f) * moveSpeed;
-                if(rigid.velocity.x > 0.1f)
-                {
-                    animator.SetFloat("Input", Mathf.Abs(rigid.velocity.x));
-                    spriteRenderer.flipX = false;
-                }
-                else if(rigid.velocity.x < -0.1f)
-                {
-                    animator.SetFloat("Input", Mathf.Abs(rigid.velocity.x));
-                    spriteRenderer.flipX = true;
-                }
-                if(rigid.velocity.x == 0f)
-                {
-                    animator.SetFloat("Input", Mathf.Abs(rigid.velocity.x));
-                }
+                
                 moveValRight = moveValRightHolder;
                 moveValLeft = moveValLeftHolder;
                 rigid.useGravity = true;
@@ -180,6 +167,22 @@ public class PlayerMove : MonoBehaviour
                 rigid.useGravity = false;
             }
 
+            //float i = (float)Math.Sqrt(Math.Pow(rigid.velocity.x, 2) + Math.Pow(rigid.velocity.y, 2));
+            animator.SetFloat("Input", Mathf.Abs((float)Math.Sqrt(Math.Pow(rigid.velocity.x, 2) + Math.Pow(rigid.velocity.y, 2))));
+            if (rigid.velocity.x > 0.1f)
+            {
+                //animator.SetFloat("Input", Mathf.Abs(rigid.velocity.x));
+                spriteRenderer.flipX = false;
+            }
+            else if (rigid.velocity.x < -0.1f)
+            {
+                //animator.SetFloat("Input", Mathf.Abs(rigid.velocity.x));
+                spriteRenderer.flipX = true;
+            }
+            if (rigid.velocity.x == 0f)
+            {
+                //animator.SetFloat("Input", Mathf.Abs(rigid.velocity.x));
+            }
 
 
             movingThreshold = new Vector3(.01f, .01f, .01f);

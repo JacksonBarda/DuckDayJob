@@ -33,7 +33,7 @@ public class Interactable : MonoBehaviour
             this.Interact();
             Debug.Log(this + " Force Play +++++++++++++++++++");
         }
-        Debug.Log(this + ".Start() <<<<<<<<<<<<<<<<<<<<<<<<<<<");
+        //Debug.Log(this + ".Start() <<<<<<<<<<<<<<<<<<<<<<<<<<<");
     }
     public virtual void Interact()
     {
@@ -50,7 +50,8 @@ public class Interactable : MonoBehaviour
             {
                 if (thingToActivate != null && !counted)
                 {
-                    if (thingToActivate.GetComponent<DoorInteract>() != null)   //if GameObject is a door, toggle isLocked bool
+
+                    if (thingToActivate.name.Contains("Door"))   //if GameObject is a door, toggle isLocked bool
                     {
                         thingToActivate.GetComponent<DoorInteract>().isLocked = !thingToActivate.GetComponent<DoorInteract>().isLocked;
                     }

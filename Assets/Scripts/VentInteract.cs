@@ -40,6 +40,8 @@ public class VentInteract : DoorInteract
 				fadeOut.FadeImageOutOverTime(timeToFade, this);
 			}
 		}
+        alreadyInteracted = true;
+        isCompleted = true;
 	}
 	public override void Action()
     {

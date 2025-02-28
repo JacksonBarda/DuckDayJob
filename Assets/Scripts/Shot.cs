@@ -22,6 +22,9 @@ public class Shot : MonoBehaviour
 
     public List<GameObject> listOfSprites;
 
+    [Tooltip("Mid-sequence interactable activation. Use for specialized scripts only")]
+    public Interactable sceneChangeInteractable;
+
     [Tooltip("Developer use; does not affect gameplay")]
     [Multiline(5)]
     public string notes;

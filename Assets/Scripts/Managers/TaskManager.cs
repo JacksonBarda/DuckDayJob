@@ -65,7 +65,7 @@ public class TaskManager : MonoBehaviour
     {
         for (int i = 0; i < dayInput-1; i++)
         {
-            for (int j = 0; j < 5; j++)
+            for (int j = 0; j < 6; j++)
             {
                 foreach (Interactable task in tasksByDay[i].GetInteractables((PartIdentifier)j))
                 {
