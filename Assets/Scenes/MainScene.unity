@@ -9816,7 +9816,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &185599396
 Transform:
   m_ObjectHideFlags: 0
@@ -12855,7 +12855,9 @@ MonoBehaviour:
   stayActive: 1
   isOptional: 0
   activatePostPuzzle: 0
-  objectToActivate: []
+  objectToActivate:
+  - {fileID: 1162540151}
+  - {fileID: 1370804415}
   player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
   counted: 0
@@ -17119,7 +17121,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &346621215
 Transform:
   m_ObjectHideFlags: 0
@@ -19650,8 +19652,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414143744}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.89941293, z: 0, w: -0.43709996}
-  m_LocalPosition: {x: -3.14, y: 0, z: -2.01}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22777,7 +22779,7 @@ MonoBehaviour:
   isOptional: 0
   activatePostPuzzle: 0
   objectToActivate:
-  - {fileID: 1162540151}
+  - {fileID: 1370804415}
   player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
   counted: 0
@@ -49012,7 +49014,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &961664472
 Transform:
   m_ObjectHideFlags: 0
@@ -49374,7 +49376,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &966984020
 Transform:
   m_ObjectHideFlags: 0
@@ -58717,7 +58719,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1162540152
 Transform:
   m_ObjectHideFlags: 0
@@ -63974,7 +63976,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1275809530
 Transform:
   m_ObjectHideFlags: 0
@@ -65612,11 +65614,11 @@ MonoBehaviour:
   isOptional: 0
   activatePostPuzzle: 1
   objectToActivate:
-  - {fileID: 886542310}
-  - {fileID: 1322129366}
-  - {fileID: 1173893079}
-  - {fileID: 471802668}
-  - {fileID: 185599395}
+  - {fileID: 1370804415}
+  - {fileID: 1133606886}
+  - {fileID: 115522428}
+  - {fileID: 1162540151}
+  - {fileID: 1449869442}
   player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
   counted: 0
@@ -67040,11 +67042,11 @@ MonoBehaviour:
   isOptional: 0
   activatePostPuzzle: 1
   objectToActivate:
-  - {fileID: 886542310}
-  - {fileID: 1322129366}
-  - {fileID: 1173893079}
-  - {fileID: 471802668}
-  - {fileID: 185599395}
+  - {fileID: 1370804415}
+  - {fileID: 1133606886}
+  - {fileID: 115522428}
+  - {fileID: 1162540151}
+  - {fileID: 1449869442}
   player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
   counted: 0
@@ -69367,34 +69369,26 @@ MonoBehaviour:
     - {fileID: 1370804415}
     - {fileID: 115522428}
     - {fileID: 1162540151}
-    - {fileID: 1449869442}
     dayLocation:
     - {fileID: 1346260724}
     - {fileID: 554288868}
     - {fileID: 1366885469}
-    - {fileID: 694351965}
   - spriteToMove:
     - {fileID: 1370804415}
     - {fileID: 115522428}
-    - {fileID: 1449869442}
     dayLocation:
     - {fileID: 1507132012}
     - {fileID: 1690474569}
-    - {fileID: 1203170876}
   - spriteToMove:
     - {fileID: 1370804415}
     - {fileID: 1133606886}
     - {fileID: 115522428}
-    - {fileID: 1162540151}
     - {fileID: 538272922}
-    - {fileID: 1449869442}
     dayLocation:
     - {fileID: 1298206897}
     - {fileID: 1834006687}
     - {fileID: 1332305249}
-    - {fileID: 0}
     - {fileID: 28583073}
-    - {fileID: 538990437}
   - spriteToMove:
     - {fileID: 1370804415}
     - {fileID: 1133606886}
@@ -76377,7 +76371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1537383124
 Transform:
   m_ObjectHideFlags: 0
@@ -83533,10 +83527,10 @@ MonoBehaviour:
   isOptional: 0
   activatePostPuzzle: 1
   objectToActivate:
-  - {fileID: 1322129366}
-  - {fileID: 886542310}
-  - {fileID: 1173893079}
-  - {fileID: 471802668}
+  - {fileID: 1370804415}
+  - {fileID: 1133606886}
+  - {fileID: 115522428}
+  - {fileID: 1162540151}
   player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
   counted: 0
@@ -85508,10 +85502,10 @@ MonoBehaviour:
   isOptional: 0
   activatePostPuzzle: 1
   objectToActivate:
-  - {fileID: 1322129366}
-  - {fileID: 886542310}
-  - {fileID: 1173893079}
-  - {fileID: 471802668}
+  - {fileID: 1370804415}
+  - {fileID: 1133606886}
+  - {fileID: 115522428}
+  - {fileID: 1162540151}
   player: {fileID: 1614031491}
   mainUI: {fileID: 1213719444}
   counted: 0
@@ -91535,7 +91529,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1834094983
 Transform:
   m_ObjectHideFlags: 0
