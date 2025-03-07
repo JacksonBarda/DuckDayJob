@@ -688,40 +688,24 @@ Encounter with Robot Janitor,5,1,Night,Janitor,7,<color=red>INITIATE EMERGENCY P
 Encounter with Robot Janitor,5,1,Night,Main Duck,2,HUH?!,TRUE,Left,Normal,FALSE,0,FALSE
 Encounter with Robot Janitor,5,1,Night,Main Duck,2,"Oh no, this is probably how Quackson died! I can't die here. Then I'll never see Duckette again!",TRUE,Left,Italics,FALSE,0,FALSE
 Encounter with Robot Janitor,5,1,Night,Main Duck,2,I need to find a way to <b>stop this robot Janitor!</b>,TRUE,Left,Italics,FALSE,0,FALSE
-Deactivate the Janitor,5,0,Night,Main Duck,2,I should try <b>distracting</b> the Janitor so I can make a run for it!,TRUE,Left,Italics,FALSE,0,FALSE
-Deactivate the Janitor,5,0,Night,Main Duck,2,But what would distract the Janitor?,TRUE,Right,Italics,TRUE,0,FALSE
-Deactivate the Janitor_Round1_Option1,5,0,Night,None,0,LOOK! It's Elon Duck!,TRUE,Right,Normal,FALSE,1,FALSE
-Deactivate the Janitor_Round1_Response1,5,0,Night,Janitor,7,<color=red>CHANGE IN ORDERS: INITIATE PROPER GREETING FOR CREATOR.</color>,TRUE,Right,Normal,FALSE,1,FALSE
-Deactivate the Janitor_Round1_Response1,5,0,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",TRUE,Left,Italics,FALSE,1,FALSE
-Deactivate the Janitor_Round1_Response1,5,0,Night,Main Duck,2,"Ok, think Main Duck, think! <b>What should I do now?</b>",TRUE,Left,Italics,TRUE,1,FALSE
-Deactivate the Janitor_Round1_Option2,5,0,Night,None,0,You missed a spot over there!,TRUE,Right,Normal,FALSE,2,FALSE
-Deactivate the Janitor_Round1_Response2,5,0,Night,Janitor,7,<color=red>ERROR: MUST COMPLETE CLEAN-UP. CHECKING FOR SPOT INITIATED.</color>,TRUE,Right,Normal,FALSE,2,FALSE
-Deactivate the Janitor_Round1_Response2,5,0,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",TRUE,Left,Italics,FALSE,2,FALSE
-Deactivate the Janitor_Round1_Response2,5,0,Night,Main Duck,2,"Ok, think Main Duck, think! <b>What should I do now?</b>",TRUE,Left,Italics,TRUE,2,FALSE
-Deactivate the Janitor_Round1_Option3,5,0,Night,None,0,Did you hear something?,TRUE,Right,Normal,FALSE,3,FALSE
-Deactivate the Janitor_Round1_Response3,5,0,Night,Janitor,7,<color=red>ERROR: I DO NOT DETECT ANY ABNORMAL SOUNDS.</color>,TRUE,Right,Normal,FALSE,3,FALSE
-Deactivate the Janitor_Round1_Response3,5,0,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",TRUE,Left,Italics,FALSE,3,FALSE
-Deactivate the Janitor_Round1_Response3,5,0,Night,Main Duck,2,"Ok, think Main Duck, think! <b>What should I do now?</b>",TRUE,Left,Italics,TRUE,3,FALSE
-Deactivate the Janitor_Round1_Option4,5,0,Night,None,0,Please! Have mercy!,TRUE,Right,Normal,FALSE,4,FALSE
-Deactivate the Janitor_Round1_Response4,5,0,Night,Janitor,7,<color=red>ERROR: NO MERCY SHALL BE GRANTED TO SUBJECT WHO INTERFERES WITH CREATOR'S PLAN.</color>,TRUE,Right,Normal,FALSE,4,FALSE
-Deactivate the Janitor_Round1_Response4,5,0,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",TRUE,Left,Italics,FALSE,4,FALSE
-Deactivate the Janitor_Round1_Response4,5,0,Night,Main Duck,2,"Ok, think Main Duck, think! <b>What should I do now?</b>",TRUE,Left,Italics,TRUE,4,FALSE
-Deactivate the Janitor_Round2_Option1,5,0,Night,None,0,Slam the stall door shut.,TRUE,Right,Normal,FALSE,1,FALSE
-Deactivate the Janitor_Round2_Response1,5,0,Night,None,0,"Once the Janitor realizes that Main Duck was trying to distract it, the Janitor lunges for Main Duck.",TRUE,Left,Normal,FALSE,1,FALSE
-Deactivate the Janitor_Round2_Response1,5,0,Night,None,0,"However, Main Duck quickly closes the stall door, and the Janitor slams its head against the cold, hard metal.",TRUE,Left,Normal,FALSE,1,FALSE
-Deactivate the Janitor_Round2_Response1,5,0,Night,None,0,"The Janitor stands there, momentarily stunned, before falling backwards and landing on the floor with a metallic clang.",TRUE,Left,Normal,FALSE,1,FALSE
-Deactivate the Janitor_Round2_Response1,5,0,Night,None,0,Main Duck then leaves the stall and quickly <b>deactivates the Janitor.</b>,TRUE,Left,Normal,FALSE,1,FALSE
-Deactivate the Janitor_Round2_Response1,5,0,Night,Main Duck,2,"Phew, that was a close one!",TRUE,Left,Normal,FALSE,1,FALSE
-Deactivate the Janitor_Round2_Option2,5,0,Night,None,0,Try to sneak past the Janitor.,TRUE,Left,Normal,FALSE,2,FALSE
-Deactivate the Janitor_Round2_Response2,5,0,Night,None,0,"With the Janitor distracted, Main Duck tries to sneak past the Janitor.",TRUE,Left,Normal,FALSE,2,FALSE
-Deactivate the Janitor_Round2_Response2,5,0,Night,None,0,"However, the Janitor immediately detects the change in movement and kills Main Duck in one swift motion.",TRUE,Left,Normal,FALSE,2,FALSE
-Deactivate the Janitor_Round2_Option3,5,0,Night,None,0,Go back into the vent.,TRUE,Left,Normal,FALSE,3,FALSE
-Deactivate the Janitor_Round2_Response3,5,0,Night,None,0,Main Duck goes back into the vents and warns the ducks to run.,TRUE,Left,Normal,FALSE,3,FALSE
-Deactivate the Janitor_Round2_Response3,5,0,Night,None,0,"However, the glint of the Janitor's glowing red eyes appears behind Main Duck, and the Janitor kills Main Duck and the rest of the ducks in the vents before returning to the slaughterhouse.",TRUE,Left,Normal,FALSE,3,FALSE
-Deactivate the Janitor_Round2_Option4,5,0,Night,None,0,Play dead.,TRUE,Left,Normal,FALSE,4,FALSE
-Deactivate the Janitor_Round2_Response4,5,0,Night,None,0,Main Duck slumps against Quackson's body and plays dead.,TRUE,Left,Normal,FALSE,4,FALSE
-Deactivate the Janitor_Round2_Response4,5,0,Night,None,0,"However, Main Duck fails to account for the Janitor's heat detection and the Janitor does not buy Main Duck's acting.",TRUE,Left,Normal,FALSE,4,FALSE
-Deactivate the Janitor_Round2_Response4,5,0,Night,None,0,"And so, the Janitor makes sure Main Duck is dead alongside Quackson.",TRUE,Left,Normal,FALSE,4,FALSE
+Encounter with Robot Janitor,5,1,Night,Main Duck,2,I should try <b>distracting</b> the Janitor so I can make a run for it!,TRUE,Left,Italics,FALSE,0,FALSE
+Encounter with Robot Janitor,5,1,Night,Main Duck,2,But what would distract the Janitor?,TRUE,Right,Italics,TRUE,0,FALSE
+Encounter with Robot Janitor_Round1_Option1,5,1,Night,None,0,LOOK! It's Elon Duck!,TRUE,Right,Normal,FALSE,1,FALSE
+Encounter with Robot Janitor_Round1_Response1,5,1,Night,Janitor,7,<color=red>CHANGE IN ORDERS: INITIATE PROPER GREETING FOR CREATOR.</color>,TRUE,Right,Normal,FALSE,1,FALSE
+Encounter with Robot Janitor_Round1_Response1,5,1,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",TRUE,Left,Italics,FALSE,1,FALSE
+Encounter with Robot Janitor_Round1_Response1,5,1,Night,Main Duck,2,"Ok, think Main Duck, think! <b>I think now is my chance!</b>",TRUE,Left,Italics,TRUE,1,FALSE
+Encounter with Robot Janitor_Round1_Option2,5,1,Night,None,0,You missed a spot over there!,TRUE,Right,Normal,FALSE,2,FALSE
+Encounter with Robot Janitor_Round1_Response2,5,1,Night,Janitor,7,<color=red>ERROR: MUST COMPLETE CLEAN-UP. CHECKING FOR SPOT INITIATED.</color>,TRUE,Right,Normal,FALSE,2,FALSE
+Encounter with Robot Janitor_Round1_Response2,5,1,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",TRUE,Left,Italics,FALSE,2,FALSE
+Encounter with Robot Janitor_Round1_Response2,5,1,Night,Main Duck,2,"Ok, think Main Duck, think! <b>I think now is my chance!</b>",TRUE,Left,Italics,TRUE,2,FALSE
+Encounter with Robot Janitor_Round1_Option3,5,1,Night,None,0,Did you hear something?,TRUE,Right,Normal,FALSE,3,FALSE
+Encounter with Robot Janitor_Round1_Response3,5,1,Night,Janitor,7,<color=red>ERROR: I DO NOT DETECT ANY ABNORMAL SOUNDS.</color>,TRUE,Right,Normal,FALSE,3,FALSE
+Encounter with Robot Janitor_Round1_Response3,5,1,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",TRUE,Left,Italics,FALSE,3,FALSE
+Encounter with Robot Janitor_Round1_Response3,5,1,Night,Main Duck,2,"Ok, think Main Duck, think! <b>I think now is my chance!</b>",TRUE,Left,Italics,TRUE,3,FALSE
+Encounter with Robot Janitor_Round1_Option4,5,1,Night,None,0,Please! Have mercy!,TRUE,Right,Normal,FALSE,4,FALSE
+Encounter with Robot Janitor_Round1_Response4,5,1,Night,Janitor,7,<color=red>ERROR: NO MERCY SHALL BE GRANTED TO SUBJECT WHO INTERFERES WITH CREATOR'S PLAN.</color>,TRUE,Right,Normal,FALSE,4,FALSE
+Encounter with Robot Janitor_Round1_Response4,5,1,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",TRUE,Left,Italics,FALSE,4,FALSE
+Encounter with Robot Janitor_Round1_Response4,5,1,Night,Main Duck,2,"Ok, think Main Duck, think! <b>I think now is my chance!</b>",TRUE,Left,Italics,TRUE,4,FALSE
 Find the Memory Files,5,4,Night,None,0,Main Duck notices something exposed from the Janitor's damaged head.,TRUE,Left,Normal,FALSE,0,FALSE
 Find the Memory Files,5,4,Night,Main Duck,2,"Huh, what's this over here?",TRUE,Left,Normal,FALSE,0,FALSE
 Find the Memory Files,5,4,Night,Main Duck,2,"Oh, these must be-",TRUE,Left,Normal,FALSE,0,FALSE

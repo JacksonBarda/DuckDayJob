@@ -62,6 +62,7 @@ public class DialogueTool : Interactable
 
     public List<DialogStruct> talkAgainList = new List<DialogStruct>();
 
+    [SerializeField]
     private List<List<DialogStruct>> responseList = new List<List<DialogStruct>>();
 
     public List<DialogStruct> refDialogueList = new List<DialogStruct>();
@@ -79,7 +80,8 @@ public class DialogueTool : Interactable
     private int roundNum = 1;
 
     // Retrieval Variables
-    public List<int> Answers;
+    public List<int> correctAnswers;
+    public int givenAnswer;
     private bool correct = false;
     private int holdIndex = 0;
     private DialogStruct lastDialogue;
@@ -628,7 +630,11 @@ public class DialogueTool : Interactable
 
             }
         }
-
+        Debug.Log("00000000000000000000000000000000000000000000000");
+        //Debug.Log("DialogueList: " + DialogueList);
+        //Debug.Log("responseList: " + responseList);
+        //Debug.Log("refDialogueList: " + refDialogueList);
+        //Debug.Log("retrievalDialogueList: " + retrievalDialogueList);
     }
 
     public void setSelectedOptionDialogue(GameObject selectedButton)
@@ -646,12 +652,13 @@ public class DialogueTool : Interactable
         }
         if (activatePostPuzzle)
         {
-            if (selectedButton.GetComponent<OptionButtonSetUp>().optionNumber == Answers[roundNum - 1])
+            if (selectedButton.GetComponent<OptionButtonSetUp>().optionNumber == correctAnswers[roundNum - 1])
             {
                 roundNum++;
                 correct = true;
                 Debug.Log("Correct");
                 attempts = 0;
+                givenAnswer = selectedButton.GetComponent<OptionButtonSetUp>().optionNumber;
             }
             else
             {
@@ -659,10 +666,16 @@ public class DialogueTool : Interactable
                 Debug.Log("Wrong");
                 attempts++;
             }
+
         }
         nextButton.interactable = false;
         nextButton.interactable = true;
         ResetTool();
+    }
+
+    public int getOptionAnswer()
+    {
+        return givenAnswer;
     }
 
     public void ResetTool()

@@ -220,9 +220,9 @@ public class CinematicSequenceTool : Interactable
     {
         if (!disableBeginningFade)
         {
-            blackoutFadeOut.FadeImageOutOverTime(0.5f);
+            blackoutFadeOut.FadeImageOutOverTime(1f);
             yield return new WaitForSeconds(1.0f);
-            blackoutFadeIn.FadeImageInOverTime(0.5f);
+            blackoutFadeIn.FadeImageInOverTime(1f);
         }
         camMain = CM.mainCamera;
         camCinematic = CM.cinematicCamera;
@@ -240,9 +240,9 @@ public class CinematicSequenceTool : Interactable
     {
         if (!disableEndingFade)
         {
-            blackoutFadeOut.FadeImageOutOverTime(0.5f);
+            blackoutFadeOut.FadeImageOutOverTime(1f);
             yield return new WaitForSeconds(1.0f);
-            blackoutFadeIn.FadeImageInOverTime(0.5f);
+            blackoutFadeIn.FadeImageInOverTime(1f);
         }
 
         DialogueButton.SetActive(false);
