@@ -688,24 +688,24 @@ Encounter with Robot Janitor,5,1,Night,Janitor,7,<color=red>INITIATE EMERGENCY P
 Encounter with Robot Janitor,5,1,Night,Main Duck,2,HUH?!,TRUE,Left,Normal,FALSE,0,FALSE
 Encounter with Robot Janitor,5,1,Night,Main Duck,2,"Oh no, this is probably how Quackson died! I can't die here. Then I'll never see Duckette again!",TRUE,Left,Italics,FALSE,0,FALSE
 Encounter with Robot Janitor,5,1,Night,Main Duck,2,I need to find a way to <b>stop this robot Janitor!</b>,TRUE,Left,Italics,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Main Duck,2,I should try <b>distracting</b> the Janitor so I can make a run for it!,TRUE,Left,Italics,FALSE,0,FALSE
-Encounter with Robot Janitor,5,1,Night,Main Duck,2,But what would distract the Janitor?,TRUE,Right,Italics,TRUE,0,FALSE
-Encounter with Robot Janitor_Round1_Option1,5,1,Night,None,0,LOOK! It's Elon Duck!,TRUE,Right,Normal,FALSE,1,FALSE
-Encounter with Robot Janitor_Round1_Response1,5,1,Night,Janitor,7,<color=red>CHANGE IN ORDERS: INITIATE PROPER GREETING FOR CREATOR.</color>,TRUE,Right,Normal,FALSE,1,FALSE
-Encounter with Robot Janitor_Round1_Response1,5,1,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",TRUE,Left,Italics,FALSE,1,FALSE
-Encounter with Robot Janitor_Round1_Response1,5,1,Night,Main Duck,2,"Ok, think Main Duck, think! <b>I think now is my chance!</b>",TRUE,Left,Italics,TRUE,1,FALSE
-Encounter with Robot Janitor_Round1_Option2,5,1,Night,None,0,You missed a spot over there!,TRUE,Right,Normal,FALSE,2,FALSE
-Encounter with Robot Janitor_Round1_Response2,5,1,Night,Janitor,7,<color=red>ERROR: MUST COMPLETE CLEAN-UP. CHECKING FOR SPOT INITIATED.</color>,TRUE,Right,Normal,FALSE,2,FALSE
-Encounter with Robot Janitor_Round1_Response2,5,1,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",TRUE,Left,Italics,FALSE,2,FALSE
-Encounter with Robot Janitor_Round1_Response2,5,1,Night,Main Duck,2,"Ok, think Main Duck, think! <b>I think now is my chance!</b>",TRUE,Left,Italics,TRUE,2,FALSE
-Encounter with Robot Janitor_Round1_Option3,5,1,Night,None,0,Did you hear something?,TRUE,Right,Normal,FALSE,3,FALSE
-Encounter with Robot Janitor_Round1_Response3,5,1,Night,Janitor,7,<color=red>ERROR: I DO NOT DETECT ANY ABNORMAL SOUNDS.</color>,TRUE,Right,Normal,FALSE,3,FALSE
-Encounter with Robot Janitor_Round1_Response3,5,1,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",TRUE,Left,Italics,FALSE,3,FALSE
-Encounter with Robot Janitor_Round1_Response3,5,1,Night,Main Duck,2,"Ok, think Main Duck, think! <b>I think now is my chance!</b>",TRUE,Left,Italics,TRUE,3,FALSE
-Encounter with Robot Janitor_Round1_Option4,5,1,Night,None,0,Please! Have mercy!,TRUE,Right,Normal,FALSE,4,FALSE
-Encounter with Robot Janitor_Round1_Response4,5,1,Night,Janitor,7,<color=red>ERROR: NO MERCY SHALL BE GRANTED TO SUBJECT WHO INTERFERES WITH CREATOR'S PLAN.</color>,TRUE,Right,Normal,FALSE,4,FALSE
-Encounter with Robot Janitor_Round1_Response4,5,1,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",TRUE,Left,Italics,FALSE,4,FALSE
-Encounter with Robot Janitor_Round1_Response4,5,1,Night,Main Duck,2,"Ok, think Main Duck, think! <b>I think now is my chance!</b>",TRUE,Left,Italics,TRUE,4,FALSE
+Distracting the Janitor,5,1,Night,Main Duck,2,I should try <b>distracting</b> the Janitor so I can make a run for it!,TRUE,Left,Italics,FALSE,0,FALSE
+Distracting the Janitor,5,1,Night,Main Duck,2,But what would distract the Janitor?,TRUE,Right,Italics,TRUE,0,FALSE
+Distracting the Janitor_Option1,5,1,Night,None,0,LOOK! It's Elon Duck!,TRUE,Right,Normal,FALSE,1,FALSE
+Distracting the Janitor_Response1,5,1,Night,Janitor,7,<color=red>CHANGE IN ORDERS: INITIATE PROPER GREETING FOR CREATOR.</color>,TRUE,Right,Normal,FALSE,1,FALSE
+Distracting the Janitor_Response1,5,1,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",TRUE,Left,Italics,FALSE,1,FALSE
+Distracting the Janitor_Response1,5,1,Night,Main Duck,2,"Ok, think Main Duck, think! <b>I think now is my chance!</b>",TRUE,Left,Italics,FALSE,1,FALSE
+Distracting the Janitor_Option2,5,1,Night,None,0,You missed a spot over there!,TRUE,Right,Normal,FALSE,2,FALSE
+Distracting the Janitor_Response2,5,1,Night,Janitor,7,<color=red>ERROR: MUST COMPLETE CLEAN-UP. CHECKING FOR SPOT INITIATED.</color>,TRUE,Right,Normal,FALSE,2,FALSE
+Distracting the Janitor_Response2,5,1,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",TRUE,Left,Italics,FALSE,2,FALSE
+Distracting the Janitor_Response2,5,1,Night,Main Duck,2,"Ok, think Main Duck, think! <b>I think now is my chance!</b>",TRUE,Left,Italics,FALSE,2,FALSE
+Distracting the Janitor_Option3,5,1,Night,None,0,Did you hear something?,TRUE,Right,Normal,FALSE,3,FALSE
+Distracting the Janitor_Response3,5,1,Night,Janitor,7,<color=red>ERROR: I DO NOT DETECT ANY ABNORMAL SOUNDS.</color>,TRUE,Right,Normal,FALSE,3,FALSE
+Distracting the Janitor_Response3,5,1,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",TRUE,Left,Italics,FALSE,3,FALSE
+Distracting the Janitor_Response3,5,1,Night,Main Duck,2,"Ok, think Main Duck, think! <b>I think now is my chance!</b>",TRUE,Left,Italics,FALSE,3,FALSE
+Distracting the Janitor_Option4,5,1,Night,None,0,Please! Have mercy!,TRUE,Right,Normal,FALSE,4,FALSE
+Distracting the Janitor_Response4,5,1,Night,Janitor,7,<color=red>ERROR: NO MERCY SHALL BE GRANTED TO SUBJECT WHO INTERFERES WITH CREATOR'S PLAN.</color>,TRUE,Right,Normal,FALSE,4,FALSE
+Distracting the Janitor_Response4,5,1,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",TRUE,Left,Italics,FALSE,4,FALSE
+Distracting the Janitor_Response4,5,1,Night,Main Duck,2,"Ok, think Main Duck, think! <b>I think now is my chance!</b>",TRUE,Left,Italics,FALSE,4,FALSE
 Find the Memory Files,5,4,Night,None,0,Main Duck notices something exposed from the Janitor's damaged head.,TRUE,Left,Normal,FALSE,0,FALSE
 Find the Memory Files,5,4,Night,Main Duck,2,"Huh, what's this over here?",TRUE,Left,Normal,FALSE,0,FALSE
 Find the Memory Files,5,4,Night,Main Duck,2,"Oh, these must be-",TRUE,Left,Normal,FALSE,0,FALSE

@@ -193,6 +193,11 @@ public class CinematicSequenceTool : Interactable
         //CinemaManager.IterateDialogue();
     }
 
+    public List<Shot> getListOfShots()
+    {
+        return listOfShots;
+    }
+
     public IEnumerator FadeCoroutine()          //fade to black, switch image/camera position, fade out from black
     {
         

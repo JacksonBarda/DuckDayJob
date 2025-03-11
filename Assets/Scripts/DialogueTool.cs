@@ -630,7 +630,7 @@ public class DialogueTool : Interactable
 
             }
         }
-        Debug.Log("00000000000000000000000000000000000000000000000");
+        Debug.Log("clicky");
         //Debug.Log("DialogueList: " + DialogueList);
         //Debug.Log("responseList: " + responseList);
         //Debug.Log("refDialogueList: " + refDialogueList);
@@ -652,13 +652,22 @@ public class DialogueTool : Interactable
         }
         if (activatePostPuzzle)
         {
+            //if (correctAnswers[0] == 0)
+            //{
+            //    givenAnswer = selectedButton.GetComponent<OptionButtonSetUp>().optionNumber;
+            //    roundNum++;
+            //    correct = true;
+            //    attempts = 0;
+            //    Debug.Log("DT: givenAnswer = " + givenAnswer);
+
+            //}
+            //else if (selectedButton.GetComponent<OptionButtonSetUp>().optionNumber == correctAnswers[roundNum - 1])
             if (selectedButton.GetComponent<OptionButtonSetUp>().optionNumber == correctAnswers[roundNum - 1])
-            {
+                    {
                 roundNum++;
                 correct = true;
                 Debug.Log("Correct");
                 attempts = 0;
-                givenAnswer = selectedButton.GetComponent<OptionButtonSetUp>().optionNumber;
             }
             else
             {

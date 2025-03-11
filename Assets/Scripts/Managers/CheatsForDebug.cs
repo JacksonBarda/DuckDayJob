@@ -53,6 +53,18 @@ public class CheatsForDebug : MonoBehaviour
             else
             {
                 Debug.Log("CheatsForDebug: Skipping " + task + "...");
+                if (task.GetComponent<CinematicSequenceTool>() != null)
+                {
+                    Debug.LogError("CheatsForDebug: Checking shots for interactables...");
+                    foreach (Shot cineShot in task.GetComponent<CinematicSequenceTool>().getListOfShots())
+                    {
+                        if (cineShot.sceneChangeInteractable != null)
+                        {
+                            cineShot.sceneChangeInteractable.Interact();
+                            Debug.LogError("bump -------------");
+                        }
+                    }
+                }
                 task.Complete();
                 break;
             }

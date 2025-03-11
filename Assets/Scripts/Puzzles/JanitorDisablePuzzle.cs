@@ -16,7 +16,7 @@ public class JanitorDisablePuzzle : Interactable
     [SerializeField]
     private Slider progressBar;
     [SerializeField]
-    private Sprite janitorSprite;
+    private SpriteRenderer janitorSprite;
     [SerializeField]
     private int choice;
 

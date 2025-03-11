@@ -83,6 +83,18 @@ public class TaskManager : MonoBehaviour
                     {
                         obj.gameObject.SetActive(!obj.gameObject.activeSelf);
                     }
+                    if (task.GetComponent<CinematicSequenceTool>() != null)
+                    {
+                        Debug.Log("TaskManager: Checking shots for interactables...");
+                        foreach(Shot cineShot in task.GetComponent<CinematicSequenceTool>().getListOfShots())
+                        {
+                            if (cineShot.sceneChangeInteractable != null)
+                            {
+                                cineShot.sceneChangeInteractable.Interact();
+                                Debug.Log("TaskManager: Skipping shot interactable - " + cineShot.sceneChangeInteractable);
+                            }
+                        }
+                    }
                     task.Complete();
                     task.gameObject.SetActive(false);
                 }
