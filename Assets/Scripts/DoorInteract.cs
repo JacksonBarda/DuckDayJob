@@ -63,7 +63,7 @@ public class DoorInteract : Interactable
     {
         UnityEngine.Debug.Log("Waiting to fade in");
         yield return new WaitForSeconds(delay);
-		StartCoroutine(fadeIn.FadeInCoroutine(1.0f, this, false));
+		fadeIn.FadeImageInOverTime(1.0f, this, false);
 	}
 
 }

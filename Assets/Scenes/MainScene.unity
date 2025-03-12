@@ -2244,6 +2244,8 @@ MonoBehaviour:
   fadeIn: {fileID: 1463816538}
   fadeOut: {fileID: 1463816537}
   dayToNight: 0
+  disableBeginningFade: 0
+  disableEndingFade: 0
   UIManager: {fileID: 1206418959}
   pivot: {fileID: 118037838}
   contButton: {fileID: 1504330710}
@@ -5256,6 +5258,8 @@ MonoBehaviour:
   fadeIn: {fileID: 1463816538}
   fadeOut: {fileID: 1463816537}
   dayToNight: 0
+  disableBeginningFade: 0
+  disableEndingFade: 0
   UIManager: {fileID: 1206418959}
   pivot: {fileID: 118037838}
   contButton: {fileID: 920346492}
@@ -6456,7 +6460,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   darkTime: 0
   image: {fileID: 118037840}
-  running: 0
 --- !u!114 &118037840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6602,7 +6605,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   darkTime: 0
   image: {fileID: 119284086}
-  running: 0
 --- !u!114 &119284089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12447,6 +12449,8 @@ MonoBehaviour:
   fadeIn: {fileID: 1463816538}
   fadeOut: {fileID: 1463816537}
   dayToNight: 0
+  disableBeginningFade: 0
+  disableEndingFade: 0
   UIManager: {fileID: 1206418959}
   pivot: {fileID: 118037838}
   contButton: {fileID: 167986623}
@@ -13132,6 +13136,8 @@ MonoBehaviour:
   fadeIn: {fileID: 1463816538}
   fadeOut: {fileID: 1463816537}
   dayToNight: 1
+  disableBeginningFade: 0
+  disableEndingFade: 0
   UIManager: {fileID: 1206418959}
   pivot: {fileID: 1711563799}
   contButton: {fileID: 80739370}
@@ -15147,6 +15153,8 @@ MonoBehaviour:
   fadeIn: {fileID: 1463816538}
   fadeOut: {fileID: 1463816537}
   dayToNight: 1
+  disableBeginningFade: 0
+  disableEndingFade: 0
   UIManager: {fileID: 1206418959}
   pivot: {fileID: 1711563799}
   contButton: {fileID: 136262526}
@@ -17687,6 +17695,8 @@ MonoBehaviour:
   fadeIn: {fileID: 1463816538}
   fadeOut: {fileID: 1463816537}
   dayToNight: 0
+  disableBeginningFade: 0
+  disableEndingFade: 0
   UIManager: {fileID: 1206418959}
   pivot: {fileID: 118037838}
   contButton: {fileID: 239994048}
@@ -23092,6 +23102,8 @@ MonoBehaviour:
   fadeIn: {fileID: 1463816538}
   fadeOut: {fileID: 1463816537}
   dayToNight: 0
+  disableBeginningFade: 0
+  disableEndingFade: 0
   UIManager: {fileID: 1206418959}
   pivot: {fileID: 118037838}
   contButton: {fileID: 188212554}
@@ -43585,6 +43597,8 @@ MonoBehaviour:
   fadeIn: {fileID: 1463816538}
   fadeOut: {fileID: 1463816537}
   dayToNight: 1
+  disableBeginningFade: 1
+  disableEndingFade: 0
   UIManager: {fileID: 1206418959}
   pivot: {fileID: 1711563799}
   contButton: {fileID: 1509031352}
@@ -58851,6 +58865,8 @@ MonoBehaviour:
   fadeIn: {fileID: 1463816538}
   fadeOut: {fileID: 1463816537}
   dayToNight: 1
+  disableBeginningFade: 0
+  disableEndingFade: 0
   UIManager: {fileID: 1206418959}
   pivot: {fileID: 1711563799}
   contButton: {fileID: 203229678}
@@ -60027,6 +60043,8 @@ MonoBehaviour:
   fadeIn: {fileID: 1463816538}
   fadeOut: {fileID: 1463816537}
   dayToNight: 1
+  disableBeginningFade: 0
+  disableEndingFade: 0
   UIManager: {fileID: 1206418959}
   pivot: {fileID: 1711563799}
   contButton: {fileID: 1601981214}
@@ -66900,6 +66918,8 @@ MonoBehaviour:
   fadeIn: {fileID: 1463816538}
   fadeOut: {fileID: 1463816537}
   dayToNight: 1
+  disableBeginningFade: 0
+  disableEndingFade: 0
   UIManager: {fileID: 1206418959}
   pivot: {fileID: 1711563799}
   contButton: {fileID: 203229678}
@@ -68328,6 +68348,8 @@ MonoBehaviour:
   fadeIn: {fileID: 1463816538}
   fadeOut: {fileID: 1463816537}
   dayToNight: 0
+  disableBeginningFade: 0
+  disableEndingFade: 0
   UIManager: {fileID: 1206418959}
   pivot: {fileID: 118037838}
   contButton: {fileID: 167986623}
@@ -74128,7 +74150,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   darkTime: 0
   image: {fileID: 1463816535}
-  running: 0
 --- !u!114 &1463816538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80401,6 +80422,8 @@ MonoBehaviour:
   fadeIn: {fileID: 1463816538}
   fadeOut: {fileID: 1463816537}
   dayToNight: 1
+  disableBeginningFade: 0
+  disableEndingFade: 0
   UIManager: {fileID: 1206418959}
   pivot: {fileID: 1711563799}
   contButton: {fileID: 1391286279}
@@ -83994,7 +84017,7 @@ MonoBehaviour:
   blackoutFadeOut: {fileID: 1463816537}
   dialogueIndex: 0
   disableBeginningFade: 1
-  disableEndingFade: 1
+  disableEndingFade: 0
   CM: {fileID: 289112759}
   listOfShots:
   - {fileID: 327460262}
@@ -85105,6 +85128,8 @@ MonoBehaviour:
   fadeIn: {fileID: 1463816538}
   fadeOut: {fileID: 1463816537}
   dayToNight: 1
+  disableBeginningFade: 0
+  disableEndingFade: 0
   UIManager: {fileID: 1206418959}
   pivot: {fileID: 1711563799}
   contButton: {fileID: 160131202}
@@ -86182,6 +86207,8 @@ MonoBehaviour:
   fadeIn: {fileID: 1463816538}
   fadeOut: {fileID: 1463816537}
   dayToNight: 0
+  disableBeginningFade: 0
+  disableEndingFade: 0
   UIManager: {fileID: 1206418959}
   pivot: {fileID: 118037838}
   contButton: {fileID: 996196404}
@@ -86520,7 +86547,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   darkTime: 0
   image: {fileID: 1711563801}
-  running: 0
 --- !u!114 &1711563801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87081,6 +87107,8 @@ MonoBehaviour:
   fadeIn: {fileID: 1463816538}
   fadeOut: {fileID: 1463816537}
   dayToNight: 0
+  disableBeginningFade: 0
+  disableEndingFade: 0
   UIManager: {fileID: 1206418959}
   pivot: {fileID: 118037838}
   contButton: {fileID: 735700018}

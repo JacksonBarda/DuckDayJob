@@ -20,6 +20,10 @@ public class DayNightTransition : Interactable
     [SerializeField]
     private bool dayToNight;
     [SerializeField]
+    private bool disableBeginningFade = false;
+    [SerializeField]
+    private bool disableEndingFade = false;
+    [SerializeField]
     private UIManager UIManager;
     [SerializeField]
     private RectTransform pivot;
@@ -86,9 +90,15 @@ public class DayNightTransition : Interactable
         //player.puzzleMode = true;
         puzzleUI.SetActive(true);
         mainUI.SetActive(false);
-        fadeOut.FadeImageOutOverTime(1.0f, this);
-
-
+        if (!disableBeginningFade)
+        {
+            fadeOut.FadeImageOutOverTime(1.0f, this);
+        }
+        else
+        {
+            Action();
+        }
+        
         counted = false;
     }
 
@@ -136,8 +146,10 @@ public class DayNightTransition : Interactable
     public void OnContPressed()
     {
 		contButton.SetActive(false);
-		StartCoroutine(dayNightIn.FadeInCoroutine(1.3f, this, true));
-        StartCoroutine(fadeIn.FadeInCoroutine(1.3f, this, false));
-
+		dayNightIn.FadeImageInOverTime(1.3f, this, true);
+        if (!disableEndingFade)
+        {
+            fadeIn.FadeImageInOverTime(1.3f, this, false);
+        }
     }
 }

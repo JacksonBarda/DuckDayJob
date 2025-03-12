@@ -94,7 +94,7 @@ public class VentInteract : DoorInteract
 		rigid.useGravity = false;
 		Debug.Log("Waiting to fade in");
 		yield return new WaitForSeconds(delay);
-		StartCoroutine(fadeIn.FadeInCoroutine(1.0f, this, false));
+		fadeIn.FadeImageInOverTime(1.0f, this, false);
 	}
 	public IEnumerator Wait2(float delay)
 	{
@@ -104,7 +104,7 @@ public class VentInteract : DoorInteract
 		rigid.useGravity = true;
 		Debug.Log("Waiting to fade in");
 		yield return new WaitForSeconds(delay);
-		StartCoroutine(fadeIn.FadeInCoroutine(1.0f, this, false));
+		fadeIn.FadeImageInOverTime(1.0f, this, false);
         cmSequence.gameObject.SetActive(true);
         cmSequence.Interact();
 	}

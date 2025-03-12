@@ -81,7 +81,7 @@ public class PlayerMove : MonoBehaviour
             holder = interactable[interactable.Count-1];
             try
             {
-                Debug.Log("interacted: " + interactable[interactable.Count - 1]);
+                Debug.Log("PlayerMove: interacted - " + interactable[interactable.Count - 1]);
                 interactable.Clear();
                 UIManager.Instance.SetInteractPopupText();
                 moveValDown = 0;

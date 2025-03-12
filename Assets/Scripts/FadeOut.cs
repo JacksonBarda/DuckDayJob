@@ -10,27 +10,32 @@ public class FadeOut : MonoBehaviour
     [SerializeField]
     private Image image;
     private float originalAlpha;
-    public bool running = false;
+    private bool running = false;
+
+    // -------------- FADE OUT COMES FIRST ------------------
 
     public void Start()
     {
         //image = this.gameObject.GetComponent<Image>();
 
         // Store the original alpha value of the image
-        originalAlpha = image.color.a;
+        originalAlpha = 0;// image.color.a;
         //Debug.Log("FO - originalAlpha: " + originalAlpha);
     }
     public void FadeImageOutOverTime(float fadeTime, Interactable targetObject)
     {
-        // Start the fade-out coroutine
-        StartCoroutine(FadeOutCoroutine(fadeTime, targetObject));
-        Debug.Log("FadeOut.cs: FadeOutCoroutine <<<<<<<<<<<<<<<<<<<");
+        if (!running)
+        {
+            // Start the fade-out coroutine
+            StartCoroutine(FadeOutCoroutine(fadeTime, targetObject));
+            Debug.Log("FadeOut.cs: FadeOutCoroutine <<<<<<<<<<<<<<<<<<<");
+        }
     }
 
     private IEnumerator FadeOutCoroutine(float fadeTime, Interactable targetObject)
     {
         running = true;
-        // Calculate the target alpha (fully transparent)
+        // Calculate the target alpha (fully opaque)
         float targetAlpha = 1f;
 
         // Calculate the alpha increment per frame

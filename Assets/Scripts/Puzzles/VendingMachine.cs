@@ -20,7 +20,7 @@ public class VendingMachine : Interactable
     public string correctItem = "";
     public GameObject correctDialogue;
     public GameObject incorrectDialogue;
-    private bool dialoguesActive = false;
+    //private bool dialoguesActive = false;
     private string enteredNumber = "";
     //private int playerCoins = 20;
     public List<GameObject> itemCosts;
@@ -112,7 +112,7 @@ public class VendingMachine : Interactable
 
 		if (lastBoughtItem != "" || lastBoughtItem != null)
         {
-            dialoguesActive = true;
+            //dialoguesActive = true;
             CheckForCorrectItem();
             Complete();
         }

@@ -10,8 +10,9 @@ public class FadeIn : MonoBehaviour
     [SerializeField]
     private Image image;
     private float originalAlpha;
+    private bool running = false;
 
-    // -------------  TRANSITION FROM CAMERA VIEW TO BLACK ------------------------
+    // -------------  FADE IN COMES LAST ------------------------
 
     public void Start()
     {
@@ -23,12 +24,17 @@ public class FadeIn : MonoBehaviour
     }
     public void FadeImageInOverTime(float fadeTime, Interactable targetObject, bool callComplete)
     {
-        // Start the fade-out coroutine
-        StartCoroutine(FadeInCoroutine(fadeTime, targetObject, callComplete));
-        Debug.Log("FadeIn.cs: FadeInCoroutine >>>>>>>>>>>>>>>>>>>");
+        if (!running)
+        {
+            // Start the fade-out coroutine
+            StartCoroutine(FadeInCoroutine(fadeTime, targetObject, callComplete));
+            Debug.Log("FadeIn.cs: FadeInCoroutine >>>>>>>>>>>>>>>>>>>");
+        }
     }
-    public IEnumerator FadeInCoroutine(float fadeTime, Interactable task, bool callComplete)
+    private IEnumerator FadeInCoroutine(float fadeTime, Interactable task, bool callComplete)
     {
+        running = true;
+        Debug.Log("FadeIn.cs: FadeInCoroutine >>>>>>>>>>>>>>>>>>>");
         // Calculate the target alpha (original alpha)
         float targetAlpha = originalAlpha;
 
@@ -53,6 +59,9 @@ public class FadeIn : MonoBehaviour
         Color finalColor = image.color;
         finalColor.a = originalAlpha;
         image.color = finalColor;
+
+        running = false;
+
         if (!task.isCompleted && callComplete)
         {
             task.Complete();
