@@ -24,6 +24,8 @@ public class CinematicSequenceTool : Interactable
     [SerializeField]
     private bool disableEndingFade = false;
     [SerializeField]
+    private bool disableEndingFadeIn = false;
+    [SerializeField]
     private CinemaManager CM;
 
     [SerializeField]
@@ -247,7 +249,10 @@ public class CinematicSequenceTool : Interactable
         {
             blackoutFadeOut.FadeImageOutOverTime(1f);
             yield return new WaitForSeconds(1.0f);
-            blackoutFadeIn.FadeImageInOverTime(1f);
+            if (!disableEndingFadeIn)
+            {
+                blackoutFadeIn.FadeImageInOverTime(1f);
+            }
         }
 
         DialogueButton.SetActive(false);
