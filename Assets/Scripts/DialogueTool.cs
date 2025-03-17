@@ -36,6 +36,8 @@ public class DialogueTool : Interactable
     [SerializeField]
     private bool retrieval;
     [SerializeField]
+    public bool recordAnswer = false;
+    [SerializeField]
     private GameObject optionButtonPrefab;
     [SerializeField]
     private Slider SLDR_Progress;
@@ -81,7 +83,8 @@ public class DialogueTool : Interactable
 
     // Retrieval Variables
     public List<int> correctAnswers;
-    public int givenAnswer;
+    [SerializeField]
+    private int givenAnswer;
     private bool correct = false;
     private int holdIndex = 0;
     private DialogStruct lastDialogue;
@@ -652,17 +655,7 @@ public class DialogueTool : Interactable
         }
         if (activatePostPuzzle)
         {
-            //if (correctAnswers[0] == 0)
-            //{
-            //    givenAnswer = selectedButton.GetComponent<OptionButtonSetUp>().optionNumber;
-            //    roundNum++;
-            //    correct = true;
-            //    attempts = 0;
-            //    Debug.Log("DT: givenAnswer = " + givenAnswer);
-
-            //}
-            //else if (selectedButton.GetComponent<OptionButtonSetUp>().optionNumber == correctAnswers[roundNum - 1])
-            if (selectedButton.GetComponent<OptionButtonSetUp>().optionNumber == correctAnswers[roundNum - 1])
+                if (selectedButton.GetComponent<OptionButtonSetUp>().optionNumber == correctAnswers[roundNum - 1])
                     {
                 roundNum++;
                 correct = true;
@@ -676,6 +669,12 @@ public class DialogueTool : Interactable
                 attempts++;
             }
 
+        }
+
+        if (recordAnswer)
+        {
+            givenAnswer = selectedButton.GetComponent<OptionButtonSetUp>().optionNumber;
+            Debug.Log("Given answer: " + givenAnswer);
         }
         nextButton.interactable = false;
         nextButton.interactable = true;

@@ -706,39 +706,39 @@ Distracting the Janitor_Option4,5,1,Night,None,0,Please! Have mercy!,TRUE,Right,
 Distracting the Janitor_Response4,5,1,Night,Janitor,7,<color=red>ERROR: NO MERCY SHALL BE GRANTED TO SUBJECT WHO INTERFERES WITH CREATOR'S PLAN.</color>,TRUE,Right,Normal,FALSE,4,FALSE
 Distracting the Janitor_Response4,5,1,Night,Main Duck,2,"Phew, I don't know how long that will distract the Janitor.",TRUE,Left,Italics,FALSE,4,FALSE
 Distracting the Janitor_Response4,5,1,Night,Main Duck,2,"Ok, think Main Duck, think! <b>I think now is my chance!</b>",TRUE,Left,Italics,FALSE,4,FALSE
-Find the Memory Files,5,4,Night,None,0,Main Duck notices something exposed from the Janitor's damaged head.,TRUE,Left,Normal,FALSE,0,FALSE
-Find the Memory Files,5,4,Night,Main Duck,2,"Huh, what's this over here?",TRUE,Left,Normal,FALSE,0,FALSE
-Find the Memory Files,5,4,Night,Main Duck,2,"Oh, these must be-",TRUE,Left,Normal,FALSE,0,FALSE
-Find the Memory Files,5,4,Night,Main Duck,2,<color=red>Memory files!</color>,TRUE,Left,Normal,FALSE,0,FALSE
-Find the Memory Files,5,4,Night,Main Duck,2,"I took one course in robotics, and these are super important for robots to function.",TRUE,Left,Normal,FALSE,0,FALSE
-Find the Memory Files,5,4,Night,Main Duck,2,These things <b>record what the robot sees and does</b> based on their assigned objectives by their creator.,TRUE,Left,Normal,FALSE,0,FALSE
-Find the Memory Files,5,4,Night,Main Duck,2,This is a quacking important piece of evidence! This should be enough to prove what the slaughterhouse is used for and the secret identity of the Janitor.,TRUE,Left,Normal,FALSE,0,FALSE
-Ducks are Saved... But Still No Duckette,5,5,Night,Main Duck,2,T-That was quacking insane... I could've died!,TRUE,Left,Italics,FALSE,0,FALSE
-Ducks are Saved... But Still No Duckette,5,5,Night,Main Duck,2,"But now with the Janitor out of the way, we should be safe for now.",TRUE,Left,Italics,FALSE,0,FALSE
-Ducks are Saved... But Still No Duckette,5,5,Night,Main Duck,2,"But it's already late, and Donald would have come rushing in if he was still in the breakroom. He must've left already.",TRUE,Left,Italics,FALSE,0,FALSE
-Ducks are Saved... But Still No Duckette,5,5,Night,Main Duck,2,I guess I'll have to <b>tell him what I found tomorrow.</b>,TRUE,Left,Italics,FALSE,0,FALSE
-Ducks are Saved... But Still No Duckette,5,5,Night,Main Duck,2,"For now, I'll get the rest of the ducks and leave. There's no way I'm quacking staying here a minute longer!",TRUE,Left,Italics,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Eggwin,3,"Thank you, sir, for meeting with me at such short notice.",FALSE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,"Of course, I'm happy to have the chance to <b>meet with you Eggwin.</b>",FALSE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,"I believe in establishing one-on-one relationships with my employees, so if there are ever any problems, please feel free to reach out to me.",FALSE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,"And from the email you sent me, it seems you have <b>concerns</b> with a fellow duck?",FALSE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Eggwin,3,Yes sir. <b>I am worried about Main Duck.</b>,FALSE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Eggwin,3,"I've only seen Main Duck in the morning today. And Donald, for whatever reason, took up their tasks for today instead of lounging in the breakroom.",FALSE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Eggwin,3,"I also noted that, while Main Duck did complete their tasks yesterday, they were running about and talking a lot with Donald. And we both know about Donald.",FALSE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,"Ah, yes. The delusional one.",FALSE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Eggwin,3,Eggs-actly. I am worried that Main Duck is <b>straying from their role</b> in the team and is <b>distracted</b> by Donald's crazy theories.,FALSE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Eggwin,3,"That is why, for the good of the company, I emailed you for a meeting to talk about Main Duck and hopefully get them back on the right track.",FALSE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,"Well, this is certainly quite a good reason for concern! I saw potential in our new employee, but it saddens me that they have been steered in the wrong direction!",FALSE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,"However, I must commend you for your outstanding observation and dedication to the team! It is quacktastic to see how much you care for Nestla and the employees here.",FALSE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,I will think about the right course of action tonight and get back to you tomorrow. Do you mind if we <b>meet tomorrow before the offices open to discuss more about Main Duck?</b>,FALSE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Eggwin,3,"Of course, sir! I understand it's already late, and I know you're a very busy duck.",FALSE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,"Hahaha, that's the life of a CEO.",FALSE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,"Well, you get on home now Eggwin. You are dismissed.",FALSE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Eggwin,3,"Thank you, sir. Goodnight.",FALSE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,Goodnight.,FALSE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,None,0,"Once Eggwin leaves, Elon Duck checks the notification on his phone. He then frowns when he sees the <b>janitor's location mysteriously disappearing on the map of Nestla.</b>",FALSE,Left,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,Looks like someone stuck their beak where they are not supposed to. Tomorrow will be a long day of cleaning up.,FALSE,Right,Normal,FALSE,0,FALSE
-Eggwin is a Snitch,5,6,Night,Elon Duck,1,"After all, <b>no duck can know.</b>",FALSE,Right,Normal,FALSE,0,FALSE
+Memory Files and Ducks Saved,5,4,Night,None,0,Main Duck notices something exposed from the Janitor's damaged head.,TRUE,Left,Normal,FALSE,0,FALSE
+Memory Files and Ducks Saved,5,4,Night,Main Duck,2,"Huh, what's this over here?",TRUE,Left,Normal,FALSE,0,FALSE
+Memory Files and Ducks Saved,5,4,Night,Main Duck,2,"Oh, these must be-",TRUE,Left,Normal,FALSE,0,FALSE
+Memory Files and Ducks Saved,5,4,Night,Main Duck,2,<color=red>Memory files!</color>,TRUE,Left,Normal,FALSE,0,FALSE
+Memory Files and Ducks Saved,5,4,Night,Main Duck,2,"I took one course in robotics, and these are super important for robots to function.",TRUE,Left,Normal,FALSE,0,FALSE
+Memory Files and Ducks Saved,5,4,Night,Main Duck,2,These things <b>record what the robot sees and does</b> based on their assigned objectives by their creator.,TRUE,Left,Normal,FALSE,0,FALSE
+Memory Files and Ducks Saved,5,4,Night,Main Duck,2,This is a quacking important piece of evidence! This should be enough to prove what the slaughterhouse is used for and the secret identity of the Janitor.,TRUE,Left,Normal,FALSE,0,FALSE
+Memory Files and Ducks Saved,5,4,Night,Main Duck,2,T-That was quacking insane... I could've died!,TRUE,Left,Italics,FALSE,0,FALSE
+Memory Files and Ducks Saved,5,4,Night,Main Duck,2,"But now with the Janitor out of the way, we should be safe for now.",TRUE,Left,Italics,FALSE,0,FALSE
+Memory Files and Ducks Saved,5,4,Night,Main Duck,2,"But it's already late, and Donald would have come rushing in if he was still in the breakroom. He must've left already.",TRUE,Left,Italics,FALSE,0,FALSE
+Memory Files and Ducks Saved,5,4,Night,Main Duck,2,I guess I'll have to <b>tell him what I found tomorrow.</b>,TRUE,Left,Italics,FALSE,0,FALSE
+Memory Files and Ducks Saved,5,4,Night,Main Duck,2,"For now, I'll get the rest of the ducks and leave. There's no way I'm quacking staying here a minute longer!",TRUE,Left,Italics,FALSE,0,FALSE
+Eggwin is a Snitch,5,5,Night,Eggwin,3,"Thank you, sir, for meeting with me at such short notice.",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,5,Night,Elon Duck,1,"Of course, I'm happy to have the chance to <b>meet with you Eggwin.</b>",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,5,Night,Elon Duck,1,"I believe in establishing one-on-one relationships with my employees, so if there are ever any problems, please feel free to reach out to me.",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,5,Night,Elon Duck,1,"And from the email you sent me, it seems you have <b>concerns</b> with a fellow duck?",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,5,Night,Eggwin,3,Yes sir. <b>I am worried about Main Duck.</b>,FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,5,Night,Eggwin,3,"I've only seen Main Duck in the morning today. And Donald, for whatever reason, took up their tasks for today instead of lounging in the breakroom.",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,5,Night,Eggwin,3,"I also noted that, while Main Duck did complete their tasks yesterday, they were running about and talking a lot with Donald. And we both know about Donald.",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,5,Night,Elon Duck,1,"Ah, yes. The delusional one.",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,5,Night,Eggwin,3,Eggs-actly. I am worried that Main Duck is <b>straying from their role</b> in the team and is <b>distracted</b> by Donald's crazy theories.,FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,5,Night,Eggwin,3,"That is why, for the good of the company, I emailed you for a meeting to talk about Main Duck and hopefully get them back on the right track.",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,5,Night,Elon Duck,1,"Well, this is certainly quite a good reason for concern! I saw potential in our new employee, but it saddens me that they have been steered in the wrong direction!",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,5,Night,Elon Duck,1,"However, I must commend you for your outstanding observation and dedication to the team! It is quacktastic to see how much you care for Nestla and the employees here.",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,5,Night,Elon Duck,1,I will think about the right course of action tonight and get back to you tomorrow. Do you mind if we <b>meet tomorrow before the offices open to discuss more about Main Duck?</b>,FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,5,Night,Eggwin,3,"Of course, sir! I understand it's already late, and I know you're a very busy duck.",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,5,Night,Elon Duck,1,"Hahaha, that's the life of a CEO.",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,5,Night,Elon Duck,1,"Well, you get on home now Eggwin. You are dismissed.",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,5,Night,Eggwin,3,"Thank you, sir. Goodnight.",FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,5,Night,Elon Duck,1,Goodnight.,FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,5,Night,None,0,"Once Eggwin leaves, Elon Duck checks the notification on his phone. He then frowns when he sees the <b>janitor's location mysteriously disappearing on the map of Nestla.</b>",FALSE,Left,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,5,Night,Elon Duck,1,Looks like someone stuck their beak where they are not supposed to. Tomorrow will be a long day of cleaning up.,FALSE,Right,Normal,FALSE,0,FALSE
+Eggwin is a Snitch,5,5,Night,Elon Duck,1,"After all, <b>no duck can know.</b>",FALSE,Right,Normal,FALSE,0,FALSE
 Find Donald to Discuss Findings in Killing Room,6,1,Day,Main Duck,2,"After escaping the slaughterhouse with all the ducks I saved, all of us immediately went home. I didn't have time to talk about what I found with Donald.",TRUE,Left,Italics,FALSE,0,FALSE
 Find Donald to Discuss Findings in Killing Room,6,1,Day,Main Duck,2,<b>I should find Donald.</b> He needs to know about what I found out yesterday.,TRUE,Left,Normal,FALSE,0,FALSE
 Gather the Ducks,6,2,Day,Donald,5,There you are! I tried lingering behind after everyone left yesterday but I never saw you.,TRUE,Right,Normal,FALSE,0,FALSE

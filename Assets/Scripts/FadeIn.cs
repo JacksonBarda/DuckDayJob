@@ -11,6 +11,8 @@ public class FadeIn : MonoBehaviour
     private Image image;
     private float originalAlpha;
     private bool running = false;
+    [SerializeField]
+    private PlayerMove player;
 
     // -------------  FADE IN COMES LAST ------------------------
 
@@ -34,6 +36,7 @@ public class FadeIn : MonoBehaviour
     private IEnumerator FadeInCoroutine(float fadeTime, Interactable task, bool callComplete)
     {
         running = true;
+        PlayerMove.puzzleMode = true;
         Debug.Log("FadeIn.cs: FadeInCoroutine >>>>>>>>>>>>>>>>>>>");
         // Calculate the target alpha (original alpha)
         float targetAlpha = originalAlpha;
@@ -61,6 +64,7 @@ public class FadeIn : MonoBehaviour
         image.color = finalColor;
 
         running = false;
+        PlayerMove.puzzleMode = false;
 
         if (!task.isCompleted && callComplete)
         {

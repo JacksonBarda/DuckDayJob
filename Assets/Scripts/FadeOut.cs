@@ -35,6 +35,7 @@ public class FadeOut : MonoBehaviour
     private IEnumerator FadeOutCoroutine(float fadeTime, Interactable targetObject)
     {
         running = true;
+        PlayerMove.puzzleMode = true;
         // Calculate the target alpha (fully opaque)
         float targetAlpha = 1f;
 
@@ -55,6 +56,7 @@ public class FadeOut : MonoBehaviour
             yield return null;
         }
         running = false;
+        PlayerMove.puzzleMode = false;
         // Call the function on the target object
         if (targetObject != null)
         {
