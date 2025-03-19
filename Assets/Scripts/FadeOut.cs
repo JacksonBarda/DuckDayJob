@@ -56,7 +56,7 @@ public class FadeOut : MonoBehaviour
             yield return null;
         }
         running = false;
-        PlayerMove.puzzleMode = false;
+        //PlayerMove.puzzleMode = false;
         // Call the function on the target object
         if (targetObject != null)
         {

@@ -91,6 +91,7 @@ public class JanitorDisablePuzzle : Interactable
 
         if (progressBar.value >= 98)
         {
+            disableJanitorPopup.SetActive(false);
             Complete();
         }
         //disableJanitorPopup.transform.LookAt(cameraTransfrom, Vector3.up);
