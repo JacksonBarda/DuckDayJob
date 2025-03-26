@@ -362,7 +362,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -9.982}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -49.150017, y: -44.650017}
+  m_AnchoredPosition: {x: -49.150017, y: -38.8}
   m_SizeDelta: {x: 200, y: 190}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4284525
@@ -2247,6 +2247,7 @@ MonoBehaviour:
   disableBeginningFade: 0
   disableEndingFade: 0
   UIManager: {fileID: 1206418959}
+  taskManager: {fileID: 1380391819}
   pivot: {fileID: 118037838}
   contButton: {fileID: 1504330710}
   endLocation: {fileID: 820599978}
@@ -5261,6 +5262,7 @@ MonoBehaviour:
   disableBeginningFade: 0
   disableEndingFade: 0
   UIManager: {fileID: 1206418959}
+  taskManager: {fileID: 1380391819}
   pivot: {fileID: 118037838}
   contButton: {fileID: 920346492}
   endLocation: {fileID: 193411363}
@@ -5850,7 +5852,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -9.982}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -49.150017, y: -44.650017}
+  m_AnchoredPosition: {x: -49.150017, y: -38.8}
   m_SizeDelta: {x: 200, y: 190}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &112309712
@@ -12468,6 +12470,7 @@ MonoBehaviour:
   disableBeginningFade: 0
   disableEndingFade: 0
   UIManager: {fileID: 1206418959}
+  taskManager: {fileID: 1380391819}
   pivot: {fileID: 118037838}
   contButton: {fileID: 167986623}
   endLocation: {fileID: 924772521}
@@ -13157,6 +13160,7 @@ MonoBehaviour:
   disableBeginningFade: 0
   disableEndingFade: 0
   UIManager: {fileID: 1206418959}
+  taskManager: {fileID: 1380391819}
   pivot: {fileID: 1711563799}
   contButton: {fileID: 80739370}
   endLocation: {fileID: 1975372651}
@@ -15175,6 +15179,7 @@ MonoBehaviour:
   disableBeginningFade: 0
   disableEndingFade: 0
   UIManager: {fileID: 1206418959}
+  taskManager: {fileID: 1380391819}
   pivot: {fileID: 1711563799}
   contButton: {fileID: 136262526}
   endLocation: {fileID: 1487762314}
@@ -17802,6 +17807,7 @@ MonoBehaviour:
   disableBeginningFade: 0
   disableEndingFade: 0
   UIManager: {fileID: 1206418959}
+  taskManager: {fileID: 1380391819}
   pivot: {fileID: 118037838}
   contButton: {fileID: 239994048}
   endLocation: {fileID: 1859022461}
@@ -23286,6 +23292,7 @@ MonoBehaviour:
   disableBeginningFade: 0
   disableEndingFade: 0
   UIManager: {fileID: 1206418959}
+  taskManager: {fileID: 1380391819}
   pivot: {fileID: 118037838}
   contButton: {fileID: 188212554}
   endLocation: {fileID: 1010359169}
@@ -28130,7 +28137,7 @@ MonoBehaviour:
   m_text: Return To Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 4289996165526141859, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -30556,7 +30563,7 @@ MonoBehaviour:
   m_text: Ducks
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 4289996165526141859, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -30619,7 +30626,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &622718323
@@ -43793,6 +43800,7 @@ MonoBehaviour:
   disableBeginningFade: 1
   disableEndingFade: 1
   UIManager: {fileID: 1206418959}
+  taskManager: {fileID: 1380391819}
   pivot: {fileID: 1711563799}
   contButton: {fileID: 1509031352}
   endLocation: {fileID: 801806475}
@@ -48161,7 +48169,7 @@ MonoBehaviour:
   m_text: Audio
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 4289996165526141859, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -48224,7 +48232,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &932932915
@@ -56070,7 +56078,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -9.982}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -49.150017, y: -44.650017}
+  m_AnchoredPosition: {x: -49.150017, y: -38.8}
   m_SizeDelta: {x: 200, y: 190}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1080446227
@@ -56753,7 +56761,7 @@ MonoBehaviour:
   m_text: SFX
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 4289996165526141859, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -58939,6 +58947,7 @@ MonoBehaviour:
   disableBeginningFade: 0
   disableEndingFade: 0
   UIManager: {fileID: 1206418959}
+  taskManager: {fileID: 1380391819}
   pivot: {fileID: 1711563799}
   contButton: {fileID: 203229678}
   endLocation: {fileID: 1262099916}
@@ -59975,7 +59984,7 @@ MonoBehaviour:
   m_text: Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 4289996165526141859, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -60038,7 +60047,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1164426843
@@ -60117,6 +60126,7 @@ MonoBehaviour:
   disableBeginningFade: 0
   disableEndingFade: 0
   UIManager: {fileID: 1206418959}
+  taskManager: {fileID: 1380391819}
   pivot: {fileID: 1711563799}
   contButton: {fileID: 1601981214}
   endLocation: {fileID: 1315064905}
@@ -67262,6 +67272,7 @@ MonoBehaviour:
   disableBeginningFade: 0
   disableEndingFade: 0
   UIManager: {fileID: 1206418959}
+  taskManager: {fileID: 1380391819}
   pivot: {fileID: 1711563799}
   contButton: {fileID: 203229678}
   endLocation: {fileID: 2085552228}
@@ -68608,6 +68619,7 @@ MonoBehaviour:
   disableBeginningFade: 0
   disableEndingFade: 0
   UIManager: {fileID: 1206418959}
+  taskManager: {fileID: 1380391819}
   pivot: {fileID: 118037838}
   contButton: {fileID: 167986623}
   endLocation: {fileID: 791613285}
@@ -71111,6 +71123,7 @@ MonoBehaviour:
   maxDays: 7
   ptCount: 0
   day: 1
+  isNight: 0
 --- !u!4 &1380391820
 Transform:
   m_ObjectHideFlags: 0
@@ -78346,6 +78359,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1541893033
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1541893034}
+  - component: {fileID: 1541893035}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1541893034
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541893033}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1655320547}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1541893035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541893033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99aaaefc83d7de34484b91239806d607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dayNum: []
+  TM: {fileID: 1380391819}
 --- !u!1 &1541921459
 GameObject:
   m_ObjectHideFlags: 0
@@ -80739,6 +80798,7 @@ MonoBehaviour:
   disableBeginningFade: 0
   disableEndingFade: 0
   UIManager: {fileID: 1206418959}
+  taskManager: {fileID: 1380391819}
   pivot: {fileID: 1711563799}
   contButton: {fileID: 1391286279}
   endLocation: {fileID: 615167985}
@@ -81144,7 +81204,7 @@ GameObject:
   - component: {fileID: 1596334181}
   - component: {fileID: 1596334180}
   m_Layer: 0
-  m_Name: ExitGameBTN
+  m_Name: ExitToMenuBTN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81167,7 +81227,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 70.5, y: -79.7}
-  m_SizeDelta: {x: 80, y: 10}
+  m_SizeDelta: {x: 85.09, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1596334180
 MonoBehaviour:
@@ -81212,7 +81272,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1596334181}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1541893035}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnExitToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1596334181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81233,7 +81305,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exit Game
+  m_text: Exit To Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
   m_sharedMaterial: {fileID: 4289996165526141859, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
@@ -85121,6 +85193,7 @@ Transform:
   - {fileID: 1066142558}
   - {fileID: 289112760}
   - {fileID: 1643477343}
+  - {fileID: 1541893034}
   - {fileID: 1380391820}
   - {fileID: 1206418958}
   m_Father: {fileID: 0}
@@ -85187,7 +85260,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 4289996165526141859, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -85447,6 +85520,7 @@ MonoBehaviour:
   disableBeginningFade: 0
   disableEndingFade: 0
   UIManager: {fileID: 1206418959}
+  taskManager: {fileID: 1380391819}
   pivot: {fileID: 1711563799}
   contButton: {fileID: 160131202}
   endLocation: {fileID: 1278050221}
@@ -86527,6 +86601,7 @@ MonoBehaviour:
   disableBeginningFade: 0
   disableEndingFade: 0
   UIManager: {fileID: 1206418959}
+  taskManager: {fileID: 1380391819}
   pivot: {fileID: 118037838}
   contButton: {fileID: 996196404}
   endLocation: {fileID: 336195954}
@@ -87428,6 +87503,7 @@ MonoBehaviour:
   disableBeginningFade: 0
   disableEndingFade: 0
   UIManager: {fileID: 1206418959}
+  taskManager: {fileID: 1380391819}
   pivot: {fileID: 118037838}
   contButton: {fileID: 735700018}
   endLocation: {fileID: 133435879}
@@ -89074,7 +89150,7 @@ MonoBehaviour:
   m_text: Dialogue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 4289996165526141859, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -95673,7 +95749,7 @@ MonoBehaviour:
   m_text: Ducks
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 4289996165526141859, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -98353,7 +98429,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1923119015}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1541893035}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnLoadGameState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1923119015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103406,7 +103494,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -25}
-  m_SizeDelta: {x: 80, y: 10}
+  m_SizeDelta: {x: 87.32, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2034687610
 MonoBehaviour:
@@ -103472,10 +103560,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exit Game
+  m_text: Save and Exit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 4289996165526141859, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -103538,7 +103626,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2034687612
@@ -105080,7 +105168,7 @@ MonoBehaviour:
   m_text: Music
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 4289996165526141859, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -108534,6 +108622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04da00a821ad0b54b9227423a31bf797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GM: {fileID: 1541893035}
   UI_MainMenu: {fileID: 872034986}
   UI_AudioMenu: {fileID: 1999058562}
   UI_CharacterMenu: {fileID: 960625364}
@@ -109509,7 +109598,7 @@ MonoBehaviour:
   m_text: Return To Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 4289996165526141859, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

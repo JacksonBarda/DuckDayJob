@@ -42,8 +42,6 @@ public class VendingMachine : Interactable
 
     public override void Complete()
     {
-
-        Debug.Log("Complete");
         base.Complete();
     }
 

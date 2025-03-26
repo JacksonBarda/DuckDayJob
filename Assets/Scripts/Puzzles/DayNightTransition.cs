@@ -26,6 +26,8 @@ public class DayNightTransition : Interactable
     [SerializeField]
     private UIManager UIManager;
     [SerializeField]
+    private TaskManager taskManager;
+    [SerializeField]
     private RectTransform pivot;
     [SerializeField] 
     private GameObject contButton;
@@ -131,11 +133,13 @@ public class DayNightTransition : Interactable
         if (dayToNight)
         {
             UIManager.SetNightTime();
+            taskManager.isNight = true;
 
         }
         else
         {
             UIManager.SetMorningTime();
+            taskManager.isNight = false;
         }
 		isCompleted = true;
 		TaskManager.onTaskComplete(this);

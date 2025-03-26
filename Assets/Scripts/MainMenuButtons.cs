@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
 using UnityEngine.UI;
 
 public class MainMenuButtons : MonoBehaviour
@@ -13,44 +14,58 @@ public class MainMenuButtons : MonoBehaviour
     private GameObject SettingButton;
     [SerializeField]
     private GameObject NameMenu;
-
     [SerializeField]
     private TMP_InputField playerInput;
+    [SerializeField]
+    private int saveSelected;
 
     private void Start()
     {
         PlayerPrefs.SetString("playerName", null);
-    }
-    public void OnStartClicked()
-    {
+        NameMenu.SetActive(false);
+        MainMenu.SetActive(true);
 
-        string _playerName = PlayerPrefs.GetString("playerName");
-        Debug.Log(_playerName);
-        if (_playerName != "")
-        {
-            SceneManager.LoadScene("MainScene");
-        }
-        else
-        {
-            MainMenu.SetActive(false);
-            NameMenu.SetActive(true);
-        }
-        
+        if (SceneManager.GetSceneByName("MainScene").isLoaded) SceneManager.UnloadSceneAsync("MainScene");
     }
+
+    public void OnNewGameClicked()
+    {
+        MainMenu.SetActive(false);
+        NameMenu.SetActive(true);
+    }
+
+    public void OnLoadSaveClicked()
+    {
+        MainMenu.SetActive(false);
+
+        string filePath = "Saves/saveFile.json";
+        if (File.Exists(filePath))
+        {
+            GameManager.loadSave = true;
+        }
+
+        SceneManager.LoadScene("MainScene");
+    }
+
+    public void OnBackClicked()
+    {
+        NameMenu.SetActive(false);
+        MainMenu.SetActive(true);
+    }
+
+    
     public void OnSettingsClicked()
     {
 
     }
-    public void OnBackClicked()
-    {
 
-    }
-    public void OnEnterNameClicked()
+    public void OnLoadNewGame()
     {
         PlayerPrefs.SetString("playerName", playerInput.text);
         PlayerPrefs.Save();
         SceneManager.LoadScene("MainScene");
     }
+
     public void OnQuitClicked()
     {
         #if UNITY_EDITOR

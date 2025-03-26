@@ -37,7 +37,7 @@ public class TaskManager : MonoBehaviour
     public int ptCount = 0;
 
     public int day = 1;
-
+    public bool isNight;
 
 
     public delegate void OnTaskComplete(Interactable _task);
@@ -63,45 +63,44 @@ public class TaskManager : MonoBehaviour
 
     public void CheatSkipToDay(int dayInput)
     {
-        for (int i = 0; i < dayInput-1; i++)
+        for (int i = 0; i < dayInput-1; i++)    // days
         {
-            for (int j = 0; j < 6; j++)
+            for (int j = 0; j < 6; j++)         //parts
             {
-                foreach (Interactable task in tasksByDay[i].GetInteractables((PartIdentifier)j))
+                foreach (Interactable task in tasksByDay[i].GetInteractables((PartIdentifier)j)) //get all tasks in Day "i" in Part "j"
                 {
-
-                    //if (task.GetComponent<DayNightTransition>() != null && task.objectToActivate != null)
-                    //{
-                    //    foreach (GameObject obj in task.objectToActivate)
-                    //    {
-                    //         obj.gameObject.SetActive(!obj.gameObject.activeSelf);
-                    //    }
-
-                    //}
-                    //else task.Complete();
-                    foreach (GameObject obj in task.objectToActivate)
-                    {
-                        obj.gameObject.SetActive(!obj.gameObject.activeSelf);
-                    }
-                    if (task.GetComponent<CinematicSequenceTool>() != null)
-                    {
-                        Debug.Log("TaskManager: Checking shots for interactables...");
-                        foreach(Shot cineShot in task.GetComponent<CinematicSequenceTool>().getListOfShots())
-                        {
-                            if (cineShot.sceneChangeInteractable != null)
-                            {
-                                cineShot.sceneChangeInteractable.Interact();
-                                Debug.Log("TaskManager: Skipping shot interactable - " + cineShot.sceneChangeInteractable);
-                            }
-                        }
-                    }
-                    task.Complete();
-                    task.gameObject.SetActive(false);
+                    CheatCompleteTask(task);
                 }
             }
             
         }
     }
+
+    public void CheatCompleteTask(Interactable task)
+    {
+        if (task.activatePostPuzzle && task.objectToActivate != null)
+        {
+            foreach (GameObject obj in task.objectToActivate)
+            {
+                obj.gameObject.SetActive(!obj.gameObject.activeSelf);
+            }
+        }
+        if (task.GetComponent<CinematicSequenceTool>() != null)
+        {
+            Debug.Log("TaskManager: Checking shots for interactables...");
+            foreach (Shot cineShot in task.GetComponent<CinematicSequenceTool>().getListOfShots())
+            {
+                if (cineShot.sceneChangeInteractable != null)
+                {
+                    cineShot.sceneChangeInteractable.Interact();
+                    Debug.Log("TaskManager: Skipping shot interactable - " + cineShot.sceneChangeInteractable);
+                }
+            }
+        }
+        task.Complete();
+        task.gameObject.SetActive(false);
+    }
+
     public PartIdentifier GetCurrentPart()
     {
         return currentPt;
@@ -390,7 +389,17 @@ public class TaskManager : MonoBehaviour
         }
     }
 
+    public List<Interactable> getCompletedTasksOfPart()
+    {
+        List<Interactable> currentTaskList = tasksByDay[day - 1].GetInteractables(GetCurrentPart());
+        List<Interactable> completedTasks = new List<Interactable>();
+        foreach (Interactable task in currentTaskList)
+        {
+            if (task.isCompleted) completedTasks.Add(task);
+        }
 
+        return completedTasks;
+    }
 }
 
 

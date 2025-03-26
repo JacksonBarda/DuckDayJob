@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class PauseScript : MonoBehaviour
 {
     [SerializeField]
+    private GameManager GM;
+    [SerializeField]
     private GameObject UI_MainMenu;
     [SerializeField]
     private GameObject UI_AudioMenu;
@@ -74,16 +76,19 @@ public class PauseScript : MonoBehaviour
     }
     public void ExitGame()
     {
-        #if UNITY_EDITOR
-            // If running in the Unity editor
-            if (UnityEditor.EditorApplication.isPlaying)
-            {
-                // If in play mode, exit play mode
-                UnityEditor.EditorApplication.ExitPlaymode();
-            }
-        #else
-            // If not running in the Unity editor, quit the application
-            Application.Quit();
-        #endif  
+        GM.OnExitToMenu();
+        GM.OnSaveGameState();
+
+        //#if UNITY_EDITOR
+        //    // If running in the Unity editor
+        //    if (UnityEditor.EditorApplication.isPlaying)
+        //    {
+        //        // If in play mode, exit play mode
+        //        UnityEditor.EditorApplication.ExitPlaymode();
+        //    }
+        //#else
+        //    // If not running in the Unity editor, quit the application
+        //    Application.Quit();
+        //#endif  
     }
 }
