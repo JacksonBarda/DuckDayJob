@@ -34,6 +34,8 @@ public class UIManager : MonoBehaviour
     private List<GameObject> taskList;
     [SerializeField]
     private List<GameObject> progressDucks;
+	[SerializeField]
+	private GameObject SaveProgressNotifText;
 
     public int dayNumber = 1;
     public DayEnum dayOrNight = DayEnum.Day;
@@ -60,6 +62,9 @@ public class UIManager : MonoBehaviour
 		setLocation(startingLocation);
         day.text = "Day " + dayNumber;
         time.text = hour + ":00 " + meridiem;
+
+		SaveProgressNotifText.SetActive(true);
+		SaveProgressNotifText.GetComponent<Text>().color = new Color(1,1,1,0);
     }
 
     // Update is called once per frame
@@ -369,4 +374,21 @@ public class UIManager : MonoBehaviour
                                                     PlayerMove.GetInteractable().transform.position.y,
                                                     PlayerMove.GetInteractable().transform.position.z);
     }
+
+	public IEnumerator NotifySaveProgress()
+    {
+		Debug.Log("UIManager: NotifySaveProgress()");
+		SaveProgressNotifText.GetComponent<Text>().color = new Color(1, 1, 1, 1);
+
+		yield return new WaitForSeconds(3f);
+
+		while (SaveProgressNotifText.GetComponent<Text>().color.a > 0)
+        {
+			Color currentColor = SaveProgressNotifText.GetComponent<Text>().color;
+			currentColor.a -= .3f * Time.deltaTime;
+			SaveProgressNotifText.GetComponent<Text>().color = currentColor;
+			//Debug.Log("UIManager: currentColor = " + currentColor);
+			yield return null;
+		}
+	}
 }

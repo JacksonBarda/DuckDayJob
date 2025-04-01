@@ -9,6 +9,7 @@ public class CheatsForDebug : MonoBehaviour
     [SerializeField]
     private GameObject CheatMenu;
     public TaskManager TaskManager;
+    public UIManager uiManager;
     public PlayerMove PlayerMove;
 
     [SerializeField]
@@ -71,5 +72,11 @@ public class CheatsForDebug : MonoBehaviour
             }
         }
         
+    }
+
+    public void TriggerFunction()
+    {
+        Debug.Log("CheatManager: Triggered function - UIManager.NotifySaveProgress()");
+        StartCoroutine(uiManager.NotifySaveProgress());
     }
 }

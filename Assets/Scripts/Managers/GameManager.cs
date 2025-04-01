@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     private Day[] dayNum;
     [SerializeField]
     TaskManager TM;
+    [SerializeField]
+    UIManager uiManager;
 
     public static bool loadSave;
 
@@ -26,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     public void OnSaveGameState()   
     {
-        Debug.LogError("GameManager: OnSaveState()");
+        Debug.Log("GameManager: OnSaveState()");
         
         GameData saveState = new GameData();
 
@@ -39,6 +41,9 @@ public class GameManager : MonoBehaviour
         string json = JsonUtility.ToJson(saveState);
 
         File.WriteAllText("Saves/saveFile.json", json); //+ gameSaveSlot + ".json", json);
+
+        StartCoroutine(uiManager.NotifySaveProgress());
+        //StartCoroutine()
     }
 
     public void OnLoadGameState() //change to take save file for input
@@ -66,6 +71,7 @@ public class GameManager : MonoBehaviour
 
         foreach (Interactable task in save.completedTasksInPart)    //  complete tasks in list
         {
+            task.gameObject.SetActive(true);
             TM.CheatCompleteTask(task);
         }
     }

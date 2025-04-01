@@ -39,6 +39,8 @@ public class TaskManager : MonoBehaviour
     public int day = 1;
     public bool isNight;
 
+    [SerializeField]
+    private GameManager GM;
 
     public delegate void OnTaskComplete(Interactable _task);
     public static OnTaskComplete onTaskComplete;
@@ -185,18 +187,18 @@ public class TaskManager : MonoBehaviour
         bool countCheck = true;
 
 
-        foreach (Interactable task in tasksByDay[day - 1].GetInteractables(currentPt))
+        foreach (Interactable task in tasksByDay[day - 1].GetInteractables(currentPt))          // for every task in the current part
         {
-            if ((task.isCompleted || task.isOptional) && !task.counted)
+            if ((task.isCompleted || task.isOptional) && !task.counted)                             // if the task is completed or optional and hasnt been counted yet
             {
                 count++;
                 task.counted = true;
 				UIManager.Instance.UpdateTime(UnityEngine.Random.Range(0.1f, 0.5f));
 			}
         }
-        if (count >= tasksByDay[day - 1].GetInteractables(currentPt).Count)
+        if (count >= tasksByDay[day - 1].GetInteractables(currentPt).Count)                     // if all tasks of the current part are done
         {
-            foreach (Interactable task in tasksByDay[day - 1].GetInteractables(currentPt))
+            foreach (Interactable task in tasksByDay[day - 1].GetInteractables(currentPt))          // for each task in the current part
             {
                 if(task.stayActive != true)
                 {
@@ -210,7 +212,7 @@ public class TaskManager : MonoBehaviour
 
 			while (countCheck)
             {
-                if(tasksByDay[day - 1].GetInteractables(currentPt).Count == 0)
+                if(tasksByDay[day - 1].GetInteractables(currentPt).Count == 0)                      // if part is empty
                 {
 
                     currentPt++;
@@ -315,6 +317,8 @@ public class TaskManager : MonoBehaviour
         PlayerPrefs.SetInt("ptCount", ptCount);
         PlayerPrefs.SetInt("Health", health);
         PlayerPrefs.Save();
+
+        GM.OnSaveGameState();
     }
     public Interactable findCurrentInteractable()
     {
