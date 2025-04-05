@@ -191,7 +191,7 @@ public class TaskManager : MonoBehaviour
         {
             if ((task.isCompleted || task.isOptional) && !task.counted)                             // if the task is completed or optional and hasnt been counted yet
             {
-                count++;
+                count++;                                                                                // update variable count
                 task.counted = true;
 				UIManager.Instance.UpdateTime(UnityEngine.Random.Range(0.1f, 0.5f));
 			}
@@ -202,7 +202,7 @@ public class TaskManager : MonoBehaviour
             {
                 if(task.stayActive != true)
                 {
-                    task.gameObject.SetActive(false);
+                    task.gameObject.SetActive(false);                                               // hide task, unless stayActive is true
                 }
 
             }
@@ -210,7 +210,9 @@ public class TaskManager : MonoBehaviour
 			UIManager.Instance.UpdateTime(UnityEngine.Random.Range(0.4f, 0.8f));
 			currentPt++;
 
-			while (countCheck)
+            // =========================== CURRENT PART UPDATED ===============================================================================================================
+
+            while (countCheck)
             {
                 if(tasksByDay[day - 1].GetInteractables(currentPt).Count == 0)                      // if part is empty
                 {
@@ -260,6 +262,10 @@ public class TaskManager : MonoBehaviour
         count = 0;
 		foreach (Interactable task in tasksByDay[day - 1].GetInteractables(currentPt))
         {
+            if (task.isVisibleOnStart && task.gameObject.activeSelf == false)
+            {
+                task.gameObject.SetActive(true);
+            }
 			String textToShow = task.name;
 			if (task.taskName != null &&  task.taskName.Length > 0)
             {
