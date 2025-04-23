@@ -111,7 +111,7 @@ public class DayNightTransition : Interactable
         player.gameObject.transform.position = endLocation.position;
         playerCamera.SetBumps(endRoom);
         UIManager.setLocation(endRoom);
-		if (activatePostPuzzle)
+		if (objectToActivate != null)
 		{
 			foreach (GameObject thingToActivate in objectToActivate)
 			{

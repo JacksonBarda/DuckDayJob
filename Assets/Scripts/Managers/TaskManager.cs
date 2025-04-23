@@ -80,22 +80,24 @@ public class TaskManager : MonoBehaviour
 
     public void CheatCompleteTask(Interactable task)
     {
-        if (task.activatePostPuzzle && task.objectToActivate != null)
-        {
-            foreach (GameObject obj in task.objectToActivate)
-            {
-                obj.gameObject.SetActive(!obj.gameObject.activeSelf);
-            }
-        }
+        Debug.Log("TaskManager.CheatCompleteTask(): Checking skipped task (" + task + ") for objects to activate...");
+        //if (task.activatePostPuzzle && task.objectToActivate != null)
+        //{
+        //    foreach (GameObject obj in task.objectToActivate)
+        //    {
+        //        obj.gameObject.SetActive(!obj.gameObject.activeSelf);
+        //        Debug.Log("TaskManager.CheatCompleteTask(): " + (obj.gameObject.activeSelf ? "Activated" : "Deactivated") + " " + obj);
+        //    }
+        //}
         if (task.GetComponent<CinematicSequenceTool>() != null)
         {
-            Debug.Log("TaskManager: Checking shots for interactables...");
+            Debug.Log("TaskManager.CheatCompleteTask(): Checking shots for interactables...");
             foreach (Shot cineShot in task.GetComponent<CinematicSequenceTool>().getListOfShots())
             {
                 if (cineShot.sceneChangeInteractable != null)
                 {
                     cineShot.sceneChangeInteractable.Interact();
-                    Debug.Log("TaskManager: Skipping shot interactable - " + cineShot.sceneChangeInteractable);
+                    Debug.Log("TaskManager.CheatCompleteTask(): Interacted with shot interactable - " + cineShot.sceneChangeInteractable);
                 }
             }
         }
@@ -252,11 +254,6 @@ public class TaskManager : MonoBehaviour
         {
             _task.gameObject.SetActive(false);
         }
-        // if (tasksByDay[day - 1].GetInteractables(currentPt)[count] != null && tasksByDay[day - 1].GetInteractables(currentPt)[count].forcePlay)
-        //{
-        //    tasksByDay[day - 1].GetInteractables(currentPt)[count].Interact();
-        //} 
-
 
         int holdCount = count;
         count = 0;

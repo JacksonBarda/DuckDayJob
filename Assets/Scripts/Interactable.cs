@@ -44,21 +44,23 @@ public class Interactable : MonoBehaviour
     public virtual void Complete()
     {
 
-		if (activatePostPuzzle)
+		if (objectToActivate != null)
         {
             foreach (GameObject thingToActivate in objectToActivate)
             {
                 if (thingToActivate != null && !counted)
                 {
-
                     if (thingToActivate.name.Contains("Door"))   //if GameObject is a door, toggle isLocked bool
                     {
                         thingToActivate.GetComponent<DoorInteract>().isLocked = !thingToActivate.GetComponent<DoorInteract>().isLocked;
+                        Debug.Log("Interactable.cs: Setting " + thingToActivate + " to " + (thingToActivate.GetComponent<DoorInteract>().isLocked ? "locked" : "unlocked"));
                     }
                     else
                     {
                         thingToActivate.gameObject.SetActive(!thingToActivate.gameObject.activeSelf);
+                        Debug.Log("Interactable.cs: Setting " + thingToActivate + " to " + (thingToActivate.gameObject.activeSelf ? "active" : "inactive"));
                     }
+                
                 } 
             }
         }
