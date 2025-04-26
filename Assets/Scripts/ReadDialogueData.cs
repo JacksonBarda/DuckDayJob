@@ -88,13 +88,6 @@ public class ReadDialogueData : MonoBehaviour
         //setDialogueTools();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
     public void getData()
     {
         DialogList.Clear();
@@ -162,6 +155,19 @@ public class ReadDialogueData : MonoBehaviour
         {                                                                                                       // instead is called by CinemaManager
             DialogTool.GetComponent<DialogueTool>().index++;
             DialogTool.GetComponent<DialogueTool>().setDialogueUI();
+
+            if (DialogTool.GetComponent<DialogueTool>().InteractableOnLine != null)
+            {
+                foreach (var thing in DialogTool.GetComponent<DialogueTool>().InteractableOnLine)
+                {
+                    if (DialogTool.GetComponent<DialogueTool>().index == thing.lineToInteract)
+                    {
+                        thing.thingToInteract.gameObject.SetActive(true);
+                        thing.thingToInteract.Interact();
+                    }
+                }
+                
+            }
         }
         //    //Debug.Log("Clicky");
         //   // if (DialogTool.GetComponent<DialogueTool>().hadOption == false){

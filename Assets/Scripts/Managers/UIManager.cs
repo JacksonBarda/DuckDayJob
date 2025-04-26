@@ -65,6 +65,8 @@ public class UIManager : MonoBehaviour
 
 		SaveProgressNotifText.SetActive(true);
 		SaveProgressNotifText.GetComponent<Text>().color = new Color(1,1,1,0);
+
+		InteractionPopup.SetActive(false);
     }
 
     // Update is called once per frame
@@ -271,7 +273,7 @@ public class UIManager : MonoBehaviour
 				if (PlayerMove.GetInteractable().customPopupName != null && PlayerMove.GetInteractable().customPopupName != "")
 				{
 					interactableName = PlayerMove.GetInteractable().customPopupName;
-					SetInteractionPopupLoc();
+					//SetInteractionPopupLoc();
 				}
 				else
 				{
@@ -281,7 +283,7 @@ public class UIManager : MonoBehaviour
 					{
 						case string x when x.Contains("Duckette"):
 							interactableName = "Duckette";
-							SetInteractionPopupLoc();
+							//SetInteractionPopupLoc();
 							break;
 						case string x when x.Contains("MainDuck"):
 							interactableName = PlayerPrefs.GetString("playerName") != null ? PlayerPrefs.GetString("playerName") : "MainDuck";
@@ -290,52 +292,52 @@ public class UIManager : MonoBehaviour
 							break;
 						case string x when x.Contains("Eggwin"):
 							interactableName = "Eggwin";
-							SetInteractionPopupLoc();
+							//SetInteractionPopupLoc();
 							break;
 						case string x when x.Contains("Donald"):
 							interactableName = "Donald";
-							SetInteractionPopupLoc();
+							//kSetInteractionPopupLoc();
 							break;
 						case string x when x.Contains("Quackson"):
 							interactableName = "Quackson";
-							SetInteractionPopupLoc();
+							//SetInteractionPopupLoc();
 							break;
 						case string x when x.Contains("ElonDuck"):
 							interactableName = "Elon Duck";
-							SetInteractionPopupLoc();
+							//SetInteractionPopupLoc();
 							break;
 						case string x when x.Contains("Janitor"):
 							interactableName = "Janitor";
-							SetInteractionPopupLoc();
+							//SetInteractionPopupLoc();
 							break;
 						case string x when x.Contains("NPC"):
 							interactableName = "NPC";
-							SetInteractionPopupLoc();
+							//SetInteractionPopupLoc();
 							break;
 						case string x when x.Contains("Door") || x.Contains("Vent"):
 							DoorInteract door = (DoorInteract)PlayerMove.GetInteractable();
 							interactableName = door.endRoom.ToString();
-							SetInteractionPopupLocForDoor();
+							//SetInteractionPopupLocForDoor();
 							break;
 						case string x when x.Contains("BathroomStalls"):
 							interactableName = "Empty Stall";
-							SetInteractionPopupLoc();
+							//SetInteractionPopupLoc();
 							break;
 						case string x when x.Contains("InteractCad"):
 							interactableName = "Computer";
-							SetInteractionPopupLoc();
+							//SetInteractionPopupLoc();
 							break;
 						case string x when x.Contains("InteractVM"):
 							interactableName = "Vending Machine";
-							SetInteractionPopupLoc();
+							//SetInteractionPopupLoc();
 							break;
 						case string x when x.Contains("DucketteHack"):
 							interactableName = "Duckette's Computer";
-							SetInteractionPopupLoc();
+							//SetInteractionPopupLoc();
 							break;
 						case string x when x.Contains("EmailDecrypt"):
 							interactableName = "Elon Duck's Computer";
-							SetInteractionPopupLoc();
+							//SetInteractionPopupLoc();
 							break;
 						default:
 							interactableName = "Interact";
@@ -349,8 +351,8 @@ public class UIManager : MonoBehaviour
 				if (!playerName)
 				{
 					InteractionPopup.SetActive(true);
-					InteractionPopup.transform.LookAt(cameraTransfrom, Vector3.up);
-					InteractionPopup.transform.eulerAngles = new Vector3(InteractionPopup.transform.eulerAngles.x, InteractionPopup.transform.eulerAngles.y + 180f, InteractionPopup.transform.eulerAngles.z);
+					//InteractionPopup.transform.LookAt(cameraTransfrom, Vector3.up);
+					//InteractionPopup.transform.eulerAngles = new Vector3(InteractionPopup.transform.eulerAngles.x, InteractionPopup.transform.eulerAngles.y + 180f, InteractionPopup.transform.eulerAngles.z);
 
 					interactableText.text = interactableName;
 				}

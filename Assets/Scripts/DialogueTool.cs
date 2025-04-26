@@ -37,6 +37,10 @@ public class DialogueTool : Interactable
     private bool retrieval;
     [SerializeField]
     public bool recordAnswer = false;
+
+    [SerializeField]
+    public List<InteractOnLine> InteractableOnLine;
+
     [SerializeField]
     private GameObject optionButtonPrefab;
     [SerializeField]
@@ -89,6 +93,13 @@ public class DialogueTool : Interactable
     private int holdIndex = 0;
     private DialogStruct lastDialogue;
     private int attempts = 0;
+
+    [System.Serializable]
+    public struct InteractOnLine
+    {
+        public Interactable thingToInteract;
+        public int lineToInteract;
+    }
 
     // Start is called before the first frame update
     void Awake()

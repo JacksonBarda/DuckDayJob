@@ -65,7 +65,7 @@ public class Interactable : MonoBehaviour
             }
         }
         isCompleted = true;
-		UIManager.InteractionPopup.SetActive(true);
+		//UIManager.InteractionPopup.SetActive(true);
 		TaskManager.onTaskComplete(this);
         Debug.Log(this + ": Complete");
     }

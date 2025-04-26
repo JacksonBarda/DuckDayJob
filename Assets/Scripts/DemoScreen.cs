@@ -17,12 +17,10 @@ public class DemoScreen : Interactable
 
     private bool scrollCredits = true;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         puzzleUI.SetActive(false);
         credits.SetActive(false);
-        //endingNote.SetActive(false);
     }
 
     public override void Interact()
