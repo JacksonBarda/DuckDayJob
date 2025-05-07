@@ -205,6 +205,7 @@ public class TaskManager : MonoBehaviour
                 if(task.stayActive != true)
                 {
                     task.gameObject.SetActive(false);                                               // hide task, unless stayActive is true
+                    Debug.Log("TM: 1");
                 }
 
             }
@@ -252,7 +253,11 @@ public class TaskManager : MonoBehaviour
             _task.mainUI.SetActive(true);
         if (!_task.repeatable)
         {
-            _task.gameObject.SetActive(false);
+            if ((_task.GetComponent<DialogueTool>() != null && _task.GetComponent<DialogueTool>().talkAgainList.Count == 0) || _task.GetComponent<DialogueTool>() == null)
+            {
+                _task.gameObject.SetActive(false);
+                Debug.Log("TM: 2");
+            }
         }
 
         int holdCount = count;

@@ -39,12 +39,16 @@ public class CinemaManager : MonoBehaviour
     {
         cinemaMode = true;
         currentSequence = sequence;
+        mainCamera.gameObject.SetActive(false);
+        cinematicCamera.gameObject.SetActive(true);
     }
 
     public void DeactivateSequence()
     {
         cinemaMode = false;
         sequenceIndex++;
+        mainCamera.gameObject.SetActive(true);
+        cinematicCamera.gameObject.SetActive(false);
     }
 
     public void OnNextDialogueLine()

@@ -530,7 +530,7 @@ Before Lock Puzzle 4,4,3,Night,Main Duck,2,"Fine, hand it over. I wouldn't get y
 After Lock Puzzle 4,4,4,Night,Main Duck,2,I... I DID IT!,TRUE,Left,Normal,FALSE,4,FALSE
 After Lock Puzzle 4,4,4,Night,Donald,5,"There we go! Great job, Main Duck! Now we can <b>investigate Elon Duck's Office.</b>",TRUE,Right,Normal,FALSE,4,FALSE
 Before Email Decryption Puzzle,4,5,Night,Donald,5,*sigh* I can't find anything over here... Besides evidence of this duck's ego problem.,TRUE,Right,Normal,FALSE,0,FALSE
-Before Email Decryption Puzzle,4,5,Night,Main Duck,2,"Look, Elon Duck <b>left his phone here.</b> Maybe we'll find evidence on here.",TRUE,Left,Normal,FALSE,0,FALSE
+Before Email Decryption Puzzle,4,5,Night,Main Duck,2,"Look, Elon Duck <b>left his laptop here.</b> Maybe we'll find evidence on here.",TRUE,Left,Normal,FALSE,0,FALSE
 Before Email Decryption Puzzle,4,5,Night,Donald,5,"Oooh, great idea Main Duck! I knew you were the perfect duck for the job!",TRUE,Right,Normal,FALSE,0,FALSE
 Before Email Decryption Puzzle,4,5,Night,Main Duck,2,"Heh, well I have hacked into Duckette's computer before...",TRUE,Left,Italics,FALSE,0,FALSE
 Before Email Decryption Puzzle,4,5,Night,Main Duck,2,Though it's strange that Elon Duck left his phone here. Maybe he was in a hurry?,TRUE,Left,Italics,FALSE,0,FALSE

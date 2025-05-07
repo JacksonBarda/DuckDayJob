@@ -49,15 +49,6 @@ public class CinematicSequenceTool : Interactable
     public override void Interact()
     {
         StartCoroutine(InitializeCoroutine());
-        //camMain = CM.mainCamera;
-        //camCinematic = CM.cinematicCamera;
-        //CM.ActivateSequence(this);
-        //dialogue.Interact();
-        //camMain.gameObject.SetActive(false);
-        //camCinematic.gameObject.SetActive(true);
-        //dialogueIndex = 0;
-        //NextLine();
-        
     }
 
 
@@ -187,11 +178,11 @@ public class CinematicSequenceTool : Interactable
 
         if (currentShot.sceneChangeInteractable != null) currentShot.sceneChangeInteractable.Interact();
 
-        if (shotIndex == listOfShots.Count)
-        {
-            camMain.gameObject.SetActive(true);
-            camCinematic.gameObject.SetActive(false);
-        }
+        //if (shotIndex == listOfShots.Count)
+        //{
+        //    camMain.gameObject.SetActive(true);
+        //    camCinematic.gameObject.SetActive(false);
+        //}
         //CinemaManager.IterateDialogue();
     }
 

@@ -26,7 +26,7 @@ public class Interactable : MonoBehaviour
     public GameObject puzzleUI;
 
     // Start will be called before first frame ONLY if GameObject is enabled; if disabled, will be called upon enabling
-    private void Start()
+    public virtual void Start()
     {
         if (forcePlay)
         {

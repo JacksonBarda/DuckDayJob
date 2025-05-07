@@ -14,6 +14,9 @@ public class CheatsForDebug : MonoBehaviour
 
     [SerializeField]
     private TMP_InputField STD_Input;
+
+    [SerializeField]
+    private GameObject thingToTrigger;
     // Start is called before the first frame update
     void Start()
     {
@@ -76,7 +79,7 @@ public class CheatsForDebug : MonoBehaviour
 
     public void TriggerFunction()
     {
-        Debug.Log("CheatManager: Triggered function - UIManager.NotifySaveProgress()");
-        StartCoroutine(uiManager.NotifySaveProgress());
+        Debug.Log("CheatManager: Triggered function - thingToTrigger.SetActive(true);");
+        thingToTrigger.SetActive(true);
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -48,7 +49,11 @@ public class DialogueTool : Interactable
     [SerializeField]
     private Button nextButton;
     [SerializeField]
-    private GameObject DialogueIndicator = null;
+    private GameObject charSprite;
+    private GameObject DialogueIndicatorE;
+    private GameObject DialogueIndicatorQ;
+    [SerializeField]
+    private bool DI_UseQuestionMark;
     [SerializeField]
     private Image backgroundImage;
     [SerializeField]
@@ -104,22 +109,7 @@ public class DialogueTool : Interactable
     // Start is called before the first frame update
     void Awake()
     {
-		if (!name.Contains("MainDuck"))
-        {
-			if (this.transform.childCount > 0 && DialogueIndicator == null)
-            {
-                DialogueIndicator = this.transform.GetChild(0).gameObject;
-
-			}
-			DialogueIndicator.SetActive(true);
-
-		}
-		else
-        {
-            DialogueIndicator = null;
-        }
-
-        if(taskName == null) 
+        if (taskName == null) 
         {
             //taskName = gameScene;
         }
@@ -130,9 +120,44 @@ public class DialogueTool : Interactable
             backgroundImage.enabled = false;
         }
 
+        if (charSprite != null)
+        {
+            DialogueIndicatorE = charSprite.transform.GetChild(0).gameObject;
+            DialogueIndicatorQ = charSprite.transform.GetChild(1).gameObject;
+        }
     }
 
-    
+    public override void Start()
+    {
+        Debug.Log("DT.Start");
+        if (charSprite != null)
+        {
+            if (DI_UseQuestionMark)
+            {
+                DialogueIndicatorE.SetActive(false);
+                DialogueIndicatorQ.SetActive(true);
+                Debug.Log("DT: DI_E - FALSE; DI_Q - TRUE 1");
+            }
+            else
+            {
+                DialogueIndicatorE.SetActive(true);
+                DialogueIndicatorQ.SetActive(false);
+                Debug.Log("DT: DI_E - TRUE; DI_Q - FALSE 2");
+            }
+        }
+        base.Start();
+    }
+
+    private void OnDisable()
+    {
+        if (charSprite != null)
+        {
+            DialogueIndicatorE.SetActive(false);
+            DialogueIndicatorQ.SetActive(false);
+            Debug.Log("DT: DI_E - FALSE; DI_Q - FALSE 3");
+        }
+    }
+
     public void setList()
     {
         refDialogueList = DialogueManager.GetComponent<ReadDialogueData>().DialogList;
@@ -178,18 +203,16 @@ public class DialogueTool : Interactable
         // set first line
         DialogueManager.GetComponent<ReadDialogueData>().DialogTool = this.gameObject;
         setDialogueUI();
-		if (!name.Contains("MainDuck"))
-			if (DialogueIndicator == null)
-            {
-                if(this.transform.childCount == 1)
-                {
-                    DialogueIndicator = this.transform.GetChild(0).gameObject;
-                }
-            
-            }
-        if (DialogueIndicator != null)
+
+        try
         {
-            DialogueIndicator.SetActive(false);
+            DialogueIndicatorE.SetActive(false);
+            DialogueIndicatorQ.SetActive(false);
+            Debug.Log("DT: DI_E - FALSE; DI_Q - FALSE 4");
+        }
+        catch (NullReferenceException)
+        {
+
         }
     }
    
@@ -218,21 +241,10 @@ public class DialogueTool : Interactable
         // only sets talk again if there is a talk again dialogue. otherwise, if talk with the duck again, will play the same dialogue
         if (talkAgainList.Count != 0)
         {
-            //if (!name.Contains("MainDuck"))
-            //{
-            //    if (this.transform.childCount > 0 && DialogueIndicator == null)
-            //    {
-            //        DialogueIndicator = this.transform.GetChild(1).gameObject;
-
-            //    }
-            //    DialogueIndicator.SetActive(true);
-
-            //}
-            //else
-			//{
-			DialogueIndicator = null;
-			//}
-			talkAgain = true;
+            DialogueIndicatorE.SetActive(false);
+            DialogueIndicatorQ.SetActive(true);
+            Debug.Log("DT: DI_E - FALSE; DI_Q - TRUE 5");
+            talkAgain = true;
         }
         index = 0;
         base.Complete();
