@@ -324,7 +324,7 @@ Hand Nestla Prototype Testing Results to Duckette	3	0	Day	Main Duck	2	"As for me
 Ducks Chosen to Stay Behind	3	1	Night	Elon Duck	1	"Impeckable work today everyone! I have just finished going over the latest progress on Model G, and I must say that I am beyond impressed!"	TRUE	Right	Normal	FALSE	0	FALSE
 Ducks Chosen to Stay Behind	3	1	Night	Elon Duck	1	"As thank you for the hard work, <b>everyone can leave early.</b> No need to stay behind to finish last minute work."	TRUE	Right	Normal	FALSE	0	FALSE
 Ducks Chosen to Stay Behind	3	1	Night	Main Duck	2	Yes! That means I have more time to figure out how I'm gonna win over Duckette.	TRUE	Left	Italics	FALSE	0	FALSE
-Ducks Chosen to Stay Behind	3	1	Night	Elon Duck	1	"Oh, I almost forgot! <b>Can Duckette, Quacksly, and Fluffy stay behind for a couple of minutes?</b> I would like to discuss the shipment of the new Model G parts that should be coming in a couple of days."	TRUE	Right	Normal	FALSE	0	FALSE
+Ducks Chosen to Stay Behind	3	1	Night	Elon Duck	1	"Oh, I almost forgot! <b>Can Duckette, Billy, and Fluffy stay behind for a couple of minutes?</b> I would like to discuss the shipment of the new Model G parts that should be coming in a couple of days."	TRUE	Right	Normal	FALSE	0	FALSE
 Ducks Chosen to Stay Behind	3	1	Night	Fluffy	10	"Finally, someone remembered my name!"	TRUE	Right	Normal	FALSE	0	FALSE
 Ducks Chosen to Stay Behind	3	1	Night	Sybill	8	Wait your name is Fluffy?!	TRUE	Right	Normal	FALSE	0	FALSE
 Ducks Chosen to Stay Behind	3	1	Night	Main Duck	2	...The Duck Gods are against me.	TRUE	Left	Italics	FALSE	0	FALSE
@@ -363,7 +363,7 @@ Teaming up with Donald	4	3	Day	Main Duck	2	"Nevermind... yes, it's specifically 
 Teaming up with Donald	4	3	Day	Donald	5	101%.	TRUE	Right	Normal	FALSE	0	FALSE
 Teaming up with Donald	4	3	Day	Main Duck	2	...Where did you get the extra 1%?	TRUE	Left	Normal	FALSE	0	FALSE
 Teaming up with Donald	4	3	Day	Donald	5	"The second I came to the office, I immediately knew something was up."	TRUE	Right	Normal	FALSE	0	FALSE
-Teaming up with Donald	4	3	Day	Donald	5	"Don't you think it's strange that the <b>same ducks that met with Elon Duck</b> after work: Duckette, Quacksly, and Fluffy, are not here?"	TRUE	Right	Normal	FALSE	0	FALSE
+Teaming up with Donald	4	3	Day	Donald	5	"Don't you think it's strange that the <b>same ducks that met with Elon Duck</b> after work: Duckette, Billy, and Fluffy, are not here?"	TRUE	Right	Normal	FALSE	0	FALSE
 Teaming up with Donald	4	3	Day	Main Duck	2	Who were those last two again?	TRUE	Left	Normal	FALSE	0	FALSE
 Teaming up with Donald	4	3	Day	Donald	5	"That doesn't matter. What matters is that another duck also realizes that something is up with this place! I'm not crazy! Oh, this is beyond bill-iant!"	TRUE	Right	Normal	FALSE	0	FALSE
 Teaming up with Donald	4	3	Day	Main Duck	2	I still think you're slightly crazy...	TRUE	Left	Italics	FALSE	0	FALSE

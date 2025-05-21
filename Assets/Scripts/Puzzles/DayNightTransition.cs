@@ -127,7 +127,6 @@ public class DayNightTransition : Interactable
 
     public override void Complete()
     {
-
         pivot.rotation = pivotStartRot;
 
         if (dayToNight)
@@ -141,12 +140,9 @@ public class DayNightTransition : Interactable
             UIManager.SetMorningTime();
             taskManager.isNight = false;
         }
-		isCompleted = true;
-		TaskManager.onTaskComplete(this);
-		Debug.Log("FadeIn Completed");
-
-
-	}
+        base.Complete();
+        Debug.Log("DayNightTransition: Complete()+++++++++++++++++++++");
+    }
     public void OnContPressed()
     {
 		contButton.SetActive(false);

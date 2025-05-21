@@ -27,7 +27,7 @@ public class DoorInteract : Interactable
     [SerializeField]
     protected FollowPlayer followPlayer;
     [SerializeField]
-    public bool isLocked;
+    private bool isLocked;
     [SerializeField]
     protected DialogueTool lockedDialogue;
 
@@ -57,13 +57,30 @@ public class DoorInteract : Interactable
     }
     public override void Complete()
     {
-        
+
     }
     public IEnumerator Wait(float delay)
     {
         UnityEngine.Debug.Log("Waiting to fade in");
         yield return new WaitForSeconds(delay);
-		fadeIn.FadeImageInOverTime(1.0f, this, false);
-	}
+        fadeIn.FadeImageInOverTime(1.0f, this, false);
+    }
+
+    public void LockDoor()
+    {
+        isLocked = true;
+    }
+    public void UnlockDoor()
+    {
+        isLocked = false;
+    }
+    public void ToggleDoor()
+    {
+        isLocked = !isLocked;
+    }
+    public bool GetIsLocked()
+    {
+        return isLocked;
+    }
 
 }

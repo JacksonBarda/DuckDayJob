@@ -8,7 +8,10 @@ using System;
 
 public class PrototypePuzzle : Interactable
 {
-    private Vector3 mousePosition;
+    [SerializeField]
+    private Canvas canvas;
+    private RectTransform canvasRect;
+    private Vector3 adjustedmousePosition;
     private Vector3 screenBounds;
     private float timePassed = 0;
     private float timeUntilNextSpawn = 2;
@@ -18,8 +21,8 @@ public class PrototypePuzzle : Interactable
     private GameObject ducksParent;
 
     public GameObject background;
-    public Canvas canvasObject;
     public GameObject car;
+    public List<Sprite> carSprites;
     public GameObject duck;
     public Text textScore;
     public GameObject popupUI;
@@ -63,22 +66,28 @@ public class PrototypePuzzle : Interactable
 
     void Awake()
     {
-        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+        
+        canvasRect = canvas.GetComponent<RectTransform>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         if (active){
 
             scrollSpeed = .3f + timePassed / 65;        //control scroll speed; initial speed is .3f
+            if ((int)timePassed % 2 == 0) car.GetComponent<Image>().sprite = carSprites[1];
+            else car.GetComponent<Image>().sprite = carSprites[0];
 
-            mousePosition.x = 400;
-            mousePosition.y = Math.Clamp(Input.mousePosition.y, 50f, 550f);
-            mousePosition.z = 4;
-            car.transform.position = mousePosition;     //car follow mouse Y position
+            Vector3 carPos = Input.mousePosition;
 
-            Debug.Log("PP: Car y-pos: " + car.transform.position.y);
+            carPos.x = Mathf.Clamp(carPos.x, 190f, 1795f);
+            carPos.y = Mathf.Clamp(carPos.y, 80f, 900f);
+            car.transform.position = carPos;
+
+
+
 
             if (recordScore){
                 timePassed += Time.deltaTime;

@@ -10,16 +10,15 @@ public class CinemaManager : MonoBehaviour
     public bool cinemaMode = false;
     [SerializeField]
     private List<CinematicSequenceTool> listOfSequences;
-    [SerializeField]
-    private int sequenceIndex;
     public ReadDialogueData DialogueManager;
     public Camera mainCamera;
     public Camera cinematicCamera;
+    public List<GameObject> listOfNormalSprites;
+    private List<bool> spritesOriginalStates = new List<bool>();
 
     // Start is called before the first frame update
     void Start()
     {
-        sequenceIndex = 0;
         cinematicCamera.gameObject.SetActive(false);
         mainCamera.gameObject.SetActive(true);
 
@@ -41,14 +40,27 @@ public class CinemaManager : MonoBehaviour
         currentSequence = sequence;
         mainCamera.gameObject.SetActive(false);
         cinematicCamera.gameObject.SetActive(true);
+
+        foreach (GameObject sprite in listOfNormalSprites)
+        {
+            spritesOriginalStates.Add(sprite.activeSelf);
+            sprite.SetActive(false);
+        }
     }
 
     public void DeactivateSequence()
     {
         cinemaMode = false;
-        sequenceIndex++;
         mainCamera.gameObject.SetActive(true);
         cinematicCamera.gameObject.SetActive(false);
+
+        int i = 0;
+        foreach (GameObject sprite in listOfNormalSprites)
+        {
+            sprite.SetActive(spritesOriginalStates[i]);
+            i++;
+        }
+        spritesOriginalStates.Clear();
     }
 
     public void OnNextDialogueLine()

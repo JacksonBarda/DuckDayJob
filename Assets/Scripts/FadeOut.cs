@@ -28,7 +28,7 @@ public class FadeOut : MonoBehaviour
         {
             // Start the fade-out coroutine
             StartCoroutine(FadeOutCoroutine(fadeTime, targetObject));
-            Debug.Log("FadeOut.cs: FadeOutCoroutine <<<<<<<<<<<<<<<<<<<");
+            //Debug.Log("FadeOut.cs: FadeOutCoroutine <<<<<<<<<<<<<<<<<<<");
         }
     }
 

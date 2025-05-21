@@ -96,10 +96,10 @@ public class EmailDecrypt : Interactable
 
         count = 0;
         AudioManager.Instance.PlaySFX("SFX_Complete");
-        foreach (Image fragment in fragments)
-        {
-            fragment.rectTransform.position = fragment.GetComponent<FragmentDragger>().originalPosition;
-        }
+        //foreach (Image fragment in fragments)
+        //{
+        //    fragment.rectTransform.position = fragment.GetComponent<FragmentDragger>().originalPosition;
+        //}
         SLDR_Progress.value++;
     }
 

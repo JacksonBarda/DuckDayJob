@@ -7,8 +7,6 @@ using UnityEngine.InputSystem;
 public class LockPickPuzzle : Interactable
 {
     [SerializeField]
-    private Camera cam;
-    [SerializeField]
     private List<GameObject> listRedPins;
     [SerializeField]
     private List<GameObject> listBluePins;
@@ -16,17 +14,21 @@ public class LockPickPuzzle : Interactable
     private List<GameObject> listSprings;
     [SerializeField]
     private GameObject pick;
+    private Vector3 pickPosition;
+    private float pickMinY = 314.18f;
+    private float pickMaxY = 426.64f;
     [SerializeField]
     private GameObject shearLine;
     [SerializeField]
     private GameObject needle;
     [SerializeField]
     private int currentChamber;
+    [SerializeField]
+    private float offset;
     
-    private float[] pcx = { -216.12f, -156.8f, -99f, -40f, 18.7f };  // pick chamber x positions
+    private float[] pcx = { 443.19f, 584.21f, 725.24f, 868.05f, 1005.5f };  // pick chamber x positions, rect anchor positions
     //private float[] pcy = { -56.2f, -47.6f, -61.9f, -52.7f, -47.2f };   // pick chamber y positions
     
-    private Vector2 mousePosition;
     private bool pickMoving;
     [SerializeField]
     private float tension;
@@ -64,13 +66,14 @@ public class LockPickPuzzle : Interactable
         {
             bp.GetComponent<Rigidbody2D>().simulated = true;
         }
-        pick.GetComponent<RectTransform>().anchoredPosition = new Vector2(pcx[0], -91.1f);
+        pick.transform.position = new Vector2(pcx[0], pickMinY);
+
+        base.Start();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("test");
         HandlePickMovement();
         HandleTension();
         HandleChamberMovement();
@@ -95,15 +98,13 @@ public class LockPickPuzzle : Interactable
     {
         if (pickMoving)
         {
-            mousePosition.x = pcx[currentChamber];
-            mousePosition.y = Mathf.Clamp(Input.mousePosition.y, 168, 226);
+            pickPosition = Input.mousePosition;
+            pickPosition.x -= 590;
 
-            Vector2 anchorPos;
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(puzzleUI.GetComponent<RectTransform>(), mousePosition, cam, out anchorPos);
+            pickPosition.x = pcx[currentChamber];
+            pickPosition.y = Mathf.Clamp(pickPosition.y, pickMinY, pickMaxY); // pick minimum and maximum Y positions
 
-            anchorPos.x = pcx[currentChamber];
-
-            pick.GetComponent<RectTransform>().anchoredPosition = anchorPos;
+            pick.transform.position = pickPosition;
         }
     }
 
@@ -154,14 +155,6 @@ public class LockPickPuzzle : Interactable
         Chamber chamber = GetChamber(currentChamber);
         Vector2 bpAnchorPos = chamber.bp.GetComponent<RectTransform>().anchoredPosition;
         Vector2 newPosition = bpAnchorPos;
-
-        //for (int i = 0; i < 4; i++)
-        //{
-        //    GameObject bp = listBluePins[i];
-        //    Vector2 tempPos = bp.GetComponent<RectTransform>().anchoredPosition;
-        //    tempPos.y = Mathf.Clamp(bp.GetComponent<RectTransform>().anchoredPosition.y, 29, 55);
-        //    bp.GetComponent<RectTransform>().anchoredPosition = tempPos;
-        //}
 
         if (chamber.rp.GetComponent<Collider2D>().IsTouching(pick.GetComponent<Collider2D>()))
         {
@@ -224,15 +217,16 @@ public class LockPickPuzzle : Interactable
         // disconnect pick from mouse input, move pick downwards, move to new position, reconnect to mouse input
         pickMoving = false;
         float timeElapsed = 0;
-        Vector2 targetPosition = new Vector2(pick.GetComponent<RectTransform>().anchoredPosition.x, -91.1f);
+        Vector2 targetPosition = new Vector2(pick.transform.position.x, pickMinY);
 
         Debug.Log("LPP.MovePick(" + i + "): moving down...");
         while (true)    //downward movement
         {
             timeElapsed += Time.deltaTime;
-            pick.GetComponent<RectTransform>().anchoredPosition = Vector2.Lerp(pick.GetComponent<RectTransform>().anchoredPosition, targetPosition, timeElapsed * 0.2f);
+            //pick.GetComponent<RectTransform>().anchoredPosition = Vector2.Lerp(pick.GetComponent<RectTransform>().anchoredPosition, targetPosition, timeElapsed * 0.2f);
+            pick.transform.position = Vector2.Lerp(pick.transform.position, targetPosition, timeElapsed * 0.2f);
 
-            if ((pick.GetComponent<RectTransform>().anchoredPosition - targetPosition).magnitude < new Vector2(0.1f, 0.1f).magnitude)
+            if (((Vector2)pick.transform.position - targetPosition).magnitude < new Vector2(0.1f, 0.1f).magnitude)
             {
                 Debug.Log("LPP.MovePick(" + i + "): downwards movement done");
                 break;
@@ -241,15 +235,16 @@ public class LockPickPuzzle : Interactable
         }
 
         timeElapsed = 0;
-        targetPosition = new Vector2(pcx[i], -91.1f);
+        targetPosition = new Vector2(pcx[i], pickMinY);
 
         Debug.Log("LPP.MovePick(" + i + "): moving hoizontally...");
         while (true)    //lateral movement
         {
             timeElapsed += Time.deltaTime;
-            pick.GetComponent<RectTransform>().anchoredPosition = Vector2.Lerp(pick.GetComponent<RectTransform>().anchoredPosition, targetPosition, timeElapsed * 0.2f);
+            //pick.GetComponent<RectTransform>().anchoredPosition = Vector2.Lerp(pick.GetComponent<RectTransform>().anchoredPosition, targetPosition, timeElapsed * 0.2f);
+            pick.transform.position = Vector2.Lerp(pick.transform.position, targetPosition, timeElapsed * 0.2f);
 
-            if ((pick.GetComponent<RectTransform>().anchoredPosition - targetPosition).magnitude < new Vector2(0.1f, 0.1f).magnitude)
+            if (((Vector2)pick.transform.position - targetPosition).magnitude < new Vector2(0.1f, 0.1f).magnitude)
             {
                 Debug.Log("LPP.MovePick(" + i + "): movement complete");
                 pickMoving = true;
@@ -269,8 +264,8 @@ public class LockPickPuzzle : Interactable
         chamber.rp = listRedPins[i];
         chamber.bp = listBluePins[i];
         chamber.s = listSprings[i];
-        //chamber.offset = 37.8f + (chamber.rp.GetComponent<RectTransform>().sizeDelta.y * chamber.rp.GetComponent<RectTransform>().localScale.y)/2;
-        chamber.offset = 37.8f + (chamber.rp.GetComponent<RectTransform>().sizeDelta.y * chamber.rp.GetComponent<RectTransform>().localScale.y * chamber.bp.GetComponent<RectTransform>().localScale.y) + (chamber.bp.GetComponent<RectTransform>().sizeDelta.y * chamber.bp.GetComponent<RectTransform>().localScale.y) / 2;
+        chamber.offset = -12.5f + (chamber.rp.GetComponent<RectTransform>().sizeDelta.y * chamber.rp.GetComponent<RectTransform>().localScale.y * chamber.bp.GetComponent<RectTransform>().localScale.y) + (chamber.bp.GetComponent<RectTransform>().sizeDelta.y * chamber.bp.GetComponent<RectTransform>().localScale.y) / 2;
+        //chamber.offset = offset + (chamber.rp.GetComponent<RectTransform>().sizeDelta.y * chamber.rp.GetComponent<RectTransform>().localScale.y * chamber.bp.GetComponent<RectTransform>().localScale.y) + (chamber.bp.GetComponent<RectTransform>().sizeDelta.y * chamber.bp.GetComponent<RectTransform>().localScale.y) / 2;
 
         return chamber;
     }

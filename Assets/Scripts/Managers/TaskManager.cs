@@ -7,9 +7,6 @@ using static TaskManager;
 [System.Serializable]
 public class TaskManager : MonoBehaviour
 {
-
-	[SerializeField]
-	public List<DailyGameObjects> duckSpritesForDays = new List<DailyGameObjects>();
     public int count = 0;
     public List<DayTask> tasksByDay = new List<DayTask>();
     [SerializeField]
@@ -80,29 +77,46 @@ public class TaskManager : MonoBehaviour
 
     public void CheatCompleteTask(Interactable task)
     {
-        Debug.Log("TaskManager.CheatCompleteTask(): Checking skipped task (" + task + ") for objects to activate...");
-        //if (task.activatePostPuzzle && task.objectToActivate != null)
-        //{
-        //    foreach (GameObject obj in task.objectToActivate)
-        //    {
-        //        obj.gameObject.SetActive(!obj.gameObject.activeSelf);
-        //        Debug.Log("TaskManager.CheatCompleteTask(): " + (obj.gameObject.activeSelf ? "Activated" : "Deactivated") + " " + obj);
-        //    }
-        //}
-        if (task.GetComponent<CinematicSequenceTool>() != null)
+        if (!task.isCompleted)
         {
-            Debug.Log("TaskManager.CheatCompleteTask(): Checking shots for interactables...");
-            foreach (Shot cineShot in task.GetComponent<CinematicSequenceTool>().getListOfShots())
+            if (task.GetComponent<DialogueTool>() != null)
             {
-                if (cineShot.sceneChangeInteractable != null)
+                Debug.Log("TaskManager.CheatCompleteTask(): Checking DialogueTool (" + task + ") for in-line interactables to activate...");
+                if (task.GetComponent<DialogueTool>().InteractableOnLine.Count != 0)
                 {
-                    cineShot.sceneChangeInteractable.Interact();
-                    Debug.Log("TaskManager.CheatCompleteTask(): Interacted with shot interactable - " + cineShot.sceneChangeInteractable);
+                    foreach (DialogueTool.InteractOnLine iolObject in task.GetComponent<DialogueTool>().InteractableOnLine)
+                    {
+                        Interactable obj = iolObject.thingToInteract;
+                        obj.Interact();
+                        Debug.Log("TaskManager.CheatCompleteTask(): Interacted with " + obj);
+                    }
+                }
+                else Debug.Log("TaskManager.CheatCompleteTask(): None found.");
+            }
+
+            if (task.GetComponent<CinematicSequenceTool>() != null)
+            {
+                Debug.Log("TaskManager.CheatCompleteTask(): Checking shots for interactables...");
+                foreach (Shot cineShot in task.GetComponent<CinematicSequenceTool>().getListOfShots())
+                {
+                    if (cineShot.sceneChangeInteractable != null)
+                    {
+                        cineShot.sceneChangeInteractable.Interact();
+                        Debug.Log("TaskManager.CheatCompleteTask(): Interacted with shot interactable - " + cineShot.sceneChangeInteractable);
+                    }
                 }
             }
+
+            Debug.Log("TaskManager.CheatCompleteTask(): Checking skipped task (" + task + ") for objects to activate...");
+            task.Complete();
+            task.gameObject.SetActive(false);
+            Debug.Log("TaskManager.CheatCompleteTask(): " + task + " skip complete");
         }
-        task.Complete();
-        task.gameObject.SetActive(false);
+
+        else
+        {
+            Debug.Log("TaskManager.CheatCompleteTask(): " + task + " already marked complete =======================");
+        }
     }
 
     public PartIdentifier GetCurrentPart()
@@ -205,7 +219,6 @@ public class TaskManager : MonoBehaviour
                 if(task.stayActive != true)
                 {
                     task.gameObject.SetActive(false);                                               // hide task, unless stayActive is true
-                    Debug.Log("TM: 1");
                 }
 
             }
@@ -256,7 +269,6 @@ public class TaskManager : MonoBehaviour
             if ((_task.GetComponent<DialogueTool>() != null && _task.GetComponent<DialogueTool>().talkAgainList.Count == 0) || _task.GetComponent<DialogueTool>() == null)
             {
                 _task.gameObject.SetActive(false);
-                Debug.Log("TM: 2");
             }
         }
 
@@ -264,7 +276,7 @@ public class TaskManager : MonoBehaviour
         count = 0;
 		foreach (Interactable task in tasksByDay[day - 1].GetInteractables(currentPt))
         {
-            if (task.isVisibleOnStart && task.gameObject.activeSelf == false)
+            if (task.isVisibleOnStart && task.gameObject.activeSelf == false && !task.counted)
             {
                 task.gameObject.SetActive(true);
             }
@@ -285,15 +297,20 @@ public class TaskManager : MonoBehaviour
 
     private void ChangeDay()
     {
-        int listLoc = 0;
-        foreach(GameObject dayObject in duckSpritesForDays[day].spriteToMove)
-        {
+  //      int listLoc = 0;
+  //      foreach(GameObject dayObject in duckSpritesForDays[day].spriteToMove)
+  //      {
             
-            dayObject.transform.position = duckSpritesForDays[day].dayLocation[listLoc].transform.position;
-            //Debug.Log("TaskManager.cs: Moved duck " + dayObject + "to " + duckSpritesForDays[day].dayLocation[listLoc]);
-            listLoc++;
+  //          dayObject.transform.position = duckSpritesForDays[day].dayLocation[listLoc].transform.position;
+  //          //Debug.Log("TaskManager.cs: Moved duck " + dayObject + "to " + duckSpritesForDays[day].dayLocation[listLoc]);
+  //          listLoc++;
 
-		}
+		//}
+
+        //foreach (Interactable duckMover in newDuckMoversPostTransition)
+        //{
+        //    duckMover.Interact();
+        //}
         currentPt = 0;
         day++;
         SaveGame();

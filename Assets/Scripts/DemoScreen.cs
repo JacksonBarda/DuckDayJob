@@ -14,8 +14,10 @@ public class DemoScreen : Interactable
     private float endingY;
     [SerializeField]
     private float creditsDurationInSeconds;
-
-    private bool scrollCredits = true;
+    [SerializeField]
+    private FadeIn blackoutFadeIn;
+    [SerializeField]
+    private FadeOut blackoutFadeOut;
 
     private void Awake()
     {
@@ -31,6 +33,11 @@ public class DemoScreen : Interactable
 
     private IEnumerator creditsCoroutine()
     {
+        blackoutFadeOut.FadeImageOutOverTime(1f);
+        yield return new WaitForSeconds(1.0f);
+        blackoutFadeIn.FadeImageInOverTime(1f);
+        yield return new WaitForSeconds(1.0f);
+
         puzzleUI.SetActive(true);
         credits.SetActive(true);
         credits.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, beginningY);

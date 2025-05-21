@@ -50,23 +50,29 @@ public class Interactable : MonoBehaviour
             {
                 if (thingToActivate != null && !counted)
                 {
-                    if (thingToActivate.name.Contains("Door"))   //if GameObject is a door, toggle isLocked bool
+                    if (thingToActivate.GetComponent<DoorInteract>() != null)   //if GameObject is a door, toggle isLocked bool
                     {
-                        thingToActivate.GetComponent<DoorInteract>().isLocked = !thingToActivate.GetComponent<DoorInteract>().isLocked;
-                        Debug.Log("Interactable.cs: Setting " + thingToActivate + " to " + (thingToActivate.GetComponent<DoorInteract>().isLocked ? "locked" : "unlocked"));
+                        thingToActivate.GetComponent<DoorInteract>().ToggleDoor();
+                        Debug.Log("Interactable.cs: Setting " + thingToActivate + " to " + (thingToActivate.GetComponent<DoorInteract>().GetIsLocked() ? "locked" : "unlocked"));
                     }
                     else
                     {
                         thingToActivate.gameObject.SetActive(!thingToActivate.gameObject.activeSelf);
-                        Debug.Log("Interactable.cs: Setting " + thingToActivate + " to " + (thingToActivate.gameObject.activeSelf ? "active" : "inactive"));
+                        Debug.Log("Interactable.cs: Setting " + thingToActivate + " to " + (thingToActivate.gameObject.activeSelf ? "active" : "inactive") + "-----------------------------------");
                     }
                 
                 } 
             }
         }
         isCompleted = true;
-		//UIManager.InteractionPopup.SetActive(true);
-		TaskManager.onTaskComplete(this);
+        //UIManager.InteractionPopup.SetActive(true);
+        try {
+            TaskManager.onTaskComplete(this);
+        }
+		catch (System.NullReferenceException)
+        {
+
+        }
         Debug.Log(this + ": Complete");
     }
     public virtual void Failed()

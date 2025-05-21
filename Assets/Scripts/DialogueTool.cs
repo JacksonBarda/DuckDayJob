@@ -35,6 +35,9 @@ public class DialogueTool : Interactable
     [SerializeField]
     private string gameScene;
     [SerializeField]
+    private string gameSceneAlt;
+    public bool useAlternateScene;
+    [SerializeField]
     private bool retrieval;
     [SerializeField]
     public bool recordAnswer = false;
@@ -136,13 +139,13 @@ public class DialogueTool : Interactable
             {
                 DialogueIndicatorE.SetActive(false);
                 DialogueIndicatorQ.SetActive(true);
-                Debug.Log("DT: DI_E - FALSE; DI_Q - TRUE 1");
+                //Debug.Log("DT: DI_E - FALSE; DI_Q - TRUE 1");
             }
             else
             {
                 DialogueIndicatorE.SetActive(true);
                 DialogueIndicatorQ.SetActive(false);
-                Debug.Log("DT: DI_E - TRUE; DI_Q - FALSE 2");
+                //Debug.Log("DT: DI_E - TRUE; DI_Q - FALSE 2");
             }
         }
         base.Start();
@@ -154,7 +157,7 @@ public class DialogueTool : Interactable
         {
             DialogueIndicatorE.SetActive(false);
             DialogueIndicatorQ.SetActive(false);
-            Debug.Log("DT: DI_E - FALSE; DI_Q - FALSE 3");
+            //Debug.Log("DT: DI_E - FALSE; DI_Q - FALSE 3");
         }
     }
 
@@ -200,6 +203,8 @@ public class DialogueTool : Interactable
         // disable user input
         PlayerMove.puzzleMode = true;
 
+        if (useAlternateScene == true) gameScene = gameSceneAlt;
+
         // set first line
         DialogueManager.GetComponent<ReadDialogueData>().DialogTool = this.gameObject;
         setDialogueUI();
@@ -210,9 +215,7 @@ public class DialogueTool : Interactable
             DialogueIndicatorQ.SetActive(false);
             Debug.Log("DT: DI_E - FALSE; DI_Q - FALSE 4");
         }
-        catch (NullReferenceException)
-        {
-
+        catch (NullReferenceException) { 
         }
     }
    

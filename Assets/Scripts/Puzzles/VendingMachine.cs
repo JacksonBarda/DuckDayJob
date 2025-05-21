@@ -20,6 +20,7 @@ public class VendingMachine : Interactable
     public string correctItem = "";
     public GameObject correctDialogue;
     public GameObject incorrectDialogue;
+    public DialogueTool reactionDialogue;     //alternate scene should be incorrect dialogue
     //private bool dialoguesActive = false;
     private string enteredNumber = "";
     //private int playerCoins = 20;
@@ -154,23 +155,26 @@ public class VendingMachine : Interactable
         //dialogue tools should be included in task manager and dialogue manager as normal
         //
 
+        reactionDialogue.gameObject.SetActive(true);
+
         if (lastBoughtItem == correctItem) //if correct item bought, hide wrong item dialogue
         {
-			//incorrectDialogue.GetComponent<DialogueTool>().Complete();
-			//TaskManager.TMInstance.AddInteractableToDay(correctDialogue.GetComponent<Interactable>(),2,2);
-			incorrectDialogue.SetActive(false);
-            incorrectDialogue.GetComponent<DialogueTool>().Complete();
+            //incorrectDialogue.SetActive(false);
+            //incorrectDialogue.GetComponent<DialogueTool>().Complete();
 
-            correctDialogue.SetActive(true);
+            //correctDialogue.SetActive(true);
+
+            reactionDialogue.useAlternateScene = false;
+
         }
         else if (lastBoughtItem != correctItem)
         {
-			//correctDialogue.GetComponent<DialogueTool>().Complete();
-			//TaskManager.TMInstance.AddInteractableToDay(incorrectDialogue.GetComponent<Interactable>(), 2, 2);
-			correctDialogue.SetActive(false);
-            correctDialogue.GetComponent<DialogueTool>().Complete();
+            //correctDialogue.SetActive(false);
+            //correctDialogue.GetComponent<DialogueTool>().Complete();
 
-            incorrectDialogue.SetActive(true);
+            //incorrectDialogue.SetActive(true);
+
+            reactionDialogue.useAlternateScene = true;
         }
     }
 }
