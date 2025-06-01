@@ -101,6 +101,7 @@ public class DialogueTool : Interactable
     private int holdIndex = 0;
     private DialogStruct lastDialogue;
     private int attempts = 0;
+    private bool originalFlip;
 
     [System.Serializable]
     public struct InteractOnLine
@@ -198,7 +199,7 @@ public class DialogueTool : Interactable
 
         // as you press w, it does this
         MainDisplay.SetActive(false);
-        DialogueDisplay.SetActive(true);
+        DialogueDisplay.SetActive(true);        
 
         // disable user input
         PlayerMove.puzzleMode = true;
@@ -216,6 +217,13 @@ public class DialogueTool : Interactable
             Debug.Log("DT: DI_E - FALSE; DI_Q - FALSE 4");
         }
         catch (NullReferenceException) { 
+        }
+        
+        if (charSprite != null)     // make NPD look at you upon interacting
+        {
+            originalFlip = charSprite.GetComponent<SpriteRenderer>().flipX;
+            if (player.transform.position.x < gameObject.transform.position.x) charSprite.GetComponent<SpriteRenderer>().flipX = true;
+            else charSprite.GetComponent<SpriteRenderer>().flipX = false;
         }
     }
    
@@ -250,6 +258,9 @@ public class DialogueTool : Interactable
             talkAgain = true;
         }
         index = 0;
+
+        if (charSprite != null) charSprite.GetComponent<SpriteRenderer>().flipX = originalFlip;
+
         base.Complete();
         //Tasklist.SetText(taskName);
         //SLDR_Progress.value++;
@@ -615,7 +626,7 @@ public class DialogueTool : Interactable
 
                     if (quackscompleted == 0)
                     {
-                        AudioManager.Instance.PlayDialogue(duckname);
+                        //AudioManager.Instance.PlayDialogue(duckname);
                     }
                 }
 
@@ -652,7 +663,7 @@ public class DialogueTool : Interactable
                     }
                     if (quackscompleted == 0)
                     {
-                        AudioManager.Instance.PlayDialogue(duckname);
+                        //AudioManager.Instance.PlayDialogue(duckname);
                     }
                 }
                 

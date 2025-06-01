@@ -60,7 +60,7 @@ public class CADPuzzle : Interactable
             fragment.rectTransform.rotation = outlines[index].rectTransform.rotation;
             count++;
             selectedFragment.gameObject.GetComponent<FragmentDragger>().FragmentPlaced();
-            AudioManager.Instance.PlaySFX("SFX_VendingButton");
+            AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[3], SoundType.InteractableSFX, "ISFX_CADPiecePlaced");
         }
         else
         {
@@ -90,7 +90,6 @@ public class CADPuzzle : Interactable
         base.Complete();
 
         count = 0;
-        AudioManager.Instance.PlaySFX("SFX_Complete");
         foreach (Image fragment in fragments)
         {
             fragment.rectTransform.position = fragment.GetComponent<FragmentDragger>().originalPosition;

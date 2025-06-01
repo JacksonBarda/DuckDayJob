@@ -54,7 +54,7 @@ public class LockPickPuzzle : Interactable
     }
 
     // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
         currentChamber = 0;
         pickMoving = true;
@@ -124,19 +124,20 @@ public class LockPickPuzzle : Interactable
 
         needle.GetComponent<RectTransform>().localRotation = Quaternion.Euler(0,0,angle);
 
-        if (tension >= 34 && tension <= 66)
+        if (tension >= 34 && tension <= 66)     // if tension is in green zone
         {
             canPick = true;
         }
-        else
+        else                // if tension is outside green zone
         {
             canPick = false;
 
-            if ((tension < 8 || tension > 93) && reset == true)
+            if ((tension < 8 || tension > 93) && reset == true)         // if tension is in red zone
             {
                 currentChamber = 0;
                 tension = 0;
                 reset = false;
+                AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[3], SoundType.InteractableSFX, "ISFX_LockTensionFail");
 
                 if (currentChamber != 0)
                 {
@@ -195,10 +196,12 @@ public class LockPickPuzzle : Interactable
         Chamber chamber = GetChamber(i);
 
         chamber.bp.GetComponent<Rigidbody2D>().simulated = false;
+        AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[3], SoundType.InteractableSFX, "ISFX_LockPinClick");
 
         currentChamber++;
-        if(currentChamber > 4)
+        if(currentChamber > 4)  // if final chamber is complete
         {
+            AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[3], SoundType.InteractableSFX, "ISFX_LockPicked");
             Complete();
         }
         else
@@ -208,6 +211,7 @@ public class LockPickPuzzle : Interactable
             tension += rnd.Next(-10, 10);
             Debug.Log("LPP.CompleteChamber(" + i + "): MovePick(" + currentChamber + ")");
         }
+
     }
 
     private IEnumerator MovePick(int i)
@@ -258,8 +262,6 @@ public class LockPickPuzzle : Interactable
     private Chamber GetChamber(int i)
     {
         Chamber chamber = new Chamber();
-
-        
 
         chamber.rp = listRedPins[i];
         chamber.bp = listBluePins[i];

@@ -21,7 +21,7 @@ public class DoorInteract : Interactable
     [SerializeField]
     protected Rigidbody rigid;
     [SerializeField]
-    protected UIManager manager;
+    protected UIManager uiManager;
     [SerializeField]
     public Locations endRoom;
     [SerializeField]
@@ -36,12 +36,15 @@ public class DoorInteract : Interactable
         if (isLocked)
         {
             lockedDialogue.Interact();
+            AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[3], SoundType.InteractableSFX, "ISFX_DoorLocked");
         }
         else
         {
             fadeOut.FadeImageOutOverTime(timeToFade, this);
+            AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[3], SoundType.InteractableSFX, "ISFX_DoorOpening");
         }
     }
+    
     public override void Action()
     {
         if (!isLocked)
@@ -49,21 +52,21 @@ public class DoorInteract : Interactable
             playerMove.Maze(false);
             rigid.useGravity = true;
             Player.transform.position = endLocation.position;
-            manager.setLocation(endRoom);
+            uiManager.setLocation(endRoom);
             followPlayer.SetBumps(endRoom);
 
             StartCoroutine(Wait(1.0f));
         }
     }
-    public override void Complete()
-    {
 
-    }
     public IEnumerator Wait(float delay)
     {
+        AudioManager.StopSounds();
         UnityEngine.Debug.Log("Waiting to fade in");
         yield return new WaitForSeconds(delay);
         fadeIn.FadeImageInOverTime(1.0f, this, false);
+
+        AudioManager.PlayRoomSounds(endRoom);
     }
 
     public void LockDoor()

@@ -3,12 +3,20 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
+public enum ClutterType
+{
+    Pencil,
+    Paper,
+    Paperclip,
+    Other
+}
+
 public class DeskDragger : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    
-
 
     private Image item;
+    [SerializeField]
+    private ClutterType type;
 
     private void Start()
     {
@@ -31,6 +39,10 @@ public class DeskDragger : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (type == ClutterType.Pencil) AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[3], SoundType.InteractableSFX, "ISFX_PencilNoise");
+        else if (type == ClutterType.Paper) AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[3], SoundType.InteractableSFX, "ISFX_PaperRustle");
+        else if (type == ClutterType.Paperclip) AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[3], SoundType.InteractableSFX, "ISFX_PaperclipNoise");
+        else AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[3], SoundType.InteractableSFX, "ISFX_GenericClutterNoise");
 
     }
 }

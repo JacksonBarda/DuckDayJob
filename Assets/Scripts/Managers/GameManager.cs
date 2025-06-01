@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
     public void OnExitToMenu()
     {
         Debug.Log("GameManager: Load scene - StartScreen");
-        SceneManager.LoadScene("StartScreen");
+        LevelManager.Instance.LoadScene("StartScreen");
     }
 
     public class GameData

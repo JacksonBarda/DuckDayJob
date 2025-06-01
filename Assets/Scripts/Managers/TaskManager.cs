@@ -35,6 +35,7 @@ public class TaskManager : MonoBehaviour
 
     public int day = 1;
     public bool isNight;
+    private bool transitionSoundCheck = false;
 
     [SerializeField]
     private GameManager GM;
@@ -77,6 +78,7 @@ public class TaskManager : MonoBehaviour
 
     public void CheatCompleteTask(Interactable task)
     {
+        AudioManager.Instance.disableSounds = true;
         if (!task.isCompleted)
         {
             if (task.GetComponent<DialogueTool>() != null)
@@ -108,7 +110,11 @@ public class TaskManager : MonoBehaviour
             }
 
             Debug.Log("TaskManager.CheatCompleteTask(): Checking skipped task (" + task + ") for objects to activate...");
+
+            
             task.Complete();
+            
+
             task.gameObject.SetActive(false);
             Debug.Log("TaskManager.CheatCompleteTask(): " + task + " skip complete");
         }
@@ -117,6 +123,7 @@ public class TaskManager : MonoBehaviour
         {
             Debug.Log("TaskManager.CheatCompleteTask(): " + task + " already marked complete =======================");
         }
+        AudioManager.Instance.disableSounds = false;
     }
 
     public PartIdentifier GetCurrentPart()
@@ -149,6 +156,8 @@ public class TaskManager : MonoBehaviour
             Debug.Log("TaskManager: Force play " + tasksByDay[day - 1].GetInteractables(currentPt)[count] + "---------------------------------------");
             tasksByDay[day - 1].GetInteractables(currentPt)[count].Interact();
         }
+        AudioManager.Instance.disableSounds = false;
+        AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[3], SoundType.InteractableSFX, "ISFX_ElevatorDayBegin");
     }
 
 
@@ -220,11 +229,19 @@ public class TaskManager : MonoBehaviour
                 {
                     task.gameObject.SetActive(false);                                               // hide task, unless stayActive is true
                 }
+                if (task.GetComponent<DayNightTransition>() != null) transitionSoundCheck = true;
 
             }
 			UIManager.Instance.ClearTaskList();
 			UIManager.Instance.UpdateTime(UnityEngine.Random.Range(0.4f, 0.8f));
-			currentPt++;
+
+            if (transitionSoundCheck == false)
+            {
+                AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[3], SoundType.InteractableSFX, "ISFX_TaskComplete");
+            }
+
+            currentPt++;
+            
 
             // =========================== CURRENT PART UPDATED ===============================================================================================================
 

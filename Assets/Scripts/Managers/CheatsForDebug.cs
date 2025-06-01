@@ -23,6 +23,7 @@ public class CheatsForDebug : MonoBehaviour
         CheatMenu.SetActive(false);
     }
 
+#if UNITY_EDITOR
     // Update is called once per frame
     void Update()
     {
@@ -31,12 +32,16 @@ public class CheatsForDebug : MonoBehaviour
             CheatMenu.SetActive(!CheatMenu.activeSelf);
         }
     }
-    
+#endif
+
     public void SkipToDay()
     {
-        int day = int.Parse(STD_Input.text);
-        Debug.Log("CheatsForDebug: Skipping to day " + day + "...");
-        TaskManager.CheatSkipToDay(day);
+        if (STD_Input.text != null)
+        {
+            int day = int.Parse(STD_Input.text);
+            Debug.Log("CheatsForDebug: Skipping to day " + day + "...");
+            TaskManager.CheatSkipToDay(day);
+        }
     }
 
     public void Teleport()

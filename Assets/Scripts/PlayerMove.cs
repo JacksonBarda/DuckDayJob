@@ -191,15 +191,13 @@ public class PlayerMove : MonoBehaviour
                 if (animator.GetBool("isMoving") == false)
                 {
                     animator.SetBool("isMoving", true);
-                    AudioManager.Instance.PlayMovement("WalkSound");
                 }
             }
             else
             {
                 if (animator.GetBool("isMoving") == true)
                 {
-                    animator.SetBool("isMoving", false); 
-                    AudioManager.Instance.PlayMovement("Silence");
+                    animator.SetBool("isMoving", false);
                 }
             }
         }

@@ -57,7 +57,7 @@ Meet Quackson,1,3,Day,Main Duck,2,(Knocks on stall door) Hello? Anyone there?,TR
 Meet Quackson,1,3,Day,Quackson,6,What the quack are you doing? Find a different stall.,TRUE,Right,Normal,FALSE,0,FALSE
 Meet Quackson,1,3,Day,Main Duck,2,I can't use the other stalls! Have you seen the sorry state they're in?,TRUE,Left,Normal,FALSE,0,FALSE
 Meet Quackson,1,3,Day,Quackson,6,So? I'm busy.,TRUE,Right,Normal,FALSE,0,FALSE
-Meet Quackson,1,3,Day,Main Duck,2,Wait... is that Angry Ducks?,TRUE,Left,Normal,FALSE,0,FALSE
+Meet Quackson,1,3,Day,Main Duck,2,Wait... are you watching Caseoh?,TRUE,Left,Normal,FALSE,0,FALSE
 Meet Quackson,1,3,Day,Quackson,6,No.,TRUE,Right,Normal,FALSE,0,FALSE
 Meet Quackson,1,3,Day,Quackson,6,(Flushes toilet).,TRUE,Right,Normal,FALSE,0,FALSE
 Meet Quackson,1,3,Day,Quackson,6,Stall is taken!,TRUE,Right,Normal,FALSE,0,TRUE

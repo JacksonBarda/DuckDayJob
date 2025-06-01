@@ -11,8 +11,6 @@ public class FadeIn : MonoBehaviour
     private Image image;
     private float originalAlpha;
     private bool running = false;
-    [SerializeField]
-    private PlayerMove player;
 
     // -------------  FADE IN COMES LAST ------------------------
 

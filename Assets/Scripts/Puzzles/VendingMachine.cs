@@ -32,7 +32,6 @@ public class VendingMachine : Interactable
     {
         puzzleUI.SetActive(true);
         mainUI.SetActive(false);
-        AudioManager.Instance.PlayMusic("VendingAmbience");
         PlayerMove.puzzleMode = true;
     }
 
@@ -70,7 +69,7 @@ public class VendingMachine : Interactable
     {
         enteredNumber += number;
         UpdateDisplay();
-        AudioManager.Instance.PlaySFX("SFX_VendingButton");
+        AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[3], SoundType.InteractableSFX, "ISFX_VendingButton");
     }
 
     private void Enter()
@@ -87,7 +86,7 @@ public class VendingMachine : Interactable
             //Debug.Log("Enter() itemIndex: " + itemIndex);
             PurchaseItem(itemIndex);
         }
-        
+        AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[3], SoundType.InteractableSFX, "ISFX_VendingButton");
     }
     
     public IEnumerator DisplayMessage(string message)
@@ -106,8 +105,10 @@ public class VendingMachine : Interactable
         UpdateDisplay();
 		puzzleUI.SetActive(false);
 		mainUI.SetActive(true);
-		AudioManager.Instance.PlayMusic("Lobby");
 		PlayerMove.puzzleMode = false;
+        AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[3], SoundType.InteractableSFX, "ISFX_VendingButton");
+
+        Debug.Log("VendingMachine.VMexit(): lastBoughtItem -  " + lastBoughtItem);
 
 		if (lastBoughtItem != "" || lastBoughtItem != null)
         {
@@ -122,26 +123,17 @@ public class VendingMachine : Interactable
         enteredNumber = null;
         enteredNumber = "";
         UpdateDisplay();
-        //foreach (string item in itemArray)
-        //{
-        //    int thing = 0;
-        //    Debug.Log(thing + ": " + item);
-        //    thing++;
-        //}
-        //Debug.Log("done");
     }
+
     private void PurchaseItem(int itemIndex)
     {
-
-
         StartCoroutine(DisplayMessage("SUCCESS"));
-        //playerCoins -= 5;
+
         UpdateDisplay();
-        //itemCosts[itemIndex].SetActive(false);
-        //Debug.Log(itemIndex);
+
         Debug.Log("Purchased item: " + itemArray[itemIndex]);
         lastBoughtItem = itemArray[itemIndex];
-
+        AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[3], SoundType.InteractableSFX, "ISFX_VendingDropSnack");
     }
 
     private void UpdateDisplay()
@@ -159,21 +151,11 @@ public class VendingMachine : Interactable
 
         if (lastBoughtItem == correctItem) //if correct item bought, hide wrong item dialogue
         {
-            //incorrectDialogue.SetActive(false);
-            //incorrectDialogue.GetComponent<DialogueTool>().Complete();
-
-            //correctDialogue.SetActive(true);
-
             reactionDialogue.useAlternateScene = false;
-
         }
+
         else if (lastBoughtItem != correctItem)
         {
-            //correctDialogue.SetActive(false);
-            //correctDialogue.GetComponent<DialogueTool>().Complete();
-
-            //incorrectDialogue.SetActive(true);
-
             reactionDialogue.useAlternateScene = true;
         }
     }

@@ -43,7 +43,6 @@ public class Interactable : MonoBehaviour
     public virtual void Action() { }
     public virtual void Complete()
     {
-
 		if (objectToActivate != null)
         {
             foreach (GameObject thingToActivate in objectToActivate)
@@ -66,8 +65,16 @@ public class Interactable : MonoBehaviour
         }
         isCompleted = true;
         //UIManager.InteractionPopup.SetActive(true);
-        try {
+        try 
+        {
             TaskManager.onTaskComplete(this);
+            if (this.GetComponent<DialogueTool>() == null && 
+                this.GetComponent<MoveNPD>() == null && 
+                this.GetComponent<CinematicSequenceTool>() == null &&
+                this.GetComponent<DayNightTransition>() == null)
+            {
+                AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[3], SoundType.InteractableSFX, "ISFX_TaskComplete");
+            }
         }
 		catch (System.NullReferenceException)
         {

@@ -95,7 +95,6 @@ public class EmailDecrypt : Interactable
         StopCoroutine(PeriodicRecalculation());
 
         count = 0;
-        AudioManager.Instance.PlaySFX("SFX_Complete");
         //foreach (Image fragment in fragments)
         //{
         //    fragment.rectTransform.position = fragment.GetComponent<FragmentDragger>().originalPosition;
@@ -116,7 +115,7 @@ public class EmailDecrypt : Interactable
                 fragment.rectTransform.position = outlines[index].rectTransform.position;
                 fragment.gameObject.GetComponent<EmailFragmentDragger>().FragmentPlaced();
                 count++;
-                AudioManager.Instance.PlaySFX("SFX_VendingButton");
+                AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[3], SoundType.InteractableSFX, "ISFX_CADPiecePlaced");
                 fragment.gameObject.transform.SetAsFirstSibling();
             }
 

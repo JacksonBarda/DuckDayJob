@@ -48,7 +48,7 @@ public class VentInteract : DoorInteract
         
         Player.transform.position = endLocation.position;
         followPlayer.SetBumps(endRoom);
-        manager.setLocation(endRoom);
+        uiManager.setLocation(endRoom);
         
     }
     public override void Complete()

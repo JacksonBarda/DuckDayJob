@@ -40,14 +40,15 @@ public class PrototypePuzzle : Interactable
 
     public override void Interact()
     {
+        AudioManager.StopSounds();
         puzzleUI.SetActive(true);
         mainUI.SetActive(false);
         popupUI.SetActive(false);
-        //AudioManager.Instance.PlayMusic("VendingAmbience");
         PlayerMove.puzzleMode = true;
         active = true;                      //is the puzzle active (things moving); necessary because update function runs before puzzle is interacted with
         recordScore = true;                 //is the puzzle keeping track of score; is true until just before duckpocalypse
 
+        AudioManager.PlaySoundContinuous(AudioManager.Instance.sourceList[0], SoundType.InteractableSFX, "ISFX_PrototypeCar");
         StartCoroutine(DuckSpawner());
     }
 
@@ -59,9 +60,6 @@ public class PrototypePuzzle : Interactable
     public override void Complete()
     {
         base.Complete();
-
-        //Location of Puzzle
-        AudioManager.Instance.PlayMusic("ManufacturingRoom");
     }
 
     void Awake()
@@ -76,13 +74,15 @@ public class PrototypePuzzle : Interactable
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         if (active){
 
+            //Debug.Log("mouseinput: " + Input.mousePosition);
+
             scrollSpeed = .3f + timePassed / 65;        //control scroll speed; initial speed is .3f
             if ((int)timePassed % 2 == 0) car.GetComponent<Image>().sprite = carSprites[1];
             else car.GetComponent<Image>().sprite = carSprites[0];
 
             Vector3 carPos = Input.mousePosition;
 
-            carPos.x = Mathf.Clamp(carPos.x, 190f, 1795f);
+            carPos.x = 300;//Mathf.Clamp(carPos.x, 190f, 1795f);
             carPos.y = Mathf.Clamp(carPos.y, 80f, 900f);
             car.transform.position = carPos;
 
@@ -123,12 +123,15 @@ public class PrototypePuzzle : Interactable
     IEnumerator Duckpocalypse()
     {
         yield return new WaitForSeconds(3);
+
         recordScore = false;
         active = false;
         StopCoroutine(DuckSpawner());
         scrollSpeed = 0;
+        AudioManager.StopSounds();
 
         yield return new WaitForSeconds(1);
+
         popupUI.SetActive(true);
         displayText.text = "TIME SURVIVED: " + timePassed +
                            "\nDUCKS HIT: " + ducksHit +

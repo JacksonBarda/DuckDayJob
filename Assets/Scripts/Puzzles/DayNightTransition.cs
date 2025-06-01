@@ -55,8 +55,8 @@ public class DayNightTransition : Interactable
             {
                 rotatePivot = 180f;
             }
-                // Calculate the difference between current rotation and target rotation
-                float angleDifference = rotatePivot - pivot.eulerAngles.z;
+            // Calculate the difference between current rotation and target rotation
+            float angleDifference = rotatePivot - pivot.eulerAngles.z;
 
             // Normalize the angle to ensure it's within -180 to 180 range
             if (angleDifference > 180f)
@@ -92,6 +92,8 @@ public class DayNightTransition : Interactable
         //player.puzzleMode = true;
         puzzleUI.SetActive(true);
         mainUI.SetActive(false);
+        AudioManager.StopSounds();
+
         if (!disableBeginningFade)
         {
             fadeOut.FadeImageOutOverTime(1.0f, this);
@@ -102,6 +104,9 @@ public class DayNightTransition : Interactable
         }
         
         counted = false;
+
+        if (dayToNight) dayNightIn.gameObject.transform.eulerAngles = new Vector3(0,0,180);
+        else dayNightIn.gameObject.transform.eulerAngles = new Vector3(0, 0, 360);
     }
 
     public override void Action()
@@ -109,8 +114,15 @@ public class DayNightTransition : Interactable
         dayNightOut.FadeImageOutOverTime(1.0f, null);
         actionCalled = true;
         player.gameObject.transform.position = endLocation.position;
+        if (endLocation.localEulerAngles.y % 360 > 180)
+        {
+            player.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else player.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = false;
+
         playerCamera.SetBumps(endRoom);
         UIManager.setLocation(endRoom);
+
 		if (objectToActivate != null)
 		{
 			foreach (GameObject thingToActivate in objectToActivate)
@@ -127,6 +139,7 @@ public class DayNightTransition : Interactable
 
     public override void Complete()
     {
+        base.Complete();
         pivot.rotation = pivotStartRot;
 
         if (dayToNight)
@@ -140,13 +153,16 @@ public class DayNightTransition : Interactable
             UIManager.SetMorningTime();
             taskManager.isNight = false;
         }
-        base.Complete();
-        Debug.Log("DayNightTransition: Complete()+++++++++++++++++++++");
+        AudioManager.PlayRoomSounds(endRoom);
     }
+
     public void OnContPressed()
     {
 		contButton.SetActive(false);
-		dayNightIn.FadeImageInOverTime(1.3f, this, true);
+
+        if (!dayToNight) AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[3], SoundType.InteractableSFX, "ISFX_ElevatorDayBegin");
+
+        dayNightIn.FadeImageInOverTime(1.3f, this, true);
         if (!disableEndingFade)
         {
             fadeIn.FadeImageInOverTime(1.3f, this, false);

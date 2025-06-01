@@ -15,7 +15,7 @@ public class PrototypeDuck : MonoBehaviour
     void Start()
     {
         prototypePuzzle = GameObject.Find("/Puzzles/PrototypePuzzle/InteractPrototype").GetComponent<PrototypePuzzle>();
-        speed = (prototypePuzzle.scrollSpeed + .1f) * 1000;
+        speed = (prototypePuzzle.scrollSpeed + .4f) * 1000;
 
         rb = this.GetComponent<Rigidbody>();
         rb.velocity = new Vector3(-speed, 0);
@@ -44,6 +44,7 @@ public class PrototypeDuck : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Player" && isAlive){   //prevent collision on dead duck
+            AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[3], SoundType.InteractableSFX, "ISFX_PrototypeDuckDeath");
             rb.velocity += new Vector3(0, -speed);
             Debug.Log("hit duck");
             prototypePuzzle.ducksHit++;
