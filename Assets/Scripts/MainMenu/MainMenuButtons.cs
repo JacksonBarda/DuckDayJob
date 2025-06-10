@@ -27,7 +27,7 @@ public class MainMenuButtons : MonoBehaviour
 
         if (SceneManager.GetSceneByName("MainScene").isLoaded) SceneManager.UnloadSceneAsync("MainScene");
 
-        string filePath = "Saves/saveFile.json";
+        string filePath = Application.dataPath + "saveFile.json";
         if (File.Exists(filePath))
         {
             MainMenu.gameObject.transform.GetChild(1).GetComponent<Button>().interactable = true;
@@ -51,7 +51,7 @@ public class MainMenuButtons : MonoBehaviour
         AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[1], SoundType.Music, "ISFX_ButtonPress");
         MainMenu.SetActive(false);
 
-        string filePath = "Saves/saveFile.json";
+        string filePath = Application.dataPath + "saveFile.json";
         if (File.Exists(filePath))
         {
             GameManager.loadSave = true;

@@ -58,7 +58,7 @@ public class UIManager : MonoBehaviour
 		Instance = this; // Assign the instance to this object
 
 		// Optionally, you can use this line to preserve the UIManager across scene changes
-		DontDestroyOnLoad(gameObject);
+		//DontDestroyOnLoad(gameObject);
 		setLocation(startingLocation);
         day.text = "Day " + dayNumber;
         time.text = hour + ":00 " + meridiem;
@@ -161,12 +161,14 @@ public class UIManager : MonoBehaviour
     {
         hour = 5;
         meridiem = "p.m.";
-    }
+		UpdateTime(0);
+	}
     public void SetMorningTime()
     {
         hour = 8;
         meridiem = "a.m.";
         UpdateDay();
+		UpdateTime(0);
     }
     int minuteCount;
 	public void UpdateTime(float addHours)

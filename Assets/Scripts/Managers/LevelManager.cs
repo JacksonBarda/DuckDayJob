@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -52,7 +52,8 @@ public class LevelManager : MonoBehaviour
         {
             _mainMenuCanvas.SetActive(false);
         }
-        catch (MissingReferenceException) { };
+        catch (MissingReferenceException) { }
+        catch (NullReferenceException) { };
 
         _loaderCanvas.SetActive(true);
 

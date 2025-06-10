@@ -293,18 +293,19 @@ public class TaskManager : MonoBehaviour
         count = 0;
 		foreach (Interactable task in tasksByDay[day - 1].GetInteractables(currentPt))
         {
-            if (task.isVisibleOnStart && task.gameObject.activeSelf == false && !task.counted)
+            if (task != null)
             {
-                task.gameObject.SetActive(true);
+                if (task.isVisibleOnStart && task.gameObject.activeSelf == false && !task.counted)
+                {
+                    task.gameObject.SetActive(true);
+                }
+                String textToShow = task.name;
+                if (task.taskName != null && task.taskName.Length > 0)
+                {
+                    textToShow = task.taskName;
+                    UIManager.Instance.SetTaskListText(textToShow, count, task.gameObject, task.isCompleted);
+                }
             }
-			String textToShow = task.name;
-			if (task.taskName != null &&  task.taskName.Length > 0)
-            {
-				textToShow = task.taskName;
-				UIManager.Instance.SetTaskListText(textToShow, count, task.gameObject, task.isCompleted);
-			}
-
-            
 
 			count++;
 		}

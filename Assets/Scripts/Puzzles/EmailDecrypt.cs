@@ -51,8 +51,10 @@ public class EmailDecrypt : Interactable
 
     public int count = 0;
 
-    private void Start()
-    {   decryptionSpeed = 3;
+    public override void Start()
+    {
+        base.Start();
+        decryptionSpeed = 3;
         decaySpeed = 3;
         progressBar.minValue = 0;
         progressBar.maxValue = 100;

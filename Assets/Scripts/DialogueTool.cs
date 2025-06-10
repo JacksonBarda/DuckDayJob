@@ -134,6 +134,15 @@ public class DialogueTool : Interactable
     public override void Start()
     {
         Debug.Log("DT.Start");
+
+        if (useAlternateScene == true)
+        {
+            gameScene = gameSceneAlt;
+            DialogueList.Clear();
+            talkAgainList.Clear();
+            setList();
+        }
+
         if (charSprite != null)
         {
             if (DI_UseQuestionMark)
@@ -203,8 +212,6 @@ public class DialogueTool : Interactable
 
         // disable user input
         PlayerMove.puzzleMode = true;
-
-        if (useAlternateScene == true) gameScene = gameSceneAlt;
 
         // set first line
         DialogueManager.GetComponent<ReadDialogueData>().DialogTool = this.gameObject;

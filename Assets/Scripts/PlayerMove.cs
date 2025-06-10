@@ -223,7 +223,7 @@ public class PlayerMove : MonoBehaviour
         if (collision.gameObject.tag == "Interactable")
         {
             if (interactable != null)
-                Debug.Log(collision.gameObject.name);
+                Debug.Log("PlayerMove.OnTriggerEnter(): entered collision " + collision.gameObject.name);
                 interactable.Add(collision.gameObject.GetComponent<Interactable>());
 
         }

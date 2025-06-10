@@ -10,8 +10,8 @@ public class DayNightCycle : MonoBehaviour
     private float darkTime;
     private Image image;
     private float originalAlpha;
-    [SerializeField]
-    private FadeController[] fadeControllers = null;
+    //[SerializeField]
+    //private FadeController[] fadeControllers = null;
 
     public void Start()
     {

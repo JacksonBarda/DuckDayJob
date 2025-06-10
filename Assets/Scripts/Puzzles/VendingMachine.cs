@@ -18,8 +18,6 @@ public class VendingMachine : Interactable
 
     public string lastBoughtItem = "";
     public string correctItem = "";
-    public GameObject correctDialogue;
-    public GameObject incorrectDialogue;
     public DialogueTool reactionDialogue;     //alternate scene should be incorrect dialogue
     //private bool dialoguesActive = false;
     private string enteredNumber = "";
@@ -45,8 +43,9 @@ public class VendingMachine : Interactable
         base.Complete();
     }
 
-    private void Start()
+    public override void Start()
     {
+        base.Start();
         UpdateDisplay();
         for (int i = 0; i < numberButtons.Length; i++)
         {
@@ -77,7 +76,11 @@ public class VendingMachine : Interactable
         //Debug.Log("Entered number: " + enteredNumber);
         int itemIndex = int.Parse(enteredNumber.Substring(0, 1)) - 1;
 
-        if (enteredNumber.Length > 2 || itemIndex < 0 || itemIndex > 3) //invalid number
+        if (enteredNumber.Length != 2 || 
+            itemIndex < 0 || 
+            itemIndex > 3 ||
+            int.Parse(enteredNumber.Substring(1, 1)) > 3 ||
+            int.Parse(enteredNumber.Substring(1, 1)) < 1)       //invalid number
         {
             StartCoroutine(DisplayMessage("ERROR"));
         }
@@ -147,7 +150,7 @@ public class VendingMachine : Interactable
         //dialogue tools should be included in task manager and dialogue manager as normal
         //
 
-        reactionDialogue.gameObject.SetActive(true);
+        if (reactionDialogue.isCompleted == false) reactionDialogue.gameObject.SetActive(true);
 
         if (lastBoughtItem == correctItem) //if correct item bought, hide wrong item dialogue
         {

@@ -33,14 +33,14 @@ public class GameManager : MonoBehaviour
         GameData saveState = new GameData();
 
         saveState.playerName = PlayerPrefs.GetString("playerName");
+        Debug.Log("GameManager.OnSaveState(): PlayerPrefs playername: " + PlayerPrefs.GetString("playerName"));
         saveState.day = TM.day;
         saveState.dayPart = TM.ptCount;
-        saveState.dateTime = DateTime.Now;
         saveState.completedTasksInPart = TM.getCompletedTasksOfPart();
 
         string json = JsonUtility.ToJson(saveState);
 
-        File.WriteAllText("Saves/saveFile.json", json); //+ gameSaveSlot + ".json", json);
+        File.WriteAllText(Application.dataPath + "saveFile.json", json); //+ gameSaveSlot + ".json", json);
 
         StartCoroutine(uiManager.NotifySaveProgress());
         //StartCoroutine()
@@ -53,7 +53,11 @@ public class GameManager : MonoBehaviour
         GameData save;
         save = GetSave();
 
+        PlayerPrefs.SetString("playerName", save.playerName);
+        PlayerPrefs.Save();
+
         TM.CheatSkipToDay(save.day);                //  set day
+        
         Debug.Log("save.day = " + save.day);
 
         for (int i = 0; i < save.dayPart; i++)      //  complete all tasks until dayPart
@@ -68,11 +72,13 @@ public class GameManager : MonoBehaviour
                 j++;
             }
         }
-
-        foreach (Interactable task in save.completedTasksInPart)    //  complete tasks in list
+        if (save.completedTasksInPart != null && save.completedTasksInPart.Count != 0)
         {
-            task.gameObject.SetActive(true);
-            TM.CheatCompleteTask(task);
+            foreach (Interactable task in save.completedTasksInPart)    //  complete tasks in list
+            {
+                task.gameObject.SetActive(true);
+                TM.CheatCompleteTask(task);
+            }
         }
     }
 
@@ -82,7 +88,7 @@ public class GameManager : MonoBehaviour
         string json;
         GameData loadedGameData;
 
-        filePath = "Saves/saveFile.json";
+        filePath = Application.dataPath + "saveFile.json";
         json = File.ReadAllText(filePath);
         loadedGameData = JsonUtility.FromJson<GameData>(json);
 
@@ -100,8 +106,6 @@ public class GameManager : MonoBehaviour
         public string playerName;
         public int day;
         public int dayPart;
-        [SerializeField]
-        public DateTime dateTime;
         public List<Interactable> completedTasksInPart;
     }
 }

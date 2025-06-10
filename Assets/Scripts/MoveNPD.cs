@@ -25,7 +25,11 @@ public class MoveNPD : Interactable
             }
             
         }
+        bool temp = mainUI.activeSelf;
+        bool temp2 = PlayerMove.puzzleMode;
         base.Complete();
+        mainUI.SetActive(temp);
+        PlayerMove.puzzleMode = temp2;
     }
 
     [System.Serializable]
