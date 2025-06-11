@@ -12,9 +12,21 @@ public class SetSFXVolume : MonoBehaviour
     public void SetVolume() 
     {
         float volume = SFXSlider.value;
-        ASFXSource1.volume = volume;
-        ASFXSource2.volume = volume;
-        ISFXSource.volume = volume;
-        movementSource.volume = volume;
+
+        try
+        { ASFXSource1.volume = volume; }
+        catch (UnassignedReferenceException) { }
+
+        try
+        { ASFXSource2.volume = volume; }
+        catch (UnassignedReferenceException) { }
+
+        try
+        { ISFXSource.volume = volume; }
+        catch (UnassignedReferenceException) { }
+
+        try
+        { movementSource.volume = volume; }
+        catch (UnassignedReferenceException) { }
     }
 }

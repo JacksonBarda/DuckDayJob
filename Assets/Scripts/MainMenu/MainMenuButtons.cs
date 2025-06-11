@@ -11,7 +11,7 @@ public class MainMenuButtons : MonoBehaviour
     [SerializeField]
     private GameObject MainMenu;
     [SerializeField]
-    private GameObject SettingButton;
+    private GameObject AudioMenu;
     [SerializeField]
     private GameObject NameMenu;
     [SerializeField]
@@ -23,6 +23,7 @@ public class MainMenuButtons : MonoBehaviour
     {
         PlayerPrefs.SetString("playerName", null);
         NameMenu.SetActive(false);
+        AudioMenu.SetActive(false);
         MainMenu.SetActive(true);
 
         if (SceneManager.GetSceneByName("MainScene").isLoaded) SceneManager.UnloadSceneAsync("MainScene");
@@ -46,6 +47,14 @@ public class MainMenuButtons : MonoBehaviour
         AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[1], SoundType.Music, "ISFX_ButtonPress");
     }
 
+    public void OnLoadNewGame()
+    {
+        AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[1], SoundType.Music, "ISFX_ButtonPress");
+        PlayerPrefs.SetString("playerName", playerInput.text);
+        PlayerPrefs.Save();
+        LevelManager.Instance.LoadScene("MainScene");
+    }
+
     public void OnLoadSaveClicked()
     {
         AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[1], SoundType.Music, "ISFX_ButtonPress");
@@ -60,21 +69,25 @@ public class MainMenuButtons : MonoBehaviour
         LevelManager.Instance.LoadScene("MainScene");
     }
 
+    public void OnAudioClicked()
+    {
+        MainMenu.SetActive(false);
+        AudioMenu.SetActive(true);
+
+        AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[1], SoundType.Music, "ISFX_ButtonPress");
+    }
+
+
     public void OnBackClicked()
     {
         AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[1], SoundType.Music, "ISFX_ButtonPress");
         NameMenu.SetActive(false);
+        AudioMenu.SetActive(false);
         MainMenu.SetActive(true);
     }
 
 
-    public void OnLoadNewGame()
-    {
-        AudioManager.PlaySoundOnce(AudioManager.Instance.sourceList[1], SoundType.Music, "ISFX_ButtonPress");
-        PlayerPrefs.SetString("playerName", playerInput.text);
-        PlayerPrefs.Save();
-        LevelManager.Instance.LoadScene("MainScene");
-    }
+
 
     public void OnQuitClicked()
     {

@@ -107905,11 +107905,38 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Uma Claire Teelock\nProducer, Project Lead\n\nJackson Barda\nLead Programmer,
-    Lead Systems Engineer\n\nAntonio Tunsakul\nPuzzle and Map Designer, Associate
-    Programmer\n\nAlexandra Silalahi\nNarrative Designer, Associate Systems Engineer\n\nGarrett
-    Rodgers\nLead Artist, 3D Modeler, Texturer\n\nMichael Maslowski\n Audio and User
-    Interface Engineer"
+  m_text: 'Uma Claire Teelock
+
+    Project Lead, Producer, Artist
+
+
+    Jackson Barda
+
+    Lead
+    Programmer, Lead Systems Engineer
+
+
+    Antonio Tunsakul
+
+    Gameplay Designer,
+    Programmer, Systems Engineer
+
+
+    Alexandra Silalahi
+
+    Narrative Designer,
+    Systems Engineer
+
+
+    Garrett Rodgers
+
+    Lead Artist, 3D Modeler, Texturer
+
+
+    Michael
+    Maslowski
+
+    Audio and User Interface Engineer'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
   m_sharedMaterial: {fileID: 4289996165526141859, guid: 15c6566e288b5a845bd8a9269aed1568, type: 2}
